@@ -1,0 +1,1261 @@
+{
+  "title": "教材原图 · 公式与方法速查",
+  "notation": "|对象|分析 / 定义|合成 / 反变换|先看什么|\n|---|---|---|---|\n|连续傅里叶级数CTFS|$a_k=\\frac1T\\int_Tx(t)e^{-jk\\omega_0t}dt$|$x(t)=\\sum_ka_ke^{jk\\omega_0t}$|$\\omega_0=2\\pi/T$；积分取任意完整一周期|\n|离散傅里叶级数DTFS|$a_k=\\frac1N\\sum_{n=0}^{N-1}x[n]e^{-j2\\pi kn/N}$|$x[n]=\\sum_{k=0}^{N-1}a_ke^{j2\\pi kn/N}$|时域与系数都按N周期重复|\n|连续傅里叶变换CTFT|$X(j\\omega)=\\int_{-\\infty}^{\\infty}x(t)e^{-j\\omega t}dt$|$x(t)=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}X(j\\omega)e^{j\\omega t}d\\omega$|$\\omega$单位rad/s；逆式有$1/(2\\pi)$|\n|离散傅里叶变换DTFT|$X(e^{j\\Omega})=\\sum_nx[n]e^{-j\\Omega n}$|$x[n]=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}X(e^{j\\Omega})e^{j\\Omega n}d\\Omega$|$\\Omega$单位rad/样本；频谱$2\\pi$周期|\n|双边拉普拉斯|$X(s)=\\int_{-\\infty}^{\\infty}x(t)e^{-st}dt$|必须结合ROC选左右边|$s=\\sigma+j\\omega$；虚轴在ROC内可取傅里叶变换|\n|双边Z变换|$X(z)=\\sum_nx[n]z^{-n}$|必须结合ROC选左右边|$z=re^{j\\Omega}$；单位圆在ROC内可取DTFT|\n\n**记号提醒：** $j\\omega$ 是拉普拉斯平面的虚轴点，$e^{j\\Omega}$ 是Z平面的单位圆点；并非把同一个式子的变量随意换写。各章或原书可能都用$\\omega$，以本卡标出的时间单位和定义为准。冲激、周期信号等公式需使用广义函数意义；级数在跳点按相应收敛条件讨论。\n\n**归一化提醒：** $\\mathrm{Sa}(v)=\\sin v/v$，归一化$\\mathrm{sinc}(v)=\\sin(\\pi v)/(\\pi v)$。不要只背sinc字样，先看参数与定义；本项目每幅相关图会明确使用哪一种。",
+  "cards": [
+    {
+      "id": "HB-01",
+      "category": "definition",
+      "chapter": "1",
+      "title": "能量与平均功率：先算模平方，再分类",
+      "section": "1.1.2；独立归纳判题步骤",
+      "conceptIds": [
+        "C-1.03"
+      ],
+      "formula": "连续与离散的定义分别为\n$$E_c=\\int_{-\\infty}^{\\infty}|x(t)|^2dt,\\quad P_c=\\lim_{T\\to\\infty}\\frac1{2T}\\int_{-T}^{T}|x(t)|^2dt,$$\n$$E_d=\\sum_{n=-\\infty}^{\\infty}|x[n]|^2,\\quad P_d=\\lim_{N\\to\\infty}\\frac1{2N+1}\\sum_{n=-N}^{N}|x[n]|^2.$$\n对一周期平方可积的周期信号，可用\n$$P_c=\\frac1{T_0}\\int_{T_0}|x(t)|^2dt,\\qquad P_d=\\frac1{N_0}\\sum_{n=0}^{N_0-1}|x[n]|^2.$$\n考试常用分类：能量信号满足$0<E<\\infty$，功率信号满足$0<P<\\infty$；零信号按所用教材约定单列。",
+      "explanation": "有限正能量意味着平均功率为0。具有正平均功率的周期信号总能量无穷。反过来，非周期并不保证有限能量：例如x(t)=t既非周期，能量与平均功率也均发散。两个功率信号相加可能完全抵消；判断和或积时必须重新计算，不能只沿用原分类。",
+      "memory": "能量累计不除窗长；功率平均要除窗长。先看模平方，不能按是否周期直接贴标签。",
+      "conditions": "功率极限必须存在；普通能量公式针对可作模平方积分或求和的函数/序列。连续冲激不能把δ²当普通函数积分。周期一周期功率式须满足该周期内平方可积。",
+      "pitfalls": "冲激面积为1不等于能量为1；能量用模平方而非普通平方；“零平均值”与“零平均功率”完全不同。",
+      "exampleIds": [
+        "2008-02",
+        "2008-04",
+        "2009-03",
+        "2015-06"
+      ],
+      "diagramPaths": [],
+      "preview": "能量累计不除窗长；功率平均要除窗长。先看模平方，不能按是否周期直接贴标签。"
+    },
+    {
+      "id": "HB-02",
+      "category": "definition",
+      "chapter": "1",
+      "title": "周期与基本周期：连续找公共周期，离散还要整数",
+      "section": "1.2.2；独立归纳频率判据",
+      "conceptIds": [
+        "C-1.02"
+      ],
+      "formula": "连续周期要求存在$T>0$使$x(t+T)=x(t)$；离散周期要求存在正整数$N$使$x[n+N]=x[n]$。\n$$e^{j\\omega_0t}:\\quad T_0=\\frac{2\\pi}{|\\omega_0|}\\quad(\\omega_0\\ne0).$$\n$$e^{j\\Omega_0 n}\\text{周期}\\Longleftrightarrow\\frac{\\Omega_0}{2\\pi}\\in\\mathbb Q.$$\n若$\\Omega_0/(2\\pi)=p/q$已约成互素整数且$q>0$，则该复指数的基本周期为$q$。\n多个非零谐波先合并同频项，再求满足所有$\\omega_iT\\in2\\pi\\mathbb Z$或$\\Omega_iN\\in2\\pi\\mathbb Z$的最小公共周期。",
+      "explanation": "连续时间允许实数周期，离散时间的移位量必须是整数。把每一项的周期相加通常得不到公共周期。对三角函数和，先检查相同离散频率折回后是否相消、某项是否恒零，再对留下的项求周期。连续常数信号任意正数都是周期，所以没有最小正基本周期；离散常数序列的基本周期为1。",
+      "memory": "连续问频率能否公度；离散先把频率除2π，再问是否有理。找到周期后，还要检查能不能再缩短。",
+      "conditions": "复指数判据直接适用；正余弦或叠加信号需先排除恒零、同频合并和抵消等退化情形。求出的最小值必须满足原信号在全部时间的等式。",
+      "pitfalls": "不把实数移位叫离散周期；不把各周期直接相加；不把可用展开周期与基本周期混为一谈。",
+      "exampleIds": [
+        "2010-06",
+        "2019-04",
+        "O08"
+      ],
+      "diagramPaths": [],
+      "preview": "连续问频率能否公度；离散先把频率除2π，再问是否有理。找到周期后，还要检查能不能再缩短。"
+    },
+    {
+      "id": "HB-03",
+      "category": "formula",
+      "chapter": "1",
+      "title": "冲激、尺度与冲激导数：先换元，再取样",
+      "section": "1.4.2、2.5.3；一般尺度式为独立推导",
+      "conceptIds": [
+        "C-1.10"
+      ],
+      "formula": "对$a\\ne0$、足够光滑的$f$，\n$$\\delta(at-b)=\\frac1{|a|}\\delta(t-b/a),\\qquad\\delta'(at-b)=\\frac1{a|a|}\\delta'(t-b/a).$$\n$$\\int_{-\\infty}^{\\infty}f(t)\\delta(t-t_0)dt=f(t_0),\\qquad\\int_{-\\infty}^{\\infty}f(t)\\delta'(t-t_0)dt=-f'(t_0).$$\n$$f(t)\\delta'(t-t_0)=f(t_0)\\delta'(t-t_0)-f'(t_0)\\delta(t-t_0).$$\n若$g$在$t_0$有跳跃$\\Delta g=g(t_0^+)-g(t_0^-)$，分布导数在该处含$\\Delta g\\,\\delta(t-t_0)$。",
+      "explanation": "先把冲激的零点解出来，再提取尺度系数，最后才对光滑因子取值或求导。第二个尺度式可从第一个式子对t求导得到：左侧多一个链式因子a，所以δ′比δ再多除一个a。例如$\\delta'(2t-2)=\\frac14\\delta'(t-1)$，而不是乘1/2。折线或跳跃函数的导数要同时包含各开区间普通导数与所有跳跃冲激。",
+      "memory": "δ看面积所以除|a|；δ′还要链式再除a；导数取样带负号。普通波形压缩不自动缩幅，冲激必须守面积。",
+      "conditions": "δ′的撇号表示对冲激自身自变量求导；抽样因子在相应点须足够光滑。积分边界恰落在冲激上时要声明端点约定，不能直接套全轴公式。",
+      "pitfalls": "把δ′(at-b)当成dδ(at-b)/dt会漏a；忽略反向尺度的符号；对含跳跃信号只求普通导数会漏冲激。",
+      "exampleIds": [
+        "2022-04",
+        "2024-03",
+        "E02"
+      ],
+      "diagramPaths": [],
+      "preview": "δ看面积所以除|a|；δ′还要链式再除a；导数取样带负号。普通波形压缩不自动缩幅，冲激必须守面积。"
+    },
+    {
+      "id": "H13-01",
+      "category": "definition",
+      "chapter": "1",
+      "title": "系统六种性质：每项究竟比较什么",
+      "section": "1.6.1–1.6.6",
+      "printPages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        34
+      ],
+      "formula": "记输出为 $y=T\\{x\\}$；离散情形将 $t,t_0$ 换成 $n,n_0$。\n\n|性质|定义或直接检验|\n|---|---|\n|线性|$T\\{a x_1+b x_2\\}=aT\\{x_1\\}+bT\\{x_2\\}$，对所有允许的输入及标量成立|\n|时不变|$T\\{x(\\cdot-t_0)\\}(t)=y(t-t_0)$，对任意时移成立|\n|因果|若两输入在 $\\tau\\le t_0$ 相同，两输出在 $t\\le t_0$ 也相同|\n|无记忆|时刻 $t_0$ 的输出只依赖同一时刻的 $x(t_0)$|\n|BIBO稳定|$\\sup_t\\lvert x(t)\\rvert<\\infty\\ \\Rightarrow\\ \\sup_t\\lvert y(t)\\rvert<\\infty$|\n|可逆|$T\\{x_1\\}=T\\{x_2\\}\\Rightarrow x_1=x_2$；即输入输出对应为单射|",
+      "explanation": "六种性质彼此独立。线性只改输入幅值，时不变则沿“先延时输入”和“先求输出再延时”两条路径比较。因果看有没有读取未来；无记忆更严格，连过去也不读取。判错常用一个反例，判对则须覆盖题给输入类；固定抽样可以无记忆，却因丢失样点间信息不可逆。",
+      "memory": "线性比幅值，时不变比时钟；因果不问未来，无记忆只问现在；稳定找统一界，可逆找唯一输入。",
+      "conditions": "必须在题目规定、使算子有定义的输入类中判断。带非零固定初态的动态模型，其全响应映射可能是仿射；线性叠加通常应落实到零状态部分。",
+      "pitfalls": "不要把“含t”同时当成非线性、时变、有记忆的证据。零输入非零输出可否定线性；某一个输入通过平移实验不能证明一般时不变。",
+      "exampleIds": [
+        "2008-01",
+        "2022-01",
+        "2026-01",
+        "O01",
+        "O02"
+      ],
+      "diagramPaths": [],
+      "preview": "线性比幅值，时不变比时钟；因果不问未来，无记忆只问现在；稳定找统一界，可逆找唯一输入。"
+    },
+    {
+      "id": "H13-02",
+      "category": "formula",
+      "chapter": "2",
+      "title": "卷积与阶跃响应：连续积分，离散求和",
+      "section": "2.1.2、2.2.2、2.3.8",
+      "printPages": [
+        50,
+        61,
+        72
+      ],
+      "formula": "**连续时间（CT）**\n$$y_{zs}(t)=x(t)*h(t)=\\int_{-\\infty}^{\\infty}x(\\tau)h(t-\\tau)\\,d\\tau.$$\n**离散时间（DT）**\n$$y_{zs}[n]=x[n]*h[n]=\\sum_{k=-\\infty}^{\\infty}x[k]h[n-k].$$\n**由零状态阶跃响应 $s$ 恢复 $h$**\n$$s(t)=\\int_{-\\infty}^{t}h(\\tau)d\\tau,\\quad h(t)=s\\prime(t);$$\n$$s[n]=\\sum_{k=-\\infty}^{n}h[k],\\quad h[n]=s[n]-s[n-1].$$\n若 $s(t)=f(t)u(t)$ 且 $f$ 在原点连续，\n$$h(t)=f\\prime(t)u(t)+f(0)\\delta(t).$$",
+      "explanation": "计算先写非零支撑的交集，再积分或求和。连续卷积的t是固定输出时刻，积分变量是τ；离散卷积的n固定、k变化。翻转平移的是h的自变量。阶跃关系源于阶跃是冲激的累计，因此连续用导数、离散用一次差分。若阶跃响应有跳变，导数必须包含相应冲激。",
+      "memory": "先支撑，后计算；连续求导，离散差分；跳变大小就是冲激权重。",
+      "conditions": "卷积表示已知LTI系统的零状态响应，积分或求和应存在。全响应还需另加零输入项；一般时变线性系统要保留二变量冲激核。",
+      "pitfalls": "不要只替换第二序列的阶跃却漏替换指数。离散闭区间L至U共U−L+1项；全响应不能未经初态拆分就冒充阶跃响应。",
+      "exampleIds": [
+        "2008-06",
+        "2009-14",
+        "O03",
+        "O04",
+        "O05"
+      ],
+      "diagramPaths": [],
+      "preview": "先支撑，后计算；连续求导，离散差分；跳变大小就是冲激权重。"
+    },
+    {
+      "id": "H13-03",
+      "category": "definition",
+      "chapter": "3",
+      "title": "CT傅里叶级数：一周期积分与无限个谐波",
+      "section": "3.3.2",
+      "printPages": [
+        120
+      ],
+      "formula": "设 $x(t+T)=x(t)$，$\\omega_0=2\\pi/T$。\n\n$$a_k=\\frac1T\\int_{t_0}^{t_0+T}x(t)e^{-jk\\omega_0t}\\,dt,\\quad k\\in\\mathbb Z;$$\n$$x(t)\\sim\\sum_{k=-\\infty}^{\\infty}a_ke^{jk\\omega_0t}.$$\n$$a_0=\\frac1T\\int_{t_0}^{t_0+T}x(t)dt.$$\n这里“$\\sim$”表示傅里叶级数表示；在相应收敛条件下，连续点重构为 $x(t)$，跳变点取左右极限平均。",
+      "explanation": "先固定展开周期，再给每根谐波编号。积分可选任意完整一周期，常选对称区间利用奇偶性。系数a0就是平均值，非零k的公式若含1/k，应把a0单独计算。展开周期可取基本周期的整数倍，但一旦选定，就必须让所有频率、系数索引和后续性质使用同一套ω0。",
+      "memory": "分析有1/T与负指数，综合无1/T与正指数；先定T，再定k。",
+      "conditions": "系数积分要求一周期可积。平方可积周期信号有均方意义的级数表示；逐点重构须满足相应收敛条件，不能仅凭“周期”或“连续”无条件保证。",
+      "pitfalls": "不能把脉宽当周期T；改变展开周期后原物理频率对应的谐波编号也会改变。级数系数与傅里叶变换的冲激谱权重并非同一数值。",
+      "exampleIds": [
+        "2012-11",
+        "2015-10",
+        "2022-05",
+        "O07",
+        "O09"
+      ],
+      "diagramPaths": [],
+      "preview": "分析有1/T与负指数，综合无1/T与正指数；先定T，再定k。"
+    },
+    {
+      "id": "H13-04",
+      "category": "definition",
+      "chapter": "3",
+      "title": "DT傅里叶级数：只需N个系数，系数也周期",
+      "section": "3.6.2",
+      "printPages": [
+        135
+      ],
+      "formula": "设 $x[n+N]=x[n]$，$N\\in\\mathbb Z_{>0}$，$\\omega_0=2\\pi/N$。\n\n$$a_k=\\frac1N\\sum_{n=n_0}^{n_0+N-1}x[n]e^{-j2\\pi kn/N};$$\n$$x[n]=\\sum_{k=k_0}^{k_0+N-1}a_ke^{j2\\pi kn/N};$$\n$$a_{k+N}=a_k,\\qquad a_0=\\frac1N\\sum_{n=n_0}^{n_0+N-1}x[n].$$\n$n_0,k_0$ 可选任意整数，但每个求和都只取连续N项。",
+      "explanation": "离散复指数每隔N个谐波编号就重复，因此只有N个独立系数，综合式不用对全部整数无限求和。先把给定越界系数按模N折回同一周期，再使用实信号共轭对称。比如N=10时a11就是a1；这一步往往比重新计算10点求和更快。",
+      "memory": "时间一周期N点，系数一周期也N点；系数索引先取模。",
+      "conditions": "已知序列以正整数N为周期。N可为基本周期的整数倍；两端均包含的0至N会多算一个样本。采用本书归一化时，分析式含1/N，综合式不含。",
+      "pitfalls": "不要把N周期的系数重复求和到无穷。若另用未归一化DFT记号X[k]，本卡的a_k=X[k]/N；不能把两种幅度约定混用。",
+      "exampleIds": [
+        "2019-04",
+        "O08",
+        "O11"
+      ],
+      "diagramPaths": [],
+      "preview": "时间一周期N点，系数一周期也N点；系数索引先取模。"
+    },
+    {
+      "id": "H13-05",
+      "category": "table",
+      "chapter": "3",
+      "title": "原表3.1：连续时间傅里叶级数性质",
+      "section": "3.5.8（表3.1）",
+      "printPages": [
+        130
+      ],
+      "formula": "约定 $x(t)\\leftrightarrow a_k$、$y(t)\\leftrightarrow b_k$，共同周期T、$\\omega_0=2\\pi/T$。下列为原表的常用行速读，截图保留完整原表。\n\n|时域操作|级数系数|\n|---|---|\n|$Ax+By$|$Aa_k+Bb_k$|\n|$x(t-t_0)$|$a_ke^{-jk\\omega_0t_0}$|\n|$e^{jM\\omega_0t}x(t)$，$M\\in\\mathbb Z$|$a_{k-M}$|\n|$x^*(t)$|$a_{-k}^*$|\n|$x(-t)$|$a_{-k}$|\n|$x(\\alpha t)$，$\\alpha>0$|$a_k$，新周期为 $T/\\alpha$|\n|$\\int_{t_0}^{t_0+T}x(\\tau)y(t-\\tau)d\\tau$|$T a_kb_k$|\n|$x(t)y(t)$|$\\sum_{l=-\\infty}^{\\infty}a_lb_{k-l}$|\n|$x\\prime(t)$|$jk\\omega_0a_k$|\n|实信号|$a_{-k}=a_k^*$|",
+      "explanation": "这张是教材真实的性质汇总表，不是重新拼成的“原书表”。使用前先统一两个信号的展开周期。时移改变每根谐波相位，调制改变谐波编号；周期卷积只积一个周期，所以带T。相乘的系数要卷积，但已知仅少数非零系数时，直接列可能的索引和最省事。",
+      "memory": "延时乘负相位，调制反向移索引；时域相乘，系数卷积；周期卷积别丢T。",
+      "conditions": "相关行要求操作有定义；M须为整数才保持所选周期。积分行的非零频率系数可除以jkω0，周期原函数须零均值，直流积分常数另定，不能无条件当作从负无穷的通常反常积分收敛。",
+      "pitfalls": "周期卷积不是全实轴普通卷积。实信号是共轭对称，不一定每个系数都为实；只有实偶等额外条件才进一步限制系数。",
+      "exampleIds": [
+        "2023-04",
+        "2024-02",
+        "O10",
+        "O09"
+      ],
+      "diagramPaths": [],
+      "preview": "延时乘负相位，调制反向移索引；时域相乘，系数卷积；周期卷积别丢T。"
+    },
+    {
+      "id": "H13-06",
+      "category": "table",
+      "chapter": "3",
+      "title": "原表3.2：离散时间傅里叶级数性质",
+      "section": "3.7（表3.2）",
+      "printPages": [
+        140
+      ],
+      "formula": "约定共同周期N，$x[n]\\leftrightarrow a_k$、$y[n]\\leftrightarrow b_k$；系数下标按模N解释。\n\n|时域操作|DFS系数|\n|---|---|\n|$Ax+By$|$Aa_k+Bb_k$|\n|$x[n-n_0]$|$a_ke^{-j2\\pi kn_0/N}$|\n|$e^{j2\\pi Mn/N}x[n]$|$a_{k-M}$|\n|$x^*[n]$|$a_{-k}^*$|\n|$x[-n]$|$a_{-k}$|\n|$\\sum_{r=0}^{N-1}x[r]y[n-r]$|$N a_kb_k$|\n|$x[n]y[n]$|$\\sum_{l=0}^{N-1}a_lb_{k-l}$|\n|$x[n]-x[n-1]$|$(1-e^{-j2\\pi k/N})a_k$|\n|实序列|$a_{-k}=a_k^*$|\n\n在样本间插入 $m-1$ 个零（$m\\in\\mathbb Z_{>0}$）后，新周期为mN，新系数 $b_k=a_k/m$；右边的旧 $a_k$ 仍按N周期延拓。",
+      "explanation": "原表完整保留了周期卷积、相乘、一次差分、求和及尺度等条目。与CT表最大的实用区别是系数按N周期循环：相乘产生的是系数周期卷积，不能套无限独立谐波的求和。周期矩形可先差分成边缘冲激，再除去差分因子恢复非零频率系数，直流则由一周期平均单独补回。",
+      "memory": "DT所有索引转一圈N；周期卷积带N；导数换成差分因子1−e的负相位。",
+      "conditions": "n0、M须为整数。使用统一N周期及本书1/N分析规范。若周期求和的差分逆运算有解，需要输入零均值；k≡0(mod N)的常数项另定，不由差分公式唯一决定。",
+      "pitfalls": "不要漏周期卷积的N，也不要把系数卷积再多乘N。差分因子在k≡0处为0，直接相除会产生0/0；插零后必须改用新周期mN。",
+      "exampleIds": [
+        "2019-04",
+        "O11",
+        "O08"
+      ],
+      "diagramPaths": [],
+      "preview": "DT所有索引转一圈N；周期卷积带N；导数换成差分因子1−e的负相位。"
+    },
+    {
+      "id": "H13-07",
+      "category": "formula",
+      "chapter": "3",
+      "title": "CTFS常见系数：由原书例题归纳的速记表",
+      "section": "3.3.2例3.3、例3.5；3.5.9例3.8",
+      "printPages": [
+        120,
+        121,
+        122,
+        131
+      ],
+      "formula": "以下按 $x(t)=\\sum_ka_ke^{jk\\omega_0t}$ 自行归纳；它不是教材另一张编号表。\n\n|周期信号|非零系数或通式|\n|---|---|\n|$C$|$a_0=C$，其余为0|\n|$A\\cos(m\\omega_0t+\\varphi)$|$a_m=\\frac A2e^{j\\varphi},\\ a_{-m}=\\frac A2e^{-j\\varphi}$|\n|$A\\sin(m\\omega_0t+\\varphi)$|$a_m=\\frac A{2j}e^{j\\varphi},\\ a_{-m}=-\\frac A{2j}e^{-j\\varphi}$|\n|每周期中心 $t_c$、宽 $\\tau$、高A的矩形|$a_0=A\\tau/T$；$a_k=\\frac{A\\sin(k\\pi\\tau/T)}{k\\pi}e^{-jk\\omega_0t_c}$，$k\\ne0$|\n|$\\sum_{q\\in\\mathbb Z}\\delta(t-t_c-qT)$|$a_k=\\frac1T e^{-jk\\omega_0t_c}$，所有整数k|\n\n正弦/余弦行取 $m\\ge1$；矩形行取 $0<\\tau<T$，零点/端点约定不改变系数。",
+      "explanation": "截图是原书例3.3、3.5、3.8；表中的幅值、相位和平移由线性与时移性质独立推广。矩形的直流是面积除周期，其余系数是按占空比缩放的sinc包络。周期冲激串的每根冲激面积为1，因此每个系数都是1/T；这里的“幅度”不能理解成普通函数的峰高。",
+      "memory": "余弦一分为二，正弦一正一负除2j；矩形先算面积/T；冲激串是全谐波等权1/T。",
+      "conditions": "使用CTFS规范、ω0=2π/T及共同周期。冲激串的级数是广义函数意义，不能因此声称它具有有限平均功率。相位公式以余弦/正弦题给实幅度与实相位为例。",
+      "pitfalls": "正弦正频系数A/(2j)=−jA/2，符号容易写反。矩形宽度τ与半宽T1的关系是τ=2T1；不能把原书的半宽直接当成全宽。",
+      "exampleIds": [
+        "2022-05",
+        "2023-04",
+        "O07",
+        "O09"
+      ],
+      "diagramPaths": [],
+      "preview": "余弦一分为二，正弦一正一负除2j；矩形先算面积/T；冲激串是全谐波等权1/T。"
+    },
+    {
+      "id": "H13-08",
+      "category": "property",
+      "chapter": "3",
+      "title": "Parseval：周期平均功率等于谐波功率之和",
+      "section": "3.5.7、3.7.3",
+      "printPages": [
+        129,
+        141
+      ],
+      "formula": "**CTFS**\n$$P=\\frac1T\\int_{t_0}^{t_0+T}|x(t)|^2dt=\\sum_{k=-\\infty}^{\\infty}|a_k|^2.$$\n**DFS（本书分析式含1/N）**\n$$P=\\frac1N\\sum_{n=0}^{N-1}|x[n]|^2=\\sum_{k=0}^{N-1}|a_k|^2.$$\n对CT实信号，还可写\n$$P=|a_0|^2+2\\sum_{k=1}^{\\infty}|a_k|^2.$$\n当 $\\omega\\ne0$ 时，实余弦 $A\\cos(\\omega t+\\varphi)$ 的一对谱线总功率为 $A^2/2$。",
+      "explanation": "每个复系数的模平方对应一根复指数谐波的平均功率，实正弦或余弦要把正负频率两根一起算。若已知若干系数的功率和等于总功率，其余项因非负只能全部为0。例O08中a11=a1=5，实信号给a9=5，两项已用完50的总功率，直接得到其余系数为0。",
+      "memory": "周期信号算平均功率；复谱线模平方；实谐波正负成对。",
+      "conditions": "CT信号一周期平方可积；DT为有限N点周期序列。DFS右侧只加N个系数。CT实信号的倍二写法不可直接照搬给DT直流和偶N时的Nyquist自配对系数。",
+      "pitfalls": "不能把一根复指数系数的功率与整条实余弦功率混同，也不能把周期信号全轴能量拿来等同有限功率。理想冲激串不满足普通有限功率假设。",
+      "exampleIds": [
+        "2015-10",
+        "2024-02",
+        "O08"
+      ],
+      "diagramPaths": [],
+      "preview": "周期信号算平均功率；复谱线模平方；实谐波正负成对。"
+    },
+    {
+      "id": "HF-01",
+      "category": "definition",
+      "chapter": "4",
+      "title": "连续傅里叶变换：分析式与逆变换",
+      "section": "4.1.1",
+      "printPages": [
+        182
+      ],
+      "formula": "$$X(j\\omega)=\\int_{-\\infty}^{\\infty}x(t)e^{-j\\omega t}\\,dt,\\qquad\nx(t)=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}X(j\\omega)e^{j\\omega t}\\,d\\omega.$$\n由定义立即得到\n$$X(0)=\\int x(t)\\,dt,\\qquad\n\\int X(j\\omega)e^{j\\omega t_0}\\,d\\omega=2\\pi x(t_0).$$",
+      "explanation": "先辨别题目给的是时间函数还是频率函数，再固定本书的变换约定。求频域积分时，先尝试把它看成逆变换在某个时刻的取值：2022-08中不必积分平方sinc，直接用t₀=0、3读出时域波形高度，得到0与2π。普通正变换常先算零频面积检验常数。",
+      "memory": "正变换负号、逆变换正号；2π放在逆变换分母。零频看面积，频谱积分看原点。",
+      "conditions": "绝对可积信号可按通常积分定义；平方可积信号可在L²意义下讨论。周期、常数、冲激和阶跃须按适当的广义函数解释。逆变换在跳变处应使用收敛条件与左右极限平均值，不能随意指定单点值。",
+      "pitfalls": "把ω（弧度每秒）与f（赫兹）混用会漏2π；将∫Xdω写成x(0)也会漏2π。含指数e^{jωt₀}的积分读的是x(t₀)，不是x(−t₀)。",
+      "exampleIds": [
+        "2022-08",
+        "O15"
+      ],
+      "diagramPaths": [],
+      "preview": "正变换负号、逆变换正号；2π放在逆变换分母。零频看面积，频谱积分看原点。"
+    },
+    {
+      "id": "HF-02",
+      "category": "table",
+      "chapter": "4",
+      "title": "原书完整表4.2：常用傅里叶变换对",
+      "section": "4.6，表4.2",
+      "printPages": [
+        209
+      ],
+      "formula": "常用的三条出发点：\n$$\\delta(t)\\longleftrightarrow1,\\qquad\ne^{-at}u(t)\\longleftrightarrow\\frac1{a+j\\omega}\\quad(\\Re a>0),$$\n$$\\mathbf1_{\\{|t|<T_1\\}}\\longleftrightarrow\\frac{2\\sin(\\omega T_1)}{\\omega},\\qquad\n\\frac{\\sin Wt}{\\pi t}\\longleftrightarrow\\mathbf1_{\\{|\\omega|<W\\}}.$$\n原点按极限补值；矩形边界可按半值理解。",
+      "explanation": "表中每一行都是可直接配对的函数形状。做O14时先找到指数核、矩形与sinc，再根据题目追加调制、微分或相乘；做O15则反过来识别频谱。表末的n阶指数核带(n−1)!，适合把反复出现的高阶分母一次还原。截图完整保留表头、周期级数列和最后一行，没有只截某几条。",
+      "memory": "先记冲激、指数、矩形三类；其余常由平移、调制、微分、对偶生成。",
+      "conditions": "指数核要求Re a>0；n阶公式中n为正整数。复指数、常数、冲激列、周期信号及阶跃按分布解释；不是普通有限能量频谱。采用本书ω与1/(2π)逆变换约定。",
+      "pitfalls": "不要把sa(v)=sin(v)/v与归一化sinc(v)=sin(πv)/(πv)混用；周期信号的频谱冲激面积是2πaₖ，不是aₖ。指数核漏掉u(t)会变成另一类问题。",
+      "exampleIds": [
+        "O14",
+        "O15",
+        "O20"
+      ],
+      "diagramPaths": [
+        "assets/handbook-ctft-rect-sinc.svg",
+        "assets/handbook-ctft-triangle-sinc2.svg",
+        "assets/handbook-ctft-exponential-spectrum.svg"
+      ],
+      "preview": "先记冲激、指数、矩形三类；其余常由平移、调制、微分、对偶生成。"
+    },
+    {
+      "id": "HF-03",
+      "category": "table",
+      "chapter": "4",
+      "title": "原书完整表4.1：傅里叶变换性质",
+      "section": "4.6，表4.1",
+      "printPages": [
+        208,
+        209
+      ],
+      "formula": "运算方向先分清：\n$$x*y\\longleftrightarrow XY,\\qquad\nxy\\longleftrightarrow\\frac1{2\\pi}(X*Y),$$\n$$x^*(t)\\longleftrightarrow X^*(-j\\omega),\\qquad\nx(-t)\\longleftrightarrow X(-j\\omega).$$\n实信号另满足$X(-j\\omega)=X^*(j\\omega)$。",
+      "explanation": "查表先圈出题目的操作：卷积、相乘、共轭、反转、平移还是微分。若含多层操作，把括号内的最基本信号先命名，再逐层写变换，避免一步猜结果。两页截图组成表4.1全文，包含末尾实信号性质与Parseval；下一张表4.2另列，不把目录当公式依据。",
+      "memory": "卷积变乘积；乘积变卷积且多1/(2π)。共轭带反号，单纯反转只换频率符号。",
+      "conditions": "表中各运算须在经典积分、L²或分布框架中有定义；尤其不能随意把两个冲激相乘。一般复信号不能套用仅对实信号成立的共轭对称、实偶与虚奇结论。",
+      "pitfalls": "把X^*(jω)误当x^*(t)的变换；忽略时域相乘的1/(2π)；只凭图形“看起来对称”就假设输入实偶。积分性质中直流冲激项也不能删。",
+      "exampleIds": [
+        "O12",
+        "O13",
+        "O14",
+        "O16"
+      ],
+      "diagramPaths": [],
+      "preview": "卷积变乘积；乘积变卷积且多1/(2π)。共轭带反号，单纯反转只换频率符号。"
+    },
+    {
+      "id": "HF-04",
+      "category": "formula",
+      "chapter": "4",
+      "title": "周期信号：级数系数变成冲激线谱",
+      "section": "4.2",
+      "printPages": [
+        188
+      ],
+      "formula": "若$x(t)=\\sum_{k\\in\\mathbb Z}a_ke^{jk\\omega_0t}$，则\n$$X(j\\omega)=2\\pi\\sum_{k\\in\\mathbb Z}a_k\\delta(\\omega-k\\omega_0),\\qquad \\omega_0=\\frac{2\\pi}{T}.$$\n特别地，\n$$\\sum_{n\\in\\mathbb Z}\\delta(t-nT)\\longleftrightarrow\n\\frac{2\\pi}{T}\\sum_{k\\in\\mathbb Z}\\delta\\!\\left(\\omega-\\frac{2\\pi k}{T}\\right).$$",
+      "explanation": "先求一个周期内的级数系数，再把每个非零系数画成对应谐波位置上的冲激。不能把周期信号当有限支撑信号直接只积一周期后称为傅里叶变换。遇到LTI系统，谱线位置不变，冲激权重再乘H(jkω₀)。若信号平均值非零，零频也必须有冲激。",
+      "memory": "时间周期T越大，谱线间距2π/T越小；级数系数乘2π才是谱线面积。",
+      "conditions": "在温和分布意义下理解周期信号变换与冲激列；要求傅里叶级数系数具有合适的分布解释。T是所用展开周期，未必一定取最小周期，但频率索引须自洽。",
+      "pitfalls": "把冲激箭头高度当普通函数值；把a₀漏掉；将冲激列权重2π/T误记成T或1/T。正负频率要一起画，复信号谱线权重不必共轭。",
+      "exampleIds": [
+        "O16",
+        "O17"
+      ],
+      "diagramPaths": [],
+      "preview": "时间周期T越大，谱线间距2π/T越小；级数系数乘2π才是谱线面积。"
+    },
+    {
+      "id": "HF-05",
+      "category": "property",
+      "chapter": "4",
+      "title": "时移、频移与尺度：三件事分别处理",
+      "section": "4.3.2；4.3.5；4.3.6",
+      "printPages": [
+        191,
+        195,
+        197
+      ],
+      "formula": "$$x(t-t_0)\\longleftrightarrow e^{-j\\omega t_0}X(j\\omega),$$\n$$e^{j\\omega_ct}x(t)\\longleftrightarrow X\\!\\left(j(\\omega-\\omega_c)\\right),$$\n$$x(at)\\longleftrightarrow\\frac1{|a|}X\\!\\left(j\\frac{\\omega}{a}\\right),\\quad a\\ne0.$$\n因此$x(at-b)$的谱为$\\frac1{|a|}e^{-j\\omega b/a}X(j\\omega/a)$。",
+      "explanation": "先把括号改写成a(t−b/a)，认出实际时移b/a，再用尺度。平移不改幅度谱，只增加线性相位；调制把整个频谱沿频率轴搬移；时间压缩则频谱变宽，并需补幅度因子。余弦调制拆成正负两次移频各乘1/2。两移位三角形叠加时，提出线性相位后仍需检查剩余实谱是否变号。",
+      "memory": "时移：谱乘指数。频移：频谱平移。尺度：宽度互逆、幅度除|a|。",
+      "conditions": "尺度参数a不能为0；用ω表示连续角频率。相位只在频谱非零处定义。时移与尺度可用于适当分布，但叠加相位计算需明确所采用的频率符号约定。",
+      "pitfalls": "把x(2t−4)当延迟4，实际延迟2；漏1/|a|；把cos调制的两份谱各忘乘1/2；剩余实谱为负时相位还要补π，不能只写直线。",
+      "exampleIds": [
+        "O14",
+        "O17",
+        "2022-08"
+      ],
+      "diagramPaths": [],
+      "preview": "时移：谱乘指数。频移：频谱平移。尺度：宽度互逆、幅度除|a|。"
+    },
+    {
+      "id": "HF-06",
+      "category": "property",
+      "chapter": "4",
+      "title": "对偶：交换时频后还要反转并乘2π",
+      "section": "4.3.6",
+      "printPages": [
+        196,
+        197
+      ],
+      "formula": "若$x(t)\\longleftrightarrow X(j\\omega)$，定义$g(t)=X(jt)$，则\n$$g(t)\\longleftrightarrow G(j\\omega)=2\\pi x(-\\omega).$$\n例如\n$$e^{-|t|}\\longleftrightarrow\\frac2{1+\\omega^2}\n\\quad\\Longrightarrow\\quad\n\\frac2{1+t^2}\\longleftrightarrow2\\pi e^{-|\\omega|}.$$",
+      "explanation": "对偶不是简单把t和ω两个字母互换。先把原逆变换乘2π，再令频率变量取负，最后重命名积分变量，就会出现2π和反转。利用已知指数核推有理型时间函数，通常比重新做复变积分更快。O19正是把X(jω)的形状直接当成新时间函数来考这一步。",
+      "memory": "交换时频，带上“2π与负号”；若原函数为偶函数，负号被偶性吸收，但不能因此忘记它。",
+      "conditions": "在所采用的变换对有效的经典或分布意义下使用。g(t)=X(jt)表示将频谱作为实变量函数重新解释，不是把解析复函数随意沿另一条复平面路径求值。",
+      "pitfalls": "偶函数例子会遮住反转，容易误记成2πx(ω)；把2π放到分母；把X(jt)错误理解成原信号x(jt)。",
+      "exampleIds": [
+        "O19"
+      ],
+      "diagramPaths": [
+        "assets/handbook-ctft-sinc-rect.svg"
+      ],
+      "preview": "交换时频，带上“2π与负号”；若原函数为偶函数，负号被偶性吸收，但不能因此忘记它。"
+    },
+    {
+      "id": "HF-07",
+      "category": "property",
+      "chapter": "4",
+      "title": "微分与积分：直流冲激和主值项都要保留",
+      "section": "4.3.4；4.3.6",
+      "printPages": [
+        194,
+        197
+      ],
+      "formula": "$$x^{(m)}(t)\\longleftrightarrow(j\\omega)^mX(j\\omega),\\qquad\nt\\,x(t)\\longleftrightarrow j\\frac{dX(j\\omega)}{d\\omega}.$$\n若$q(t)=\\int_{-\\infty}^t x(\\tau)d\\tau$，则\n$$Q(j\\omega)=\\operatorname{pv}\\frac{X(j\\omega)}{j\\omega}+\\pi X(0)\\delta(\\omega).$$\n特别地，\n$$u(t)\\longleftrightarrow\\operatorname{pv}\\frac1{j\\omega}+\\pi\\delta(\\omega),\\qquad\n\\operatorname{pv}\\frac1{\\pi t}\\longleftrightarrow-j\\,\\operatorname{sgn}\\omega.$$",
+      "explanation": "阶梯、斜坡、折线题先求分布导数，把难积分的波形变成矩形或冲激，再除以jω还原；丢失的直流由两侧常值或积分公式补回。O12的导数是宽1矩形，所以先记导数谱为$D(j\\omega)=2\\sin(\\omega/2)/\\omega$，再写$X=D/(j\\omega)+\\pi\\delta(\\omega)$（除法按主值理解）。带t的指数核则直接对已知频谱求导。最后一条主值对由阶跃、符号函数及对偶推出，非普通反常积分。",
+      "memory": "时间微分乘jω；时间乘t变频域j倍导数。积分除jω之外，还要查零频直流。",
+      "conditions": "普通微分公式可由分部积分在边界项消失时得到；含跳变则导数须包括冲激并按分布处理。积分公式假设x、X具有足够正则性使零频值与主值乘积有定义；不能将任意奇异分布直接代入X(0)。",
+      "pitfalls": "对有跳变波形只求各段普通导数会漏δ；由jωX=G直接写X=G/(jω)会漏可存在的Cδ；1/ω、1/t必须注明主值，不能当作绝对收敛积分。",
+      "exampleIds": [
+        "O12",
+        "O14",
+        "O20"
+      ],
+      "diagramPaths": [],
+      "preview": "时间微分乘jω；时间乘t变频域j倍导数。积分除jω之外，还要查零频直流。"
+    },
+    {
+      "id": "HF-08",
+      "category": "formula",
+      "chapter": "4",
+      "title": "能量Parseval与频谱矩：不用先求完整逆变换",
+      "section": "4.3.7（含例4.14）",
+      "printPages": [
+        198,
+        199
+      ],
+      "formula": "$$E=\\int_{-\\infty}^{\\infty}|x(t)|^2dt\n=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}|X(j\\omega)|^2d\\omega.$$\n互能量形式为$\\int x(t)y^*(t)dt=\\frac1{2\\pi}\\int X(j\\omega)Y^*(j\\omega)d\\omega$。若可逐项微分，则\n$$x^{(m)}(0)=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}(j\\omega)^mX(j\\omega)d\\omega.$$",
+      "explanation": "平方积分先选容易的一侧。2014-07频谱有两个不重叠三角形，峰高2、半宽2；每个三角形的平方积分为16/3，合计32/3，所以时域能量为16/(3π)，完全不需求x(t)。频谱带ω或指数的积分则先考虑导数或指定时刻点值。周期信号应改用级数平均功率Parseval，不能把无限能量误当有限能量。",
+      "memory": "能量换边除2π；谐波功率用系数平方和。积分带jω，对应时间导数。",
+      "conditions": "能量等式用于平方可积信号或相应Plancherel意义；互能量式要求内积存在。频谱矩与导数的点值公式另需可交换微分积分的条件，原点有跳变/冲激时不能套普通导数值。",
+      "pitfalls": "能量写x²而没有模平方会错于复信号；画三角谱时积分|X|²，不是三角面积；混用周期平均功率公式；将∫ωX误记成2πx′(0)，正确还差j因子。",
+      "exampleIds": [
+        "2014-07",
+        "2026-03",
+        "2022-08"
+      ],
+      "diagramPaths": [],
+      "preview": "能量换边除2π；谐波功率用系数平方和。积分带jω，对应时间导数。"
+    },
+    {
+      "id": "HD-01",
+      "category": "definition",
+      "chapter": "5",
+      "title": "DTFT定义、连续频率变量与jΩ / e^{jω}记号",
+      "section": "5.1.1；5.3.1",
+      "printPages": [
+        229,
+        237
+      ],
+      "formula": "$$X(e^{j\\omega})=\\sum_{n=-\\infty}^{\\infty}x[n]e^{-j\\omega n},\\qquad x[n]=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}X(e^{j\\omega})e^{j\\omega n}d\\omega.$$\n$$X(e^{j(\\omega+2\\pi)})=X(e^{j\\omega}).$$\n连续时间用$X(j\\Omega)$，$\\Omega$单位为弧度/秒；离散时间用$X(e^{j\\omega})$，$\\omega$单位为弧度/样点。若$x[n]=x_c(nT)$，对应频率满足$\\omega=\\Omega T$（按$2\\pi$同余理解）。",
+      "explanation": "“离散”修饰时间索引$n$；DTFT的频率$\\omega$仍能连续取值。因为$n$为整数，$e^{j(\\omega+2\\pi)n}=e^{j\\omega n}$，相差$2\\pi$的频率是同一个离散复指数。记号$e^{j\\omega}$来自Z平面单位圆；$j\\Omega$来自拉普拉斯平面虚轴。它们不是把时间信号本身变成指数。由系统函数取傅里叶响应时，还要检查ROC是否包含单位圆或虚轴。",
+      "memory": "先看t还是n；n离散、ω连续；逆DTFT只积一个2π区间。",
+      "conditions": "有限序列及绝对可和序列可直接按定义处理；平方可和序列需按相应L²意义解释。周期序列通常采用冲激分布。原书公式采用正变换不带系数、逆变换1/(2π)的约定。",
+      "pitfalls": "把DTFT误认为只有N个频率点；用连续频率Ω直接代数字滤波器而漏T；对不含单位圆的Z变换强行称普通DTFT。",
+      "exampleIds": [
+        "O21",
+        "O22",
+        "2013-11"
+      ],
+      "diagramPaths": [],
+      "preview": "先看t还是n；n离散、ω连续；逆DTFT只积一个2π区间。"
+    },
+    {
+      "id": "HD-02",
+      "category": "formula",
+      "chapter": "5",
+      "title": "周期序列的DTFT：冲激权重是2πa_k",
+      "section": "5.2",
+      "printPages": [
+        234,
+        235
+      ],
+      "formula": "若$x[n]=\\sum_{k=0}^{N-1}a_ke^{j2\\pi kn/N}$，则\n$$X(e^{j\\omega})=2\\pi\\sum_{k\\in\\mathbb Z}a_k\\delta\\!\\left(\\omega-\\frac{2\\pi k}{N}\\right),\\qquad a_{k+N}=a_k.$$\n$$e^{j\\omega_0n}\\longleftrightarrow2\\pi\\sum_{m\\in\\mathbb Z}\\delta(\\omega-\\omega_0-2\\pi m).$$\n$$\\cos\\omega_0n\\longleftrightarrow\\pi\\sum_m[\\delta(\\omega-\\omega_0-2\\pi m)+\\delta(\\omega+\\omega_0-2\\pi m)].$$",
+      "explanation": "周期序列在时域不会衰减，不能把有限几项求和所得的连续包络当成它的DTFT。先求一个周期的DFS系数，再在$\\omega=2\\pi k/N$处画冲激，其面积为$2\\pi a_k$。主区间中的谱线最后要按$2\\pi$重复。若两个频率折回到同一位置，必须先加复权重：同号会叠加，反号可能相消；奈奎斯特边界处的正弦就是典型情形。",
+      "memory": "DFS画系数a_k；DTFT画冲激2πa_k；先折回，再相加。",
+      "conditions": "公式按广义函数理解；N为任意选定的有效整数周期，系数只需一个N点周期。主区间可取[-π,π)，在边界取舍时保持一致，避免重复计算同一根谱线。",
+      "pitfalls": "把a_k当冲激高度；忘2π副本；把±π当两个独立离散频率；由样点全零的最高正弦谐波宣称可恢复。",
+      "exampleIds": [
+        "O21",
+        "O11",
+        "2024-06"
+      ],
+      "diagramPaths": [],
+      "preview": "DFS画系数a_k；DTFT画冲激2πa_k；先折回，再相加。"
+    },
+    {
+      "id": "HD-03",
+      "category": "table",
+      "chapter": "5",
+      "title": "原书表5.2：基本DTFT变换对（两页完整表）",
+      "section": "5.6，表5.2",
+      "printPages": [
+        249,
+        250
+      ],
+      "formula": "最常用的四个起点：\n$$\\delta[n-n_0]\\longleftrightarrow e^{-j\\omega n_0},\\qquad a^nu[n]\\longleftrightarrow\\frac1{1-ae^{-j\\omega}},\\quad |a|<1.$$\n$$\\frac{\\sin(Wn)}{\\pi n}\\longleftrightarrow\\begin{cases}1,&|\\omega|<W,\\\\0,&W<|\\omega|<\\pi,\\end{cases}\\quad0<W<\\pi,$$\n其中$n=0$取$W/\\pi$，频谱按$2\\pi$延拓。\n$$x[n]=\\mathbf1_{|n|\\le M}\\longleftrightarrow\\frac{\\sin[(M+1/2)\\omega]}{\\sin(\\omega/2)}.$$",
+      "explanation": "两张截图合起来才是原教材完整的基本变换对表，不把若干重写公式当成整张原表。查表先认支撑：$a^nu[n]$是右边指数，而$a^{|n|}$是双边序列，谱不同。周期信号一栏同时给DTFT冲激列和DFS系数，要先认当前所问的对象。表中的单位阶跃与全时间正弦涉及分布；有限矩形与$|a|<1$的右边指数可按普通函数处理。",
+      "memory": "冲激→指数；指数→几何分式；有限矩形→正弦比；离散sinc→周期矩形。",
+      "conditions": "n0、M为整数且M≥0；右边指数普通DTFT要求|a|<1；sinc带宽在0与π之间。表中阶跃的奇异项按分布/主值解释，不能在ω=0做普通除法。",
+      "pitfalls": "给离散冲激套连续冲激的1/|a|尺度；将e^{-j10ω}看成δ[n+10]；把单位阶跃谱仅写成1/(1−e^{-jω})而漏周期冲激项。",
+      "exampleIds": [
+        "O21",
+        "O22",
+        "O23",
+        "O36"
+      ],
+      "diagramPaths": [],
+      "preview": "冲激→指数；指数→几何分式；有限矩形→正弦比；离散sinc→周期矩形。"
+    },
+    {
+      "id": "HD-04",
+      "category": "table",
+      "chapter": "5",
+      "title": "原书表5.1：DTFT性质（含完整续表）",
+      "section": "5.6，表5.1；5.3–5.5",
+      "printPages": [
+        248,
+        249
+      ],
+      "formula": "$$x[n-n_0]\\longleftrightarrow e^{-j\\omega n_0}X(e^{j\\omega}),\\qquad e^{j\\omega_0n}x[n]\\longleftrightarrow X(e^{j(\\omega-\\omega_0)}).$$\n$$x*y\\longleftrightarrow XY,\\qquad x[n]y[n]\\longleftrightarrow\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}X(e^{j\\theta})Y(e^{j(\\omega-\\theta)})d\\theta.$$\n$$nx[n]\\longleftrightarrow j\\frac{dX(e^{j\\omega})}{d\\omega},\\qquad x[n]-x[n-1]\\longleftrightarrow(1-e^{-j\\omega})X(e^{j\\omega}).$$\n实序列满足$X(e^{-j\\omega})=X^*(e^{j\\omega})$。",
+      "explanation": "先把复杂题拆成查表起点，再一层层应用性质，最后检查$2\\pi$周期性与共轭对称。时移$n_0$必须是整数；任意主周期内写出的$e^{-j\\omega/2}$不是半拍冲激，可以先按区间积分反演。表中的“时域扩展”指每两原样点之间插零，而不是连续时间任意$x(at)$；整数抽取$x[kn]$则会产生不同的混叠求和式。相乘对应的是周期频谱卷积，只积一周期，并带$1/(2\\pi)$。",
+      "memory": "时移加线性相位；调制搬频谱；卷积变乘积；乘积变一周期卷积。",
+      "conditions": "有关和、积分、导数存在，或采用适当分布解释。n0为整数；频移量任意但结果须按2π折回。实序列只推出共轭对称，不能直接推出频谱实值。",
+      "pitfalls": "漏掉周期卷积前1/(2π)；把时域插零与抽取混同；把实奇序列误判为实奇频谱；只除差分因子而漏掉累加所需的零频分布项。",
+      "exampleIds": [
+        "O22",
+        "O24",
+        "2013-15",
+        "2018-09"
+      ],
+      "diagramPaths": [],
+      "preview": "时移加线性相位；调制搬频谱；卷积变乘积；乘积变一周期卷积。"
+    },
+    {
+      "id": "HD-05",
+      "category": "property",
+      "chapter": "5",
+      "title": "DFS、DTFT、DFT：同一组N点数据的三种读法",
+      "section": "3.6.2；5.2（DFT换算为独立补充）",
+      "printPages": [
+        135,
+        234
+      ],
+      "formula": "对给定数组$v[0],\\ldots,v[N-1]$，本手册采用未归一化DFT：\n$$V_D[k]=\\sum_{n=0}^{N-1}v[n]e^{-j2\\pi kn/N},\\qquad v[n]=\\frac1N\\sum_{k=0}^{N-1}V_D[k]e^{j2\\pi kn/N}.$$\n将数组在外面补零所得$v_0[n]$的DTFT记$V_0(e^{j\\omega})$，则\n$$V_D[k]=V_0(e^{j2\\pi k/N}).$$\n将数组按N周期重复所得$\\widetilde v[n]$的DFS系数为\n$$a_k=\\frac1N V_D[k],\\qquad \\widetilde V(e^{j\\omega})=2\\pi\\sum_{k\\in\\mathbb Z}a_k\\delta(\\omega-2\\pi k/N).$$",
+      "explanation": "原图直接提供DFS与周期信号DTFT公式；这里的DFT定义及三者换算由本手册独立整理，不冒称原书有DFT专节。同一N个数字若“区间外补零”，得到连续的周期DTFT；若“按N点重复”，得到DFS及冲激线谱；若“只取DTFT的N个等距频率”，得到DFT。O21(i)的六点数组(1,1,1,1,1,0)在直流处分别给DTFT值5、DFT值5、DFS系数5/6，周期延拓DTFT的零频冲激权重则为5π/3。",
+      "memory": "补零看包络，重复看线谱；DFT=包络采N点=N×DFS。",
+      "conditions": "N为正整数，公式使用正DFT不除N、逆DFT除N的约定。DFT乘积逆变换对应N点循环卷积；要计算长度Lx、Lh序列的线性卷积，需补零至N≥Lx+Lh−1。",
+      "pitfalls": "认为DFT等于DFS系数而漏N；将周期延拓的冲激谱误当零延拓的连续包络；看到有限N点数据就擅自决定其区间外支撑。",
+      "exampleIds": [
+        "O21",
+        "O11",
+        "O08"
+      ],
+      "diagramPaths": [],
+      "preview": "补零看包络，重复看线谱；DFT=包络采N点=N×DFS。"
+    },
+    {
+      "id": "HD-06",
+      "category": "formula",
+      "chapter": "5",
+      "title": "离散Parseval：非周期能量、周期功率与DFT归一化",
+      "section": "5.3.9；3.7.3",
+      "printPages": [
+        241,
+        242,
+        141
+      ],
+      "formula": "非周期平方可和序列：\n$$\\sum_{n\\in\\mathbb Z}|x[n]|^2=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}|X(e^{j\\omega})|^2d\\omega.$$\nN周期序列的平均功率：\n$$\\frac1N\\sum_{n=0}^{N-1}|\\widetilde x[n]|^2=\\sum_{k=0}^{N-1}|a_k|^2.$$\n按HD-05的DFT约定（独立换算）：\n$$\\sum_{n=0}^{N-1}|v[n]|^2=\\frac1N\\sum_{k=0}^{N-1}|V_D[k]|^2.$$",
+      "explanation": "先看题目要“总能量”还是“周期平均功率”，再选对应式。频谱虽然以2π重复，非周期序列的总能量只需积分一频率周期；若把DTFT谱平方积分到全实轴，会把同一能量重复无穷次。周期序列的总时间能量通常无穷，因此改用一周期平均功率。O08中两个共轭DFS系数各为5，功率为25+25=50；E11有五个单位样点，能量为5，故其一周期DTFT模平方积分为10π。",
+      "memory": "DTFT：积分除2π；DFS：时域除N；未归一DFT：频域平方和除N。",
+      "conditions": "DTFT能量式对平方可和序列按L²变换成立；周期式求和都只取一个N点周期。周期冲激频谱不能直接把δ平方后套能量积分，必须回DFS功率式。",
+      "pitfalls": "混用能量与平均功率；在DFS右侧对所有整数k重复相加；把复系数一对各5误认为总功率25；DFT归一化约定改变却不调整N。",
+      "exampleIds": [
+        "O08",
+        "E11",
+        "O21"
+      ],
+      "diagramPaths": [],
+      "preview": "DTFT：积分除2π；DFS：时域除N；未归一DFT：频域平方和除N。"
+    },
+    {
+      "id": "HD-07",
+      "category": "formula",
+      "chapter": "5",
+      "title": "有限矩形序列：先数样点、找中心，再写正弦比",
+      "section": "5.1.2例5.3；5.3.3",
+      "printPages": [
+        231,
+        232,
+        237
+      ],
+      "formula": "若$x[n]=1$仅在$n_0\\le n\\le n_0+L-1$成立，$L\\ge1$为整数，则\n$$X(e^{j\\omega})=e^{-j\\omega[n_0+(L-1)/2]}\\frac{\\sin(L\\omega/2)}{\\sin(\\omega/2)}.$$\n$$X(e^{j2\\pi m})=L,\\qquad m\\in\\mathbb Z.$$\nE11取$n_0=1,L=5$：\n$$X=e^{-j3\\omega}\\frac{\\sin(5\\omega/2)}{\\sin(\\omega/2)},\\quad X(1)=5,\\quad X(e^{j\\pi})=-1.$$",
+      "explanation": "第一步从阶跃差写出实际非零索引，长度是末点减首点再加1；接着把序列平移到中心，使频谱的线性相位与实偶正弦比自然分开。原书图是$n=-2$到2的五点矩形，E11则将它整体右移3，因此多出$e^{-j3\\omega}$。正弦比的$0/0$是代数改写产生的可去奇点，回到原有限和即可取值。下方中文图显示的是带符号的实频谱，不是绝对值幅度谱。",
+      "memory": "端点数清楚：长度+1；中心定相位；零频看样点和。",
+      "conditions": "n0、L均为整数，信号区间外为0。表达式中2π整数点按连续延拓；L为偶数时中心可为半整数，但完整频谱仍以2π周期重复，不能拆开因子后单独判周期。",
+      "pitfalls": "把u[n−1]−u[n−6]算成6个点；把0/0处写0；正弦比变负时不补π相位；把带符号实频谱直接当非负幅度谱。",
+      "exampleIds": [
+        "E11",
+        "O21",
+        "2026-02"
+      ],
+      "diagramPaths": [
+        "assets/handbook-dtft-periodicity.svg"
+      ],
+      "preview": "端点数清楚：长度+1；中心定相位；零频看样点和。"
+    },
+    {
+      "id": "HS-01",
+      "category": "formula",
+      "chapter": "6",
+      "title": "频率响应的幅相与群时延：先幅度、后相位、再求导",
+      "section": "6.2；6.2.2",
+      "printPages": [
+        275,
+        277
+      ],
+      "formula": "$$Y(j\\omega)=H(j\\omega)X(j\\omega),\\qquad |Y|=|H||X|,\\quad \\phi_Y=\\phi_H+\\phi_X.$$\n$$\\tau_g(\\omega)=-\\frac{d\\phi_H(\\omega)}{d\\omega}.$$\n对实LTI系统的一个全时间正弦分量：\n$$A\\cos(\\omega_0t+\\theta)\\ \\longmapsto\\ A|H(j\\omega_0)|\\cos[\\omega_0t+\\theta+\\phi_H(\\omega_0)].$$\n离散系统同样使用 $H(e^{j\\Omega})$，其相位斜率给出的群时延单位为样本。",
+      "explanation": "把输入拆成一个个频率看，每个频率经过系统只改幅度和相位；幅频回答“这条频率放大多少”，相频回答“这条频率转了多少角”。群时延再看相位随频率的斜率，描述一个窄频带波包的大致延迟。算群时延前先连续展开相位，主值相位从π折回−π的跳变只是画图约定。判滤波类型可比较低频、高频和中间频带的增益，不能仅凭分母阶数。一个频率的相移也不能直接等同于所有频率共同的时间延迟。",
+      "memory": "“模相乘，角相加；群时延对相位求负导。” 若 $H=e^{-j\\omega t_0}$，代入必须得到 $\\tau_g=t_0$，用它检查负号。",
+      "conditions": "要求频响在所考察频率存在；上式正弦输出是全时间特征分量或稳态结果，开启输入的暂态需另计。群时延使用频响非零处的展开相位；窄带波包的时延解释还要求带内幅度与相位变化足够平滑。",
+      "pitfalls": "把主值相位的2π折返当成真实突变；忽略群时延定义的负号；把全通误当无失真；对带u(t)的余弦只写稳态却漏自然响应。",
+      "exampleIds": [
+        "2018-09",
+        "2018-11"
+      ],
+      "diagramPaths": [],
+      "preview": "“模相乘，角相加；群时延对相位求负导。” 若 $H=e^{-j\\omega t_0}$，代入必须得到 $\\tau_g=t_0$，用它检查负号。"
+    },
+    {
+      "id": "HS-02",
+      "category": "property",
+      "chapter": "6",
+      "title": "无失真条件：各频率必须共享同一个延时",
+      "section": "6.2.1",
+      "printPages": [
+        275,
+        276
+      ],
+      "formula": "$$y(t)=Kx(t-t_0)\\quad\\Longleftrightarrow\\quad H(j\\omega)=Ke^{-j\\omega t_0}\\ \\text{在输入所占频带成立}.$$\n若取 $K>0$：$|H|=K$，$\\phi_H=-\\omega t_0\\pmod{2\\pi}$。若允许实负K，负号应计入一个固定π相位。\n两条谐波的延迟相位为 $\\varphi_1,\\varphi_2$ 时，必须用同一 $t_0$ 同时满足两式。2018题的第二输出为余弦，故实际条件是\n$$\\varphi_2-2\\varphi_1\\equiv\\frac\\pi2\\pmod{2\\pi}.$$",
+      "explanation": "无失真要求输出只是整条波形同倍缩放、整体平移。只检查幅度相同还不够：若不同频率需要不同的延时，它们叠加后的波形会变。群时延恒定是线性相位的检查办法，但还要同时检查模是否恒定和额外相位是否符合一个实常数K。对于只含两条谱线的输入，直接逐条写相位同余条件通常最快；对于任意带限输入，则要在整个输入频带验证。输入完全没有占据的频率无需强加条件。",
+      "memory": "“一把尺子缩放，一只时钟延迟。” 幅度条件和相位条件缺一不可；先把正弦、余弦统一，再比较延迟相位。",
+      "conditions": "讨论给定输入的无失真时，只约束其实际非零频谱；讨论所有输入则须覆盖全部所需频率。两谐波相位关系假定两项幅度均非零、公共增益K的约定一致。单频信号可吸收相位，并不能证明系统对多频也无失真。",
+      "pitfalls": "全通只有|H|不变，未保证相位线性；把余弦第二项的φ2直接等同2φ1，漏π/2；只比较主值相位而不考虑模2π；把恒定群时延单独当成完整的充分条件。",
+      "exampleIds": [
+        "2018-03",
+        "2015-11"
+      ],
+      "diagramPaths": [],
+      "preview": "“一把尺子缩放，一只时钟延迟。” 幅度条件和相位条件缺一不可；先把正弦、余弦统一，再比较延迟相位。"
+    },
+    {
+      "id": "HS-03",
+      "category": "formula",
+      "chapter": "7",
+      "title": "冲激抽样的频谱：三件事是间隔、幅度、恢复增益",
+      "section": "7.1.1",
+      "printPages": [
+        332,
+        333,
+        334
+      ],
+      "formula": "$$p(t)=\\sum_n\\delta(t-nT_s),\\qquad \\omega_s=\\frac{2\\pi}{T_s},$$\n$$P(j\\omega)=\\frac{2\\pi}{T_s}\\sum_k\\delta(\\omega-k\\omega_s),\\qquad X_s(j\\omega)=\\frac1{T_s}\\sum_kX(j(\\omega-k\\omega_s)).$$\n若 $X=0$ 于 $|\\omega|>\\omega_M$，无混叠时可选恢复低通\n$$H_r(j\\omega)=T_s\\quad(|\\omega|<\\omega_c),\\qquad \\omega_M<\\omega_c<\\omega_s-\\omega_M.$$\n若抽样串前另乘常数A，每份复制谱改乘 $A/T_s$，完整恢复的通带增益相应改为 $T_s/A$。",
+      "explanation": "先把原谱复制到kωs，每份左右边缘都跟着平移，最后将所有重合部分相加。单位冲激串让每份高度乘1/Ts，这是抽样周期倒数，不是1/ωs。恢复器要补回Ts，所以题给“低通增益1”时，输出即使没有混叠也通常缩成x/Ts。图中为了比较形状把纵轴写成TsXs，已将这个高度系数消掉；实际答题仍要恢复。交替冲激和周期门控必须先求各自的时钟谱，不能机械照搬普通抽样的中心位置和权重。",
+      "memory": "“时间隔Ts，频域隔2π/Ts；复制先除Ts，恢复再乘Ts。” 碰到题目自带Ts权重，先抵消一次再继续。",
+      "conditions": "本卡的均匀复制公式针对双边、等间隔、单位权重的理想冲激抽样；x在样点需可取值。严格无混叠恢复要求原谱带限并为滤波器留出分离空间。普通连续谱的边界单点与冲激谱线的边界需分别处理。",
+      "pitfalls": "忘掉1/Ts；把Ts权重算两次；画副本只标中心不标边缘；把相交谱取最大值而不是相加；将周期矩形门控的各阶系数一律当1/Ts。",
+      "exampleIds": [
+        "O26",
+        "O29",
+        "2022-07"
+      ],
+      "diagramPaths": [
+        "assets/handbook-sampling-spectra.svg"
+      ],
+      "preview": "“时间隔Ts，频域隔2π/Ts；复制先除Ts，恢复再乘Ts。” 碰到题目自带Ts权重，先抵消一次再继续。"
+    },
+    {
+      "id": "HS-04",
+      "category": "property",
+      "chapter": "7",
+      "title": "奈奎斯特临界边界：等号要看谱线和相位",
+      "section": "7.3；例7.1",
+      "printPages": [
+        340,
+        342
+      ],
+      "formula": "经典保证条件：$\\omega_s>2\\omega_M$，即 $T_s<\\pi/\\omega_M$。\n临界余弦样值为\n$$x(t)=\\cos\\left(\\frac{\\omega_s}{2}t+\\phi\\right)\\quad\\Rightarrow\\quad x[n]=(-1)^n\\cos\\phi.$$\n特别地，\n$$\\sin\\left(\\frac{\\omega_s}{2}nT_s\\right)=\\sin(\\pi n)=0.$$\n对临界带限的普通频谱，若接触处为零且无离散谱线，可按具体支撑与滤波端点讨论；不能据此保证任意边缘信号。",
+      "explanation": "“每周期刚好采两个点”会固定地只看见某两个相位。若正好采到正弦的过零点，整条非零波形得到的样值全是零；若换成余弦，相位又会影响保留下来的幅度。因此临界边界不能只凭图上两份频带刚好相接就宣布无条件可恢复。2015真题与O27的最高正弦恰好丢失；2016交替抽样三角谱则在边缘为零，可以按该具体频谱恢复。这两种结论并不矛盾：关键在接触点承载了什么信息。",
+      "memory": "“等号先问：边缘有冲激吗？样点踩过零了吗？” 把最高频率那一项直接代t=nTs，通常比争论“算不算混叠”更快。",
+      "conditions": "临界式使用普通均匀样点nTs；若时钟平移，需把平移量纳入相位。教材严格采样定理用大于号给普遍保证，等号情况必须额外给出边缘谱、相位和滤波器端点约定。",
+      "pitfalls": "把“两个谱开区间没有重叠”当成边缘谱线也无损；误说奈奎斯特频率的所有正弦/余弦必然都消失；看到某个三角谱能在边缘恢复就推广为所有带限信号。",
+      "exampleIds": [
+        "O27",
+        "2015-12",
+        "2016-06"
+      ],
+      "diagramPaths": [],
+      "preview": "“等号先问：边缘有冲激吗？样点踩过零了吗？” 把最高频率那一项直接代t=nTs，通常比争论“算不算混叠”更快。"
+    },
+    {
+      "id": "HS-05",
+      "category": "formula",
+      "chapter": "7",
+      "title": "CT↔DT频率映射：ω乘Ts才是数字角频率",
+      "section": "7.4",
+      "printPages": [
+        345,
+        346
+      ],
+      "formula": "$$x_d[n]=x_c(nT_s),\\qquad e^{j\\omega t}\\big|_{t=nT_s}=e^{j\\Omega n},\\quad \\Omega=\\omega T_s.$$\n$$X_d(e^{j\\Omega})=\\frac1{T_s}\\sum_kX_c\\left(j\\frac{\\Omega-2\\pi k}{T_s}\\right).$$\n相同采样/恢复时钟、标准理想恢复、输入无混叠时：\n$$H_{\\mathrm{eq}}(j\\omega)=H_d(e^{j\\omega T_s}),\\quad |\\omega|<\\pi/T_s;\\qquad \\omega_{c,\\mathrm{eq}}=\\frac{\\Omega_c}{T_s}.$$\n连续频率单位为rad/s，离散频率单位为rad/样本；$j\\omega$ 与 $e^{j\\Omega}$ 是不同变换域中的函数参数。",
+      "explanation": "C/D先取样，再把真实时刻nTs重标为整数n，因而同一段波形的相位必须保持ωnTs=Ωn。这就是乘Ts的来源，不能凭记忆把连续ω直接代进数字滤波器。整个链路从外面仍是连续输入、连续输出；在无混叠与标准恢复条件下，各允许频率只乘$H_d(e^{j\\omega T_s})$，所以可等效为一个连续滤波器。数字截止不变而采样率提高一倍，等效连续截止也提高一倍。若恢复时钟不同，应重新推导时间伸缩；不能继续沿用本卡的同钟频响。",
+      "memory": "“相位对齐：ω·Ts·n=Ω·n。” 先检查单位，再代频响；ω=ωs应映成Ω=2π，是最方便的量纲自检。",
+      "conditions": "等效H式假定数字系统LTI、输入限于无混叠频带、C/D与D/C采用相同间隔Ts、D/C采用标准理想插值。题目若给非标准恢复增益或其它保持器，其频响应另外相乘。",
+      "pitfalls": "把 $j\\omega$ 和 $e^{j\\Omega}$当成随意互换的记号；漏Ω=ωTs的坐标换算；把DTFT的2π周期解释成原连续谱周期；已经混叠后还声称所有输入都服从同一个连续LTI等效频响。",
+      "exampleIds": [
+        "2013-11"
+      ],
+      "diagramPaths": [],
+      "preview": "“相位对齐：ω·Ts·n=Ω·n。” 先检查单位，再代频响；ω=ωs应映成Ω=2π，是最方便的量纲自检。"
+    },
+    {
+      "id": "HS-06",
+      "category": "formula",
+      "chapter": "8",
+      "title": "AM同步解调：两次余弦先积化和差，再数低通增益",
+      "section": "8.1.2；8.2.1；习题8.21、8.23",
+      "printPages": [
+        375,
+        376,
+        377
+      ],
+      "formula": "发射 $s(t)=x(t)\\cos(\\omega_ct+\\theta_m)$，接收乘 $\\cos(\\omega_dt+\\theta_d)$。记 $\\Delta\\omega=\\omega_d-\\omega_c$、$\\Delta\\theta=\\theta_d-\\theta_m$。\n$$w(t)=\\frac{x(t)}2\\cos(\\Delta\\omega t+\\Delta\\theta)+\\frac{x(t)}2\\cos[(\\omega_c+\\omega_d)t+\\theta_m+\\theta_d].$$\n当低通完整通过差频项、滤除和频项且通带增益为G时：\n$$y(t)=\\frac G2x(t)\\cos(\\Delta\\omega t+\\Delta\\theta).$$\n若x带宽为B，一组严格分离条件是\n$$B+|\\Delta\\omega|<\\omega_{co}<|\\omega_c+\\omega_d|-B.$$\n原书图8.8取 $G=2$。完全同频同相时输出x；O32偏频且无相差时 $y=x\\cos(\\Delta\\omega t)$，\n$$Y(j\\omega)=\\tfrac12[X(j(\\omega-\\Delta\\omega))+X(j(\\omega+\\Delta\\omega))].$$",
+      "explanation": "同步解调的第一步先不动x，把两个载波相乘拆成差频和和频。接着标出两组谱的最远、最近边缘，确认题给低通确实保留前者并删除后者，最后再乘通带增益。原书图8.8明示增益2，它恰好补偿差频项前的1/2；单位增益下输出才会再减半。固定相位差只是cosΔθ常数，偏频则出现随时间起伏、甚至过零的cos(Δωt+Δθ)，不能靠一个常数对任意输入校正。O32画谱时各1/2三角形在重叠处相加；不要套用单位增益变式的各1/4。",
+      "memory": "“差频留下，和频丢掉；先除二，再乘G。” 看原框图增益后再写最后比例；图8.8的G=2必须圈出来。",
+      "conditions": "乘法器和低通按题给理想模型，x带限且截止满足所需支撑分离。若差频谱被低通截断，不能直接写Gxcos/2。两载波共同初相相同则Δθ=0；G=2是原书图8.8的具体数值，并非所有解调器自动如此。",
+      "pitfalls": "把原书图8.8的增益2漏成1；两次频移后忘记合并中央两条路径；相位差误写为两相位之和；把非零偏频误当固定幅度损失；三角谱重叠不相加。",
+      "exampleIds": [
+        "O31",
+        "O32",
+        "2024-05",
+        "2013-12"
+      ],
+      "diagramPaths": [],
+      "preview": "“差频留下，和频丢掉；先除二，再乘G。” 看原框图增益后再写最后比例；图8.8的G=2必须圈出来。"
+    },
+    {
+      "id": "HL-01",
+      "category": "definition",
+      "chapter": "9",
+      "title": "双边拉普拉斯：定义、ROC与因果稳定",
+      "section": "9.1、9.2、9.7.1–9.7.2",
+      "printPages": [
+        417,
+        422,
+        443,
+        444
+      ],
+      "formula": "$$X_b(s)=\\int_{-\\infty}^{\\infty}x(t)e^{-st}\\,dt,\\qquad s=\\sigma+j\\omega.$$\n\n$$X_b(\\sigma+j\\omega)=\\mathcal F\\{x(t)e^{-\\sigma t}\\}.$$\n\n|问题|应检查的条件|\n|---|---|\n|由双边拉氏式得到傅里叶变换|若ROC含整条虚轴$\\sigma=0$，可安全令$s=j\\omega$|\n|LTI是否因果|$h(t)=0$于$t<0$；有理因果系统的ROC在最右实际极点右侧|\n|LTI是否BIBO稳定|普通核满足$\\int\\lvert h(t)\\rvert dt<\\infty$；等价地ROC含虚轴|\n|因果有理系统稳定|对适当有理式，未抵消极点全部严格在开左半平面|\n\n**同一分式的三个系统：**\n$$H(s)=\\frac1{(s+1)(s-2)}=-\\frac{1/3}{s+1}+\\frac{1/3}{s-2}.$$\n\n$$\\begin{array}{c|c|c}\n\\text{ROC}&h(t)&\\text{性质}\\\\\\hline\n\\Re s>2&\\frac13(e^{2t}-e^{-t})u(t)&\\text{因果、不稳定}\\\\\n-1<\\Re s<2&-\\frac13e^{-t}u(t)-\\frac13e^{2t}u(-t)&\\text{非因果、稳定}\\\\\n\\Re s<-1&\\frac13(e^{-t}-e^{2t})u(-t)&\\text{非因果、不稳定}\n\\end{array}$$",
+      "explanation": "s平面ROC控制的是把哪一尾指数压下去，并非分母的附属说明。先标极点、再根据题给因果或稳定选ROC，最后为每个部分分式选左右边。上表是独立推导的数值示例，原书截图提供定义与判据；右半平面极点只否定因果且稳定同时成立，不否定一切双边稳定实现。",
+      "memory": "竖条看虚轴：因果向右收，稳定要夹住虚轴。",
+      "conditions": "ROC判据针对双边变换。连续BIBO判据通常用于普通可积核；允许有限直通δ时按有限绝对权重理解。极点判稳还要求有理式适当，微分器H=s不能因无有限极点就称稳定。 不在绝对收敛ROC内的条件收敛或广义傅里叶变换应另行论证，不能仅凭代入式断言存在或不存在。",
+      "pitfalls": "不要先把每项都配成u(t)；不要把“右半平面零点”误当成原系统不稳定极点；约分只描述外部零状态映射，内部模态须另查。",
+      "exampleIds": [
+        "O34",
+        "2017-02",
+        "2020-04"
+      ],
+      "diagramPaths": [
+        "assets/handbook-roc-compare.svg"
+      ],
+      "preview": "竖条看虚轴：因果向右收，稳定要夹住虚轴。"
+    },
+    {
+      "id": "HL-02",
+      "category": "table",
+      "chapter": "9",
+      "title": "完整表9.2：基本函数的拉普拉斯变换对",
+      "section": "9.6，表9.2",
+      "printPages": [
+        442
+      ],
+      "formula": "设$n=1,2,\\ldots$，下表按常用实数$a$写ROC。\n\n|序号|时域信号|双边拉普拉斯变换|ROC|\n|---|---|---|---|\n|1|$\\delta(t)$|$1$|全s平面|\n|2|$u(t)$|$1/s$|$\\Re s>0$|\n|3|$-u(-t)$|$1/s$|$\\Re s<0$|\n|4|$t^{n-1}u(t)/(n-1)!$|$1/s^n$|$\\Re s>0$|\n|5|$-t^{n-1}u(-t)/(n-1)!$|$1/s^n$|$\\Re s<0$|\n|6|$e^{-at}u(t)$|$1/(s+a)$|$\\Re s>-a$|\n|7|$-e^{-at}u(-t)$|$1/(s+a)$|$\\Re s<-a$|\n|8|$t^{n-1}e^{-at}u(t)/(n-1)!$|$1/(s+a)^n$|$\\Re s>-a$|\n|9|$-t^{n-1}e^{-at}u(-t)/(n-1)!$|$1/(s+a)^n$|$\\Re s<-a$|\n|10|$\\delta(t-T)$|$e^{-sT}$|全s平面|\n|11|$\\cos(\\omega_0t)u(t)$|$s/(s^2+\\omega_0^2)$|$\\Re s>0$|\n|12|$\\sin(\\omega_0t)u(t)$|$\\omega_0/(s^2+\\omega_0^2)$|$\\Re s>0$|\n|13|$e^{-at}\\cos(\\omega_0t)u(t)$|$(s+a)/[(s+a)^2+\\omega_0^2]$|$\\Re s>-a$|\n|14|$e^{-at}\\sin(\\omega_0t)u(t)$|$\\omega_0/[(s+a)^2+\\omega_0^2]$|$\\Re s>-a$|\n|15|$u_n(t)=d^n\\delta(t)/dt^n$|$s^n$|全s平面|\n|16|$u_{-n}(t)=\\underbrace{u*\\cdots*u}_{n\\text{次}}$|$1/s^n$|$\\Re s>0$|\n\n**左右边同式，不能漏ROC：**\n$$\\frac1{s-a}\\leftrightarrow\\begin{cases}e^{at}u(t),&\\Re s>\\Re a,\\\\-e^{at}u(-t),&\\Re s<\\Re a.\\end{cases}$$",
+      "explanation": "截图保留原书表9.2的全部16项；文字表按同一顺序整理，便于检索。重极点先找阶数n，再补t的幂和阶乘。两条左边指数的负号是变换对本身的部分，不是部分分式留数；留数为负时还要再乘一次。最后两项是原书的广义函数记号，连续冲激导数不能按普通函数的高度处理。",
+      "memory": "右边往右收，左边多负号；n重极点配t的n−1次方和(n−1)!。",
+      "conditions": "通常取ω₀>0、a为实数；复数a时ROC边界用−Re a。各表项按其双边支撑使用；若把信号截成单边，必须重新检查原积分。",
+      "pitfalls": "表中1/(s+a)不能自动认成右边指数；δ(t−T)的变换不额外乘2π；冲激导数与普通指数的初值定理适用条件不同。",
+      "exampleIds": [
+        "O33",
+        "O34",
+        "2020-04",
+        "2020-10"
+      ],
+      "diagramPaths": [],
+      "preview": "右边往右收，左边多负号；n重极点配t的n−1次方和(n−1)!。"
+    },
+    {
+      "id": "HL-03",
+      "category": "table",
+      "chapter": "9",
+      "title": "完整表9.1：双边性质与连续初终值",
+      "section": "9.5.11，表9.1；9.5.10",
+      "printPages": [
+        441
+      ],
+      "formula": "设$x\\leftrightarrow X$、$x_i\\leftrightarrow X_i$，以下是**双边**性质。\n\n|时域运算|s域结果|ROC提示|\n|---|---|---|\n|$ax_1+bx_2$|$aX_1+bX_2$|至少含两ROC交集；抵消后可扩大|\n|$x(t-t_0)$|$e^{-st_0}X(s)$|同原ROC|\n|$e^{s_0t}x(t)$|$X(s-s_0)$|原ROC平移$s_0$|\n|$x(at),\\ a\\ne0$|$\\frac1{\\lvert a\\rvert}X(s/a)$|检查$s/a$是否落在原ROC|\n|$x^*(t)$|$X^*(s^*)$|ROC共轭反射|\n|$x_1*x_2$|$X_1X_2$|至少含ROC交集|\n|$x'(t)$|$sX(s)$|按双边导数理解，可能发生抵消|\n|$-tx(t)$|$dX(s)/ds$|原ROC|\n|$\\int_{-\\infty}^{t}x(\\tau)d\\tau$|$X(s)/s$|至少含原ROC与$\\Re s>0$的交集|\n\n**连续初值、终值是另带条件的极限：**\n$$x(0^+)=\\lim_{s\\to\\infty}sX(s),\\qquad x(\\infty)=\\lim_{s\\to0}sX(s).$$\n\n终值核验必须检查$sX(s)$的相关极点均在开左半平面；不能仅计算一个代数极限。",
+      "explanation": "截图保留表9.1全部性质与ROC栏；旁边的文字表不是将单边初值项删去后的近似式，而是不同积分范围下的双边规则。时域乘t与对t求导是两条相反方向的对应关系。初终值极限可快速核验留数的系数和，但遇到原点冲激、持续振荡或增长模式时，先检查条件再使用。",
+      "memory": "时域导数乘s，时域乘−t才对s求导；双边不补0⁻，单边必须补。",
+      "conditions": "积分与求导在变换存在的相应区域/广义函数意义下使用。初值定理要求右边普通信号且0处无冲激及其高阶导数。终值需存在并满足衰减极点条件；表中简写不能替代这项检查。",
+      "pitfalls": "共轭是X*(s*)而不是只给X(s)加星；缩放系数是1/|a|；因果系统存在非零初态时不能把双边零状态式当作完整单边初值方程。",
+      "exampleIds": [
+        "O35",
+        "2017-02",
+        "2020-10"
+      ],
+      "diagramPaths": [],
+      "preview": "时域导数乘s，时域乘−t才对s求导；双边不补0⁻，单边必须补。"
+    },
+    {
+      "id": "HL-04",
+      "category": "table",
+      "chapter": "9",
+      "title": "单边拉普拉斯：完整表9.3与0⁻初值",
+      "section": "9.9、9.9.2–9.9.3，表9.3",
+      "printPages": [
+        456,
+        458,
+        459,
+        460
+      ],
+      "formula": "$$X_+(s)=\\int_{0^-}^{\\infty}x(t)e^{-st}\\,dt.$$\n\n$$\\mathcal L_+\\{x'\\}=sX_+(s)-x(0^-),$$\n$$\\mathcal L_+\\{x''\\}=s^2X_+(s)-sx(0^-)-x'(0^-).$$\n\n|表9.3运算|单边结果|\n|---|---|\n|线性$ax_1+bx_2$|$aX_1+bX_2$|\n|$e^{s_0t}x(t)$|$X_+(s-s_0)$|\n|$x(at),a>0$|$X_+(s/a)/a$|\n|$x^*(t)$|$X_+^*(s^*)$|\n|$x_1*x_2$，两信号在t<0均为0|$X_{1,+}X_{2,+}$|\n|$x'(t)$|$sX_+-x(0^-)$|\n|$-tx(t)$|$dX_+/ds$|\n|$\\int_{0^-}^{t}x(\\tau)d\\tau$|$X_+/s$|\n\n**将完整响应分成来源不同的两项（自主归纳）：**\n$$A(s)Y_+(s)=B(s)X_+(s)+I_0(s),$$\n$$Y_{zs}=\\frac{B}{A}X_+,\\qquad Y_{zi}=\\frac{I_0}{A},\\qquad Y=Y_{zs}+Y_{zi}.$$\n\n例如$y''+4y'+3y=2x'+x$、$x=u$、$y(0^-)=1,y'(0^-)=0$时：\n$$Y=\\frac{s+4}{(s+1)(s+3)}+\\frac{2s+1}{s(s+1)(s+3)}.$$\n$$y(0^+)=1,\\qquad y'(0^+)=2.$$\n\n初态项$I_0$须由实际方程逐项整理，输入自身的0⁻边界项也不能省略。",
+      "explanation": "原书表9.3整张保留，二阶公式由同节正文给出；响应分解和数值例子是自主归纳。0⁻初值描述输入作用前的状态，不等于0⁺；输入导数含δ时，右导数可以瞬间改变。非零初态实验要保留I₀，不能直接拿全响应Y/X当H。单边只保留观测段，含负时间信号的双边卷积一般不能由单边乘积替代。",
+      "memory": "先写左初值，再看冲激改右初值；初态清零求H，保留初态求全响应。",
+      "conditions": "单边时域缩放只列a>0。卷积乘积需两输入的负时间部分均为0；初终值行仍需无原点奇异项和相应极点条件。所有0⁻量按题目给定处理，不自行设0。",
+      "pitfalls": "不要把双边sX直接套单边；不要把题给左导数当成右导数；不要把同初态响应随每一段输入重复叠加；若积分下限不是0⁻应先核对边界。",
+      "exampleIds": [
+        "O35",
+        "2015-14",
+        "2016-07",
+        "2019-10",
+        "2020-05"
+      ],
+      "diagramPaths": [],
+      "preview": "先写左初值，再看冲激改右初值；初态清零求H，保留初态求全响应。"
+    },
+    {
+      "id": "HL-05",
+      "category": "definition",
+      "chapter": "10",
+      "title": "双边Z：定义、单位圆与ROC选边",
+      "section": "10.1、10.2、10.7.1–10.7.2",
+      "printPages": [
+        474,
+        475,
+        478,
+        497,
+        498
+      ],
+      "formula": "$$X_b(z)=\\sum_{n=-\\infty}^{\\infty}x[n]z^{-n},\\qquad z=re^{j\\omega}.$$\n$$X_b(re^{j\\omega})=\\mathcal F_D\\{x[n]r^{-n}\\}.$$\n\n当单位圆在ROC内，可安全令$X(e^{j\\omega})=X(z)|_{z=e^{j\\omega}}$得到相应DTFT；条件收敛或广义情形另论。\n\n$$\\frac1{1-az^{-1}}=\\frac z{z-a}\\leftrightarrow\\begin{cases}\na^nu[n],&\\lvert z\\rvert>\\lvert a\\rvert,\\\\\n-a^nu[-n-1],&\\lvert z\\rvert<\\lvert a\\rvert.\n\\end{cases}$$\n\n|要判断的性质|应使用的条件|\n|---|---|\n|因果|$h[n]=0$于$n<0$；ROC在某圆外，且包含无穷远|\n|稳定|$\\sum_n\\lvert h[n]\\rvert<\\infty$；ROC包含整个单位圆|\n|因果有理系统稳定|全部实际极点严格在单位圆内，并满足因果的无穷远条件|\n|分子1与分子z的区别|$1/(z-a)$的右边逆变换从$n=1$开始，不是$n=0$|\n\n**圆环选边示例（自主推导）：**\n$$H(z)=\\frac z{(z-1/2)(z-2)},\\quad\\tfrac12<\\lvert z\\rvert<2,$$\n$$h[n]=-\\frac23(1/2)^nu[n]-\\frac23 2^nu[-n-1].$$\n它稳定但非因果；若改为因果ROC$\\lvert z\\rvert>2$，则出现增长的$2^n$，反而不稳定。",
+      "explanation": "先根据题目条件定ROC，再把每个极点项选成左边或右边。稳定只要求两尾各向自己的无穷远衰减，并不要求全部极点在单位圆内；“所有极点在内”须连同因果条件使用。Z域变量位于单位圆时才对应数字角频率ω，沿单位圆走一圈即2π周期。图中用同一分式对照三种ROC，强调代数式不能唯一指定系统。",
+      "memory": "圆环看单位圆：稳定圈住它，因果往外选；左边项多负号且止于−1。",
+      "conditions": "因果ROC还必须包含无穷远；只有“右边序列”可能提前到负索引，不能直接等同因果。实际极点以精确约分后为准，内部稳定仍需查看原结构。",
+      "pitfalls": "单位圆上的极点不属于ROC；不能只在式子里代e^(jω)就声称DTFT存在；分子z与分子1的表项相差一拍；左边支撑u[−n−1]勿改成u[−n]。",
+      "exampleIds": [
+        "O36",
+        "O37",
+        "2017-04",
+        "2022-11"
+      ],
+      "diagramPaths": [
+        "assets/handbook-roc-compare.svg"
+      ],
+      "preview": "圆环看单位圆：稳定圈住它，因果往外选；左边项多负号且止于−1。"
+    },
+    {
+      "id": "HL-06",
+      "category": "table",
+      "chapter": "10",
+      "title": "完整表10.2：常用Z变换对",
+      "section": "10.6，表10.2",
+      "printPages": [
+        496
+      ],
+      "formula": "设$q=z^{-1}$，表内$r>0$、$a\\ne0$。\n\n|序号|序列|双边Z变换|ROC|\n|---|---|---|---|\n|1|$\\delta[n]$|$1$|全z平面|\n|2|$u[n]$|$1/(1-q)$|$\\lvert z\\rvert>1$|\n|3|$-u[-n-1]$|$1/(1-q)$|$\\lvert z\\rvert<1$|\n|4|$\\delta[n-m]$|$z^{-m}$|m>0排除0；m<0排除无穷远；m=0全平面|\n|5|$a^nu[n]$|$1/(1-aq)$|$\\lvert z\\rvert>\\lvert a\\rvert$|\n|6|$-a^nu[-n-1]$|$1/(1-aq)$|$\\lvert z\\rvert<\\lvert a\\rvert$|\n|7|$na^nu[n]$|$aq/(1-aq)^2$|$\\lvert z\\rvert>\\lvert a\\rvert$|\n|8|$-na^nu[-n-1]$|$aq/(1-aq)^2$|$\\lvert z\\rvert<\\lvert a\\rvert$|\n|9|$\\cos(\\omega_0n)u[n]$|$[1-\\cos(\\omega_0)q]/[1-2\\cos(\\omega_0)q+q^2]$|$\\lvert z\\rvert>1$|\n|10|$\\sin(\\omega_0n)u[n]$|$\\sin(\\omega_0)q/[1-2\\cos(\\omega_0)q+q^2]$|$\\lvert z\\rvert>1$|\n|11|$r^n\\cos(\\omega_0n)u[n]$|$[1-r\\cos(\\omega_0)q]/[1-2r\\cos(\\omega_0)q+r^2q^2]$|$\\lvert z\\rvert>r$|\n|12|$r^n\\sin(\\omega_0n)u[n]$|$r\\sin(\\omega_0)q/[1-2r\\cos(\\omega_0)q+r^2q^2]$|$\\lvert z\\rvert>r$|\n\n**把分子1改成可直接查表的分子z：**\n$$\\frac1{z-a}=z^{-1}\\frac z{z-a}.$$\n$$\\frac1{z-a}\\leftrightarrow\\begin{cases}a^{n-1}u[n-1],&\\lvert z\\rvert>\\lvert a\\rvert,\\\\-a^{n-1}u[-n],&\\lvert z\\rvert<\\lvert a\\rvert.\\end{cases}$$",
+      "explanation": "截图保留原书表10.2全部12项。文字表用q简化长分式；逆变换时最后仍还原q=z⁻¹。正余弦的二阶分母来自一对共轭极点，r决定衰减半径、ω₀决定旋转角。幂次乘n导致二阶极点。另列分子1的移位版本是自主归纳，用于防止从表中直接抄错起点，尤其双边左边项包含n=0。",
+      "memory": "分子z从0起，分子1先延一拍；正幂z表示提前，负幂表示延迟。",
+      "conditions": "正余弦表按一般非退化频率使用；若正弦恒为0或因特殊参数发生抵消，实际ROC可能扩大。有限样点序列需单独核对0与无穷远。",
+      "pitfalls": "a可能为负或复数，ROC看|a|，不能按a本身大小判断；左边序列的负号与a的符号不同；同一分式的ROC必须随题意给出。",
+      "exampleIds": [
+        "O36",
+        "O37",
+        "2019-12",
+        "2021-09"
+      ],
+      "diagramPaths": [],
+      "preview": "分子z从0起，分子1先延一拍；正幂z表示提前，负幂表示延迟。"
+    },
+    {
+      "id": "HL-07",
+      "category": "table",
+      "chapter": "10",
+      "title": "完整表10.1：双边Z性质与初值定理",
+      "section": "10.5.9–10.5.10，表10.1",
+      "printPages": [
+        495
+      ],
+      "formula": "设$x[n]\\leftrightarrow X(z)$。\n\n|序列运算|双边Z域结果|\n|---|---|\n|$ax_1[n]+bx_2[n]$|$aX_1(z)+bX_2(z)$|\n|$x[n-n_0]$|$z^{-n_0}X(z)$|\n|$e^{j\\omega_0n}x[n]$|$X(e^{-j\\omega_0}z)$|\n|$z_0^nx[n]$|$X(z/z_0)$|\n|$a^nx[n]$|$X(z/a)$|\n|$x[-n]$|$X(z^{-1})$|\n|$x_k[n]=x[m]$于$n=mk$，其余0|$X(z^k)$|\n|$x^*[n]$|$X^*(z^*)$|\n|$x_1*x_2$|$X_1X_2$|\n|$x[n]-x[n-1]$|$(1-z^{-1})X(z)$|\n|$\\sum_{k=-\\infty}^{n}x[k]$|$X(z)/(1-z^{-1})$|\n|$nx[n]$|$-z\\,dX(z)/dz$|\n\n**ROC跟随运算：**移位保留原环带但另查0与无穷远；乘$z_0^n$使环带半径乘$\\lvert z_0\\rvert$；反转把半径区间倒数；线性和卷积至少含原ROC交集。\n\n**原书只列离散初值：**若$n<0$时$x[n]=0$，\n$$x[0]=\\lim_{z\\to\\infty}X(z).$$\n\n**独立补充，非本书表10.1原文：**在终值存在、消去$z=1$后其余相关极点均严格在单位圆内的条件下，\n$$\\lim_{n\\to\\infty}x[n]=\\lim_{z\\to1}(1-z^{-1})X(z).$$",
+      "explanation": "截图完整保留原书性质表和初值正文；离散终值另作醒目标注，避免冒称原书表内内容。差分和累加互为方向相反的操作，分别对应乘、除1−z⁻¹。卷积、调制、反转得到新代数式后都要跟踪ROC；若只抄变换表达式，双边逆变换仍可能不唯一。初值式看的是z趋无穷，而非z趋0。",
+      "memory": "连续−t配d/ds，离散n配−z d/dz；反转倒z，调制缩放z。",
+      "conditions": "双边累加公式须保证原累加与变换存在，ROC至少含原ROC与|z|>1的交集。初值要求负索引为0；独立补充的终值公式必须先检查衰减条件，不能用于(−1)^n或2^n。",
+      "pitfalls": "共轭写X*(z*)，不是X*(1/z*)；单位圆上两种表达可能偶然混淆，离开单位圆通常不同。不得把单边移位初态项混入本双边表。",
+      "exampleIds": [
+        "O36",
+        "O37",
+        "2018-08",
+        "2021-09"
+      ],
+      "diagramPaths": [],
+      "preview": "连续−t配d/ds，离散n配−z d/dz；反转倒z，调制缩放z。"
+    },
+    {
+      "id": "HL-08",
+      "category": "table",
+      "chapter": "10",
+      "title": "单边Z：完整表10.3与负索引初态",
+      "section": "10.9、10.9.2–10.9.3，表10.3",
+      "printPages": [
+        506,
+        508,
+        509,
+        510
+      ],
+      "formula": "$$X_+(z)=\\sum_{n=0}^{\\infty}x[n]z^{-n}.$$\n\n|运算|单边结果|\n|---|---|\n|$x[n-1]$|$z^{-1}X_+(z)+x[-1]$|\n|$x[n-2]$|$z^{-2}X_+(z)+x[-1]z^{-1}+x[-2]$|\n|$x[n+1]$|$zX_+(z)-zx[0]$|\n|$x[n]-x[n-1]$|$(1-z^{-1})X_+(z)-x[-1]$|\n|$\\sum_{k=0}^{n}x[k]$|$X_+(z)/(1-z^{-1})$|\n|$nx[n]$|$-z\\,dX_+(z)/dz$|\n\n线性、$e^{j\\omega_0n}$及$z_0^n$调制、时间扩展、共轭的公式与表10.1对应项相同。卷积乘积要求两序列在$n<0$时均为0；不能把双边时间反转公式直接用于单边截取。\n\n**带初态差分方程示例（按原书例10.37自主归纳）：**\n$$y[n]+3y[n-1]=x[n],\\quad y[-1]=\\beta,\\quad x[n]=\\alpha u[n],$$\n$$Y_+(z)=\\underbrace{\\frac{-3\\beta}{1+3z^{-1}}}_{Y_{zi}}+\\underbrace{\\frac{\\alpha}{(1+3z^{-1})(1-z^{-1})}}_{Y_{zs}}.$$\n$$\\alpha=8,\\ \\beta=1\\quad\\Longrightarrow\\quad y[n]=[3(-3)^n+2]u[n].$$",
+      "explanation": "截图保留原书表10.3全表，随后正文给出一拍、两拍移位的边界项与非零初态求解。表中累加按其相关负时间/边界前提使用，本卡将求和下限明确写为0，避免遗失负时间累计常数。先把y[−1]等状态代入变换式，再区分初态与输入来源；从−1到0已经递推一次，指数系数通常不等于题给初值。",
+      "memory": "单边延时要捎上负索引；一拍加x[−1]，两拍再加x[−2]。",
+      "conditions": "表10.3是真实原书单边表，数值分解是依原例自主整理。单边卷积公式需两信号负索引为0；单边并无普遍的x[−n]↔X(z⁻¹)规则。本卡不把离散终值归给原书。",
+      "pitfalls": "不可把y[−1]直接当y[0]；零状态清掉初态并不删除输入起点；同一个非零初态只加一次；全时余弦特征响应与有限起点响应须分开。",
+      "exampleIds": [
+        "2016-09",
+        "2018-09",
+        "2021-09"
+      ],
+      "diagramPaths": [],
+      "preview": "单边延时要捎上负索引；一拍加x[−1]，两拍再加x[−2]。"
+    },
+    {
+      "id": "HB-04",
+      "category": "formula",
+      "chapter": "11",
+      "title": "反馈闭环：先列求和节点，再找实际极点",
+      "section": "11.1、11.2.3；符号与稳定步骤独立归纳",
+      "conceptIds": [
+        "C-11.01"
+      ],
+      "formula": "负反馈按$e=x-Gy$、$y=He$列式：\n$$Q=\\frac YX=\\frac H{1+HG}.$$\n正反馈按$e=x+Gy$列式：\n$$Q=\\frac H{1-HG}.$$\n稳定判断针对闭环实际系统：连续系统检查虚轴是否在ROC内；离散系统检查单位圆是否在ROC内。\n对适当有理因果系统，连续实际极点须全部在开左半平面；离散实际极点须全部严格位于单位圆内。",
+      "explanation": "不要先背分母正负号：从图上的求和节点写出e，再代入y=He，移项后自然得到闭环分母。参数题先把Q化成多项式之比，求稳定区间；到边界时单独检查虚轴或单位圆极点、重根与抵消。外部输入输出函数的约分可能隐藏内部模态，因此题目问内部稳定时还须回到原结构。",
+      "memory": "负反馈节点是减号，移到分母变加号；正反馈相反。开环稳定不等于闭环稳定，边界振荡不等于BIBO稳定。",
+      "conditions": "标准标量LTI反馈互联需良定义；有直通项时先排除代数回路奇异。闭环极点判据须连同因果性、适当性与ROC解释。延时环路不一定能化成有限阶有理式。",
+      "pitfalls": "只看开环极点；把有限一次回波误加成反馈分母；临界点不单独检查；只凭约分后的Q就断定全部内部状态稳定。",
+      "exampleIds": [
+        "2010-19",
+        "2023-08",
+        "O40"
+      ],
+      "diagramPaths": [],
+      "preview": "负反馈节点是减号，移到分母变加号；正反馈相反。开环稳定不等于闭环稳定，边界振荡不等于BIBO稳定。"
+    },
+    {
+      "id": "HM-01",
+      "category": "common",
+      "chapter": "2",
+      "title": "支撑先行：先求重叠，再算卷积",
+      "section": "自主归纳｜教材依据2.1.2、2.2.2（卷积和与卷积积分）",
+      "conceptIds": [
+        "C-2.01",
+        "C-2.02"
+      ],
+      "formula": "$y(t)=\\int x(\\tau)h(t-\\tau)d\\tau$；若$x$支撑于$[a,b]$、$h$支撑于$[c,d]$，则有效积分限为$\\max(a,t-d)\\le\\tau\\le\\min(b,t-c)$。离散求和另须取有效整数端点。",
+      "explanation": "1. 把第二个信号的所有自变量统一换成$t-\\tau$或$n-k$，从两个非零条件分别列不等式，不先套积分原函数。\n\n2. 连续题取区间交集，离散题取整数交集；令上下界相等或主导边界切换，找出分段点。2025-01中输入窗$[0,2]$、核窗$[0,4]$，所以分段点是$0,2,4,6$。\n\n3. 只在重叠区计算。该题被积函数是$3e^{-3t}e^\\tau$，可统一写成$3e^{-3t}(e^b-e^a)$；2022-02则先得$2\\le k\\le n+1$，再做有限等比和。\n\n4. 用支撑和首点核对：2025-01输出只在$[0,6]$，立即知$y(7)=0$；2022-02首个非零点是$n=1$，只有一项，值为$45$。",
+      "memory": "出现阶跃截断、有限矩形、左右边指数，第一笔就写“两个非零条件的交集”。",
+      "conditions": "卷积描述要求所讨论的是LTI零状态映射；一般时变核不能压成单一h(t−τ)。",
+      "pitfalls": "连续积分的孤立端点通常不改面积，离散端点却是一整项；整数闭区间项数为U−L+1。",
+      "exampleIds": [
+        "2025-01",
+        "2022-02",
+        "2009-14"
+      ],
+      "diagramPaths": [
+        "assets/2025_q1_waveform.svg"
+      ],
+      "preview": "出现阶跃截断、有限矩形、左右边指数，第一笔就写“两个非零条件的交集”。"
+    },
+    {
+      "id": "HM-02",
+      "category": "common",
+      "chapter": "3",
+      "title": "特征输入：把整条LTI链测成一个复增益",
+      "section": "自主归纳｜教材依据3.8、4.4、5.4（指数信号与LTI响应）",
+      "conceptIds": [
+        "C-3.04",
+        "C-4.05",
+        "C-5.03"
+      ],
+      "formula": "$e^{j\\omega t}\\mapsto H(j\\omega)e^{j\\omega t}$；离散一般指数为$z_0^n\\mapsto H(z_0)z_0^n$，后式须在相应卷积收敛的$z_0$处使用。",
+      "explanation": "1. 先确认输入是全时间指数，且系统为LTI、相应响应存在；再把指数代入卷积，提出与求和或积分变量无关的因子。\n\n2. 余下系数就是$H(j\\omega)$或$H(z_0)$。2021-04在$\\omega_0$处幅度为1、相位为$k\\omega_0$，所以输出为$e^{jk\\omega_0}e^{j\\omega_0t}$。\n\n3. 遇到“某全时间指数输入输出恒零”，先写零点条件。2019-11的$(-2)^n$给$H(-2)=0$，代其已知实验所得有理式，解得$a=-9/8$，而不是把$-2$当作角频率。\n\n4. 多个谐波输入分别乘各自增益后相加；缺失的输入谐波不能由零状态LTI系统凭空生成，2017-01正可据此排除二次谐波目标。",
+      "memory": "看到全时间e的指数、sin/cos、或“输入某指数而输出为零”，先试特征输入，不先做长卷积。",
+      "conditions": "系统须线性且时不变，复指数所在频率或z₀处的卷积须收敛；实余弦合并还要注意正负频率共轭关系。",
+      "pitfalls": "cos(ωt)u(t)开启时含暂态；非零初态另加零输入响应。全时间(-2)ⁿ用的是Z域取值H(-2)，不是H(e^{-j2})。",
+      "exampleIds": [
+        "2021-04",
+        "2019-11",
+        "2017-01"
+      ],
+      "diagramPaths": [],
+      "preview": "看到全时间e的指数、sin/cos、或“输入某指数而输出为零”，先试特征输入，不先做长卷积。"
+    },
+    {
+      "id": "HM-03",
+      "category": "common",
+      "chapter": "2",
+      "title": "先拆零输入与零状态，同初态实验先相减",
+      "section": "自主归纳｜教材依据2.4.1脚注及1.6.6（响应分解与叠加）；同初态消元为解题迁移",
+      "conceptIds": [
+        "C-2.04",
+        "C-2.09",
+        "C-10.06"
+      ],
+      "formula": "$y=y_{zi}+y_{zs}$；同初态两实验有$Y_1=HX_1+Z$、$Y_2=HX_2+Z$，故$Y_1-Y_2=H(X_1-X_2)$。",
+      "explanation": "1. 先把初态贡献命名为同一个$Z$；输入改变时只能让零状态部分按比例变化，不能把完整输出当成冲激响应。\n\n2. 相同初态实验先相减消$Z$。2022-10给$Y_1=1+1/(s+1)$、$Y_2=3/(s+1)$，故$H(1-1/s)=(s-1)/(s+1)$，解得$H=s/(s+1)$。\n\n3. 回代一条实验求$Z=2/(s+1)$，从而$y_{zi}=2e^{-t}u(t)$；再用另一条实验核对，而不是分别添加两份初态。\n\n4. 新输入延时时只移动其零状态响应，初态仍从原起算时刻演化。2012-08的输入$u(t)+u(t-1)$应只加一次零输入项。",
+      "memory": "题干出现“同一起始状态”“全响应”“初始储能”，先问哪些项只由初态产生。",
+      "conditions": "须有线性动态分解；写成单一H并使用时移还需时不变解释。初态模型必须与题给内部框图或方程一致。",
+      "pitfalls": "非零初态的冲激输入全响应一般不是h；不能对每个拆出的输入分量各加一次零输入响应，也不能把整个旧输出一起延时。",
+      "exampleIds": [
+        "2022-10",
+        "2017-09",
+        "2012-08"
+      ],
+      "diagramPaths": [],
+      "preview": "题干出现“同一起始状态”“全响应”“初始储能”，先问哪些项只由初态产生。"
+    },
+    {
+      "id": "HM-04",
+      "category": "common",
+      "chapter": "10",
+      "title": "ROC先行：先选左右边，再谈因果与稳定",
+      "section": "自主归纳｜教材依据9.2、10.2、9.7.1–2、10.7.1–2",
+      "conceptIds": [
+        "C-9.02",
+        "C-10.02",
+        "C-9.04",
+        "C-10.04"
+      ],
+      "formula": "$\\dfrac{z}{z-a}\\leftrightarrow a^nu[n]$在$|z|>|a|$；同一分式在$|z|<|a|$对应$-a^nu[-n-1]$。稳定要求$\\mathrm{ROC}_s$包含整个虚轴、$\\mathrm{ROC}_z$包含整个单位圆。",
+      "explanation": "1. 先因式分解，按实部或模排列实际极点；题给因果、稳定、右边或双边条件用于挑ROC，不能只记代数分式。\n\n2. 逐项按所选ROC决定左右边和符号。2017-04的$1/2<|z|<3$要求$1/2$极点项取右边、3极点项取左边，而不是把两项都写成因果指数。\n\n3. 再核对稳定区域：单位圆在ROC内可安全取DTFT；条件收敛或广义情形需另论。2024-10因果ROC为$|z|>2$，因此普通频响不存在，即使形式上能把$z$替成$e^{j\\omega}$。\n\n4. 参数抵消后必须重写实际分式与ROC，再区别外部BIBO稳定和未被消掉的内部模态；原来的最外极点不一定仍是外部极点。",
+      "memory": "出现“双边逆变换”“稳定实现”“ROC”“频响是否存在”，第一笔先画极点和可能收敛域。",
+      "conditions": "这里采用普通双边Laplace/Z变换；因果有理稳定判据还要排除非适当连续微分器等无界直达算子。",
+      "pitfalls": "左边序列有额外负号与不同起点；“因果”不自动意味着稳定。零极点相消也不自动证明所有内部状态稳定。",
+      "exampleIds": [
+        "2017-04",
+        "2017-10",
+        "2024-10"
+      ],
+      "diagramPaths": [],
+      "preview": "出现“双边逆变换”“稳定实现”“ROC”“频响是否存在”，第一笔先画极点和可能收敛域。"
+    },
+    {
+      "id": "HM-05",
+      "category": "common",
+      "chapter": "1",
+      "title": "由图到分段：先搬断点，再叠加门函数",
+      "section": "自主归纳｜教材依据1.2.1（时移、反转、尺度）",
+      "conceptIds": [
+        "C-1.01"
+      ],
+      "formula": "对$z(t)=x(at+b)$，原断点$\\tau_i$映到$t_i=(\\tau_i-b)/a$（$a\\ne0$）；$a<0$时按新t的先后重新排列。",
+      "explanation": "1. 先列原图每个断点、平台、斜率和冲激，不能只凭图形整体“往左往右挪”。若已知的是变换后的图，先反解自变量关系。\n\n2. 2018-01已知$g(t)=f(-t/2)$，故$f(t+1)=g(-2t-2)$。g的断点$-4,-2,4$分别变成$t=1,0,-3$，重排为$-3,0,1$。\n\n3. 再执行额外乘门$u(-t)$，删去$t>0$部分；本题留下$-3<t<0$的高度1平台，所以$y=u(t+3)-u(t)$，原斜坡段被门截去。\n\n4. 含冲激时把普通图形幅值和冲激面积分开处理。2022-04的$3\\delta(-3t+3)$权重变为1，不随普通斜坡的纵坐标规则直接复制。",
+      "memory": "看到x(at+b)、给的是f(−t/2)图、或变换后再乘u(t)，先写断点映射表，最后描图。",
+      "conditions": "原断点和波形须能从题图可靠读出；普通函数孤立端点的约定通常不影响积分，但冲激面积不能忽略。",
+      "pitfalls": "负尺度既改变顺序又改变区间不等号；普通波形不额外乘1/|a|，连续冲激才要按面积缩放。",
+      "exampleIds": [
+        "2018-01",
+        "2022-04"
+      ],
+      "diagramPaths": [
+        "assets/2022-q3-wave.svg"
+      ],
+      "preview": "看到x(at+b)、给的是f(−t/2)图、或变换后再乘u(t)，先写断点映射表，最后描图。"
+    },
+    {
+      "id": "HM-06",
+      "category": "common",
+      "chapter": "3",
+      "title": "周期与FS：统一频率网格，再逐根搬移或滤波",
+      "section": "自主归纳｜教材依据3.3.2、3.5、3.8（系数、性质与周期输入响应）",
+      "conceptIds": [
+        "C-3.01",
+        "C-3.03",
+        "C-3.04"
+      ],
+      "formula": "$\\omega_0=2\\pi/T_0$，$a_k=T_0^{-1}\\int_{T_0}x(t)e^{-jk\\omega_0t}dt$；LTI输出系数$b_k=a_kH(jk\\omega_0)$。乘$\\cos(m\\omega_0t)$则变为$(a_{k-m}+a_{k+m})/2$。",
+      "explanation": "1. 先选全题共同展开周期，列清基频；载波的角频率除以基频才是系数索引。2023-04共同基频π，所以cos(100πt)落在第±100项。\n\n2. 选分段少、对称好的整周期积分，直流单独由平均值求。该题方波$X_0=1/2$，$X_{k\\ne0}=\\sin(k\\pi/2)/(k\\pi)$。\n\n3. 调制就在索引上搬移，$Z_k=(X_{k-100}+X_{k+100})/2$；滤波则逐根乘同频率H。2017-05的延时理想低通只筛选通带内谐波，并保留其延时相位。\n\n4. 命中零索引时回用直流值：2023-04有$Z_{\\pm100}=1/4$。没有的输入谐波经零状态LTI后仍没有，不能凭滤波器通带自行添加。",
+      "memory": "题干同时出现周期、载波、级数、功率或周期输入系统，先把所有分量放在同一频率网格上。",
+      "conditions": "连续级数索引一般无限；N周期离散序列只需N个独立系数。周期LTI响应须存在且讨论零状态。",
+      "pitfalls": "载波第几谐波不是看频率数字本身；直流不能硬代1/k式，离散系数的模N周期性不能套到连续级数。",
+      "exampleIds": [
+        "2023-04",
+        "2017-05",
+        "2025-03"
+      ],
+      "diagramPaths": [],
+      "preview": "题干同时出现周期、载波、级数、功率或周期输入系统，先把所有分量放在同一频率网格上。"
+    },
+    {
+      "id": "HM-07",
+      "category": "special",
+      "chapter": "4",
+      "title": "求导转冲激：用斜率和跳跃替代分段长积分",
+      "section": "自主归纳｜教材依据1.4.2、2.5.3及4.3变换性质；波形求导为解题归纳",
+      "conceptIds": [
+        "C-1.10",
+        "C-4.02"
+      ],
+      "formula": "$x^\\prime(t)=\\text{各开区间的普通导数}+\\sum_i[x]_{t_i}\\delta(t-t_i)$；已有冲激$A\\delta(t-t_i)$求导为$A\\delta^\\prime(t-t_i)$。$\\mathcal F\\{x^\\prime\\}=j\\omega X$，但求导不能决定原信号的常数项。",
+      "explanation": "1. 先区分原图中的跳变、折点与已有冲激：跳变变δ，连续折点只是普通导数换值；原本的δ才会变δ′。\n\n2. 2022-04变换后$z=\\delta(t-1)+2t[u(t)-u(t-1)]$；故$z^\\prime=\\delta^\\prime(t-1)+2[u(t)-u(t-1)]-2\\delta(t-1)$，在0没有额外跳变δ。\n\n3. 周期锯齿2024-03在每个$2m\\pi$处从$2\\pi$回跳到0，故$f^\\prime=1-2\\pi\\sum_m\\delta(t-2m\\pi)$，非零谐波导数系数为-1，除以jn即得$c_n=j/n$。\n\n4. 最后用平均值补回原级数直流$c_0=\\pi$；连续FT若经除jω反推，也要检查是否遗漏δ(ω)。",
+      "memory": "分段线性图形或周期锯齿看起来要做多段分部积分时，先试求导，把图换成常值段和少量冲激。",
+      "conditions": "按分布导数处理跳变与冲激；变换和反推须采用同一傅里叶约定，周期情形用谐波系数微分性质。",
+      "pitfalls": "只有函数跳跃才直接产生δ，斜率改变但函数连续不会在一阶导数产生δ。求导丢失直流，不能直接除jω就结束。",
+      "exampleIds": [
+        "2022-04",
+        "2024-03"
+      ],
+      "diagramPaths": [
+        "assets/2022-q3-wave.svg"
+      ],
+      "preview": "分段线性图形或周期锯齿看起来要做多段分部积分时，先试求导，把图换成常值段和少量冲激。"
+    },
+    {
+      "id": "HM-08",
+      "category": "special",
+      "chapter": "4",
+      "title": "参数求导：从一阶指数表项生成t的幂",
+      "section": "自主归纳｜教材依据4.3、4.6及9.1表项；对衰减参数求导为独立迁移",
+      "conceptIds": [
+        "C-4.02",
+        "C-9.01"
+      ],
+      "formula": "$-\\partial_a e^{-at}=te^{-at}$，所以$\\mathcal L\\{t^me^{-at}u(t)\\}=(-\\partial_a)^m(s+a)^{-1}=m!/(s+a)^{m+1}$。通常CTFT中将s换为jω时还需$a>0$。",
+      "explanation": "1. 看到$te^{-at}$或$t^me^{-at}$，先把a当变量；由最简单表项$e^{-at}u\\leftrightarrow1/(s+a)$求参数导数，而不从头积分。\n\n2. 取a=1、m=1，直接得$te^{-t}u\\leftrightarrow1/(s+1)^2$。2012-16于是可列$[1/(s+1)+G]/(s+2)=1/(s+1)^2$。\n\n3. 移项得$G=(s+2)/(s+1)^2-1/(s+1)=1/(s+1)^2$，因此未知支路仍为$g=te^{-t}u$。\n\n4. 2024-07阶跃求导后也出现同一h，立即认出H的二重极点；随后才用X=Y/H反求输入，不必再积分求H。",
+      "memory": "一个熟悉的指数信号只多乘t或t的幂，先想“对哪个参数求导能把这个因子带出来”。",
+      "conditions": "交换参数导数与积分须有相应收敛条件；Laplace表项要求Re(s+a)>0，普通CTFT用衰减a>0，不能把增长指数硬套成通常FT。",
+      "pitfalls": "对衰减参数求导带负号；它与对频率求导的j因子是两条不同公式。2009-15原印te^{2t}sin4t不能据此声称普通FT存在。",
+      "exampleIds": [
+        "2012-16",
+        "2024-07"
+      ],
+      "diagramPaths": [],
+      "preview": "一个熟悉的指数信号只多乘t或t的幂，先想“对哪个参数求导能把这个因子带出来”。"
+    },
+    {
+      "id": "HM-09",
+      "category": "special",
+      "chapter": "S",
+      "title": "残差正交：不必先把所有基归一化",
+      "section": "自主归纳｜教材依据3.4有限项傅里叶最佳逼近；一般正交基公式为自主推广",
+      "conceptIds": [
+        "C-S.01"
+      ],
+      "formula": "$\\hat x=\\sum_rc_rg_r$，$\\langle x,g\\rangle=\\int xg^*dt$；正交基有$c_r=\\langle x,g_r\\rangle/\\|g_r\\|^2$，$E_{\\min}=\\|x\\|^2-\\sum_r|\\langle x,g_r\\rangle|^2/\\|g_r\\|^2$。",
+      "explanation": "1. 写残差$e=x-\\hat x$，把“最小误差”转换为每个已选方向上的残差内积为0：$\\langle e,g_k\\rangle=0$。\n\n2. 利用正交性消交叉项，得到$\\langle x,g_k\\rangle-c_k\\|g_k\\|^2=0$。2023-05没有给归一化，所以分母必须保留；只有单位能量基才可直接以内积作系数。\n\n3. 用正交能量分解算最小误差，若题问均方误差，再除区间长度。增加基只保证误差不增，趋零还需完备或该信号属于基的闭线性张成空间。\n\n4. 2026-05用复内积时检查星号；有限展开最佳$a_k=\\int x\\varphi_k^*dt$。原题无共轭的反转核并不自动输出这个内积，须按原核另算。",
+      "memory": "出现“最佳逼近”“最小误差”“正交但未归一”，先写残差与基正交，别急着逐个归一化。",
+      "conditions": "基函数能量有限非零，内积约定需一致；非正交基要保留Gram矩阵联立方程，不能直接逐项除能量。",
+      "pitfalls": "正交、归一、完备互不等同；复系数误差用模平方，复匹配核需要共轭时间反转才对应规定的内积。",
+      "exampleIds": [
+        "2023-05",
+        "2026-05"
+      ],
+      "diagramPaths": [],
+      "preview": "出现“最佳逼近”“最小误差”“正交但未归一”，先写残差与基正交，别急着逐个归一化。"
+    },
+    {
+      "id": "HM-10",
+      "category": "special",
+      "chapter": "11",
+      "title": "有限回波：先数路径，再作相量相加",
+      "section": "自主归纳｜教材依据2.3系统互连、11.1反馈定义；有限/递归模型区分为解题迁移",
+      "conceptIds": [
+        "C-2.08",
+        "C-11.02"
+      ],
+      "formula": "2021-08的$h=\\alpha\\delta(t-T)+\\alpha^3\\delta(t-3T)$给$H=\\alpha e^{-sT}(1+\\alpha^2e^{-2sT})$，$|H(j\\omega)|=\\alpha\\sqrt{1+\\alpha^4+2\\alpha^2\\cos2\\omega T}$。",
+      "explanation": "1. 题干写“只接收一个回波”，就只列给出的两条路径：延迟T乘α、延迟3T乘α³；先得到$y=\\alpha x(t-T)+\\alpha^3x(t-3T)$。\n\n2. 两项逐个变换后相加。每一项都在全部有限s处存在，所以H无有限极点，ROC为整个有限s平面；不因出现指数延迟就凭空补一个反馈分母。\n\n3. 画幅频时提掉公共相位$e^{-j\\omega T}$，剩下两长度α、α³、夹角2ωT的相量。峰值α+α³、谷值α-α³；0<α<1保证谷值大于0。\n\n4. 有界输入|x|≤M时输出≤(α+α³)M，故有限路径模型稳定。只有题目另给回路递推，才转向闭环分母与无限回声级数。",
+      "memory": "出现“回波”“多径”“直达+一次反射”，第一步先数实际路径，确定是有限求和还是递归回路。",
+      "conditions": "该卡针对题给有限LTI延时路径、T>0且0<α<1；递归回路是不同模型，不能与有限路径互换。",
+      "pitfalls": "有限两项之和不等于1/(1−ae^{-sT})。也不能把α、α³两相量误作等长而画出真实频率零点。",
+      "exampleIds": [
+        "2021-08"
+      ],
+      "diagramPaths": [
+        "assets/2021-q9-response.svg"
+      ],
+      "preview": "出现“回波”“多径”“直达+一次反射”，第一步先数实际路径，确定是有限求和还是递归回路。"
+    },
+    {
+      "id": "HM-11",
+      "category": "special",
+      "chapter": "10",
+      "title": "系数递推：用指数根和首样值重建有理H",
+      "section": "自主归纳｜教材依据10.7.3、10.5差分性质；按首样值重建分子为自主归纳",
+      "conceptIds": [
+        "C-10.03",
+        "C-10.01"
+      ],
+      "formula": "若$H(q)=B(q)/A(q)$、$q=z^{-1}$、$A=1+\\sum_{k=1}^pa_kq^k$，则$b_n=h[n]+\\sum_{k=1}^pa_kh[n-k]$，因果零状态下$h[n<0]=0$。指数尾部$r_i^n$提示$A(q)=\\prod_i(1-r_iq)$。",
+      "explanation": "1. 给阶跃响应先作差分求h，并把n=0单独算。2023-11得到h[0]=2、h[1]=2、h[2]=-14/3，尾部底数为1/3和-5/3。\n\n2. 不必把多个分式通分，直接写$A=(1-q/3)(1+5q/3)=1+4q/3-5q^2/9$，它会消掉尾部两个指数。\n\n3. 用前三个边界样值补分子：$b_0=2$，$b_1=2+(4/3)2=14/3$，$b_2=-14/3+(4/3)2-(5/9)2=-28/9$。\n\n4. 得$H=(2+14q/3-28q^2/9)/A$；交叉相乘即为差分方程。再检查实际极点和ROC，-5/3模大于1说明本题因果系统不稳定。",
+      "memory": "阶跃或冲激响应是少量指数之和、通分容易算乱时，先看底数决定分母，再让首样值决定分子。",
+      "conditions": "需已知因果/零状态边界与真实指数模态；重复根对应n的多项式因子，不能仍只写一次(1−rq)。",
+      "pitfalls": "尾部递推不自动确定起点；δ或有限首项正是分子来源。还要检查有无零系数导致极点消去，避免高估最小阶数。",
+      "exampleIds": [
+        "2023-11",
+        "2018-08"
+      ],
+      "diagramPaths": [],
+      "preview": "阶跃或冲激响应是少量指数之和、通分容易算乱时，先看底数决定分母，再让首样值决定分子。"
+    },
+    {
+      "id": "HM-12",
+      "category": "special",
+      "chapter": "4",
+      "title": "频谱积分：先倒认成反变换的一个取值",
+      "section": "自主归纳｜教材依据4.1.1反演与4.3.7频谱积分性质",
+      "conceptIds": [
+        "C-4.01",
+        "C-4.06"
+      ],
+      "formula": "$\\int_{-\\infty}^{\\infty}X(j\\omega)e^{j\\omega t_0}d\\omega=2\\pi x(t_0)$；特别$\\int X\\,d\\omega=2\\pi x(0)$，而$X(0)=\\int x(t)dt$。跳点取值须按适用反演条件处理。",
+      "explanation": "1. 看到全频域积分中有$e^{j\\omega t_0}$，先和逆变换核对；它通常是在问x的某个时刻，而不是要求把复杂X积分到底。\n\n2. 2022-08的两个三角脉冲在t=0为0、t=3为1，直接读图得$\\int F\\,d\\omega=0$、$\\int Fe^{j3\\omega}d\\omega=2\\pi$，无需先展开整个F。\n\n3. 再把“零频值”与“频域积分”分清：同题F(0)是两个三角的总面积2，不是x(0)。若积分是时域h，2021-04则读$\\int hdt=H(0)=1$。\n\n4. 计算前检查积分是否为普通函数、分布或主值；若取值点是跳点，用相应左右极限平均，不能机械代入人为指定的单点值。",
+      "memory": "被积函数是一个谱，或谱乘复指数，第一步先写逆变换公式并找t₀。",
+      "conditions": "采用本项目CTFT逆变换含1/(2π)的约定，并满足对应反演条件；积分若不普通收敛须明确分布/主值解释。",
+      "pitfalls": "∫X、X(0)、x(0)是三个不同量。指数是e^{+jωt₀}时读x(t₀)，若指数为负号则应读x(−t₀)。",
+      "exampleIds": [
+        "2022-08",
+        "2021-04"
+      ],
+      "diagramPaths": [
+        "assets/2022-q7-wave.svg"
+      ],
+      "preview": "被积函数是一个谱，或谱乘复指数，第一步先写逆变换公式并找t₀。"
+    }
+  ]
+}

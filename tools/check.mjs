@@ -13,6 +13,7 @@ const qs=d.exams.flatMap(e=>e.questions),drills=d.training,book=d.oppenheim;
 const sources=d.resources||[],methods=d.alternativeMethods||[],guides=d.studyGuides||[];
 const examMethods=d.examMethods||[];
 const references=d.textbookReferences||{},bookOriginals=references.exercises||[],bookConcepts=references.concepts||[];
+const handbook=d.referenceHandbook?.cards||[];
 assert.equal(qs.length,243);assert.equal(new Set(qs.map(q=>q.id)).size,243);assert.equal(drills.length,32);assert.equal(d.oppenheim.length,40);
 assert.equal(new Set([...qs,...drills,...book].map(q=>q.id)).size,315);
 const questionIds=new Set([...qs,...drills,...book].map(q=>q.id));
@@ -20,13 +21,26 @@ assert.equal(bookOriginals.length,40,'Each selected exercise needs its actual or
 assert.equal(new Set(bookOriginals.map(b=>b.id)).size,40);
 const coveredConcepts=new Set(bookConcepts.flatMap(c=>c.topicCodes));
 for(const t of d.topics)assert.ok(coveredConcepts.has(t.code),'Missing textbook basis for '+t.code);
-for(const r of [...bookOriginals,...bookConcepts,...(references.relationExcerpts||[])]){
+for(const r of [...bookOriginals,...bookConcepts,...(references.relationExcerpts||[]),...(references.handbookCards||[])]){
  assert.ok(r.excerpts?.length,r.id+' missing original image');
  for(const f of r.excerpts){
   assert.ok(f.pdfPage>0&&f.pdfPage<=references.book.pdfPages,r.id+' invalid PDF page');
   assert.ok(f.width>0&&f.height>0,r.id+' invalid image dimensions');
   for(const pathName of [f.path,f.thumb])assert.ok((await fs.stat(path.join(root,'dist',pathName))).size>100,r.id+' missing/empty original image');
  }
+}
+assert.ok(handbook.length>=40,'Formula and method handbook must be substantive');
+assert.equal(new Set(handbook.map(c=>c.id)).size,handbook.length,'Duplicate handbook IDs');
+for(const kind of ['definition','formula','property','table','common','special'])assert.ok(handbook.some(c=>c.category===kind),'Missing handbook category '+kind);
+for(const chapter of ['3','4','5','9','10'])assert.ok(handbook.some(c=>c.category==='table'&&String(c.chapter)===chapter),'Missing original transform/property table '+chapter);
+for(const c of handbook){
+ assert.ok(c.title&&c.formula&&c.explanation&&c.memory&&c.conditions&&c.pitfalls,c.id+' incomplete revision aid');
+ assert.ok(['definition','formula','property','table','common','special'].includes(c.category),c.id+' unknown category');
+ assert.ok(c.exampleIds?.length,c.id+' missing worked example');
+ for(const id of c.exampleIds)assert.ok(questionIds.has(id),c.id+' unknown example '+id);
+ const refs=[...(references.handbookCards||[]).filter(r=>r.id===c.id),...(c.conceptIds||[]).map(id=>bookConcepts.find(r=>r.id===id))];
+ assert.ok(refs.length&&refs.every(r=>r?.excerpts?.length),c.id+' missing authentic original basis');
+ for(const p of c.diagramPaths||[])assert.ok((await fs.stat(path.join(root,'dist/assets',path.basename(p)))).size>100,c.id+' missing diagram');
 }
 for(const r of references.relations||[]){
  assert.ok(questionIds.has(r.questionId),'Unknown matching question '+r.questionId);
@@ -75,7 +89,8 @@ for(const g of guides){
 for(const q of [...drills,...book]){assert.ok(q.solution.length>300,q.id+' needs a worked solution');assert.ok(!/^(最终表达式|各问具体表达式).*(见|推导)/.test(q.answer),q.id+' needs a concrete answer');}
 assert.ok(!(await fs.readFile(path.join(root,'dist/app.js'),'utf8')).includes("replace(/\\$|\\\\[a-zA-Z]+/g"),'Preview must preserve TeX commands');
 let errors=[],mathCount=0,figureCount=0;
-for(const q of [...qs,...drills,...book,...methods.map(m=>({id:m.id,statement:m.why||'',firstStep:m.whenToUse||'',solution:m.derivation,answer:m.check||'',training:true})),...guides.map(g=>({id:g.id,statement:g.summary,firstStep:g.quickTakeaways.join('\n'),solution:g.body,answer:g.selfCheck.join('\n'),pitfalls:g.pitfalls,training:true})),...examMethods.map(m=>({id:m.targetId+'-methods',statement:m.scope,firstStep:m.recommended.why,solution:m.recommended.steps.join('\n')+'\n'+(m.alternatives||[]).map(a=>a.whenToUse+'\n'+a.steps.join('\n')).join('\n'),answer:m.comparison,training:true})),...bookConcepts.map(c=>({id:c.id,statement:c.summary,firstStep:c.coverageNote||'',solution:'',answer:'',training:true})),...(references.relations||[]).map((r,i)=>({id:'book-relation-'+i,statement:r.scope,firstStep:'',solution:r.explanation,answer:'',training:true}))]){
+const handbookChecks=handbook.map(c=>({id:c.id,statement:c.formula,firstStep:c.memory,solution:c.explanation+'\n'+(Array.isArray(c.conditions)?c.conditions.join('\n'):c.conditions),answer:Array.isArray(c.pitfalls)?c.pitfalls.join('\n'):c.pitfalls,training:true,figures:(c.diagramPaths||[]).map(path=>({path}))}));
+for(const q of [...handbookChecks,{id:"handbook-notation",statement:d.referenceHandbook.notation,firstStep:"",solution:"",answer:"",training:true},...qs,...drills,...book,...methods.map(m=>({id:m.id,statement:m.why||'',firstStep:m.whenToUse||'',solution:m.derivation,answer:m.check||'',training:true})),...guides.map(g=>({id:g.id,statement:g.summary,firstStep:g.quickTakeaways.join('\n'),solution:g.body,answer:g.selfCheck.join('\n'),pitfalls:g.pitfalls,training:true})),...examMethods.map(m=>({id:m.targetId+'-methods',statement:m.scope,firstStep:m.recommended.why,solution:m.recommended.steps.join('\n')+'\n'+(m.alternatives||[]).map(a=>a.whenToUse+'\n'+a.steps.join('\n')).join('\n'),answer:m.comparison,training:true})),...bookConcepts.map(c=>({id:c.id,statement:c.summary,firstStep:c.coverageNote||'',solution:'',answer:'',training:true})),...(references.relations||[]).map((r,i)=>({id:'book-relation-'+i,statement:r.scope,firstStep:'',solution:r.explanation,answer:'',training:true}))]){
  for(const field of ['statement','firstStep','solution','answer',...(q.pitfalls||[]).map((_,i)=>'pitfall'+i)]){
   const value=field.startsWith('pitfall')?q.pitfalls[+field.slice(7)]:q[field];
   assert.equal(typeof value,'string',q.id+' '+field);
@@ -89,5 +104,5 @@ for(const q of [...qs,...drills,...book,...methods.map(m=>({id:m.id,statement:m.
 }
 for(const c of d.chapters){let list=qs.filter(q=>q.chapters.includes(c.chapter));assert.equal(list.length,c.count,c.chapter);assert.equal(new Set(list.map(q=>q.year)).size,c.year_count,c.chapter);}
 await fs.writeFile(path.join(root,'content/math-check.json'),JSON.stringify(errors,null,2));
-console.log(JSON.stringify({questions:qs.length,examMethodSyntheses:examMethods.length,training:drills.length,textbookGroups:book.length,textbookOriginals:bookOriginals.length,conceptCards:bookConcepts.length,topicCoverage:coveredConcepts.size,textbookRelations:references.relations?.length,alternativeMethods:methods.length,courseDigests:guides.length,courseSources:sources.length,formulaExpressions:mathCount,figureReferences:figureCount,formulaErrors:errors.length,examples:errors.slice(0,12)}));
+console.log(JSON.stringify({handbookCards:handbook.length,handbookTables:handbook.filter(c=>c.category==='table').length,questions:qs.length,examMethodSyntheses:examMethods.length,training:drills.length,textbookGroups:book.length,textbookOriginals:bookOriginals.length,conceptCards:bookConcepts.length,topicCoverage:coveredConcepts.size,textbookRelations:references.relations?.length,alternativeMethods:methods.length,courseDigests:guides.length,courseSources:sources.length,formulaExpressions:mathCount,figureReferences:figureCount,formulaErrors:errors.length,examples:errors.slice(0,12)}));
 if(errors.length)process.exitCode=1;

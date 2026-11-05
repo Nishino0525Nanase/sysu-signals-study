@@ -1,0 +1,28 @@
+/* Original textbook excerpts and independently written revision aids. */
+window.createSignalReference = function({D,escape,md,heading,options,referenceGallery,questionLabel}) {
+ const cards=D.referenceHandbook?.cards||[];
+ const categories=[['definition','定义','#1f5d9b'],['formula','公式','#6c41a5'],['property','性质','#087b7e'],['table','变换表','#946009'],['common','常规解法','#317247'],['special','特殊技巧','#ae3864']];
+ const categoryById=new Map(categories.map(c=>[c[0],c]));
+ const originals=new Map((D.textbookReferences?.handbookCards||[]).map(c=>[c.id,c]));
+ const concepts=new Map((D.textbookReferences?.concepts||[]).map(c=>[c.id,c]));
+ const byId=new Map(cards.map(c=>[c.id,c]));
+ const name=id=>categoryById.get(id)?.[1]||'复习卡';
+ const allCategories=[['','全部'],...categories];
+ const blocks=(title,value,kind)=>value?`<section class="reference-aid ${kind}"><h2>${title}</h2>${md(Array.isArray(value)?value.map(x=>'- '+x).join('\n'):value)}</section>`:'';
+ function examples(c){return `<div class="reference-examples"><h2>用到这张卡的题目</h2><p class="muted">点击直接进入题内解析；真题会定位到多方法对照。</p><div class="inline-actions">${(c.exampleIds||[]).map(id=>`<button data-action="open-analysis" data-id="${escape(id)}">${escape(questionLabel(id))} →</button>`).join('')}</div></div>`;}
+ function diagrams(c){return (c.diagramPaths||[]).map(p=>`<figure class="figure reference-diagram"><img src="${escape(p.startsWith('assets/')?p:'assets/'+p)}" alt="${escape(c.title)} · 中文图解" loading="lazy" data-expand><figcaption>中文辅助图 · 独立绘制，用于理解原书公式</figcaption></figure>`).join('');}
+ function original(c){
+  const refs=[originals.get(c.id),...(c.conceptIds||[]).map(id=>concepts.get(id))].filter(Boolean);
+  return refs.map(r=>`<section class="reference-original"><h2>教材原文摘图</h2><p class="book-citation">${escape(r.section||c.section||'原教材相关基础')} · 中文书页 ${(r.printPages||[]).join('、')}<br>上传的奥本海姆《信号与系统》第二版；每张图另标 PDF 页。</p>${referenceGallery(r.excerpts,'教材原文')}${r.displayNote?`<p class="source-note">${escape(r.displayNote)}</p>`:''}</section>`).join('');
+ }
+ function detail(c){
+  const index=cards.indexOf(c),isMethod=['common','special'].includes(c.category);
+  return `<div class="reference-toolbar"><a class="button" href="#reference?category=${c.category}">← ${name(c.category)}目录</a><button data-action="print-guide">打印 / PDF</button><a href="#downloads">完整速查 PDF ↓</a></div><article class="reference-detail ref-${c.category}"><header class="reference-detail-head"><span class="reference-label">${name(c.category)}</span><span class="muted">${c.chapter==='S'?'补充专题':'第'+escape(c.chapter)+'章'} · ${escape(c.id)}</span><h1>${escape(c.title)}</h1><p>${isMethod?'从题面识别触发条件，再按步骤执行。下方原文提供基础依据，方法步骤为自主归纳。':'先核对原书，再用清晰公式与提示复习。原图不改字，下面的说明为独立整理。'}</p></header><div class="reference-reading">${original(c)}${blocks(isMethod?'关键关系':'清晰公式 · 对照原文',c.formula,'reference-formula')}${diagrams(c)}${blocks(isMethod?'怎么做 · 逐步路线':'怎么理解',c.explanation,'reference-understanding')}${blocks(isMethod?'第一步怎么想到':'记忆提示',c.memory,'reference-memory')}${blocks('适用条件',c.conditions,'reference-conditions')}${blocks('易错提醒',c.pitfalls,'reference-warning')}${examples(c)}</div></article><div class="reference-toolbar">${index>0?`<a class="button" href="#reference?card=${cards[index-1].id}">← 上一张</a>`:'<span></span>'}${index<cards.length-1?`<a class="button" href="#reference?card=${cards[index+1].id}">下一张 →</a>`:''}</div>`;
+ }
+ return function reference(p){
+  if(byId.has(p.get('card')))return detail(byId.get(p.get('card')));
+  const category=p.get('category')||'',chapter=p.get('chapter')||'',query=p.get('q')||'';
+  const list=cards.filter(c=>(!category||c.category===category)&&(!chapter||String(c.chapter)===chapter)&&(!query||[c.title,c.formula,c.explanation,c.memory,...(c.keywords||[])].join(' ').toLowerCase().includes(query.toLowerCase())));
+  return heading('教材原图 / 公式 / 方法','把常用的，放在手边','定义、傅里叶级数、四类变换、性质与真题解法放在一起查。原书截图下附清晰公式、适用条件与理解提示，点击题号即可迁移到真题。')+`<section class="reference-intro"><div><strong>${cards.length} 张复习卡</strong><p>蓝色看定义，紫色看公式，青色看性质，金色查变换表，绿色选常规解法，玫红色找特殊技巧。</p></div><a class="button" href="downloads/reference-handbook.pdf" download>下载彩色速查 PDF ↓</a></section><div class="reference-categories" role="group" aria-label="速查分类">${allCategories.map(([id,label])=>`<a class="reference-category ref-${id||'all'} ${id===category?'selected':''}" href="#reference${id?'?category='+id:''}">${label}<span>${cards.filter(c=>!id||c.category===id).length}</span></a>`).join('')}</div><details class="reference-notation"><summary>先分清记号：$j\\omega$ 与 $e^{j\\omega}$，级数与变换</summary><div class="lesson">${md(D.referenceHandbook?.notation||'')}</div></details><div class="filters"><input id="reference-search" aria-label="搜索速查" placeholder="搜索：冲激、对偶、抽样、ROC、第一步…" value="${escape(query)}"><select id="reference-chapter" aria-label="速查章节">${options(D.chapters.map(c=>[c.chapter,(c.chapter==='S'?'补充':c.chapter+'章')+' '+c.name]),chapter,'全部章节')}</select><a class="button" href="#reference?category=table">直达变换表 →</a></div><div class="section-head"><h2>${list.length} 张${category?name(category):'复习'}卡</h2><span class="muted">打开卡片查看教材原图与完整提示</span></div><div class="reference-grid">${list.map(c=>`<a class="reference-index-card ref-${c.category}" href="#reference?card=${c.id}"><div class="reference-card-meta"><span class="reference-label">${name(c.category)}</span><span>${c.chapter==='S'?'补充专题':'第'+escape(c.chapter)+'章'}</span></div><h3>${escape(c.title)}</h3><div class="reference-card-summary">${md(c.preview||c.memory)}</div><span class="reference-card-foot">${['common','special'].includes(c.category)?'看解题步骤与真题示例':'看教材原图与理解提示'} →</span></a>`).join('')||'<p class="empty">没有匹配的卡片，换个关键词试试。</p>'}</div>`;
+ };
+};

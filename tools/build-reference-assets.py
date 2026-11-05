@@ -22,7 +22,7 @@ render_temp=ROOT/'android/build/reference-render';render_temp.mkdir(parents=True
 source_hash=hashlib.sha256(pdf.read_bytes()).hexdigest()
 old_path=ROOT/'content/textbook-links.json'
 old=json.loads(old_path.read_text()) if old_path.exists() else {}
-old_entries={e['id']:e for key in ['exercises','concepts','relationExcerpts'] for e in old.get(key,[])}
+old_entries={e['id']:e for key in ['exercises','concepts','relationExcerpts','handbookCards'] for e in old.get(key,[])}
 
 def write_json(p,value):
     t=p.with_name(p.name+'.tmp');t.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n');os.replace(t,p)
@@ -72,9 +72,11 @@ result={'book':{'id':'OPP-CN2','title':'信号与系统（第二版）','authors
     'exercises':[render(e,'exercise') for e in locations['exercises']],
     'concepts':[render(e,'concept') for e in locations['concepts']],
     'relationExcerpts':[render(e,'relation') for e in locations.get('relationExcerpts',[])],
+    'handbookCards':[render(e,'handbook') for e in locations.get('handbookCards',[])],
     'relations':locations.get('relations',[]),
     'auditNotes':locations.get('auditNotes',[])}
 write_json(ROOT/'content/textbook-links.json',result)
 print(json.dumps({'exercises':len(result['exercises']),'concepts':len(result['concepts']),
-    'images':sum(len(result[k][i]['excerpts']) for k in ['exercises','concepts','relationExcerpts'] for i in range(len(result[k]))),
+    'handbookCards':len(result['handbookCards']),
+    'images':sum(len(result[k][i]['excerpts']) for k in ['exercises','concepts','relationExcerpts','handbookCards'] for i in range(len(result[k]))),
     'bytes':sum(p.stat().st_size for p in assets.glob('*.webp'))}))

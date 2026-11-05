@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "github": "https://github.com/Nishino0525Nanase/sysu-signals-study",
   "training": [
     {
@@ -1674,9 +1674,15 @@
   "files": [
     {
       "kind": "apk",
-      "title": "Android离线版 1.5.0",
-      "description": "内置40组选题原图、中文书页/PDF页、概念原文截图及真题对应提示；支持原始尺寸与局部放大。Android 7.0及以上，可覆盖升级。",
-      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.5.0/sysu-signals-study-v1.5.0.apk"
+      "title": "Android离线版 1.6.0",
+      "description": "新增教材原图、变换表、定义公式、中文图解及常规/特殊解法速查；内置全部卡片与详解，可覆盖升级。",
+      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.6.0/sysu-signals-study-v1.6.0.apk"
+    },
+    {
+      "kind": "pdf",
+      "title": "教材原图 · 公式与方法速查",
+      "description": "按颜色分类的原书变换表、定义、公式、性质、记忆提示与真题解法，附对应中文图解。",
+      "path": "downloads/reference-handbook.pdf"
     },
     {
       "kind": "xlsx",

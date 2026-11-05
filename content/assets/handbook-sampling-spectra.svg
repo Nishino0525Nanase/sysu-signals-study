@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1000" viewBox="0 0 1100 1000" role="img" aria-labelledby="title desc">
+<title id="title">冲激抽样的频谱复制：无混叠与混叠对照</title>
+<desc id="desc">同一个半宽为一的三角原谱，分别以抽样角频率三和一点五复制。抽样谱纵轴乘以抽样周期归一化。第三幅主恢复频带内的邻谱相加造成混叠。</desc>
+<rect width="1100" height="1000" fill="#f4f7f3"/>
+<style>text{font-family:'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#203c32}.heading{font-size:30px;font-weight:700}.paneltitle{font-size:24px;font-weight:700}.note{font-size:19px}.tick{font-size:17px;fill:#55685f}.axis{stroke:#63736b;stroke-width:1.5}.copy{fill:none;stroke:#5b88a4;stroke-width:2;stroke-dasharray:7 5;opacity:.7}.sum{fill:none;stroke:#005c3d;stroke-width:3.5;stroke-linejoin:round}</style>
+<text x="50" y="47" class="heading">抽样先复制，再相加：图上每份的中心、边缘和幅度都要保留</text>
+<text x="50" y="79" class="note">同一原谱的两种抽样率；纵轴统一补偿了抽样谱的 1/Tₛ 系数</text>
+
+<rect x="35" y="100" width="1030" height="235" rx="16" fill="white" stroke="#d6e2d8"/>
+<text x="57" y="134" class="paneltitle">原谱：最高角频率 ωM＝1</text>
+<text x="57" y="163" class="note">X(jω)＝max(1−|ω|,0)，仅在 −1 到 1 内非零</text>
+<defs><clipPath id="clip100"><rect x="180" y="179" width="850" height="114"/></clipPath></defs>
+<line class="axis" x1="170" x2="1038" y1="290" y2="290"/>
+<line class="axis" x1="605.0" x2="605.0" y1="294" y2="175"/>
+<text x="75" y="225" class="note">X(jω)</text>
+<text x="584.0" y="188" class="tick">1</text>
+<line class="axis" x1="227.22222222222223" x2="227.22222222222223" y1="290" y2="295"/><text x="227.22222222222223" y="316" text-anchor="middle" class="tick">-4</text>
+<line class="axis" x1="321.66666666666663" x2="321.66666666666663" y1="290" y2="295"/><text x="321.66666666666663" y="316" text-anchor="middle" class="tick">-3</text>
+<line class="axis" x1="416.1111111111111" x2="416.1111111111111" y1="290" y2="295"/><text x="416.1111111111111" y="316" text-anchor="middle" class="tick">-2</text>
+<line class="axis" x1="510.55555555555554" x2="510.55555555555554" y1="290" y2="295"/><text x="510.55555555555554" y="316" text-anchor="middle" class="tick">-1</text>
+<line class="axis" x1="605.0" x2="605.0" y1="290" y2="295"/><text x="605.0" y="316" text-anchor="middle" class="tick">0</text>
+<line class="axis" x1="699.4444444444445" x2="699.4444444444445" y1="290" y2="295"/><text x="699.4444444444445" y="316" text-anchor="middle" class="tick">1</text>
+<line class="axis" x1="793.8888888888889" x2="793.8888888888889" y1="290" y2="295"/><text x="793.8888888888889" y="316" text-anchor="middle" class="tick">2</text>
+<line class="axis" x1="888.3333333333334" x2="888.3333333333334" y1="290" y2="295"/><text x="888.3333333333334" y="316" text-anchor="middle" class="tick">3</text>
+<line class="axis" x1="982.7777777777777" x2="982.7777777777777" y1="290" y2="295"/><text x="982.7777777777777" y="316" text-anchor="middle" class="tick">4</text>
+<text x="1040" y="315" class="tick">ω</text>
+<polyline class="sum" points="510.556,290.000 605.000,190.000 699.444,290.000"/>
+<rect x="35" y="350" width="1030" height="235" rx="16" fill="white" stroke="#d6e2d8"/>
+<text x="57" y="384" class="paneltitle">无混叠：ωₛ＝3 ＞ 2ωM</text>
+<text x="57" y="413" class="note">副本之间有空隙；低通取中央一份，并用通带增益 Tₛ 恢复幅度</text>
+<defs><clipPath id="clip350"><rect x="180" y="429" width="850" height="114"/></clipPath></defs>
+<rect x="463.333" y="432" width="283.333" height="108" fill="#dcedd9" opacity=".8"/>
+<line x1="463.333" x2="463.333" y1="430" y2="540" stroke="#74a986" stroke-dasharray="4 4"/>
+<line x1="746.667" x2="746.667" y1="430" y2="540" stroke="#74a986" stroke-dasharray="4 4"/>
+<line class="axis" x1="170" x2="1038" y1="540" y2="540"/>
+<line class="axis" x1="605.0" x2="605.0" y1="544" y2="425"/>
+<text x="75" y="475" class="note">TₛXₛ(jω)</text>
+<text x="584.0" y="438" class="tick">1</text>
+<line class="axis" x1="227.22222222222223" x2="227.22222222222223" y1="540" y2="545"/><text x="227.22222222222223" y="566" text-anchor="middle" class="tick">-4</text>
+<line class="axis" x1="321.66666666666663" x2="321.66666666666663" y1="540" y2="545"/><text x="321.66666666666663" y="566" text-anchor="middle" class="tick">-3</text>
+<line class="axis" x1="416.1111111111111" x2="416.1111111111111" y1="540" y2="545"/><text x="416.1111111111111" y="566" text-anchor="middle" class="tick">-2</text>
+<line class="axis" x1="510.55555555555554" x2="510.55555555555554" y1="540" y2="545"/><text x="510.55555555555554" y="566" text-anchor="middle" class="tick">-1</text>
+<line class="axis" x1="605.0" x2="605.0" y1="540" y2="545"/><text x="605.0" y="566" text-anchor="middle" class="tick">0</text>
+<line class="axis" x1="699.4444444444445" x2="699.4444444444445" y1="540" y2="545"/><text x="699.4444444444445" y="566" text-anchor="middle" class="tick">1</text>
+<line class="axis" x1="793.8888888888889" x2="793.8888888888889" y1="540" y2="545"/><text x="793.8888888888889" y="566" text-anchor="middle" class="tick">2</text>
+<line class="axis" x1="888.3333333333334" x2="888.3333333333334" y1="540" y2="545"/><text x="888.3333333333334" y="566" text-anchor="middle" class="tick">3</text>
+<line class="axis" x1="982.7777777777777" x2="982.7777777777777" y1="540" y2="545"/><text x="982.7777777777777" y="566" text-anchor="middle" class="tick">4</text>
+<text x="1040" y="565" class="tick">ω</text>
+<g clip-path="url(#clip350)">
+<polyline class="copy" points="-56.111,540.000 38.333,440.000 132.778,540.000"/>
+<polyline class="copy" points="227.222,540.000 321.667,440.000 416.111,540.000"/>
+<polyline class="copy" points="510.556,540.000 605.000,440.000 699.444,540.000"/>
+<polyline class="copy" points="793.889,540.000 888.333,440.000 982.778,540.000"/>
+<polyline class="copy" points="1077.222,540.000 1171.667,440.000 1266.111,540.000"/>
+<polyline class="sum" points="180.000,540.000 227.222,540.000 321.667,440.000 416.111,540.000 510.556,540.000 605.000,440.000 699.444,540.000 793.889,540.000 888.333,440.000 982.778,540.000 1030.000,540.000"/>
+</g>
+<rect x="35" y="600" width="1030" height="235" rx="16" fill="white" stroke="#d6e2d8"/>
+<text x="57" y="634" class="paneltitle">发生混叠：ωₛ＝1.5 ＜ 2ωM</text>
+<text x="57" y="663" class="note">主频带 |ω|＜0.75 内已有邻谱侵入，红色区域无法靠低通分离</text>
+<defs><clipPath id="clip600"><rect x="180" y="679" width="850" height="114"/></clipPath></defs>
+<rect x="534.167" y="682" width="141.667" height="108" fill="#dcedd9" opacity=".8"/>
+<line x1="534.167" x2="534.167" y1="680" y2="790" stroke="#74a986" stroke-dasharray="4 4"/>
+<line x1="675.833" x2="675.833" y1="680" y2="790" stroke="#74a986" stroke-dasharray="4 4"/>
+<line class="axis" x1="170" x2="1038" y1="790" y2="790"/>
+<line class="axis" x1="605.0" x2="605.0" y1="794" y2="675"/>
+<text x="75" y="725" class="note">TₛXₛ(jω)</text>
+<text x="584.0" y="688" class="tick">1</text>
+<line class="axis" x1="227.22222222222223" x2="227.22222222222223" y1="790" y2="795"/><text x="227.22222222222223" y="816" text-anchor="middle" class="tick">-4</text>
+<line class="axis" x1="321.66666666666663" x2="321.66666666666663" y1="790" y2="795"/><text x="321.66666666666663" y="816" text-anchor="middle" class="tick">-3</text>
+<line class="axis" x1="416.1111111111111" x2="416.1111111111111" y1="790" y2="795"/><text x="416.1111111111111" y="816" text-anchor="middle" class="tick">-2</text>
+<line class="axis" x1="510.55555555555554" x2="510.55555555555554" y1="790" y2="795"/><text x="510.55555555555554" y="816" text-anchor="middle" class="tick">-1</text>
+<line class="axis" x1="605.0" x2="605.0" y1="790" y2="795"/><text x="605.0" y="816" text-anchor="middle" class="tick">0</text>
+<line class="axis" x1="699.4444444444445" x2="699.4444444444445" y1="790" y2="795"/><text x="699.4444444444445" y="816" text-anchor="middle" class="tick">1</text>
+<line class="axis" x1="793.8888888888889" x2="793.8888888888889" y1="790" y2="795"/><text x="793.8888888888889" y="816" text-anchor="middle" class="tick">2</text>
+<line class="axis" x1="888.3333333333334" x2="888.3333333333334" y1="790" y2="795"/><text x="888.3333333333334" y="816" text-anchor="middle" class="tick">3</text>
+<line class="axis" x1="982.7777777777777" x2="982.7777777777777" y1="790" y2="795"/><text x="982.7777777777777" y="816" text-anchor="middle" class="tick">4</text>
+<text x="1040" y="815" class="tick">ω</text>
+<g clip-path="url(#clip600)">
+<polyline class="copy" points="-56.111,790.000 38.333,690.000 132.778,790.000"/>
+<polyline class="copy" points="85.556,790.000 180.000,690.000 274.444,790.000"/>
+<polyline class="copy" points="227.222,790.000 321.667,690.000 416.111,790.000"/>
+<polyline class="copy" points="368.889,790.000 463.333,690.000 557.778,790.000"/>
+<polyline class="copy" points="510.556,790.000 605.000,690.000 699.444,790.000"/>
+<polyline class="copy" points="652.222,790.000 746.667,690.000 841.111,790.000"/>
+<polyline class="copy" points="793.889,790.000 888.333,690.000 982.778,790.000"/>
+<polyline class="copy" points="935.556,790.000 1030.000,690.000 1124.444,790.000"/>
+<polyline class="copy" points="1077.222,790.000 1171.667,690.000 1266.111,790.000"/>
+<polygon points="534.167,740.000 557.778,740.000 557.778,740.000 534.167,765.000" fill="#df8d78" opacity=".75"/>
+<polygon points="652.222,740.000 675.833,740.000 675.833,765.000 652.222,740.000" fill="#df8d78" opacity=".75"/>
+<polyline class="sum" points="180.000,690.000 227.222,740.000 274.444,740.000 321.667,690.000 368.889,740.000 416.111,740.000 463.333,690.000 510.556,740.000 557.778,740.000 605.000,690.000 652.222,740.000 699.444,740.000 746.667,690.000 793.889,740.000 841.111,740.000 888.333,690.000 935.556,740.000 982.778,740.000 1030.000,690.000"/>
+</g>
+<line x1="58" y1="875" x2="98" y2="875" stroke="#5b88a4" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="108" y="881" class="note">单个副本</text><line x1="285" y1="875" x2="325" y2="875" stroke="#005c3d" stroke-width="3.5"/>
+<text x="335" y="881" class="note">副本相加的结果</text><rect x="584" y="864" width="28" height="22" fill="#dcedd9"/>
+<text x="623" y="881" class="note">主奈奎斯特频带</text>
+<text x="57" y="923" class="note">记忆：时间间隔 Tₛ → 频域间隔 2π/Tₛ；实际复制谱每份乘 1/Tₛ，恢复再乘 Tₛ。</text>
+<text x="57" y="958" class="note">此图为普通三角谱的精确示例。临界边界若有冲激谱线，还必须检查相位与样值。</text>
+</svg>
