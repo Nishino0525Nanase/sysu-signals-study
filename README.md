@@ -5,7 +5,7 @@
 ## 使用
 
 - 网页：[中大信号研习室](https://nishino0525nanase.github.io/sysu-signals-study/)，由 Pages 工作流发布 `dist/`。
-- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”中的 `sysu-signals-study-v1.5.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
+- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”指向的 `sysu-signals-study-v1.5.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
 - APK内置全部学习内容、公式字体和配图，核心阅读无需联网，不申请网络、定位、摄像头或账号权限。
 - 学习进度、收藏、错题、笔记保存在本机，支持导出和导入JSON备份。
 
@@ -81,3 +81,5 @@ Android使用JDK17、SDK platform35/build-tools35编译：设置`ANDROID_JAR`、
 - 实际对照纠正了3.11多加偶性、4.15左右半轴条件，以及8.21/8.23漏计图8.8低通增益2的问题；单位增益单独标为变式。正文、图形、PDF和APK共用更正后的数据。
 - `content/reference-locations.json`保存逐项核实的裁剪坐标与关系，`content/textbook-links.json`保存生成图片尺寸、页码和来源SHA256；只收录本项目选用的摘图，不收录整本教材PDF。
 - 重建摘图：`python tools/build-reference-assets.py --textbook /path/to/book.pdf`。重建真题原页：`python tools/reextract-exam-sources.py --project-root . --upload /path/to/pdfs --output /path/to/output`。
+
+安装包以GitHub Releases为固定下载入口，源码仓库和网页构建无需存放APK二进制。

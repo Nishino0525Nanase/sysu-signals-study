@@ -1676,7 +1676,7 @@
       "kind": "apk",
       "title": "Android离线版 1.5.0",
       "description": "内置40组选题原图、中文书页/PDF页、概念原文截图及真题对应提示；支持原始尺寸与局部放大。Android 7.0及以上，可覆盖升级。",
-      "path": "downloads/sysu-signals-study-v1.5.0.apk"
+      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.5.0/sysu-signals-study-v1.5.0.apk"
     },
     {
       "kind": "xlsx",
