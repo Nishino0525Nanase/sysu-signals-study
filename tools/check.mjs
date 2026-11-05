@@ -14,6 +14,25 @@ const sources=d.resources||[],methods=d.alternativeMethods||[],guides=d.studyGui
 const examMethods=d.examMethods||[];
 const references=d.textbookReferences||{},bookOriginals=references.exercises||[],bookConcepts=references.concepts||[];
 const handbook=d.referenceHandbook?.cards||[];
+const textbookReader=d.textbookReader;
+assert.equal(textbookReader?.pages?.length,628,'The complete uploaded book has 628 PDF pages');
+assert.equal(textbookReader.pdfPageCount,628);
+assert.equal(textbookReader.toc.length,302,'Preserve all original book bookmarks');
+assert.equal(new Set(textbookReader.pages.map(p=>p.pdfPage)).size,628);
+for(let i=0;i<textbookReader.pages.length;i++){
+ const p=textbookReader.pages[i];assert.equal(p.pdfPage,i+1,'Book pages must remain in source order');
+ assert.ok(p.width>0&&p.height>0&&p.path.startsWith('references/textbook/'),'Invalid book image '+p.pdfPage);
+ assert.ok((await fs.stat(path.join(root,'dist',p.path))).size>100,'Missing book image '+p.pdfPage);
+ if(p.printPage!==null)assert.equal(p.printPage,p.pdfPage-22,'Incorrect printed page '+p.pdfPage);
+}
+assert.equal(textbookReader.pages[0].printPage,null,'Cover is not printed page -21');
+assert.equal(textbookReader.pages.at(-1).printPage,null,'File-information leaf has no book page');
+for(const t of textbookReader.toc)assert.ok(t.title&&t.pdfPage>=1&&t.pdfPage<=628,'Invalid original bookmark');
+assert.equal(new URL(textbookReader.download.path).protocol,'https:');
+const serviceWorker=await fs.readFile(path.join(root,'dist/sw.js'),'utf8');
+const precacheMatch=serviceWorker.match(/const ASSETS=(\[[\s\S]*?\]);self/);
+assert.ok(precacheMatch,'Missing offline asset list');
+assert.ok(!JSON.parse(precacheMatch[1]).some(p=>p.startsWith('references/textbook/')),'Do not preload the entire textbook on website install');
 assert.equal(qs.length,243);assert.equal(new Set(qs.map(q=>q.id)).size,243);assert.equal(drills.length,32);assert.equal(d.oppenheim.length,40);
 assert.equal(new Set([...qs,...drills,...book].map(q=>q.id)).size,315);
 const questionIds=new Set([...qs,...drills,...book].map(q=>q.id));

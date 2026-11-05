@@ -10,6 +10,7 @@ const guides=await read('content/study-guides.json');
 const examMethods=await read('content/exam-methods.json');
 const textbookReferences=await read('content/textbook-links.json');
 const referenceHandbook=await read('content/reference-handbook.json');
+const textbookReader=await read('content/textbook-reader.json');
 const topics=new Map(statistics.topics.map(t=>[t.code,t]));
 const exams=[];
 for(let year=2008;year<=2026;year++){
@@ -36,22 +37,26 @@ for(const name of await fs.readdir(path.join(root,'content/assets'))){
  await fs.rename(temporary,destination);
 }
 const referenceFiles=new Set(['exercises','concepts','relationExcerpts','handbookCards'].flatMap(k=>(textbookReferences[k]||[]).flatMap(e=>e.excerpts.flatMap(f=>[f.path,f.thumb]))));
+for(const page of textbookReader.pages)referenceFiles.add(page.path);
+const textbookAssetDigest=crypto.createHash('sha256');
 for(const relativeFile of referenceFiles){
  const file=path.join(root,'content',relativeFile);
  const relative=path.relative(path.join(root,'content/references'),file),destination=path.join(root,'dist/references',relative);
- await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination+'.tmp',await fs.readFile(file));await fs.rename(destination+'.tmp',destination);
+ const bytes=await fs.readFile(file);if(relativeFile.startsWith('references/textbook/'))textbookAssetDigest.update(relativeFile).update(bytes);
+ await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination+'.tmp',bytes);await fs.rename(destination+'.tmp',destination);
 }
-const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams,resources:learning.sources,alternativeMethods:learning.methods,studyGuides:guides.guides,examMethods:examMethods.entries,textbookReferences,referenceHandbook};
+const textbookCacheVersion=textbookAssetDigest.digest('hex').slice(0,16);
+const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams,resources:learning.sources,alternativeMethods:learning.methods,studyGuides:guides.guides,examMethods:examMethods.entries,textbookReferences,referenceHandbook,textbookReader};
 const compiled=path.join(root,'dist/data.js');
 await fs.writeFile(compiled+'.tmp','window.SIGNAL_DATA='+JSON.stringify(data)+';\n');
 await fs.rename(compiled+'.tmp',compiled);
 async function walk(dir){let result=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){let p=path.join(dir,e.name);if(e.isDirectory())result.push(...await walk(p));else result.push(p);}return result;}
 const files=await walk(path.join(root,'dist'));
-const assets=files.filter(p=>!p.endsWith('.apk')&&!p.endsWith('.apk.sha256')&&!p.endsWith('/sw.js')&&!/\.tmp(?:\.|$)|\.cn-tmp$/.test(p)).map(p=>path.relative(path.join(root,'dist'),p).split(path.sep).join('/'));
+const assets=files.filter(p=>!p.endsWith('.apk')&&!p.endsWith('.apk.sha256')&&!p.endsWith('/sw.js')&&!p.includes('/references/textbook/')&&!/\.tmp(?:\.|$)|\.cn-tmp$/.test(p)).map(p=>path.relative(path.join(root,'dist'),p).split(path.sep).join('/'));
 const digest=crypto.createHash('sha256');
 for(const asset of [...assets].sort()){
  digest.update(asset).update(await fs.readFile(path.join(root,'dist',asset)));
 }
 const hash=digest.digest('hex').slice(0,12);
-await fs.writeFile(path.join(root,'dist/sw.js'),`const CACHE='signal-atlas-${hash}';const ASSETS=${JSON.stringify(['./',...assets])};self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('signal-atlas-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||e.request.url.endsWith('.apk'))return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){let copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));}return r;}).catch(()=>caches.match(e.request)));});`);
-console.log(JSON.stringify({years:exams.length,questions:exams.flatMap(e=>e.questions).length,training:data.training.length,assets:assets.length}));
+await fs.writeFile(path.join(root,'dist/sw.js'),`const CACHE='signal-atlas-${hash}',BOOK_CACHE='signal-textbook-${textbookCacheVersion}';const ASSETS=${JSON.stringify(['./',...assets])};self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>(k.startsWith('signal-atlas-')&&k!==CACHE)||(k.startsWith('signal-textbook-')&&k!==BOOK_CACHE)).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>{const url=new URL(e.request.url);if(e.request.method!=='GET'||url.origin!==location.origin||url.pathname.endsWith('.apk'))return;if(url.pathname.includes('/references/textbook/')){e.respondWith((async()=>{let c;try{c=await caches.open(BOOK_CACHE);const hit=await c.match(e.request);if(hit)return hit;}catch{}const r=await fetch(e.request);if(r.ok&&c){try{await c.put(e.request,r.clone());}catch{}}return r;})());return;}e.respondWith(fetch(e.request).then(r=>{if(r.ok){let copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));}return r;}).catch(()=>caches.match(e.request)));});`);
+console.log(JSON.stringify({years:exams.length,questions:exams.flatMap(e=>e.questions).length,training:data.training.length,assets:assets.length,textbookPages:textbookReader.pages.length}));

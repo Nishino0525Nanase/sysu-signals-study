@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "github": "https://github.com/Nishino0525Nanase/sysu-signals-study",
   "training": [
     {
@@ -1674,9 +1674,16 @@
   "files": [
     {
       "kind": "apk",
-      "title": "Android离线版 1.6.0",
-      "description": "新增教材原图、变换表、定义公式、中文图解及常规/特殊解法速查；内置全部卡片与详解，可覆盖升级。",
-      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.6.0/sysu-signals-study-v1.6.0.apk"
+      "title": "Android离线版 1.7.0",
+      "description": "内置628页奥本海姆原书、真题详解及公式速查；支持书页/PDF页跳转、目录和原图放大，可覆盖升级。",
+      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.7.0/sysu-signals-study-v1.7.0.apk"
+    },
+    {
+      "id": "textbook-pdf",
+      "kind": "pdf",
+      "title": "奥本海姆原书 · 高清整理版",
+      "description": "上传的中文版第二版全628页，保留原生扫描细节与完整书签。可直接阅读整本，也可下载PDF。",
+      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.7.0/oppenheim-signals-systems-2e-zh-native-hd.pdf"
     },
     {
       "kind": "pdf",

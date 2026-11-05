@@ -1,11 +1,11 @@
 # 中大信号研习室
 
-中山大学信号与系统备考学习工具，独立仓库。包括2008—2026年所供真题的243个可见题组、逐题推导、中文SVG图解与训练配图、32道原创迁移与模拟训练、40组奥本海姆第二版所选课后题逐小问答案，以及逐章考点统计。
+中山大学信号与系统备考学习工具，独立仓库。包括2008—2026年所供真题的243个可见题组、逐题推导、中文SVG图解与训练配图、32道原创迁移与模拟训练、40组奥本海姆第二版所选课后题逐小问答案，以及逐章考点统计。另附上传中文版奥本海姆原书全628页高清阅读与原书302项目录。
 
 ## 使用
 
 - 网页：[中大信号研习室](https://nishino0525nanase.github.io/sysu-signals-study/)，由 Pages 工作流发布 `dist/`。
-- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”指向的 `sysu-signals-study-v1.6.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
+- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”指向的 `sysu-signals-study-v1.7.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
 - APK内置全部学习内容、公式字体和配图，核心阅读无需联网，不申请网络、定位、摄像头或账号权限。
 - 学习进度、收藏、错题、笔记保存在本机，支持导出和导入JSON备份。
 
@@ -93,3 +93,12 @@ Android使用JDK17、SDK platform35/build-tools35编译：设置`ANDROID_JAR`、
 - 配有中文矩形/三角/指数及频谱、DTFT周期、抽样混叠、s/z平面ROC图。已有真题配图可在相关卡中复用。原书图片支持原尺寸与局部放大。
 - 入口：网页侧栏“公式速查”（`#reference`）；单卡支持`#reference?card=HF-02`。真题阅读器可进入本章速查。搜索和章节/类别筛选均离线可用。
 - `content/reference-handbook.json`是文字内容源，真实摘图坐标在`content/reference-locations.json`的`handbookCards`中。`python tools/export-reference-handbook.py`生成同源彩色PDF，APK内置全部速查内容。
+
+
+## 1.7.0 整本原书高清阅读
+
+- 增加上传中文版第二版全628页阅读入口，保留原302条书签。正文原生约300dpi，二值扫描无损保留笔画，低分辨率封面按实际像素保存；不以插值放大冒称新增细节。
+- `#book`可从上次位置继续，支持PDF页/印刷书页跳转、章节目录与原图局部放大。PDF23–627对应印刷1–605，前置页与末页文件信息不冒标印刷页。
+- 总览与“资料与安装”均可进入，每个原书摘图下可直接打开整本原书的对应页。完整高清整理PDF另由Releases提供下载。
+- 网页按页加载并缓存浏览过的原书页面，不在首次打开时预下载全书；Android离线版内置全628页，沿用原签名升级。
+- 内容清单为`content/textbook-reader.json`，原生全页图位于`content/references/textbook/`。重建方式见`tools/build-textbook-reader.py --help`；整本PDF输出在构建目录，不把大文件加入网页源码。

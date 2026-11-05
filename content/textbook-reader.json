@@ -1,0 +1,6553 @@
+{
+  "id": "oppenheim-signals-systems-2e-zh",
+  "title": "奥本海姆《信号与系统》第二版中文版 · 原生高清阅读",
+  "sourceSha256": "80e2adcafcd9868eb5922172d8916ae08673496dfea71ac3a134dfaf106e0ff3",
+  "pdfPageCount": 628,
+  "printPageOffset": 22,
+  "pages": [
+    {
+      "pdfPage": 1,
+      "printPage": null,
+      "path": "references/textbook/page-001.webp",
+      "width": 1087,
+      "height": 1584,
+      "bytes": 768180
+    },
+    {
+      "pdfPage": 2,
+      "printPage": null,
+      "path": "references/textbook/page-002.webp",
+      "width": 1092,
+      "height": 1591,
+      "bytes": 855880
+    },
+    {
+      "pdfPage": 3,
+      "printPage": null,
+      "path": "references/textbook/page-003.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 25056
+    },
+    {
+      "pdfPage": 4,
+      "printPage": null,
+      "path": "references/textbook/page-004.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 117154
+    },
+    {
+      "pdfPage": 5,
+      "printPage": null,
+      "path": "references/textbook/page-005.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 121314
+    },
+    {
+      "pdfPage": 6,
+      "printPage": null,
+      "path": "references/textbook/page-006.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 119856
+    },
+    {
+      "pdfPage": 7,
+      "printPage": null,
+      "path": "references/textbook/page-007.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 135762
+    },
+    {
+      "pdfPage": 8,
+      "printPage": null,
+      "path": "references/textbook/page-008.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 139356
+    },
+    {
+      "pdfPage": 9,
+      "printPage": null,
+      "path": "references/textbook/page-009.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 141292
+    },
+    {
+      "pdfPage": 10,
+      "printPage": null,
+      "path": "references/textbook/page-010.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 85436
+    },
+    {
+      "pdfPage": 11,
+      "printPage": null,
+      "path": "references/textbook/page-011.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 31360
+    },
+    {
+      "pdfPage": 12,
+      "printPage": null,
+      "path": "references/textbook/page-012.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 119096
+    },
+    {
+      "pdfPage": 13,
+      "printPage": null,
+      "path": "references/textbook/page-013.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 131932
+    },
+    {
+      "pdfPage": 14,
+      "printPage": null,
+      "path": "references/textbook/page-014.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46774
+    },
+    {
+      "pdfPage": 15,
+      "printPage": null,
+      "path": "references/textbook/page-015.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47774
+    },
+    {
+      "pdfPage": 16,
+      "printPage": null,
+      "path": "references/textbook/page-016.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59404
+    },
+    {
+      "pdfPage": 17,
+      "printPage": null,
+      "path": "references/textbook/page-017.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50610
+    },
+    {
+      "pdfPage": 18,
+      "printPage": null,
+      "path": "references/textbook/page-018.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56710
+    },
+    {
+      "pdfPage": 19,
+      "printPage": null,
+      "path": "references/textbook/page-019.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53468
+    },
+    {
+      "pdfPage": 20,
+      "printPage": null,
+      "path": "references/textbook/page-020.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53954
+    },
+    {
+      "pdfPage": 21,
+      "printPage": null,
+      "path": "references/textbook/page-021.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50292
+    },
+    {
+      "pdfPage": 22,
+      "printPage": null,
+      "path": "references/textbook/page-022.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 32208
+    },
+    {
+      "pdfPage": 23,
+      "printPage": 1,
+      "path": "references/textbook/page-023.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79844
+    },
+    {
+      "pdfPage": 24,
+      "printPage": 2,
+      "path": "references/textbook/page-024.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 149748
+    },
+    {
+      "pdfPage": 25,
+      "printPage": 3,
+      "path": "references/textbook/page-025.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 54374
+    },
+    {
+      "pdfPage": 26,
+      "printPage": 4,
+      "path": "references/textbook/page-026.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 83108
+    },
+    {
+      "pdfPage": 27,
+      "printPage": 5,
+      "path": "references/textbook/page-027.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 78978
+    },
+    {
+      "pdfPage": 28,
+      "printPage": 6,
+      "path": "references/textbook/page-028.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59824
+    },
+    {
+      "pdfPage": 29,
+      "printPage": 7,
+      "path": "references/textbook/page-029.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 40654
+    },
+    {
+      "pdfPage": 30,
+      "printPage": 8,
+      "path": "references/textbook/page-030.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 91538
+    },
+    {
+      "pdfPage": 31,
+      "printPage": 9,
+      "path": "references/textbook/page-031.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55784
+    },
+    {
+      "pdfPage": 32,
+      "printPage": 10,
+      "path": "references/textbook/page-032.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49996
+    },
+    {
+      "pdfPage": 33,
+      "printPage": 11,
+      "path": "references/textbook/page-033.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 54860
+    },
+    {
+      "pdfPage": 34,
+      "printPage": 12,
+      "path": "references/textbook/page-034.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79844
+    },
+    {
+      "pdfPage": 35,
+      "printPage": 13,
+      "path": "references/textbook/page-035.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62154
+    },
+    {
+      "pdfPage": 36,
+      "printPage": 14,
+      "path": "references/textbook/page-036.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 77924
+    },
+    {
+      "pdfPage": 37,
+      "printPage": 15,
+      "path": "references/textbook/page-037.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 35300
+    },
+    {
+      "pdfPage": 38,
+      "printPage": 16,
+      "path": "references/textbook/page-038.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70502
+    },
+    {
+      "pdfPage": 39,
+      "printPage": 17,
+      "path": "references/textbook/page-039.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 35124
+    },
+    {
+      "pdfPage": 40,
+      "printPage": 18,
+      "path": "references/textbook/page-040.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 87162
+    },
+    {
+      "pdfPage": 41,
+      "printPage": 19,
+      "path": "references/textbook/page-041.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 82334
+    },
+    {
+      "pdfPage": 42,
+      "printPage": 20,
+      "path": "references/textbook/page-042.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45822
+    },
+    {
+      "pdfPage": 43,
+      "printPage": 21,
+      "path": "references/textbook/page-043.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66462
+    },
+    {
+      "pdfPage": 44,
+      "printPage": 22,
+      "path": "references/textbook/page-044.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47432
+    },
+    {
+      "pdfPage": 45,
+      "printPage": 23,
+      "path": "references/textbook/page-045.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 90338
+    },
+    {
+      "pdfPage": 46,
+      "printPage": 24,
+      "path": "references/textbook/page-046.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 77134
+    },
+    {
+      "pdfPage": 47,
+      "printPage": 25,
+      "path": "references/textbook/page-047.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60990
+    },
+    {
+      "pdfPage": 48,
+      "printPage": 26,
+      "path": "references/textbook/page-048.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 118702
+    },
+    {
+      "pdfPage": 49,
+      "printPage": 27,
+      "path": "references/textbook/page-049.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64928
+    },
+    {
+      "pdfPage": 50,
+      "printPage": 28,
+      "path": "references/textbook/page-050.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70286
+    },
+    {
+      "pdfPage": 51,
+      "printPage": 29,
+      "path": "references/textbook/page-051.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79660
+    },
+    {
+      "pdfPage": 52,
+      "printPage": 30,
+      "path": "references/textbook/page-052.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 85930
+    },
+    {
+      "pdfPage": 53,
+      "printPage": 31,
+      "path": "references/textbook/page-053.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 94966
+    },
+    {
+      "pdfPage": 54,
+      "printPage": 32,
+      "path": "references/textbook/page-054.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 93108
+    },
+    {
+      "pdfPage": 55,
+      "printPage": 33,
+      "path": "references/textbook/page-055.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 75508
+    },
+    {
+      "pdfPage": 56,
+      "printPage": 34,
+      "path": "references/textbook/page-056.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62686
+    },
+    {
+      "pdfPage": 57,
+      "printPage": 35,
+      "path": "references/textbook/page-057.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46480
+    },
+    {
+      "pdfPage": 58,
+      "printPage": 36,
+      "path": "references/textbook/page-058.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 80202
+    },
+    {
+      "pdfPage": 59,
+      "printPage": 37,
+      "path": "references/textbook/page-059.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49550
+    },
+    {
+      "pdfPage": 60,
+      "printPage": 38,
+      "path": "references/textbook/page-060.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44768
+    },
+    {
+      "pdfPage": 61,
+      "printPage": 39,
+      "path": "references/textbook/page-061.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 33930
+    },
+    {
+      "pdfPage": 62,
+      "printPage": 40,
+      "path": "references/textbook/page-062.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49300
+    },
+    {
+      "pdfPage": 63,
+      "printPage": 41,
+      "path": "references/textbook/page-063.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57452
+    },
+    {
+      "pdfPage": 64,
+      "printPage": 42,
+      "path": "references/textbook/page-064.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52686
+    },
+    {
+      "pdfPage": 65,
+      "printPage": 43,
+      "path": "references/textbook/page-065.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 42460
+    },
+    {
+      "pdfPage": 66,
+      "printPage": 44,
+      "path": "references/textbook/page-066.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 72230
+    },
+    {
+      "pdfPage": 67,
+      "printPage": 45,
+      "path": "references/textbook/page-067.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64518
+    },
+    {
+      "pdfPage": 68,
+      "printPage": 46,
+      "path": "references/textbook/page-068.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46650
+    },
+    {
+      "pdfPage": 69,
+      "printPage": 47,
+      "path": "references/textbook/page-069.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 41970
+    },
+    {
+      "pdfPage": 70,
+      "printPage": 48,
+      "path": "references/textbook/page-070.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 81030
+    },
+    {
+      "pdfPage": 71,
+      "printPage": 49,
+      "path": "references/textbook/page-071.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61224
+    },
+    {
+      "pdfPage": 72,
+      "printPage": 50,
+      "path": "references/textbook/page-072.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 91408
+    },
+    {
+      "pdfPage": 73,
+      "printPage": 51,
+      "path": "references/textbook/page-073.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 27582
+    },
+    {
+      "pdfPage": 74,
+      "printPage": 52,
+      "path": "references/textbook/page-074.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 54984
+    },
+    {
+      "pdfPage": 75,
+      "printPage": 53,
+      "path": "references/textbook/page-075.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39024
+    },
+    {
+      "pdfPage": 76,
+      "printPage": 54,
+      "path": "references/textbook/page-076.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 15588
+    },
+    {
+      "pdfPage": 77,
+      "printPage": 55,
+      "path": "references/textbook/page-077.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47618
+    },
+    {
+      "pdfPage": 78,
+      "printPage": 56,
+      "path": "references/textbook/page-078.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39090
+    },
+    {
+      "pdfPage": 79,
+      "printPage": 57,
+      "path": "references/textbook/page-079.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70578
+    },
+    {
+      "pdfPage": 80,
+      "printPage": 58,
+      "path": "references/textbook/page-080.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44702
+    },
+    {
+      "pdfPage": 81,
+      "printPage": 59,
+      "path": "references/textbook/page-081.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65892
+    },
+    {
+      "pdfPage": 82,
+      "printPage": 60,
+      "path": "references/textbook/page-082.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45414
+    },
+    {
+      "pdfPage": 83,
+      "printPage": 61,
+      "path": "references/textbook/page-083.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 86346
+    },
+    {
+      "pdfPage": 84,
+      "printPage": 62,
+      "path": "references/textbook/page-084.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 29660
+    },
+    {
+      "pdfPage": 85,
+      "printPage": 63,
+      "path": "references/textbook/page-085.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 27486
+    },
+    {
+      "pdfPage": 86,
+      "printPage": 64,
+      "path": "references/textbook/page-086.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65920
+    },
+    {
+      "pdfPage": 87,
+      "printPage": 65,
+      "path": "references/textbook/page-087.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65220
+    },
+    {
+      "pdfPage": 88,
+      "printPage": 66,
+      "path": "references/textbook/page-088.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 63824
+    },
+    {
+      "pdfPage": 89,
+      "printPage": 67,
+      "path": "references/textbook/page-089.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 76538
+    },
+    {
+      "pdfPage": 90,
+      "printPage": 68,
+      "path": "references/textbook/page-090.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 67600
+    },
+    {
+      "pdfPage": 91,
+      "printPage": 69,
+      "path": "references/textbook/page-091.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 72138
+    },
+    {
+      "pdfPage": 92,
+      "printPage": 70,
+      "path": "references/textbook/page-092.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 74604
+    },
+    {
+      "pdfPage": 93,
+      "printPage": 71,
+      "path": "references/textbook/page-093.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62694
+    },
+    {
+      "pdfPage": 94,
+      "printPage": 72,
+      "path": "references/textbook/page-094.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 83734
+    },
+    {
+      "pdfPage": 95,
+      "printPage": 73,
+      "path": "references/textbook/page-095.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 117602
+    },
+    {
+      "pdfPage": 96,
+      "printPage": 74,
+      "path": "references/textbook/page-096.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 58334
+    },
+    {
+      "pdfPage": 97,
+      "printPage": 75,
+      "path": "references/textbook/page-097.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 96964
+    },
+    {
+      "pdfPage": 98,
+      "printPage": 76,
+      "path": "references/textbook/page-098.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 88340
+    },
+    {
+      "pdfPage": 99,
+      "printPage": 77,
+      "path": "references/textbook/page-099.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 67462
+    },
+    {
+      "pdfPage": 100,
+      "printPage": 78,
+      "path": "references/textbook/page-100.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 97630
+    },
+    {
+      "pdfPage": 101,
+      "printPage": 79,
+      "path": "references/textbook/page-101.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 69870
+    },
+    {
+      "pdfPage": 102,
+      "printPage": 80,
+      "path": "references/textbook/page-102.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 84506
+    },
+    {
+      "pdfPage": 103,
+      "printPage": 81,
+      "path": "references/textbook/page-103.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 68458
+    },
+    {
+      "pdfPage": 104,
+      "printPage": 82,
+      "path": "references/textbook/page-104.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64946
+    },
+    {
+      "pdfPage": 105,
+      "printPage": 83,
+      "path": "references/textbook/page-105.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65592
+    },
+    {
+      "pdfPage": 106,
+      "printPage": 84,
+      "path": "references/textbook/page-106.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60500
+    },
+    {
+      "pdfPage": 107,
+      "printPage": 85,
+      "path": "references/textbook/page-107.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52376
+    },
+    {
+      "pdfPage": 108,
+      "printPage": 86,
+      "path": "references/textbook/page-108.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 91700
+    },
+    {
+      "pdfPage": 109,
+      "printPage": 87,
+      "path": "references/textbook/page-109.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 29626
+    },
+    {
+      "pdfPage": 110,
+      "printPage": 88,
+      "path": "references/textbook/page-110.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48046
+    },
+    {
+      "pdfPage": 111,
+      "printPage": 89,
+      "path": "references/textbook/page-111.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 36476
+    },
+    {
+      "pdfPage": 112,
+      "printPage": 90,
+      "path": "references/textbook/page-112.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 34740
+    },
+    {
+      "pdfPage": 113,
+      "printPage": 91,
+      "path": "references/textbook/page-113.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49526
+    },
+    {
+      "pdfPage": 114,
+      "printPage": 92,
+      "path": "references/textbook/page-114.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 81076
+    },
+    {
+      "pdfPage": 115,
+      "printPage": 93,
+      "path": "references/textbook/page-115.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 30348
+    },
+    {
+      "pdfPage": 116,
+      "printPage": 94,
+      "path": "references/textbook/page-116.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61828
+    },
+    {
+      "pdfPage": 117,
+      "printPage": 95,
+      "path": "references/textbook/page-117.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62258
+    },
+    {
+      "pdfPage": 118,
+      "printPage": 96,
+      "path": "references/textbook/page-118.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55472
+    },
+    {
+      "pdfPage": 119,
+      "printPage": 97,
+      "path": "references/textbook/page-119.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 42034
+    },
+    {
+      "pdfPage": 120,
+      "printPage": 98,
+      "path": "references/textbook/page-120.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55534
+    },
+    {
+      "pdfPage": 121,
+      "printPage": 99,
+      "path": "references/textbook/page-121.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65762
+    },
+    {
+      "pdfPage": 122,
+      "printPage": 100,
+      "path": "references/textbook/page-122.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56580
+    },
+    {
+      "pdfPage": 123,
+      "printPage": 101,
+      "path": "references/textbook/page-123.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53066
+    },
+    {
+      "pdfPage": 124,
+      "printPage": 102,
+      "path": "references/textbook/page-124.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57246
+    },
+    {
+      "pdfPage": 125,
+      "printPage": 103,
+      "path": "references/textbook/page-125.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 67456
+    },
+    {
+      "pdfPage": 126,
+      "printPage": 104,
+      "path": "references/textbook/page-126.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 63832
+    },
+    {
+      "pdfPage": 127,
+      "printPage": 105,
+      "path": "references/textbook/page-127.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50382
+    },
+    {
+      "pdfPage": 128,
+      "printPage": 106,
+      "path": "references/textbook/page-128.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66826
+    },
+    {
+      "pdfPage": 129,
+      "printPage": 107,
+      "path": "references/textbook/page-129.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55228
+    },
+    {
+      "pdfPage": 130,
+      "printPage": 108,
+      "path": "references/textbook/page-130.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50206
+    },
+    {
+      "pdfPage": 131,
+      "printPage": 109,
+      "path": "references/textbook/page-131.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70948
+    },
+    {
+      "pdfPage": 132,
+      "printPage": 110,
+      "path": "references/textbook/page-132.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 98168
+    },
+    {
+      "pdfPage": 133,
+      "printPage": 111,
+      "path": "references/textbook/page-133.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 237514
+    },
+    {
+      "pdfPage": 134,
+      "printPage": 112,
+      "path": "references/textbook/page-134.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 127412
+    },
+    {
+      "pdfPage": 135,
+      "printPage": 113,
+      "path": "references/textbook/page-135.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 227592
+    },
+    {
+      "pdfPage": 136,
+      "printPage": 114,
+      "path": "references/textbook/page-136.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65600
+    },
+    {
+      "pdfPage": 137,
+      "printPage": 115,
+      "path": "references/textbook/page-137.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 76436
+    },
+    {
+      "pdfPage": 138,
+      "printPage": 116,
+      "path": "references/textbook/page-138.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60588
+    },
+    {
+      "pdfPage": 139,
+      "printPage": 117,
+      "path": "references/textbook/page-139.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 41774
+    },
+    {
+      "pdfPage": 140,
+      "printPage": 118,
+      "path": "references/textbook/page-140.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46682
+    },
+    {
+      "pdfPage": 141,
+      "printPage": 119,
+      "path": "references/textbook/page-141.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 69092
+    },
+    {
+      "pdfPage": 142,
+      "printPage": 120,
+      "path": "references/textbook/page-142.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64896
+    },
+    {
+      "pdfPage": 143,
+      "printPage": 121,
+      "path": "references/textbook/page-143.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 27082
+    },
+    {
+      "pdfPage": 144,
+      "printPage": 122,
+      "path": "references/textbook/page-144.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 30930
+    },
+    {
+      "pdfPage": 145,
+      "printPage": 123,
+      "path": "references/textbook/page-145.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 96498
+    },
+    {
+      "pdfPage": 146,
+      "printPage": 124,
+      "path": "references/textbook/page-146.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61470
+    },
+    {
+      "pdfPage": 147,
+      "printPage": 125,
+      "path": "references/textbook/page-147.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64544
+    },
+    {
+      "pdfPage": 148,
+      "printPage": 126,
+      "path": "references/textbook/page-148.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60734
+    },
+    {
+      "pdfPage": 149,
+      "printPage": 127,
+      "path": "references/textbook/page-149.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 91204
+    },
+    {
+      "pdfPage": 150,
+      "printPage": 128,
+      "path": "references/textbook/page-150.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59802
+    },
+    {
+      "pdfPage": 151,
+      "printPage": 129,
+      "path": "references/textbook/page-151.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 68708
+    },
+    {
+      "pdfPage": 152,
+      "printPage": 130,
+      "path": "references/textbook/page-152.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51808
+    },
+    {
+      "pdfPage": 153,
+      "printPage": 131,
+      "path": "references/textbook/page-153.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64092
+    },
+    {
+      "pdfPage": 154,
+      "printPage": 132,
+      "path": "references/textbook/page-154.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 31118
+    },
+    {
+      "pdfPage": 155,
+      "printPage": 133,
+      "path": "references/textbook/page-155.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 77794
+    },
+    {
+      "pdfPage": 156,
+      "printPage": 134,
+      "path": "references/textbook/page-156.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 74030
+    },
+    {
+      "pdfPage": 157,
+      "printPage": 135,
+      "path": "references/textbook/page-157.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 82544
+    },
+    {
+      "pdfPage": 158,
+      "printPage": 136,
+      "path": "references/textbook/page-158.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44062
+    },
+    {
+      "pdfPage": 159,
+      "printPage": 137,
+      "path": "references/textbook/page-159.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50130
+    },
+    {
+      "pdfPage": 160,
+      "printPage": 138,
+      "path": "references/textbook/page-160.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46294
+    },
+    {
+      "pdfPage": 161,
+      "printPage": 139,
+      "path": "references/textbook/page-161.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57852
+    },
+    {
+      "pdfPage": 162,
+      "printPage": 140,
+      "path": "references/textbook/page-162.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57484
+    },
+    {
+      "pdfPage": 163,
+      "printPage": 141,
+      "path": "references/textbook/page-163.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 78964
+    },
+    {
+      "pdfPage": 164,
+      "printPage": 142,
+      "path": "references/textbook/page-164.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 42770
+    },
+    {
+      "pdfPage": 165,
+      "printPage": 143,
+      "path": "references/textbook/page-165.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 54244
+    },
+    {
+      "pdfPage": 166,
+      "printPage": 144,
+      "path": "references/textbook/page-166.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50722
+    },
+    {
+      "pdfPage": 167,
+      "printPage": 145,
+      "path": "references/textbook/page-167.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 68930
+    },
+    {
+      "pdfPage": 168,
+      "printPage": 146,
+      "path": "references/textbook/page-168.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 43914
+    },
+    {
+      "pdfPage": 169,
+      "printPage": 147,
+      "path": "references/textbook/page-169.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 104268
+    },
+    {
+      "pdfPage": 170,
+      "printPage": 148,
+      "path": "references/textbook/page-170.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50484
+    },
+    {
+      "pdfPage": 171,
+      "printPage": 149,
+      "path": "references/textbook/page-171.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 618870
+    },
+    {
+      "pdfPage": 172,
+      "printPage": 150,
+      "path": "references/textbook/page-172.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 67852
+    },
+    {
+      "pdfPage": 173,
+      "printPage": 151,
+      "path": "references/textbook/page-173.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 118754
+    },
+    {
+      "pdfPage": 174,
+      "printPage": 152,
+      "path": "references/textbook/page-174.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 73242
+    },
+    {
+      "pdfPage": 175,
+      "printPage": 153,
+      "path": "references/textbook/page-175.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45486
+    },
+    {
+      "pdfPage": 176,
+      "printPage": 154,
+      "path": "references/textbook/page-176.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 76758
+    },
+    {
+      "pdfPage": 177,
+      "printPage": 155,
+      "path": "references/textbook/page-177.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59944
+    },
+    {
+      "pdfPage": 178,
+      "printPage": 156,
+      "path": "references/textbook/page-178.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61776
+    },
+    {
+      "pdfPage": 179,
+      "printPage": 157,
+      "path": "references/textbook/page-179.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 74314
+    },
+    {
+      "pdfPage": 180,
+      "printPage": 158,
+      "path": "references/textbook/page-180.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57756
+    },
+    {
+      "pdfPage": 181,
+      "printPage": 159,
+      "path": "references/textbook/page-181.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 89838
+    },
+    {
+      "pdfPage": 182,
+      "printPage": 160,
+      "path": "references/textbook/page-182.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44614
+    },
+    {
+      "pdfPage": 183,
+      "printPage": 161,
+      "path": "references/textbook/page-183.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 43202
+    },
+    {
+      "pdfPage": 184,
+      "printPage": 162,
+      "path": "references/textbook/page-184.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39556
+    },
+    {
+      "pdfPage": 185,
+      "printPage": 163,
+      "path": "references/textbook/page-185.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47322
+    },
+    {
+      "pdfPage": 186,
+      "printPage": 164,
+      "path": "references/textbook/page-186.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 34856
+    },
+    {
+      "pdfPage": 187,
+      "printPage": 165,
+      "path": "references/textbook/page-187.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47964
+    },
+    {
+      "pdfPage": 188,
+      "printPage": 166,
+      "path": "references/textbook/page-188.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51602
+    },
+    {
+      "pdfPage": 189,
+      "printPage": 167,
+      "path": "references/textbook/page-189.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49426
+    },
+    {
+      "pdfPage": 190,
+      "printPage": 168,
+      "path": "references/textbook/page-190.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 22860
+    },
+    {
+      "pdfPage": 191,
+      "printPage": 169,
+      "path": "references/textbook/page-191.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46584
+    },
+    {
+      "pdfPage": 192,
+      "printPage": 170,
+      "path": "references/textbook/page-192.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39218
+    },
+    {
+      "pdfPage": 193,
+      "printPage": 171,
+      "path": "references/textbook/page-193.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 38760
+    },
+    {
+      "pdfPage": 194,
+      "printPage": 172,
+      "path": "references/textbook/page-194.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44450
+    },
+    {
+      "pdfPage": 195,
+      "printPage": 173,
+      "path": "references/textbook/page-195.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 67706
+    },
+    {
+      "pdfPage": 196,
+      "printPage": 174,
+      "path": "references/textbook/page-196.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49012
+    },
+    {
+      "pdfPage": 197,
+      "printPage": 175,
+      "path": "references/textbook/page-197.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49628
+    },
+    {
+      "pdfPage": 198,
+      "printPage": 176,
+      "path": "references/textbook/page-198.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52314
+    },
+    {
+      "pdfPage": 199,
+      "printPage": 177,
+      "path": "references/textbook/page-199.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62578
+    },
+    {
+      "pdfPage": 200,
+      "printPage": 178,
+      "path": "references/textbook/page-200.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 41344
+    },
+    {
+      "pdfPage": 201,
+      "printPage": 179,
+      "path": "references/textbook/page-201.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 240638
+    },
+    {
+      "pdfPage": 202,
+      "printPage": 180,
+      "path": "references/textbook/page-202.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66480
+    },
+    {
+      "pdfPage": 203,
+      "printPage": 181,
+      "path": "references/textbook/page-203.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 67966
+    },
+    {
+      "pdfPage": 204,
+      "printPage": 182,
+      "path": "references/textbook/page-204.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 42128
+    },
+    {
+      "pdfPage": 205,
+      "printPage": 183,
+      "path": "references/textbook/page-205.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 83236
+    },
+    {
+      "pdfPage": 206,
+      "printPage": 184,
+      "path": "references/textbook/page-206.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59726
+    },
+    {
+      "pdfPage": 207,
+      "printPage": 185,
+      "path": "references/textbook/page-207.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 29712
+    },
+    {
+      "pdfPage": 208,
+      "printPage": 186,
+      "path": "references/textbook/page-208.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62454
+    },
+    {
+      "pdfPage": 209,
+      "printPage": 187,
+      "path": "references/textbook/page-209.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 54322
+    },
+    {
+      "pdfPage": 210,
+      "printPage": 188,
+      "path": "references/textbook/page-210.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45014
+    },
+    {
+      "pdfPage": 211,
+      "printPage": 189,
+      "path": "references/textbook/page-211.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 27306
+    },
+    {
+      "pdfPage": 212,
+      "printPage": 190,
+      "path": "references/textbook/page-212.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55028
+    },
+    {
+      "pdfPage": 213,
+      "printPage": 191,
+      "path": "references/textbook/page-213.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 40984
+    },
+    {
+      "pdfPage": 214,
+      "printPage": 192,
+      "path": "references/textbook/page-214.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39676
+    },
+    {
+      "pdfPage": 215,
+      "printPage": 193,
+      "path": "references/textbook/page-215.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50736
+    },
+    {
+      "pdfPage": 216,
+      "printPage": 194,
+      "path": "references/textbook/page-216.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50654
+    },
+    {
+      "pdfPage": 217,
+      "printPage": 195,
+      "path": "references/textbook/page-217.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49128
+    },
+    {
+      "pdfPage": 218,
+      "printPage": 196,
+      "path": "references/textbook/page-218.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61472
+    },
+    {
+      "pdfPage": 219,
+      "printPage": 197,
+      "path": "references/textbook/page-219.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45714
+    },
+    {
+      "pdfPage": 220,
+      "printPage": 198,
+      "path": "references/textbook/page-220.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49780
+    },
+    {
+      "pdfPage": 221,
+      "printPage": 199,
+      "path": "references/textbook/page-221.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 73958
+    },
+    {
+      "pdfPage": 222,
+      "printPage": 200,
+      "path": "references/textbook/page-222.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 77354
+    },
+    {
+      "pdfPage": 223,
+      "printPage": 201,
+      "path": "references/textbook/page-223.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61108
+    },
+    {
+      "pdfPage": 224,
+      "printPage": 202,
+      "path": "references/textbook/page-224.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66374
+    },
+    {
+      "pdfPage": 225,
+      "printPage": 203,
+      "path": "references/textbook/page-225.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52490
+    },
+    {
+      "pdfPage": 226,
+      "printPage": 204,
+      "path": "references/textbook/page-226.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 37550
+    },
+    {
+      "pdfPage": 227,
+      "printPage": 205,
+      "path": "references/textbook/page-227.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46300
+    },
+    {
+      "pdfPage": 228,
+      "printPage": 206,
+      "path": "references/textbook/page-228.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60076
+    },
+    {
+      "pdfPage": 229,
+      "printPage": 207,
+      "path": "references/textbook/page-229.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62398
+    },
+    {
+      "pdfPage": 230,
+      "printPage": 208,
+      "path": "references/textbook/page-230.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51190
+    },
+    {
+      "pdfPage": 231,
+      "printPage": 209,
+      "path": "references/textbook/page-231.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 33034
+    },
+    {
+      "pdfPage": 232,
+      "printPage": 210,
+      "path": "references/textbook/page-232.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 69402
+    },
+    {
+      "pdfPage": 233,
+      "printPage": 211,
+      "path": "references/textbook/page-233.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 58984
+    },
+    {
+      "pdfPage": 234,
+      "printPage": 212,
+      "path": "references/textbook/page-234.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 86376
+    },
+    {
+      "pdfPage": 235,
+      "printPage": 213,
+      "path": "references/textbook/page-235.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47508
+    },
+    {
+      "pdfPage": 236,
+      "printPage": 214,
+      "path": "references/textbook/page-236.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 32402
+    },
+    {
+      "pdfPage": 237,
+      "printPage": 215,
+      "path": "references/textbook/page-237.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45466
+    },
+    {
+      "pdfPage": 238,
+      "printPage": 216,
+      "path": "references/textbook/page-238.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 25248
+    },
+    {
+      "pdfPage": 239,
+      "printPage": 217,
+      "path": "references/textbook/page-239.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 33240
+    },
+    {
+      "pdfPage": 240,
+      "printPage": 218,
+      "path": "references/textbook/page-240.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 43718
+    },
+    {
+      "pdfPage": 241,
+      "printPage": 219,
+      "path": "references/textbook/page-241.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 29008
+    },
+    {
+      "pdfPage": 242,
+      "printPage": 220,
+      "path": "references/textbook/page-242.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 43918
+    },
+    {
+      "pdfPage": 243,
+      "printPage": 221,
+      "path": "references/textbook/page-243.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 38362
+    },
+    {
+      "pdfPage": 244,
+      "printPage": 222,
+      "path": "references/textbook/page-244.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64140
+    },
+    {
+      "pdfPage": 245,
+      "printPage": 223,
+      "path": "references/textbook/page-245.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 69978
+    },
+    {
+      "pdfPage": 246,
+      "printPage": 224,
+      "path": "references/textbook/page-246.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59484
+    },
+    {
+      "pdfPage": 247,
+      "printPage": 225,
+      "path": "references/textbook/page-247.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 100990
+    },
+    {
+      "pdfPage": 248,
+      "printPage": 226,
+      "path": "references/textbook/page-248.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 87274
+    },
+    {
+      "pdfPage": 249,
+      "printPage": 227,
+      "path": "references/textbook/page-249.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 80218
+    },
+    {
+      "pdfPage": 250,
+      "printPage": 228,
+      "path": "references/textbook/page-250.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46856
+    },
+    {
+      "pdfPage": 251,
+      "printPage": 229,
+      "path": "references/textbook/page-251.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 82290
+    },
+    {
+      "pdfPage": 252,
+      "printPage": 230,
+      "path": "references/textbook/page-252.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 34016
+    },
+    {
+      "pdfPage": 253,
+      "printPage": 231,
+      "path": "references/textbook/page-253.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 33912
+    },
+    {
+      "pdfPage": 254,
+      "printPage": 232,
+      "path": "references/textbook/page-254.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55382
+    },
+    {
+      "pdfPage": 255,
+      "printPage": 233,
+      "path": "references/textbook/page-255.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50234
+    },
+    {
+      "pdfPage": 256,
+      "printPage": 234,
+      "path": "references/textbook/page-256.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 58798
+    },
+    {
+      "pdfPage": 257,
+      "printPage": 235,
+      "path": "references/textbook/page-257.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 26210
+    },
+    {
+      "pdfPage": 258,
+      "printPage": 236,
+      "path": "references/textbook/page-258.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44976
+    },
+    {
+      "pdfPage": 259,
+      "printPage": 237,
+      "path": "references/textbook/page-259.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 40800
+    },
+    {
+      "pdfPage": 260,
+      "printPage": 238,
+      "path": "references/textbook/page-260.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56436
+    },
+    {
+      "pdfPage": 261,
+      "printPage": 239,
+      "path": "references/textbook/page-261.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49350
+    },
+    {
+      "pdfPage": 262,
+      "printPage": 240,
+      "path": "references/textbook/page-262.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 37036
+    },
+    {
+      "pdfPage": 263,
+      "printPage": 241,
+      "path": "references/textbook/page-263.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 37604
+    },
+    {
+      "pdfPage": 264,
+      "printPage": 242,
+      "path": "references/textbook/page-264.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 77518
+    },
+    {
+      "pdfPage": 265,
+      "printPage": 243,
+      "path": "references/textbook/page-265.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79314
+    },
+    {
+      "pdfPage": 266,
+      "printPage": 244,
+      "path": "references/textbook/page-266.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57010
+    },
+    {
+      "pdfPage": 267,
+      "printPage": 245,
+      "path": "references/textbook/page-267.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 41646
+    },
+    {
+      "pdfPage": 268,
+      "printPage": 246,
+      "path": "references/textbook/page-268.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62010
+    },
+    {
+      "pdfPage": 269,
+      "printPage": 247,
+      "path": "references/textbook/page-269.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45360
+    },
+    {
+      "pdfPage": 270,
+      "printPage": 248,
+      "path": "references/textbook/page-270.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 30864
+    },
+    {
+      "pdfPage": 271,
+      "printPage": 249,
+      "path": "references/textbook/page-271.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 32494
+    },
+    {
+      "pdfPage": 272,
+      "printPage": 250,
+      "path": "references/textbook/page-272.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49806
+    },
+    {
+      "pdfPage": 273,
+      "printPage": 251,
+      "path": "references/textbook/page-273.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51620
+    },
+    {
+      "pdfPage": 274,
+      "printPage": 252,
+      "path": "references/textbook/page-274.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64812
+    },
+    {
+      "pdfPage": 275,
+      "printPage": 253,
+      "path": "references/textbook/page-275.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52294
+    },
+    {
+      "pdfPage": 276,
+      "printPage": 254,
+      "path": "references/textbook/page-276.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 63754
+    },
+    {
+      "pdfPage": 277,
+      "printPage": 255,
+      "path": "references/textbook/page-277.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70798
+    },
+    {
+      "pdfPage": 278,
+      "printPage": 256,
+      "path": "references/textbook/page-278.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62424
+    },
+    {
+      "pdfPage": 279,
+      "printPage": 257,
+      "path": "references/textbook/page-279.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 31708
+    },
+    {
+      "pdfPage": 280,
+      "printPage": 258,
+      "path": "references/textbook/page-280.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 40902
+    },
+    {
+      "pdfPage": 281,
+      "printPage": 259,
+      "path": "references/textbook/page-281.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 37818
+    },
+    {
+      "pdfPage": 282,
+      "printPage": 260,
+      "path": "references/textbook/page-282.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 17020
+    },
+    {
+      "pdfPage": 283,
+      "printPage": 261,
+      "path": "references/textbook/page-283.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 30238
+    },
+    {
+      "pdfPage": 284,
+      "printPage": 262,
+      "path": "references/textbook/page-284.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 43652
+    },
+    {
+      "pdfPage": 285,
+      "printPage": 263,
+      "path": "references/textbook/page-285.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46476
+    },
+    {
+      "pdfPage": 286,
+      "printPage": 264,
+      "path": "references/textbook/page-286.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47566
+    },
+    {
+      "pdfPage": 287,
+      "printPage": 265,
+      "path": "references/textbook/page-287.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 43690
+    },
+    {
+      "pdfPage": 288,
+      "printPage": 266,
+      "path": "references/textbook/page-288.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 38100
+    },
+    {
+      "pdfPage": 289,
+      "printPage": 267,
+      "path": "references/textbook/page-289.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55924
+    },
+    {
+      "pdfPage": 290,
+      "printPage": 268,
+      "path": "references/textbook/page-290.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64506
+    },
+    {
+      "pdfPage": 291,
+      "printPage": 269,
+      "path": "references/textbook/page-291.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59774
+    },
+    {
+      "pdfPage": 292,
+      "printPage": 270,
+      "path": "references/textbook/page-292.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 68964
+    },
+    {
+      "pdfPage": 293,
+      "printPage": 271,
+      "path": "references/textbook/page-293.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 31530
+    },
+    {
+      "pdfPage": 294,
+      "printPage": 272,
+      "path": "references/textbook/page-294.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 106752
+    },
+    {
+      "pdfPage": 295,
+      "printPage": 273,
+      "path": "references/textbook/page-295.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 91528
+    },
+    {
+      "pdfPage": 296,
+      "printPage": 274,
+      "path": "references/textbook/page-296.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 1040158
+    },
+    {
+      "pdfPage": 297,
+      "printPage": 275,
+      "path": "references/textbook/page-297.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 88002
+    },
+    {
+      "pdfPage": 298,
+      "printPage": 276,
+      "path": "references/textbook/page-298.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 74308
+    },
+    {
+      "pdfPage": 299,
+      "printPage": 277,
+      "path": "references/textbook/page-299.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65338
+    },
+    {
+      "pdfPage": 300,
+      "printPage": 278,
+      "path": "references/textbook/page-300.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70340
+    },
+    {
+      "pdfPage": 301,
+      "printPage": 279,
+      "path": "references/textbook/page-301.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48410
+    },
+    {
+      "pdfPage": 302,
+      "printPage": 280,
+      "path": "references/textbook/page-302.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 36498
+    },
+    {
+      "pdfPage": 303,
+      "printPage": 281,
+      "path": "references/textbook/page-303.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 99794
+    },
+    {
+      "pdfPage": 304,
+      "printPage": 282,
+      "path": "references/textbook/page-304.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 92266
+    },
+    {
+      "pdfPage": 305,
+      "printPage": 283,
+      "path": "references/textbook/page-305.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66226
+    },
+    {
+      "pdfPage": 306,
+      "printPage": 284,
+      "path": "references/textbook/page-306.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 21554
+    },
+    {
+      "pdfPage": 307,
+      "printPage": 285,
+      "path": "references/textbook/page-307.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 110180
+    },
+    {
+      "pdfPage": 308,
+      "printPage": 286,
+      "path": "references/textbook/page-308.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 80836
+    },
+    {
+      "pdfPage": 309,
+      "printPage": 287,
+      "path": "references/textbook/page-309.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45048
+    },
+    {
+      "pdfPage": 310,
+      "printPage": 288,
+      "path": "references/textbook/page-310.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62826
+    },
+    {
+      "pdfPage": 311,
+      "printPage": 289,
+      "path": "references/textbook/page-311.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 73122
+    },
+    {
+      "pdfPage": 312,
+      "printPage": 290,
+      "path": "references/textbook/page-312.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48304
+    },
+    {
+      "pdfPage": 313,
+      "printPage": 291,
+      "path": "references/textbook/page-313.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66072
+    },
+    {
+      "pdfPage": 314,
+      "printPage": 292,
+      "path": "references/textbook/page-314.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 63800
+    },
+    {
+      "pdfPage": 315,
+      "printPage": 293,
+      "path": "references/textbook/page-315.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66402
+    },
+    {
+      "pdfPage": 316,
+      "printPage": 294,
+      "path": "references/textbook/page-316.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46140
+    },
+    {
+      "pdfPage": 317,
+      "printPage": 295,
+      "path": "references/textbook/page-317.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 71084
+    },
+    {
+      "pdfPage": 318,
+      "printPage": 296,
+      "path": "references/textbook/page-318.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39742
+    },
+    {
+      "pdfPage": 319,
+      "printPage": 297,
+      "path": "references/textbook/page-319.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59266
+    },
+    {
+      "pdfPage": 320,
+      "printPage": 298,
+      "path": "references/textbook/page-320.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 30428
+    },
+    {
+      "pdfPage": 321,
+      "printPage": 299,
+      "path": "references/textbook/page-321.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 42610
+    },
+    {
+      "pdfPage": 322,
+      "printPage": 300,
+      "path": "references/textbook/page-322.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 41384
+    },
+    {
+      "pdfPage": 323,
+      "printPage": 301,
+      "path": "references/textbook/page-323.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 31800
+    },
+    {
+      "pdfPage": 324,
+      "printPage": 302,
+      "path": "references/textbook/page-324.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45848
+    },
+    {
+      "pdfPage": 325,
+      "printPage": 303,
+      "path": "references/textbook/page-325.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 31252
+    },
+    {
+      "pdfPage": 326,
+      "printPage": 304,
+      "path": "references/textbook/page-326.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 72162
+    },
+    {
+      "pdfPage": 327,
+      "printPage": 305,
+      "path": "references/textbook/page-327.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 85896
+    },
+    {
+      "pdfPage": 328,
+      "printPage": 306,
+      "path": "references/textbook/page-328.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66324
+    },
+    {
+      "pdfPage": 329,
+      "printPage": 307,
+      "path": "references/textbook/page-329.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45008
+    },
+    {
+      "pdfPage": 330,
+      "printPage": 308,
+      "path": "references/textbook/page-330.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 97742
+    },
+    {
+      "pdfPage": 331,
+      "printPage": 309,
+      "path": "references/textbook/page-331.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52876
+    },
+    {
+      "pdfPage": 332,
+      "printPage": 310,
+      "path": "references/textbook/page-332.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 31148
+    },
+    {
+      "pdfPage": 333,
+      "printPage": 311,
+      "path": "references/textbook/page-333.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 80724
+    },
+    {
+      "pdfPage": 334,
+      "printPage": 312,
+      "path": "references/textbook/page-334.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56560
+    },
+    {
+      "pdfPage": 335,
+      "printPage": 313,
+      "path": "references/textbook/page-335.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 58454
+    },
+    {
+      "pdfPage": 336,
+      "printPage": 314,
+      "path": "references/textbook/page-336.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45048
+    },
+    {
+      "pdfPage": 337,
+      "printPage": 315,
+      "path": "references/textbook/page-337.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 36338
+    },
+    {
+      "pdfPage": 338,
+      "printPage": 316,
+      "path": "references/textbook/page-338.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62866
+    },
+    {
+      "pdfPage": 339,
+      "printPage": 317,
+      "path": "references/textbook/page-339.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62468
+    },
+    {
+      "pdfPage": 340,
+      "printPage": 318,
+      "path": "references/textbook/page-340.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51294
+    },
+    {
+      "pdfPage": 341,
+      "printPage": 319,
+      "path": "references/textbook/page-341.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51026
+    },
+    {
+      "pdfPage": 342,
+      "printPage": 320,
+      "path": "references/textbook/page-342.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39472
+    },
+    {
+      "pdfPage": 343,
+      "printPage": 321,
+      "path": "references/textbook/page-343.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56788
+    },
+    {
+      "pdfPage": 344,
+      "printPage": 322,
+      "path": "references/textbook/page-344.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 81914
+    },
+    {
+      "pdfPage": 345,
+      "printPage": 323,
+      "path": "references/textbook/page-345.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 87204
+    },
+    {
+      "pdfPage": 346,
+      "printPage": 324,
+      "path": "references/textbook/page-346.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45256
+    },
+    {
+      "pdfPage": 347,
+      "printPage": 325,
+      "path": "references/textbook/page-347.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 95406
+    },
+    {
+      "pdfPage": 348,
+      "printPage": 326,
+      "path": "references/textbook/page-348.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60452
+    },
+    {
+      "pdfPage": 349,
+      "printPage": 327,
+      "path": "references/textbook/page-349.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 73962
+    },
+    {
+      "pdfPage": 350,
+      "printPage": 328,
+      "path": "references/textbook/page-350.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47970
+    },
+    {
+      "pdfPage": 351,
+      "printPage": 329,
+      "path": "references/textbook/page-351.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59430
+    },
+    {
+      "pdfPage": 352,
+      "printPage": 330,
+      "path": "references/textbook/page-352.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 22322
+    },
+    {
+      "pdfPage": 353,
+      "printPage": 331,
+      "path": "references/textbook/page-353.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 91374
+    },
+    {
+      "pdfPage": 354,
+      "printPage": 332,
+      "path": "references/textbook/page-354.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44282
+    },
+    {
+      "pdfPage": 355,
+      "printPage": 333,
+      "path": "references/textbook/page-355.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 54376
+    },
+    {
+      "pdfPage": 356,
+      "printPage": 334,
+      "path": "references/textbook/page-356.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 74810
+    },
+    {
+      "pdfPage": 357,
+      "printPage": 335,
+      "path": "references/textbook/page-357.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50086
+    },
+    {
+      "pdfPage": 358,
+      "printPage": 336,
+      "path": "references/textbook/page-358.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60828
+    },
+    {
+      "pdfPage": 359,
+      "printPage": 337,
+      "path": "references/textbook/page-359.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 78228
+    },
+    {
+      "pdfPage": 360,
+      "printPage": 338,
+      "path": "references/textbook/page-360.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 507232
+    },
+    {
+      "pdfPage": 361,
+      "printPage": 339,
+      "path": "references/textbook/page-361.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 224826
+    },
+    {
+      "pdfPage": 362,
+      "printPage": 340,
+      "path": "references/textbook/page-362.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 73190
+    },
+    {
+      "pdfPage": 363,
+      "printPage": 341,
+      "path": "references/textbook/page-363.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 33184
+    },
+    {
+      "pdfPage": 364,
+      "printPage": 342,
+      "path": "references/textbook/page-364.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 89738
+    },
+    {
+      "pdfPage": 365,
+      "printPage": 343,
+      "path": "references/textbook/page-365.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 99996
+    },
+    {
+      "pdfPage": 366,
+      "printPage": 344,
+      "path": "references/textbook/page-366.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53602
+    },
+    {
+      "pdfPage": 367,
+      "printPage": 345,
+      "path": "references/textbook/page-367.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 75784
+    },
+    {
+      "pdfPage": 368,
+      "printPage": 346,
+      "path": "references/textbook/page-368.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55086
+    },
+    {
+      "pdfPage": 369,
+      "printPage": 347,
+      "path": "references/textbook/page-369.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60234
+    },
+    {
+      "pdfPage": 370,
+      "printPage": 348,
+      "path": "references/textbook/page-370.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 40406
+    },
+    {
+      "pdfPage": 371,
+      "printPage": 349,
+      "path": "references/textbook/page-371.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55318
+    },
+    {
+      "pdfPage": 372,
+      "printPage": 350,
+      "path": "references/textbook/page-372.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53214
+    },
+    {
+      "pdfPage": 373,
+      "printPage": 351,
+      "path": "references/textbook/page-373.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45800
+    },
+    {
+      "pdfPage": 374,
+      "printPage": 352,
+      "path": "references/textbook/page-374.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 31044
+    },
+    {
+      "pdfPage": 375,
+      "printPage": 353,
+      "path": "references/textbook/page-375.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62420
+    },
+    {
+      "pdfPage": 376,
+      "printPage": 354,
+      "path": "references/textbook/page-376.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44666
+    },
+    {
+      "pdfPage": 377,
+      "printPage": 355,
+      "path": "references/textbook/page-377.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 95362
+    },
+    {
+      "pdfPage": 378,
+      "printPage": 356,
+      "path": "references/textbook/page-378.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 28234
+    },
+    {
+      "pdfPage": 379,
+      "printPage": 357,
+      "path": "references/textbook/page-379.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 87704
+    },
+    {
+      "pdfPage": 380,
+      "printPage": 358,
+      "path": "references/textbook/page-380.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52382
+    },
+    {
+      "pdfPage": 381,
+      "printPage": 359,
+      "path": "references/textbook/page-381.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53740
+    },
+    {
+      "pdfPage": 382,
+      "printPage": 360,
+      "path": "references/textbook/page-382.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 42036
+    },
+    {
+      "pdfPage": 383,
+      "printPage": 361,
+      "path": "references/textbook/page-383.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 58880
+    },
+    {
+      "pdfPage": 384,
+      "printPage": 362,
+      "path": "references/textbook/page-384.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39244
+    },
+    {
+      "pdfPage": 385,
+      "printPage": 363,
+      "path": "references/textbook/page-385.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 32654
+    },
+    {
+      "pdfPage": 386,
+      "printPage": 364,
+      "path": "references/textbook/page-386.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46036
+    },
+    {
+      "pdfPage": 387,
+      "printPage": 365,
+      "path": "references/textbook/page-387.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 54592
+    },
+    {
+      "pdfPage": 388,
+      "printPage": 366,
+      "path": "references/textbook/page-388.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49992
+    },
+    {
+      "pdfPage": 389,
+      "printPage": 367,
+      "path": "references/textbook/page-389.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65006
+    },
+    {
+      "pdfPage": 390,
+      "printPage": 368,
+      "path": "references/textbook/page-390.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 40714
+    },
+    {
+      "pdfPage": 391,
+      "printPage": 369,
+      "path": "references/textbook/page-391.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46266
+    },
+    {
+      "pdfPage": 392,
+      "printPage": 370,
+      "path": "references/textbook/page-392.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66320
+    },
+    {
+      "pdfPage": 393,
+      "printPage": 371,
+      "path": "references/textbook/page-393.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52798
+    },
+    {
+      "pdfPage": 394,
+      "printPage": 372,
+      "path": "references/textbook/page-394.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 15766
+    },
+    {
+      "pdfPage": 395,
+      "printPage": 373,
+      "path": "references/textbook/page-395.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 101372
+    },
+    {
+      "pdfPage": 396,
+      "printPage": 374,
+      "path": "references/textbook/page-396.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56482
+    },
+    {
+      "pdfPage": 397,
+      "printPage": 375,
+      "path": "references/textbook/page-397.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 81030
+    },
+    {
+      "pdfPage": 398,
+      "printPage": 376,
+      "path": "references/textbook/page-398.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 67520
+    },
+    {
+      "pdfPage": 399,
+      "printPage": 377,
+      "path": "references/textbook/page-399.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 37220
+    },
+    {
+      "pdfPage": 400,
+      "printPage": 378,
+      "path": "references/textbook/page-400.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 89578
+    },
+    {
+      "pdfPage": 401,
+      "printPage": 379,
+      "path": "references/textbook/page-401.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 42196
+    },
+    {
+      "pdfPage": 402,
+      "printPage": 380,
+      "path": "references/textbook/page-402.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 82314
+    },
+    {
+      "pdfPage": 403,
+      "printPage": 381,
+      "path": "references/textbook/page-403.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51200
+    },
+    {
+      "pdfPage": 404,
+      "printPage": 382,
+      "path": "references/textbook/page-404.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 87728
+    },
+    {
+      "pdfPage": 405,
+      "printPage": 383,
+      "path": "references/textbook/page-405.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 84592
+    },
+    {
+      "pdfPage": 406,
+      "printPage": 384,
+      "path": "references/textbook/page-406.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 27334
+    },
+    {
+      "pdfPage": 407,
+      "printPage": 385,
+      "path": "references/textbook/page-407.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 68104
+    },
+    {
+      "pdfPage": 408,
+      "printPage": 386,
+      "path": "references/textbook/page-408.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61290
+    },
+    {
+      "pdfPage": 409,
+      "printPage": 387,
+      "path": "references/textbook/page-409.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66544
+    },
+    {
+      "pdfPage": 410,
+      "printPage": 388,
+      "path": "references/textbook/page-410.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 72682
+    },
+    {
+      "pdfPage": 411,
+      "printPage": 389,
+      "path": "references/textbook/page-411.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79818
+    },
+    {
+      "pdfPage": 412,
+      "printPage": 390,
+      "path": "references/textbook/page-412.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 37044
+    },
+    {
+      "pdfPage": 413,
+      "printPage": 391,
+      "path": "references/textbook/page-413.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 87700
+    },
+    {
+      "pdfPage": 414,
+      "printPage": 392,
+      "path": "references/textbook/page-414.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 92564
+    },
+    {
+      "pdfPage": 415,
+      "printPage": 393,
+      "path": "references/textbook/page-415.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 43012
+    },
+    {
+      "pdfPage": 416,
+      "printPage": 394,
+      "path": "references/textbook/page-416.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51856
+    },
+    {
+      "pdfPage": 417,
+      "printPage": 395,
+      "path": "references/textbook/page-417.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70774
+    },
+    {
+      "pdfPage": 418,
+      "printPage": 396,
+      "path": "references/textbook/page-418.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55784
+    },
+    {
+      "pdfPage": 419,
+      "printPage": 397,
+      "path": "references/textbook/page-419.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 40434
+    },
+    {
+      "pdfPage": 420,
+      "printPage": 398,
+      "path": "references/textbook/page-420.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52858
+    },
+    {
+      "pdfPage": 421,
+      "printPage": 399,
+      "path": "references/textbook/page-421.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57522
+    },
+    {
+      "pdfPage": 422,
+      "printPage": 400,
+      "path": "references/textbook/page-422.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79716
+    },
+    {
+      "pdfPage": 423,
+      "printPage": 401,
+      "path": "references/textbook/page-423.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 81018
+    },
+    {
+      "pdfPage": 424,
+      "printPage": 402,
+      "path": "references/textbook/page-424.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48512
+    },
+    {
+      "pdfPage": 425,
+      "printPage": 403,
+      "path": "references/textbook/page-425.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47640
+    },
+    {
+      "pdfPage": 426,
+      "printPage": 404,
+      "path": "references/textbook/page-426.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53450
+    },
+    {
+      "pdfPage": 427,
+      "printPage": 405,
+      "path": "references/textbook/page-427.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47170
+    },
+    {
+      "pdfPage": 428,
+      "printPage": 406,
+      "path": "references/textbook/page-428.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 63868
+    },
+    {
+      "pdfPage": 429,
+      "printPage": 407,
+      "path": "references/textbook/page-429.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 74974
+    },
+    {
+      "pdfPage": 430,
+      "printPage": 408,
+      "path": "references/textbook/page-430.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 26560
+    },
+    {
+      "pdfPage": 431,
+      "printPage": 409,
+      "path": "references/textbook/page-431.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 85000
+    },
+    {
+      "pdfPage": 432,
+      "printPage": 410,
+      "path": "references/textbook/page-432.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 18330
+    },
+    {
+      "pdfPage": 433,
+      "printPage": 411,
+      "path": "references/textbook/page-433.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 58944
+    },
+    {
+      "pdfPage": 434,
+      "printPage": 412,
+      "path": "references/textbook/page-434.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 22012
+    },
+    {
+      "pdfPage": 435,
+      "printPage": 413,
+      "path": "references/textbook/page-435.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50646
+    },
+    {
+      "pdfPage": 436,
+      "printPage": 414,
+      "path": "references/textbook/page-436.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48068
+    },
+    {
+      "pdfPage": 437,
+      "printPage": 415,
+      "path": "references/textbook/page-437.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59142
+    },
+    {
+      "pdfPage": 438,
+      "printPage": 416,
+      "path": "references/textbook/page-438.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48244
+    },
+    {
+      "pdfPage": 439,
+      "printPage": 417,
+      "path": "references/textbook/page-439.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 77574
+    },
+    {
+      "pdfPage": 440,
+      "printPage": 418,
+      "path": "references/textbook/page-440.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52250
+    },
+    {
+      "pdfPage": 441,
+      "printPage": 419,
+      "path": "references/textbook/page-441.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 187752
+    },
+    {
+      "pdfPage": 442,
+      "printPage": 420,
+      "path": "references/textbook/page-442.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53836
+    },
+    {
+      "pdfPage": 443,
+      "printPage": 421,
+      "path": "references/textbook/page-443.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 380054
+    },
+    {
+      "pdfPage": 444,
+      "printPage": 422,
+      "path": "references/textbook/page-444.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 207026
+    },
+    {
+      "pdfPage": 445,
+      "printPage": 423,
+      "path": "references/textbook/page-445.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 58094
+    },
+    {
+      "pdfPage": 446,
+      "printPage": 424,
+      "path": "references/textbook/page-446.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65602
+    },
+    {
+      "pdfPage": 447,
+      "printPage": 425,
+      "path": "references/textbook/page-447.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56368
+    },
+    {
+      "pdfPage": 448,
+      "printPage": 426,
+      "path": "references/textbook/page-448.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 365596
+    },
+    {
+      "pdfPage": 449,
+      "printPage": 427,
+      "path": "references/textbook/page-449.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 192888
+    },
+    {
+      "pdfPage": 450,
+      "printPage": 428,
+      "path": "references/textbook/page-450.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 76082
+    },
+    {
+      "pdfPage": 451,
+      "printPage": 429,
+      "path": "references/textbook/page-451.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 246516
+    },
+    {
+      "pdfPage": 452,
+      "printPage": 430,
+      "path": "references/textbook/page-452.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 82400
+    },
+    {
+      "pdfPage": 453,
+      "printPage": 431,
+      "path": "references/textbook/page-453.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 80076
+    },
+    {
+      "pdfPage": 454,
+      "printPage": 432,
+      "path": "references/textbook/page-454.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 36892
+    },
+    {
+      "pdfPage": 455,
+      "printPage": 433,
+      "path": "references/textbook/page-455.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56974
+    },
+    {
+      "pdfPage": 456,
+      "printPage": 434,
+      "path": "references/textbook/page-456.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 74064
+    },
+    {
+      "pdfPage": 457,
+      "printPage": 435,
+      "path": "references/textbook/page-457.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49542
+    },
+    {
+      "pdfPage": 458,
+      "printPage": 436,
+      "path": "references/textbook/page-458.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 206304
+    },
+    {
+      "pdfPage": 459,
+      "printPage": 437,
+      "path": "references/textbook/page-459.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 179946
+    },
+    {
+      "pdfPage": 460,
+      "printPage": 438,
+      "path": "references/textbook/page-460.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 173900
+    },
+    {
+      "pdfPage": 461,
+      "printPage": 439,
+      "path": "references/textbook/page-461.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 41878
+    },
+    {
+      "pdfPage": 462,
+      "printPage": 440,
+      "path": "references/textbook/page-462.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44754
+    },
+    {
+      "pdfPage": 463,
+      "printPage": 441,
+      "path": "references/textbook/page-463.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56850
+    },
+    {
+      "pdfPage": 464,
+      "printPage": 442,
+      "path": "references/textbook/page-464.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57648
+    },
+    {
+      "pdfPage": 465,
+      "printPage": 443,
+      "path": "references/textbook/page-465.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 67602
+    },
+    {
+      "pdfPage": 466,
+      "printPage": 444,
+      "path": "references/textbook/page-466.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70862
+    },
+    {
+      "pdfPage": 467,
+      "printPage": 445,
+      "path": "references/textbook/page-467.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 239862
+    },
+    {
+      "pdfPage": 468,
+      "printPage": 446,
+      "path": "references/textbook/page-468.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 152064
+    },
+    {
+      "pdfPage": 469,
+      "printPage": 447,
+      "path": "references/textbook/page-469.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57862
+    },
+    {
+      "pdfPage": 470,
+      "printPage": 448,
+      "path": "references/textbook/page-470.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66482
+    },
+    {
+      "pdfPage": 471,
+      "printPage": 449,
+      "path": "references/textbook/page-471.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 76026
+    },
+    {
+      "pdfPage": 472,
+      "printPage": 450,
+      "path": "references/textbook/page-472.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 35366
+    },
+    {
+      "pdfPage": 473,
+      "printPage": 451,
+      "path": "references/textbook/page-473.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53292
+    },
+    {
+      "pdfPage": 474,
+      "printPage": 452,
+      "path": "references/textbook/page-474.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 54690
+    },
+    {
+      "pdfPage": 475,
+      "printPage": 453,
+      "path": "references/textbook/page-475.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62968
+    },
+    {
+      "pdfPage": 476,
+      "printPage": 454,
+      "path": "references/textbook/page-476.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 37544
+    },
+    {
+      "pdfPage": 477,
+      "printPage": 455,
+      "path": "references/textbook/page-477.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 40924
+    },
+    {
+      "pdfPage": 478,
+      "printPage": 456,
+      "path": "references/textbook/page-478.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 68312
+    },
+    {
+      "pdfPage": 479,
+      "printPage": 457,
+      "path": "references/textbook/page-479.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60436
+    },
+    {
+      "pdfPage": 480,
+      "printPage": 458,
+      "path": "references/textbook/page-480.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46162
+    },
+    {
+      "pdfPage": 481,
+      "printPage": 459,
+      "path": "references/textbook/page-481.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 74886
+    },
+    {
+      "pdfPage": 482,
+      "printPage": 460,
+      "path": "references/textbook/page-482.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 83076
+    },
+    {
+      "pdfPage": 483,
+      "printPage": 461,
+      "path": "references/textbook/page-483.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 58406
+    },
+    {
+      "pdfPage": 484,
+      "printPage": 462,
+      "path": "references/textbook/page-484.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 42932
+    },
+    {
+      "pdfPage": 485,
+      "printPage": 463,
+      "path": "references/textbook/page-485.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56844
+    },
+    {
+      "pdfPage": 486,
+      "printPage": 464,
+      "path": "references/textbook/page-486.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 35136
+    },
+    {
+      "pdfPage": 487,
+      "printPage": 465,
+      "path": "references/textbook/page-487.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 31532
+    },
+    {
+      "pdfPage": 488,
+      "printPage": 466,
+      "path": "references/textbook/page-488.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64614
+    },
+    {
+      "pdfPage": 489,
+      "printPage": 467,
+      "path": "references/textbook/page-489.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44602
+    },
+    {
+      "pdfPage": 490,
+      "printPage": 468,
+      "path": "references/textbook/page-490.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 38728
+    },
+    {
+      "pdfPage": 491,
+      "printPage": 469,
+      "path": "references/textbook/page-491.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50488
+    },
+    {
+      "pdfPage": 492,
+      "printPage": 470,
+      "path": "references/textbook/page-492.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79320
+    },
+    {
+      "pdfPage": 493,
+      "printPage": 471,
+      "path": "references/textbook/page-493.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 75168
+    },
+    {
+      "pdfPage": 494,
+      "printPage": 472,
+      "path": "references/textbook/page-494.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 112896
+    },
+    {
+      "pdfPage": 495,
+      "printPage": 473,
+      "path": "references/textbook/page-495.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 42880
+    },
+    {
+      "pdfPage": 496,
+      "printPage": 474,
+      "path": "references/textbook/page-496.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65036
+    },
+    {
+      "pdfPage": 497,
+      "printPage": 475,
+      "path": "references/textbook/page-497.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 71136
+    },
+    {
+      "pdfPage": 498,
+      "printPage": 476,
+      "path": "references/textbook/page-498.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 273998
+    },
+    {
+      "pdfPage": 499,
+      "printPage": 477,
+      "path": "references/textbook/page-499.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 431208
+    },
+    {
+      "pdfPage": 500,
+      "printPage": 478,
+      "path": "references/textbook/page-500.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 311024
+    },
+    {
+      "pdfPage": 501,
+      "printPage": 479,
+      "path": "references/textbook/page-501.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 68622
+    },
+    {
+      "pdfPage": 502,
+      "printPage": 480,
+      "path": "references/textbook/page-502.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60350
+    },
+    {
+      "pdfPage": 503,
+      "printPage": 481,
+      "path": "references/textbook/page-503.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 274450
+    },
+    {
+      "pdfPage": 504,
+      "printPage": 482,
+      "path": "references/textbook/page-504.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 408314
+    },
+    {
+      "pdfPage": 505,
+      "printPage": 483,
+      "path": "references/textbook/page-505.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 161062
+    },
+    {
+      "pdfPage": 506,
+      "printPage": 484,
+      "path": "references/textbook/page-506.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 143636
+    },
+    {
+      "pdfPage": 507,
+      "printPage": 485,
+      "path": "references/textbook/page-507.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57948
+    },
+    {
+      "pdfPage": 508,
+      "printPage": 486,
+      "path": "references/textbook/page-508.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64618
+    },
+    {
+      "pdfPage": 509,
+      "printPage": 487,
+      "path": "references/textbook/page-509.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 38466
+    },
+    {
+      "pdfPage": 510,
+      "printPage": 488,
+      "path": "references/textbook/page-510.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79092
+    },
+    {
+      "pdfPage": 511,
+      "printPage": 489,
+      "path": "references/textbook/page-511.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65432
+    },
+    {
+      "pdfPage": 512,
+      "printPage": 490,
+      "path": "references/textbook/page-512.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 69272
+    },
+    {
+      "pdfPage": 513,
+      "printPage": 491,
+      "path": "references/textbook/page-513.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59804
+    },
+    {
+      "pdfPage": 514,
+      "printPage": 492,
+      "path": "references/textbook/page-514.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50976
+    },
+    {
+      "pdfPage": 515,
+      "printPage": 493,
+      "path": "references/textbook/page-515.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60436
+    },
+    {
+      "pdfPage": 516,
+      "printPage": 494,
+      "path": "references/textbook/page-516.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 41916
+    },
+    {
+      "pdfPage": 517,
+      "printPage": 495,
+      "path": "references/textbook/page-517.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49730
+    },
+    {
+      "pdfPage": 518,
+      "printPage": 496,
+      "path": "references/textbook/page-518.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53418
+    },
+    {
+      "pdfPage": 519,
+      "printPage": 497,
+      "path": "references/textbook/page-519.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 76032
+    },
+    {
+      "pdfPage": 520,
+      "printPage": 498,
+      "path": "references/textbook/page-520.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 69372
+    },
+    {
+      "pdfPage": 521,
+      "printPage": 499,
+      "path": "references/textbook/page-521.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 279734
+    },
+    {
+      "pdfPage": 522,
+      "printPage": 500,
+      "path": "references/textbook/page-522.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 59956
+    },
+    {
+      "pdfPage": 523,
+      "printPage": 501,
+      "path": "references/textbook/page-523.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56226
+    },
+    {
+      "pdfPage": 524,
+      "printPage": 502,
+      "path": "references/textbook/page-524.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 84812
+    },
+    {
+      "pdfPage": 525,
+      "printPage": 503,
+      "path": "references/textbook/page-525.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65522
+    },
+    {
+      "pdfPage": 526,
+      "printPage": 504,
+      "path": "references/textbook/page-526.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 38754
+    },
+    {
+      "pdfPage": 527,
+      "printPage": 505,
+      "path": "references/textbook/page-527.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 33358
+    },
+    {
+      "pdfPage": 528,
+      "printPage": 506,
+      "path": "references/textbook/page-528.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 89398
+    },
+    {
+      "pdfPage": 529,
+      "printPage": 507,
+      "path": "references/textbook/page-529.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60818
+    },
+    {
+      "pdfPage": 530,
+      "printPage": 508,
+      "path": "references/textbook/page-530.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60570
+    },
+    {
+      "pdfPage": 531,
+      "printPage": 509,
+      "path": "references/textbook/page-531.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 68564
+    },
+    {
+      "pdfPage": 532,
+      "printPage": 510,
+      "path": "references/textbook/page-532.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 67470
+    },
+    {
+      "pdfPage": 533,
+      "printPage": 511,
+      "path": "references/textbook/page-533.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 72054
+    },
+    {
+      "pdfPage": 534,
+      "printPage": 512,
+      "path": "references/textbook/page-534.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 37526
+    },
+    {
+      "pdfPage": 535,
+      "printPage": 513,
+      "path": "references/textbook/page-535.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48754
+    },
+    {
+      "pdfPage": 536,
+      "printPage": 514,
+      "path": "references/textbook/page-536.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 40904
+    },
+    {
+      "pdfPage": 537,
+      "printPage": 515,
+      "path": "references/textbook/page-537.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 33566
+    },
+    {
+      "pdfPage": 538,
+      "printPage": 516,
+      "path": "references/textbook/page-538.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49390
+    },
+    {
+      "pdfPage": 539,
+      "printPage": 517,
+      "path": "references/textbook/page-539.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 41638
+    },
+    {
+      "pdfPage": 540,
+      "printPage": 518,
+      "path": "references/textbook/page-540.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 44418
+    },
+    {
+      "pdfPage": 541,
+      "printPage": 519,
+      "path": "references/textbook/page-541.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50606
+    },
+    {
+      "pdfPage": 542,
+      "printPage": 520,
+      "path": "references/textbook/page-542.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52752
+    },
+    {
+      "pdfPage": 543,
+      "printPage": 521,
+      "path": "references/textbook/page-543.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 38646
+    },
+    {
+      "pdfPage": 544,
+      "printPage": 522,
+      "path": "references/textbook/page-544.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51402
+    },
+    {
+      "pdfPage": 545,
+      "printPage": 523,
+      "path": "references/textbook/page-545.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 111354
+    },
+    {
+      "pdfPage": 546,
+      "printPage": 524,
+      "path": "references/textbook/page-546.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49938
+    },
+    {
+      "pdfPage": 547,
+      "printPage": 525,
+      "path": "references/textbook/page-547.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 87834
+    },
+    {
+      "pdfPage": 548,
+      "printPage": 526,
+      "path": "references/textbook/page-548.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 85464
+    },
+    {
+      "pdfPage": 549,
+      "printPage": 527,
+      "path": "references/textbook/page-549.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 81750
+    },
+    {
+      "pdfPage": 550,
+      "printPage": 528,
+      "path": "references/textbook/page-550.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 81818
+    },
+    {
+      "pdfPage": 551,
+      "printPage": 529,
+      "path": "references/textbook/page-551.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 76350
+    },
+    {
+      "pdfPage": 552,
+      "printPage": 530,
+      "path": "references/textbook/page-552.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 111600
+    },
+    {
+      "pdfPage": 553,
+      "printPage": 531,
+      "path": "references/textbook/page-553.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 72790
+    },
+    {
+      "pdfPage": 554,
+      "printPage": 532,
+      "path": "references/textbook/page-554.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 81550
+    },
+    {
+      "pdfPage": 555,
+      "printPage": 533,
+      "path": "references/textbook/page-555.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 72372
+    },
+    {
+      "pdfPage": 556,
+      "printPage": 534,
+      "path": "references/textbook/page-556.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 107288
+    },
+    {
+      "pdfPage": 557,
+      "printPage": 535,
+      "path": "references/textbook/page-557.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61334
+    },
+    {
+      "pdfPage": 558,
+      "printPage": 536,
+      "path": "references/textbook/page-558.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66168
+    },
+    {
+      "pdfPage": 559,
+      "printPage": 537,
+      "path": "references/textbook/page-559.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 72948
+    },
+    {
+      "pdfPage": 560,
+      "printPage": 538,
+      "path": "references/textbook/page-560.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50580
+    },
+    {
+      "pdfPage": 561,
+      "printPage": 539,
+      "path": "references/textbook/page-561.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 74818
+    },
+    {
+      "pdfPage": 562,
+      "printPage": 540,
+      "path": "references/textbook/page-562.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56092
+    },
+    {
+      "pdfPage": 563,
+      "printPage": 541,
+      "path": "references/textbook/page-563.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 98270
+    },
+    {
+      "pdfPage": 564,
+      "printPage": 542,
+      "path": "references/textbook/page-564.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70450
+    },
+    {
+      "pdfPage": 565,
+      "printPage": 543,
+      "path": "references/textbook/page-565.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 55924
+    },
+    {
+      "pdfPage": 566,
+      "printPage": 544,
+      "path": "references/textbook/page-566.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 102956
+    },
+    {
+      "pdfPage": 567,
+      "printPage": 545,
+      "path": "references/textbook/page-567.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 63866
+    },
+    {
+      "pdfPage": 568,
+      "printPage": 546,
+      "path": "references/textbook/page-568.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 57808
+    },
+    {
+      "pdfPage": 569,
+      "printPage": 547,
+      "path": "references/textbook/page-569.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 95400
+    },
+    {
+      "pdfPage": 570,
+      "printPage": 548,
+      "path": "references/textbook/page-570.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 62676
+    },
+    {
+      "pdfPage": 571,
+      "printPage": 549,
+      "path": "references/textbook/page-571.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 78332
+    },
+    {
+      "pdfPage": 572,
+      "printPage": 550,
+      "path": "references/textbook/page-572.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 99440
+    },
+    {
+      "pdfPage": 573,
+      "printPage": 551,
+      "path": "references/textbook/page-573.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 97620
+    },
+    {
+      "pdfPage": 574,
+      "printPage": 552,
+      "path": "references/textbook/page-574.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61924
+    },
+    {
+      "pdfPage": 575,
+      "printPage": 553,
+      "path": "references/textbook/page-575.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61222
+    },
+    {
+      "pdfPage": 576,
+      "printPage": 554,
+      "path": "references/textbook/page-576.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 45598
+    },
+    {
+      "pdfPage": 577,
+      "printPage": 555,
+      "path": "references/textbook/page-577.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 63858
+    },
+    {
+      "pdfPage": 578,
+      "printPage": 556,
+      "path": "references/textbook/page-578.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 64616
+    },
+    {
+      "pdfPage": 579,
+      "printPage": 557,
+      "path": "references/textbook/page-579.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48128
+    },
+    {
+      "pdfPage": 580,
+      "printPage": 558,
+      "path": "references/textbook/page-580.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39652
+    },
+    {
+      "pdfPage": 581,
+      "printPage": 559,
+      "path": "references/textbook/page-581.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49660
+    },
+    {
+      "pdfPage": 582,
+      "printPage": 560,
+      "path": "references/textbook/page-582.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56312
+    },
+    {
+      "pdfPage": 583,
+      "printPage": 561,
+      "path": "references/textbook/page-583.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48358
+    },
+    {
+      "pdfPage": 584,
+      "printPage": 562,
+      "path": "references/textbook/page-584.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52672
+    },
+    {
+      "pdfPage": 585,
+      "printPage": 563,
+      "path": "references/textbook/page-585.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 50600
+    },
+    {
+      "pdfPage": 586,
+      "printPage": 564,
+      "path": "references/textbook/page-586.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 51718
+    },
+    {
+      "pdfPage": 587,
+      "printPage": 565,
+      "path": "references/textbook/page-587.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 69760
+    },
+    {
+      "pdfPage": 588,
+      "printPage": 566,
+      "path": "references/textbook/page-588.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 63786
+    },
+    {
+      "pdfPage": 589,
+      "printPage": 567,
+      "path": "references/textbook/page-589.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 60384
+    },
+    {
+      "pdfPage": 590,
+      "printPage": 568,
+      "path": "references/textbook/page-590.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 83688
+    },
+    {
+      "pdfPage": 591,
+      "printPage": 569,
+      "path": "references/textbook/page-591.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47500
+    },
+    {
+      "pdfPage": 592,
+      "printPage": 570,
+      "path": "references/textbook/page-592.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 53998
+    },
+    {
+      "pdfPage": 593,
+      "printPage": 571,
+      "path": "references/textbook/page-593.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 78464
+    },
+    {
+      "pdfPage": 594,
+      "printPage": 572,
+      "path": "references/textbook/page-594.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 73296
+    },
+    {
+      "pdfPage": 595,
+      "printPage": 573,
+      "path": "references/textbook/page-595.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56550
+    },
+    {
+      "pdfPage": 596,
+      "printPage": 574,
+      "path": "references/textbook/page-596.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46922
+    },
+    {
+      "pdfPage": 597,
+      "printPage": 575,
+      "path": "references/textbook/page-597.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 61736
+    },
+    {
+      "pdfPage": 598,
+      "printPage": 576,
+      "path": "references/textbook/page-598.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 43368
+    },
+    {
+      "pdfPage": 599,
+      "printPage": 577,
+      "path": "references/textbook/page-599.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 56820
+    },
+    {
+      "pdfPage": 600,
+      "printPage": 578,
+      "path": "references/textbook/page-600.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 70206
+    },
+    {
+      "pdfPage": 601,
+      "printPage": 579,
+      "path": "references/textbook/page-601.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 58190
+    },
+    {
+      "pdfPage": 602,
+      "printPage": 580,
+      "path": "references/textbook/page-602.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52642
+    },
+    {
+      "pdfPage": 603,
+      "printPage": 581,
+      "path": "references/textbook/page-603.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 47688
+    },
+    {
+      "pdfPage": 604,
+      "printPage": 582,
+      "path": "references/textbook/page-604.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 73574
+    },
+    {
+      "pdfPage": 605,
+      "printPage": 583,
+      "path": "references/textbook/page-605.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 52438
+    },
+    {
+      "pdfPage": 606,
+      "printPage": 584,
+      "path": "references/textbook/page-606.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 49222
+    },
+    {
+      "pdfPage": 607,
+      "printPage": 585,
+      "path": "references/textbook/page-607.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 39262
+    },
+    {
+      "pdfPage": 608,
+      "printPage": 586,
+      "path": "references/textbook/page-608.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 48542
+    },
+    {
+      "pdfPage": 609,
+      "printPage": 587,
+      "path": "references/textbook/page-609.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 46314
+    },
+    {
+      "pdfPage": 610,
+      "printPage": 588,
+      "path": "references/textbook/page-610.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 35202
+    },
+    {
+      "pdfPage": 611,
+      "printPage": 589,
+      "path": "references/textbook/page-611.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 20626
+    },
+    {
+      "pdfPage": 612,
+      "printPage": 590,
+      "path": "references/textbook/page-612.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79152
+    },
+    {
+      "pdfPage": 613,
+      "printPage": 591,
+      "path": "references/textbook/page-613.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 65414
+    },
+    {
+      "pdfPage": 614,
+      "printPage": 592,
+      "path": "references/textbook/page-614.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79636
+    },
+    {
+      "pdfPage": 615,
+      "printPage": 593,
+      "path": "references/textbook/page-615.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 79598
+    },
+    {
+      "pdfPage": 616,
+      "printPage": 594,
+      "path": "references/textbook/page-616.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 77116
+    },
+    {
+      "pdfPage": 617,
+      "printPage": 595,
+      "path": "references/textbook/page-617.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 66210
+    },
+    {
+      "pdfPage": 618,
+      "printPage": 596,
+      "path": "references/textbook/page-618.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 73330
+    },
+    {
+      "pdfPage": 619,
+      "printPage": 597,
+      "path": "references/textbook/page-619.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 28596
+    },
+    {
+      "pdfPage": 620,
+      "printPage": 598,
+      "path": "references/textbook/page-620.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 23322
+    },
+    {
+      "pdfPage": 621,
+      "printPage": 599,
+      "path": "references/textbook/page-621.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 32372
+    },
+    {
+      "pdfPage": 622,
+      "printPage": 600,
+      "path": "references/textbook/page-622.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 25640
+    },
+    {
+      "pdfPage": 623,
+      "printPage": 601,
+      "path": "references/textbook/page-623.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 29152
+    },
+    {
+      "pdfPage": 624,
+      "printPage": 602,
+      "path": "references/textbook/page-624.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 27244
+    },
+    {
+      "pdfPage": 625,
+      "printPage": 603,
+      "path": "references/textbook/page-625.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 25802
+    },
+    {
+      "pdfPage": 626,
+      "printPage": 604,
+      "path": "references/textbook/page-626.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 28162
+    },
+    {
+      "pdfPage": 627,
+      "printPage": 605,
+      "path": "references/textbook/page-627.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 17336
+    },
+    {
+      "pdfPage": 628,
+      "printPage": null,
+      "path": "references/textbook/page-628.webp",
+      "width": 2066,
+      "height": 3012,
+      "bytes": 15170
+    }
+  ],
+  "toc": [
+    {
+      "level": 1,
+      "title": "第1章  信号与系统",
+      "pdfPage": 23
+    },
+    {
+      "level": 2,
+      "title": "1.0引言",
+      "pdfPage": 23
+    },
+    {
+      "level": 2,
+      "title": "1.1连续时间和离散时间信号",
+      "pdfPage": 23
+    },
+    {
+      "level": 3,
+      "title": "1.1.1举例与数学表示",
+      "pdfPage": 23
+    },
+    {
+      "level": 3,
+      "title": "1.1.2信号能量与功率",
+      "pdfPage": 26
+    },
+    {
+      "level": 2,
+      "title": "1.2自变量的变换",
+      "pdfPage": 27
+    },
+    {
+      "level": 3,
+      "title": "1.2.1自变量变换举例",
+      "pdfPage": 28
+    },
+    {
+      "level": 3,
+      "title": "1.2.2周期信号",
+      "pdfPage": 30
+    },
+    {
+      "level": 3,
+      "title": "1.2.3偶信号与奇信号",
+      "pdfPage": 31
+    },
+    {
+      "level": 2,
+      "title": "1.3指数信号与正弦信号",
+      "pdfPage": 32
+    },
+    {
+      "level": 3,
+      "title": "1.3.1连续时间复指数信号与正弦信号",
+      "pdfPage": 32
+    },
+    {
+      "level": 3,
+      "title": "1.3.2离散时间复指数信号与正弦信号",
+      "pdfPage": 36
+    },
+    {
+      "level": 3,
+      "title": "1.3.3离散时间复指数序列的周期性质",
+      "pdfPage": 38
+    },
+    {
+      "level": 2,
+      "title": "1.4单位冲激与单位阶跃函数",
+      "pdfPage": 41
+    },
+    {
+      "level": 3,
+      "title": "1.4.1离散时间单位脉冲和单位阶跃序列",
+      "pdfPage": 41
+    },
+    {
+      "level": 3,
+      "title": "1.4.2连续时间单位阶跃和单位冲激函数",
+      "pdfPage": 43
+    },
+    {
+      "level": 2,
+      "title": "1.5连续时间和离散时间系统",
+      "pdfPage": 46
+    },
+    {
+      "level": 3,
+      "title": "1.5.1简单系统举例",
+      "pdfPage": 47
+    },
+    {
+      "level": 3,
+      "title": "1.5.2系统的互联",
+      "pdfPage": 48
+    },
+    {
+      "level": 2,
+      "title": "1.6基本系统性质",
+      "pdfPage": 50
+    },
+    {
+      "level": 3,
+      "title": "1.6.1记忆系统与无记忆系统",
+      "pdfPage": 50
+    },
+    {
+      "level": 3,
+      "title": "1.6.2可逆性与可逆系统",
+      "pdfPage": 51
+    },
+    {
+      "level": 3,
+      "title": "1.6.3因果性",
+      "pdfPage": 52
+    },
+    {
+      "level": 3,
+      "title": "1.6.4稳定性",
+      "pdfPage": 53
+    },
+    {
+      "level": 3,
+      "title": "1.6.5时不变性",
+      "pdfPage": 54
+    },
+    {
+      "level": 3,
+      "title": "1.6.6线性",
+      "pdfPage": 55
+    },
+    {
+      "level": 2,
+      "title": "1.7小结",
+      "pdfPage": 58
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 59
+    },
+    {
+      "level": 1,
+      "title": "第2章  线性时不变系统",
+      "pdfPage": 70
+    },
+    {
+      "level": 2,
+      "title": "2.0引言",
+      "pdfPage": 70
+    },
+    {
+      "level": 2,
+      "title": "2.1离散时间线性时不变系统：卷积和",
+      "pdfPage": 70
+    },
+    {
+      "level": 3,
+      "title": "2.1.1用脉冲表示离散时间信号",
+      "pdfPage": 70
+    },
+    {
+      "level": 3,
+      "title": "2.1.2离散时间线性时不变系统的单位脉冲响应及卷积和表示",
+      "pdfPage": 71
+    },
+    {
+      "level": 2,
+      "title": "2.2连续时间线性时不变系统：卷积积分",
+      "pdfPage": 79
+    },
+    {
+      "level": 3,
+      "title": "2.2.1用冲激表示连续时间信号",
+      "pdfPage": 79
+    },
+    {
+      "level": 3,
+      "title": "2.2.2连续时间线性时不变系统的单位冲激响应及卷积积分表示",
+      "pdfPage": 81
+    },
+    {
+      "level": 2,
+      "title": "2.3线性时不变系统的性质",
+      "pdfPage": 86
+    },
+    {
+      "level": 3,
+      "title": "2.3.1交换律性质",
+      "pdfPage": 86
+    },
+    {
+      "level": 3,
+      "title": "2.3.2分配律性质",
+      "pdfPage": 87
+    },
+    {
+      "level": 3,
+      "title": "2.3.3结合律性质",
+      "pdfPage": 88
+    },
+    {
+      "level": 3,
+      "title": "2.3.4有记忆和无记忆线性时不变系统",
+      "pdfPage": 89
+    },
+    {
+      "level": 3,
+      "title": "2.3.5线性时不变系统的可逆性",
+      "pdfPage": 90
+    },
+    {
+      "level": 3,
+      "title": "2.3.6线性时不变系统的因果性",
+      "pdfPage": 91
+    },
+    {
+      "level": 3,
+      "title": "2.3.7线性时不变系统的稳定性",
+      "pdfPage": 92
+    },
+    {
+      "level": 3,
+      "title": "2.3.8线性时不变系统的单位阶跃响应",
+      "pdfPage": 94
+    },
+    {
+      "level": 2,
+      "title": "2.4用微分和差分方程描述的因果线性时不变系统",
+      "pdfPage": 94
+    },
+    {
+      "level": 3,
+      "title": "2.4.1线性常系数微分方程",
+      "pdfPage": 95
+    },
+    {
+      "level": 3,
+      "title": "2.4.2线性常系数差分方程",
+      "pdfPage": 98
+    },
+    {
+      "level": 3,
+      "title": "2.4.3用微分和差分方程描述的一阶系统的方框图表示",
+      "pdfPage": 100
+    },
+    {
+      "level": 2,
+      "title": "2.5奇异函数",
+      "pdfPage": 102
+    },
+    {
+      "level": 3,
+      "title": "2.5.1作为理想化短脉冲的单位冲激",
+      "pdfPage": 102
+    },
+    {
+      "level": 3,
+      "title": "2.5.2通过卷积定义单位冲激",
+      "pdfPage": 104
+    },
+    {
+      "level": 3,
+      "title": "2.5.3单位冲激偶和其他奇异函数",
+      "pdfPage": 105
+    },
+    {
+      "level": 2,
+      "title": "2.6小结",
+      "pdfPage": 108
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 108
+    },
+    {
+      "level": 1,
+      "title": "第3章  周期信号的傅里叶级数表示",
+      "pdfPage": 132
+    },
+    {
+      "level": 2,
+      "title": "3.0引言",
+      "pdfPage": 132
+    },
+    {
+      "level": 2,
+      "title": "3.1历史回顾",
+      "pdfPage": 132
+    },
+    {
+      "level": 2,
+      "title": "3.2线性时不变系统对复指数信号的响应",
+      "pdfPage": 135
+    },
+    {
+      "level": 2,
+      "title": "3.3连续时间周期信号的傅里叶级数表示",
+      "pdfPage": 138
+    },
+    {
+      "level": 3,
+      "title": "3.3.1成谐波关系的复指数信号的线性组合",
+      "pdfPage": 138
+    },
+    {
+      "level": 3,
+      "title": "3.3.2连续时间周期信号傅里叶级数表示的确定",
+      "pdfPage": 141
+    },
+    {
+      "level": 2,
+      "title": "3.4傅里叶级数的收敛",
+      "pdfPage": 145
+    },
+    {
+      "level": 2,
+      "title": "3.5连续时间傅里叶级数性质",
+      "pdfPage": 149
+    },
+    {
+      "level": 3,
+      "title": "3.5.1线性性质",
+      "pdfPage": 149
+    },
+    {
+      "level": 3,
+      "title": "3.5.2时移性质",
+      "pdfPage": 149
+    },
+    {
+      "level": 3,
+      "title": "3.5.3时间反转",
+      "pdfPage": 150
+    },
+    {
+      "level": 3,
+      "title": "3.5.4时域尺度变换",
+      "pdfPage": 150
+    },
+    {
+      "level": 3,
+      "title": "3.5.5相乘",
+      "pdfPage": 151
+    },
+    {
+      "level": 3,
+      "title": "3.5.6共轭及共轭对称",
+      "pdfPage": 151
+    },
+    {
+      "level": 3,
+      "title": "3.5.7连续时间周期信号的帕斯瓦尔定理",
+      "pdfPage": 151
+    },
+    {
+      "level": 3,
+      "title": "3.5.8连续时间傅里叶级数性质列表",
+      "pdfPage": 152
+    },
+    {
+      "level": 3,
+      "title": "3.5.9举例",
+      "pdfPage": 152
+    },
+    {
+      "level": 2,
+      "title": "3.6离散时间周期信号的傅里叶级数表示",
+      "pdfPage": 155
+    },
+    {
+      "level": 3,
+      "title": "3.6.1成谐波关系的复指数信号的线性组合",
+      "pdfPage": 155
+    },
+    {
+      "level": 3,
+      "title": "3.6.2周期信号傅里叶级数表示的确定",
+      "pdfPage": 156
+    },
+    {
+      "level": 2,
+      "title": "3.7离散时间傅里叶级数性质",
+      "pdfPage": 161
+    },
+    {
+      "level": 3,
+      "title": "3.7.1相乘",
+      "pdfPage": 162
+    },
+    {
+      "level": 3,
+      "title": "3.7.2一次差分",
+      "pdfPage": 163
+    },
+    {
+      "level": 3,
+      "title": "3.7.3离散时间周期信号的帕斯瓦尔定理",
+      "pdfPage": 163
+    },
+    {
+      "level": 3,
+      "title": "3.7.4举例",
+      "pdfPage": 163
+    },
+    {
+      "level": 2,
+      "title": "3.8傅里叶级数与线性时不变系统",
+      "pdfPage": 166
+    },
+    {
+      "level": 2,
+      "title": "3.9滤波",
+      "pdfPage": 169
+    },
+    {
+      "level": 3,
+      "title": "3.9.1频率成形滤波器",
+      "pdfPage": 169
+    },
+    {
+      "level": 3,
+      "title": "3.9.2频率选择性滤波器",
+      "pdfPage": 173
+    },
+    {
+      "level": 2,
+      "title": "3.10用微分方程描述的连续时间滤波器举例",
+      "pdfPage": 174
+    },
+    {
+      "level": 3,
+      "title": "3.10.1简单RC低通滤波器",
+      "pdfPage": 175
+    },
+    {
+      "level": 3,
+      "title": "3.10.2简单RC高通滤波器",
+      "pdfPage": 176
+    },
+    {
+      "level": 2,
+      "title": "3.11用差分方程描述的离散时间滤波器举例",
+      "pdfPage": 177
+    },
+    {
+      "level": 3,
+      "title": "3.11.1一阶递归离散时间滤波器",
+      "pdfPage": 178
+    },
+    {
+      "level": 3,
+      "title": "3.11.2非递归离散时间滤波器",
+      "pdfPage": 179
+    },
+    {
+      "level": 2,
+      "title": "3.12小结",
+      "pdfPage": 181
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 181
+    },
+    {
+      "level": 1,
+      "title": "第4章  连续时间傅里叶变换",
+      "pdfPage": 202
+    },
+    {
+      "level": 2,
+      "title": "4.0引言",
+      "pdfPage": 202
+    },
+    {
+      "level": 2,
+      "title": "4.1非周期信号的表示：连续时间傅里叶变换",
+      "pdfPage": 202
+    },
+    {
+      "level": 3,
+      "title": "4.1.1非周期信号傅里叶变换表示的导出",
+      "pdfPage": 202
+    },
+    {
+      "level": 3,
+      "title": "4.1.2傅里叶变换的收敛",
+      "pdfPage": 205
+    },
+    {
+      "level": 3,
+      "title": "4.1.3连续时间傅里叶变换举例",
+      "pdfPage": 206
+    },
+    {
+      "level": 2,
+      "title": "4.2周期信号的傅里叶变换",
+      "pdfPage": 209
+    },
+    {
+      "level": 2,
+      "title": "4.3连续时间傅里叶变换性质",
+      "pdfPage": 212
+    },
+    {
+      "level": 3,
+      "title": "4.3.1线性性质",
+      "pdfPage": 212
+    },
+    {
+      "level": 3,
+      "title": "4.3.2时移性质",
+      "pdfPage": 213
+    },
+    {
+      "level": 3,
+      "title": "4.3.3共轭与共轭对称性",
+      "pdfPage": 214
+    },
+    {
+      "level": 3,
+      "title": "4.3.4微分与积分",
+      "pdfPage": 216
+    },
+    {
+      "level": 3,
+      "title": "4.3.5时间与频率的尺度变换",
+      "pdfPage": 217
+    },
+    {
+      "level": 3,
+      "title": "4.3.6对偶性",
+      "pdfPage": 218
+    },
+    {
+      "level": 3,
+      "title": "4.3.7帕斯瓦尔定理",
+      "pdfPage": 219
+    },
+    {
+      "level": 2,
+      "title": "4.4卷积性质",
+      "pdfPage": 221
+    },
+    {
+      "level": 3,
+      "title": "4.4.1举例",
+      "pdfPage": 223
+    },
+    {
+      "level": 2,
+      "title": "4.5相乘性质",
+      "pdfPage": 227
+    },
+    {
+      "level": 3,
+      "title": "4.5.1具有可变中心频率的频率选择性滤波",
+      "pdfPage": 229
+    },
+    {
+      "level": 2,
+      "title": "4.6傅里叶变换性质和基本傅里叶变换对列表",
+      "pdfPage": 230
+    },
+    {
+      "level": 2,
+      "title": "4.7由线性常系数微分方程表征的系统",
+      "pdfPage": 232
+    },
+    {
+      "level": 2,
+      "title": "4.8小结",
+      "pdfPage": 234
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 234
+    },
+    {
+      "level": 1,
+      "title": "第5章  离散时间傅里叶变换",
+      "pdfPage": 249
+    },
+    {
+      "level": 2,
+      "title": "5.0引言",
+      "pdfPage": 249
+    },
+    {
+      "level": 2,
+      "title": "5.1非周期信号的表示：离散时间傅里叶变换",
+      "pdfPage": 249
+    },
+    {
+      "level": 3,
+      "title": "5.1.1离散时间傅里叶变换的导出",
+      "pdfPage": 249
+    },
+    {
+      "level": 3,
+      "title": "5.1.2离散时间傅里叶变换举例",
+      "pdfPage": 252
+    },
+    {
+      "level": 3,
+      "title": "5.1.3关于离散时间傅里叶变换的收敛问题",
+      "pdfPage": 254
+    },
+    {
+      "level": 2,
+      "title": "5.2周期信号的傅里叶变换",
+      "pdfPage": 255
+    },
+    {
+      "level": 2,
+      "title": "5.3离散时间傅里叶变换性质",
+      "pdfPage": 258
+    },
+    {
+      "level": 3,
+      "title": "5.3.1离散时间傅里叶变换的周期性",
+      "pdfPage": 259
+    },
+    {
+      "level": 3,
+      "title": "5.3.2线性性质",
+      "pdfPage": 259
+    },
+    {
+      "level": 3,
+      "title": "5.3.3时移与频移性质",
+      "pdfPage": 259
+    },
+    {
+      "level": 3,
+      "title": "5.3.4共轭与共轭对称性",
+      "pdfPage": 260
+    },
+    {
+      "level": 3,
+      "title": "5.3.5差分与累加",
+      "pdfPage": 260
+    },
+    {
+      "level": 3,
+      "title": "5.3.6时间反转",
+      "pdfPage": 261
+    },
+    {
+      "level": 3,
+      "title": "5.3.7时域扩展",
+      "pdfPage": 261
+    },
+    {
+      "level": 3,
+      "title": "5.3.8频域微分",
+      "pdfPage": 263
+    },
+    {
+      "level": 3,
+      "title": "5.3.9帕斯瓦尔定理",
+      "pdfPage": 263
+    },
+    {
+      "level": 2,
+      "title": "5.4卷积性质",
+      "pdfPage": 264
+    },
+    {
+      "level": 3,
+      "title": "5.4.1举例",
+      "pdfPage": 265
+    },
+    {
+      "level": 2,
+      "title": "5.5相乘性质",
+      "pdfPage": 268
+    },
+    {
+      "level": 2,
+      "title": "5.6傅里叶变换性质和基本傅里叶变换对列表",
+      "pdfPage": 270
+    },
+    {
+      "level": 2,
+      "title": "5.7对偶性",
+      "pdfPage": 272
+    },
+    {
+      "level": 3,
+      "title": "5.7.1离散时间傅里叶级数的对偶性",
+      "pdfPage": 272
+    },
+    {
+      "level": 3,
+      "title": "5.7.2离散时间傅里叶变换和连续时间傅里叶级数之间的对偶性",
+      "pdfPage": 274
+    },
+    {
+      "level": 2,
+      "title": "5.8由线性常系数差分方程表征的系统",
+      "pdfPage": 275
+    },
+    {
+      "level": 2,
+      "title": "5.9小结",
+      "pdfPage": 277
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 278
+    },
+    {
+      "level": 1,
+      "title": "第6章  信号与系统的时域和频域特性",
+      "pdfPage": 294
+    },
+    {
+      "level": 2,
+      "title": "6.0引言",
+      "pdfPage": 294
+    },
+    {
+      "level": 2,
+      "title": "6.1傅里叶变换的模和相位表示",
+      "pdfPage": 294
+    },
+    {
+      "level": 2,
+      "title": "6.2线性时不变系统频率响应的模和相位表示",
+      "pdfPage": 297
+    },
+    {
+      "level": 3,
+      "title": "6.2.1线性与非线性相位",
+      "pdfPage": 297
+    },
+    {
+      "level": 3,
+      "title": "6.2.2群时延",
+      "pdfPage": 299
+    },
+    {
+      "level": 3,
+      "title": "6.2.3对数模和相位图",
+      "pdfPage": 303
+    },
+    {
+      "level": 2,
+      "title": "6.3理想频率选择性滤波器的时域特性",
+      "pdfPage": 304
+    },
+    {
+      "level": 2,
+      "title": "6.4非理想滤波器的时域和频域特性讨论",
+      "pdfPage": 307
+    },
+    {
+      "level": 2,
+      "title": "6.5一阶与二阶连续时间系统",
+      "pdfPage": 309
+    },
+    {
+      "level": 3,
+      "title": "6.5.1一阶连续时间系统",
+      "pdfPage": 309
+    },
+    {
+      "level": 3,
+      "title": "6.5.2二阶连续时间系统",
+      "pdfPage": 311
+    },
+    {
+      "level": 3,
+      "title": "6.5.3有理型频率响应的伯德图",
+      "pdfPage": 315
+    },
+    {
+      "level": 2,
+      "title": "6.6一阶与二阶离散时间系统",
+      "pdfPage": 318
+    },
+    {
+      "level": 3,
+      "title": "6.6.1一阶离散时间系统",
+      "pdfPage": 318
+    },
+    {
+      "level": 3,
+      "title": "6.6.2二阶离散时间系统",
+      "pdfPage": 320
+    },
+    {
+      "level": 2,
+      "title": "6.7系统的时域分析与频域分析举例",
+      "pdfPage": 326
+    },
+    {
+      "level": 3,
+      "title": "6.7.1汽车减震系统的分析",
+      "pdfPage": 326
+    },
+    {
+      "level": 3,
+      "title": "6.7.2离散时间非递归滤波器举例",
+      "pdfPage": 328
+    },
+    {
+      "level": 2,
+      "title": "6.8小结",
+      "pdfPage": 333
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 333
+    },
+    {
+      "level": 1,
+      "title": "第7章  采样",
+      "pdfPage": 353
+    },
+    {
+      "level": 2,
+      "title": "7.0引言",
+      "pdfPage": 353
+    },
+    {
+      "level": 2,
+      "title": "7.1用信号样本表示连续时间信号：采样定理",
+      "pdfPage": 353
+    },
+    {
+      "level": 3,
+      "title": "7.1.1冲激串采样",
+      "pdfPage": 354
+    },
+    {
+      "level": 3,
+      "title": "7.1.2零阶保持采样",
+      "pdfPage": 356
+    },
+    {
+      "level": 2,
+      "title": "7.2利用内插由样本重建信号",
+      "pdfPage": 358
+    },
+    {
+      "level": 2,
+      "title": "7.3欠采样的效果：混叠现象",
+      "pdfPage": 361
+    },
+    {
+      "level": 2,
+      "title": "7.4连续时间信号的离散时间处理",
+      "pdfPage": 365
+    },
+    {
+      "level": 3,
+      "title": "7.4.1数字微分器",
+      "pdfPage": 369
+    },
+    {
+      "level": 3,
+      "title": "7.4.2半采样间隔延时",
+      "pdfPage": 371
+    },
+    {
+      "level": 2,
+      "title": "7.5离散时间信号采样",
+      "pdfPage": 372
+    },
+    {
+      "level": 3,
+      "title": "7.5.1脉冲串采样",
+      "pdfPage": 372
+    },
+    {
+      "level": 3,
+      "title": "7.5.2离散时间抽取与内插",
+      "pdfPage": 375
+    },
+    {
+      "level": 2,
+      "title": "7.6小结",
+      "pdfPage": 379
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 379
+    },
+    {
+      "level": 1,
+      "title": "第8章  通信系统",
+      "pdfPage": 395
+    },
+    {
+      "level": 2,
+      "title": "8.0引言",
+      "pdfPage": 395
+    },
+    {
+      "level": 2,
+      "title": "8.1复指数与正弦幅度调制",
+      "pdfPage": 395
+    },
+    {
+      "level": 3,
+      "title": "8.1.1复指数载波的幅度调制",
+      "pdfPage": 396
+    },
+    {
+      "level": 3,
+      "title": "8.1.2正弦载波的幅度调制",
+      "pdfPage": 397
+    },
+    {
+      "level": 2,
+      "title": "8.2正弦幅度调制的解调",
+      "pdfPage": 398
+    },
+    {
+      "level": 3,
+      "title": "8.2.1同步解调",
+      "pdfPage": 398
+    },
+    {
+      "level": 3,
+      "title": "8.2.2非同步解调",
+      "pdfPage": 400
+    },
+    {
+      "level": 2,
+      "title": "8.3频分多路复用",
+      "pdfPage": 403
+    },
+    {
+      "level": 2,
+      "title": "8.4单边带正弦幅度调制",
+      "pdfPage": 405
+    },
+    {
+      "level": 2,
+      "title": "8.5用脉冲串进行载波的幅度调制",
+      "pdfPage": 407
+    },
+    {
+      "level": 3,
+      "title": "8.5.1脉冲串载波调制",
+      "pdfPage": 407
+    },
+    {
+      "level": 3,
+      "title": "8.5.2时分多路复用",
+      "pdfPage": 409
+    },
+    {
+      "level": 2,
+      "title": "8.6脉冲幅度调制",
+      "pdfPage": 409
+    },
+    {
+      "level": 3,
+      "title": "8.6.1脉冲幅度已调信号",
+      "pdfPage": 409
+    },
+    {
+      "level": 3,
+      "title": "8.6.2脉冲幅度调制系统中的码间干扰",
+      "pdfPage": 410
+    },
+    {
+      "level": 3,
+      "title": "8.6.3数字脉冲幅度调制和脉冲编码调制",
+      "pdfPage": 413
+    },
+    {
+      "level": 2,
+      "title": "8.7正弦频率调制",
+      "pdfPage": 413
+    },
+    {
+      "level": 3,
+      "title": "8.7.1窄带频率调制",
+      "pdfPage": 415
+    },
+    {
+      "level": 3,
+      "title": "8.7.2宽带频率调制",
+      "pdfPage": 417
+    },
+    {
+      "level": 3,
+      "title": "8.7.3周期方波调制信号",
+      "pdfPage": 418
+    },
+    {
+      "level": 2,
+      "title": "8.8离散时间调制",
+      "pdfPage": 419
+    },
+    {
+      "level": 3,
+      "title": "8.8.1离散时间正弦幅度调制",
+      "pdfPage": 419
+    },
+    {
+      "level": 3,
+      "title": "8.8.2离散时间调制转换",
+      "pdfPage": 422
+    },
+    {
+      "level": 2,
+      "title": "8.9小结",
+      "pdfPage": 422
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 423
+    },
+    {
+      "level": 1,
+      "title": "第9章  拉普拉斯变换",
+      "pdfPage": 439
+    },
+    {
+      "level": 2,
+      "title": "9.0引言",
+      "pdfPage": 439
+    },
+    {
+      "level": 2,
+      "title": "9.1拉普拉斯变换",
+      "pdfPage": 439
+    },
+    {
+      "level": 2,
+      "title": "9.2拉普拉斯变换收敛域",
+      "pdfPage": 444
+    },
+    {
+      "level": 2,
+      "title": "9.3拉普拉斯逆变换",
+      "pdfPage": 449
+    },
+    {
+      "level": 2,
+      "title": "9.4由零-极点图对傅里叶变换进行几何求值",
+      "pdfPage": 452
+    },
+    {
+      "level": 3,
+      "title": "9.4.1一阶系统",
+      "pdfPage": 453
+    },
+    {
+      "level": 3,
+      "title": "9.4.2二阶系统",
+      "pdfPage": 454
+    },
+    {
+      "level": 3,
+      "title": "9.4.3全通系统",
+      "pdfPage": 457
+    },
+    {
+      "level": 2,
+      "title": "9.5拉普拉斯变换的性质",
+      "pdfPage": 457
+    },
+    {
+      "level": 3,
+      "title": "9.5.1线性性质",
+      "pdfPage": 457
+    },
+    {
+      "level": 3,
+      "title": "9.5.2时移性质",
+      "pdfPage": 458
+    },
+    {
+      "level": 3,
+      "title": "9.5.3s域平移",
+      "pdfPage": 459
+    },
+    {
+      "level": 3,
+      "title": "9.5.4时域尺度变换",
+      "pdfPage": 459
+    },
+    {
+      "level": 3,
+      "title": "9.5.5共轭",
+      "pdfPage": 460
+    },
+    {
+      "level": 3,
+      "title": "9.5.6卷积性质",
+      "pdfPage": 460
+    },
+    {
+      "level": 3,
+      "title": "9.5.7时域微分",
+      "pdfPage": 461
+    },
+    {
+      "level": 3,
+      "title": "9.5.8s域微分",
+      "pdfPage": 461
+    },
+    {
+      "level": 3,
+      "title": "9.5.9时域积分",
+      "pdfPage": 462
+    },
+    {
+      "level": 3,
+      "title": "9.5.10初值定理与终值定理",
+      "pdfPage": 462
+    },
+    {
+      "level": 3,
+      "title": "9.5.11性质列表",
+      "pdfPage": 463
+    },
+    {
+      "level": 2,
+      "title": "9.6常用拉普拉斯变换对",
+      "pdfPage": 463
+    },
+    {
+      "level": 2,
+      "title": "9.7用拉普拉斯变换分析与表征线性时不变系统",
+      "pdfPage": 464
+    },
+    {
+      "level": 3,
+      "title": "9.7.1因果性",
+      "pdfPage": 465
+    },
+    {
+      "level": 3,
+      "title": "9.7.2稳定性",
+      "pdfPage": 466
+    },
+    {
+      "level": 3,
+      "title": "9.7.3由线性常系数微分方程表征的线性时不变系统",
+      "pdfPage": 468
+    },
+    {
+      "level": 3,
+      "title": "9.7.4系统特性与系统函数的关系举例",
+      "pdfPage": 469
+    },
+    {
+      "level": 3,
+      "title": "9.7.5巴特沃思滤波器",
+      "pdfPage": 471
+    },
+    {
+      "level": 2,
+      "title": "9.8系统函数的代数属性与方框图表示",
+      "pdfPage": 474
+    },
+    {
+      "level": 3,
+      "title": "9.8.1线性时不变系统互联的系统函数",
+      "pdfPage": 474
+    },
+    {
+      "level": 3,
+      "title": "9.8.2由微分方程和有理系统函数描述的因果线性时不变系统的方框图表示",
+      "pdfPage": 475
+    },
+    {
+      "level": 2,
+      "title": "9.9单边拉普拉斯变换",
+      "pdfPage": 478
+    },
+    {
+      "level": 3,
+      "title": "9.9.1单边拉普拉斯变换举例",
+      "pdfPage": 479
+    },
+    {
+      "level": 3,
+      "title": "9.9.2单边拉普拉斯变换性质",
+      "pdfPage": 480
+    },
+    {
+      "level": 3,
+      "title": "9.9.3利用单边拉普拉斯变换求解微分方程",
+      "pdfPage": 482
+    },
+    {
+      "level": 2,
+      "title": "9.10小结",
+      "pdfPage": 482
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 483
+    },
+    {
+      "level": 1,
+      "title": "第10章Z变换",
+      "pdfPage": 496
+    },
+    {
+      "level": 2,
+      "title": "10.0引言",
+      "pdfPage": 496
+    },
+    {
+      "level": 2,
+      "title": "10.1z变换",
+      "pdfPage": 496
+    },
+    {
+      "level": 2,
+      "title": "10.2z变换的收敛域",
+      "pdfPage": 500
+    },
+    {
+      "level": 2,
+      "title": "10.3  z逆变换",
+      "pdfPage": 506
+    },
+    {
+      "level": 2,
+      "title": "10.4利用零-极点图对傅里叶变换进行几何求值",
+      "pdfPage": 510
+    },
+    {
+      "level": 3,
+      "title": "10.4.1一阶系统",
+      "pdfPage": 510
+    },
+    {
+      "level": 3,
+      "title": "10.4.2二阶系统",
+      "pdfPage": 511
+    },
+    {
+      "level": 2,
+      "title": "10.5z变换的性质",
+      "pdfPage": 512
+    },
+    {
+      "level": 3,
+      "title": "10.5.1线性性质",
+      "pdfPage": 512
+    },
+    {
+      "level": 3,
+      "title": "10.5.2时移性质",
+      "pdfPage": 513
+    },
+    {
+      "level": 3,
+      "title": "10.5.3z域尺度变换",
+      "pdfPage": 513
+    },
+    {
+      "level": 3,
+      "title": "10.5.4时间反转",
+      "pdfPage": 513
+    },
+    {
+      "level": 3,
+      "title": "10.5.5时间扩展",
+      "pdfPage": 514
+    },
+    {
+      "level": 3,
+      "title": "10.5.6共轭",
+      "pdfPage": 514
+    },
+    {
+      "level": 3,
+      "title": "10.5.7卷积性质",
+      "pdfPage": 515
+    },
+    {
+      "level": 3,
+      "title": "10.5.8  z域微分",
+      "pdfPage": 516
+    },
+    {
+      "level": 3,
+      "title": "10.5.9初值定理",
+      "pdfPage": 517
+    },
+    {
+      "level": 3,
+      "title": "10.5.10性质小结",
+      "pdfPage": 517
+    },
+    {
+      "level": 2,
+      "title": "10.6几个常用z变换对",
+      "pdfPage": 518
+    },
+    {
+      "level": 2,
+      "title": "10.7利用z变换分析与表征线性时不变系统",
+      "pdfPage": 518
+    },
+    {
+      "level": 3,
+      "title": "10.7.1因果性",
+      "pdfPage": 519
+    },
+    {
+      "level": 3,
+      "title": "10.7.2稳定性",
+      "pdfPage": 520
+    },
+    {
+      "level": 3,
+      "title": "10.7.3由线性常系数差分方程表征的线性时不变系统",
+      "pdfPage": 521
+    },
+    {
+      "level": 3,
+      "title": "10.7.4系统特性与系统函数的关系举例",
+      "pdfPage": 522
+    },
+    {
+      "level": 2,
+      "title": "10.8系统函数的代数属性与方框图表示",
+      "pdfPage": 524
+    },
+    {
+      "level": 3,
+      "title": "10.8.1线性时不变系统互联的系统函数",
+      "pdfPage": 524
+    },
+    {
+      "level": 3,
+      "title": "10.8.2由差分方程和有理系统函数描述的因果线性时不变系统的方框图表示",
+      "pdfPage": 524
+    },
+    {
+      "level": 2,
+      "title": "10.9单边z变换",
+      "pdfPage": 528
+    },
+    {
+      "level": 3,
+      "title": "10.9.1单边z变换和单边z逆变换举例",
+      "pdfPage": 528
+    },
+    {
+      "level": 3,
+      "title": "10.9.2单边z变换性质",
+      "pdfPage": 530
+    },
+    {
+      "level": 3,
+      "title": "10.9.3利用单边z变换求解差分方程",
+      "pdfPage": 532
+    },
+    {
+      "level": 2,
+      "title": "10.10小结",
+      "pdfPage": 533
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 533
+    },
+    {
+      "level": 1,
+      "title": "第11章  线性反馈系统",
+      "pdfPage": 545
+    },
+    {
+      "level": 2,
+      "title": "11.0引言",
+      "pdfPage": 545
+    },
+    {
+      "level": 2,
+      "title": "11.1线性反馈系统",
+      "pdfPage": 547
+    },
+    {
+      "level": 2,
+      "title": "11.2反馈的某些应用及结果",
+      "pdfPage": 548
+    },
+    {
+      "level": 3,
+      "title": "11.2.1逆系统设计",
+      "pdfPage": 548
+    },
+    {
+      "level": 3,
+      "title": "11.2.2非理想元件的补偿",
+      "pdfPage": 548
+    },
+    {
+      "level": 3,
+      "title": "11.2.3不稳定系统的稳定",
+      "pdfPage": 549
+    },
+    {
+      "level": 3,
+      "title": "11.2.4采样数据反馈系统",
+      "pdfPage": 552
+    },
+    {
+      "level": 3,
+      "title": "11.2.5跟踪系统",
+      "pdfPage": 553
+    },
+    {
+      "level": 3,
+      "title": "11.2.6反馈引起的不稳定",
+      "pdfPage": 555
+    },
+    {
+      "level": 2,
+      "title": "11.3线性反馈系统的根轨迹分析法",
+      "pdfPage": 556
+    },
+    {
+      "level": 3,
+      "title": "11.3.1一个例子",
+      "pdfPage": 556
+    },
+    {
+      "level": 3,
+      "title": "11.3.2闭环极点方程",
+      "pdfPage": 558
+    },
+    {
+      "level": 3,
+      "title": "11.3.3根轨迹的端点：K=0和|K| = ∞时的闭环极点",
+      "pdfPage": 558
+    },
+    {
+      "level": 3,
+      "title": "11.3.4角判据",
+      "pdfPage": 559
+    },
+    {
+      "level": 3,
+      "title": "11.3.5  根轨迹的性质",
+      "pdfPage": 562
+    },
+    {
+      "level": 2,
+      "title": "11.4奈奎斯特稳定判据",
+      "pdfPage": 566
+    },
+    {
+      "level": 3,
+      "title": "11.4.1围线性质",
+      "pdfPage": 566
+    },
+    {
+      "level": 3,
+      "title": "11.4.2连续时间线性时不变反馈系统的奈奎斯特判据",
+      "pdfPage": 568
+    },
+    {
+      "level": 3,
+      "title": "11.4.3离散时间线性时不变反馈系统的奈奎斯特判据",
+      "pdfPage": 571
+    },
+    {
+      "level": 2,
+      "title": "11.5增益和相位裕度",
+      "pdfPage": 572
+    },
+    {
+      "level": 2,
+      "title": "11.6小结",
+      "pdfPage": 578
+    },
+    {
+      "level": 3,
+      "title": "习题",
+      "pdfPage": 578
+    },
+    {
+      "level": 1,
+      "title": "附录A部分分式展开",
+      "pdfPage": 603
+    },
+    {
+      "level": 1,
+      "title": "附录B  文献目录",
+      "pdfPage": 612
+    },
+    {
+      "level": 1,
+      "title": "基本题答案",
+      "pdfPage": 619
+    }
+  ],
+  "qualityNote": "共628页，保留原书302条目录。正文大多保留原生约300dpi细节，含叠加插图的页面完整合成，封面保留原始清晰度。页面采用无损图像，不裁切、不重绘公式；原件已有的模糊不靠放大冒称恢复。印刷书页1–605对应PDF第23–627页，前置页及末页文件信息不标正文书页。",
+  "download": {
+    "filename": "oppenheim-signals-systems-2e-zh-native-hd.pdf",
+    "bytes": 30167030,
+    "sha256": "d33db46f90eca00d1041e459e3393c923bdf82ad906044ea00736213b39d5c08",
+    "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.7.0/oppenheim-signals-systems-2e-zh-native-hd.pdf"
+  },
+  "processingNotes": "完整628页，保留全部原页面和302条原书签。595页单幅1位黑白扫描直接保留原生像素，逐页对照原PDF渲染校准ImageMask黑白极性，不灰度化、不锐化、不放大；1页前置页因原PDF图像存在亚像素位置，以原图像素尺寸整页渲染以保留真实页面布局，不为强求二值化而改写笔画；29页含灰度插图的复合页面以原扫描300dpi整页合成，避免漏掉叠加图形；2页封面按实际约158dpi图像密度保留完整页面，末尾文件信息页按300dpi渲染。网页图像为逐像素核验的无损WebP。下载PDF保留原始CCITT/JPEG图像流、页面尺寸及书签，仅优化文件结构并新增页码标签；印刷1–605对应PDF23–627，封面前置页及末尾信息页不冒标正文页码。未使用生成式修复、文字重绘、超分辨率、裁切或盲目放大。"
+}
