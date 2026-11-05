@@ -30,6 +30,10 @@ await fs.writeFile(path.join(root,'dist/data.js'),'window.SIGNAL_DATA='+JSON.str
 async function walk(dir){let result=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){let p=path.join(dir,e.name);if(e.isDirectory())result.push(...await walk(p));else result.push(p);}return result;}
 const files=await walk(path.join(root,'dist'));
 const assets=files.filter(p=>!p.endsWith('.apk')&&!p.endsWith('/sw.js')).map(p=>path.relative(path.join(root,'dist'),p).split(path.sep).join('/'));
-const hash=crypto.createHash('sha256').update(await fs.readFile(path.join(root,'dist/data.js'))).update(await fs.readFile(path.join(root,'dist/app.js'))).digest('hex').slice(0,12);
+const digest=crypto.createHash('sha256');
+for(const asset of [...assets].sort()){
+ digest.update(asset).update(await fs.readFile(path.join(root,'dist',asset)));
+}
+const hash=digest.digest('hex').slice(0,12);
 await fs.writeFile(path.join(root,'dist/sw.js'),`const CACHE='signal-atlas-${hash}';const ASSETS=${JSON.stringify(['./',...assets])};self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('signal-atlas-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||e.request.url.endsWith('.apk'))return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){let copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));}return r;}).catch(()=>caches.match(e.request)));});`);
 console.log(JSON.stringify({years:exams.length,questions:exams.flatMap(e=>e.questions).length,training:data.training.length,assets:assets.length}));

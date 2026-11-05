@@ -9,21 +9,25 @@ const d=JSON.parse(source.slice(source.indexOf('=')+1).trim().replace(/;$/,''));
 const context={module:{exports:{}},exports:{},console};context.exports=context.module.exports;
 vm.runInNewContext(await fs.readFile(path.join(root,'dist/vendor/katex.min.js'),'utf8'),context);
 const katex=context.module.exports;
-const qs=d.exams.flatMap(e=>e.questions),drills=d.training;
+const qs=d.exams.flatMap(e=>e.questions),drills=d.training,book=d.oppenheim;
 assert.equal(qs.length,243);assert.equal(new Set(qs.map(q=>q.id)).size,243);assert.equal(drills.length,32);assert.equal(d.oppenheim.length,40);
+assert.equal(new Set([...qs,...drills,...book].map(q=>q.id)).size,315);
+for(const q of [...drills,...book]){assert.ok(q.solution.length>300,q.id+' needs a worked solution');assert.ok(!/^(最终表达式|各问具体表达式).*(见|推导)/.test(q.answer),q.id+' needs a concrete answer');}
+assert.ok(!(await fs.readFile(path.join(root,'dist/app.js'),'utf8')).includes("replace(/\\$|\\\\[a-zA-Z]+/g"),'Preview must preserve TeX commands');
 let errors=[],mathCount=0,figureCount=0;
-for(const q of [...qs,...drills]){
- for(const field of ['statement','firstStep','solution','answer']){
-  assert.equal(typeof q[field],'string',q.id+' '+field);
-  for(const match of q[field].matchAll(/\$\$([\s\S]*?)\$\$|(?<!\\)\$([^$\n]+)\$|\\\[([\s\S]*?)\\\]|\\\(([\s\S]*?)\\\)/g)){
+for(const q of [...qs,...drills,...book]){
+ for(const field of ['statement','firstStep','solution','answer',...(q.pitfalls||[]).map((_,i)=>'pitfall'+i)]){
+  const value=field.startsWith('pitfall')?q.pitfalls[+field.slice(7)]:q[field];
+  assert.equal(typeof value,'string',q.id+' '+field);
+  for(const match of value.matchAll(/\$\$([\s\S]*?)\$\$|(?<!\\)\$([^$\n]+)\$|\\\[([\s\S]*?)\\\]|\\\(([\s\S]*?)\\\)/g)){
    const tex=match[1]??match[2]??match[3]??match[4];mathCount++;
    try{katex.renderToString(tex,{throwOnError:true,strict:'ignore',macros:{'\\sinc':'\\operatorname{sinc}','\\sgn':'\\operatorname{sgn}','\\rect':'\\operatorname{rect}','\\Sa':'\\operatorname{Sa}'}});}catch(e){errors.push({id:q.id,field,tex,error:e.message});}
   }
  }
  for(const f of q.figures||[]){let name=typeof f==='string'?f:f.path||f.file||f.src;assert.ok(name,q.id);await fs.access(path.join(root,'dist/assets',path.basename(name)));figureCount++;}
- if(!q.training)for(const p of q.sourcePages||[])await fs.access(path.join(root,`dist/sources/${q.year}_${p}.webp`));
+ if(!q.training&&!q.textbook)for(const p of q.sourcePages||[])await fs.access(path.join(root,`dist/sources/${q.year}_${p}.webp`));
 }
 for(const c of d.chapters){let list=qs.filter(q=>q.chapters.includes(c.chapter));assert.equal(list.length,c.count,c.chapter);assert.equal(new Set(list.map(q=>q.year)).size,c.year_count,c.chapter);}
 await fs.writeFile(path.join(root,'content/math-check.json'),JSON.stringify(errors,null,2));
-console.log(JSON.stringify({questions:qs.length,training:drills.length,formulaExpressions:mathCount,figureReferences:figureCount,formulaErrors:errors.length,examples:errors.slice(0,12)}));
+console.log(JSON.stringify({questions:qs.length,training:drills.length,textbookGroups:book.length,formulaExpressions:mathCount,figureReferences:figureCount,formulaErrors:errors.length,examples:errors.slice(0,12)}));
 if(errors.length)process.exitCode=1;

@@ -25,6 +25,16 @@ java -cp "$ANDROID_BUILD_TOOLS/lib/d8.jar" com.android.tools.r8.D8 --min-api 24 
 cp build/base.apk build/unsigned.apk
 (cd build/dex && zip -q -j ../unsigned.apk classes.dex)
 "$ANDROID_BUILD_TOOLS/zipalign" -f 4 build/unsigned.apk build/aligned.apk
-"$ANDROID_BUILD_TOOLS/apksigner" sign --ks "$SIGNING_KEYSTORE" --ks-key-alias sysusignals --ks-pass "file:$SIGNING_PASSWORD_FILE" --out build/sysu-signals-study-v1.0.1.apk build/aligned.apk
-"$ANDROID_BUILD_TOOLS/apksigner" verify --verbose build/sysu-signals-study-v1.0.1.apk
-printf '%s\n' "$PWD/build/sysu-signals-study-v1.0.1.apk"
+"$ANDROID_BUILD_TOOLS/apksigner" sign --ks "$SIGNING_KEYSTORE" --ks-key-alias sysusignals --ks-pass "file:$SIGNING_PASSWORD_FILE" --out build/signed.apk build/aligned.apk
+"$ANDROID_BUILD_TOOLS/apksigner" verify --verbose build/signed.apk
+python3 - <<'PY'
+import os, zipfile
+import xml.etree.ElementTree as ET
+from pathlib import Path
+version=ET.parse('AndroidManifest.xml').getroot().get('{http://schemas.android.com/apk/res/android}versionName')
+with zipfile.ZipFile('build/signed.apk') as package:
+    assert package.testzip() is None, 'APK archive integrity check failed'
+destination=Path('build')/('sysu-signals-study-v'+version+'.apk')
+os.replace('build/signed.apk',destination)
+print(destination.resolve())
+PY
