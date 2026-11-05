@@ -11,6 +11,7 @@ const examMethods=await read('content/exam-methods.json');
 const textbookReferences=await read('content/textbook-links.json');
 const referenceHandbook=await read('content/reference-handbook.json');
 const textbookReader=await read('content/textbook-reader.json');
+const textbookCondensed=await read('content/textbook-condensed.json');
 const topics=new Map(statistics.topics.map(t=>[t.code,t]));
 const exams=[];
 for(let year=2008;year<=2026;year++){
@@ -46,7 +47,7 @@ for(const relativeFile of referenceFiles){
  await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination+'.tmp',bytes);await fs.rename(destination+'.tmp',destination);
 }
 const textbookCacheVersion=textbookAssetDigest.digest('hex').slice(0,16);
-const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams,resources:learning.sources,alternativeMethods:learning.methods,studyGuides:guides.guides,examMethods:examMethods.entries,textbookReferences,referenceHandbook,textbookReader};
+const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams,resources:learning.sources,alternativeMethods:learning.methods,studyGuides:guides.guides,examMethods:examMethods.entries,textbookReferences,referenceHandbook,textbookReader,textbookCondensed};
 const compiled=path.join(root,'dist/data.js');
 await fs.writeFile(compiled+'.tmp','window.SIGNAL_DATA='+JSON.stringify(data)+';\n');
 await fs.rename(compiled+'.tmp',compiled);

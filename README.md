@@ -5,7 +5,7 @@
 ## 使用
 
 - 网页：[中大信号研习室](https://nishino0525nanase.github.io/sysu-signals-study/)，由 Pages 工作流发布 `dist/`。
-- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”指向的 `sysu-signals-study-v1.7.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
+- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”指向的 `sysu-signals-study-v1.8.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
 - APK内置全部学习内容、公式字体和配图，核心阅读无需联网，不申请网络、定位、摄像头或账号权限。
 - 学习进度、收藏、错题、笔记保存在本机，支持导出和导入JSON备份。
 
@@ -102,3 +102,12 @@ Android使用JDK17、SDK platform35/build-tools35编译：设置`ANDROID_JAR`、
 - 总览与“资料与安装”均可进入，每个原书摘图下可直接打开整本原书的对应页。完整高清整理PDF另由Releases提供下载。
 - 网页按页加载并缓存浏览过的原书页面，不在首次打开时预下载全书；Android离线版内置全628页，沿用原签名升级。
 - 内容清单为`content/textbook-reader.json`，原生全页图位于`content/references/textbook/`。重建方式见`tools/build-textbook-reader.py --help`；整本PDF输出在构建目录，不把大文件加入网页源码。
+
+
+## 1.8.0 原书精读精简版
+
+- 按原书11章正文、章末小结与正文例题逐页核对，共401个正文PDF页；另读附录A。提要保留每章核心概念、适用条件、第一步、一个小例子、两处易错和自检，附正交投影补充。完整阅读范围记录在内容源中。
+- 首页优先提供“先读原书精简版”，原书、公式页和题内也可跳到对应章。阅读主线与原图回看分开，既有完整原书和详细题解仍可从章末链接进入。
+- 新内容源`content/textbook-condensed.json`，页面`#digest`与`#digest?chapter=7`，支持连续阅读与同源彩色PDF下载。导出工具为`tools/export-textbook-condensed.py`。
+- 新核对原书例3.9与2024年第二题的实值、T=4、有限谐波、变换后奇性与平均功率条件完全对应。题内增加同题提示与原例截图，教材关系合计97条；判断内容对应，不据此推断命题来源。
+- PDF保留中文图解与母谱/第一步清单；详细证明、长表和原书图像通过链接按需展开。Android沿用原签名，内置精简讲义及全书。

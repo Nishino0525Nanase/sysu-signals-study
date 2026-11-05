@@ -36,6 +36,22 @@ assert.ok(!JSON.parse(precacheMatch[1]).some(p=>p.startsWith('references/textboo
 assert.equal(qs.length,243);assert.equal(new Set(qs.map(q=>q.id)).size,243);assert.equal(drills.length,32);assert.equal(d.oppenheim.length,40);
 assert.equal(new Set([...qs,...drills,...book].map(q=>q.id)).size,315);
 const questionIds=new Set([...qs,...drills,...book].map(q=>q.id));
+const condensed=d.textbookCondensed;
+assert.equal(condensed?.chapters?.length,12,'The brief needs all 11 original chapters and the labeled supplement');
+assert.equal(new Set(condensed.chapters.map(c=>c.chapter)).size,12,'Duplicate condensed chapter');
+assert.equal(new Set(condensed.auditedBodyPdfPages).size,401,'Check all chapter body and summary pages');
+for(const c of condensed.chapters){
+ assert.ok(c.title&&c.coreIdea&&c.readAudit?.bodyPdfPages?.length,c.id+' missing source reading record');
+ assert.ok(c.essentials.length>=3&&c.essentials.length<=4,c.id+' should stay concise');
+ assert.ok(c.firstSteps.length<=3&&c.firstSteps.length>0&&c.pitfalls.length===2,c.id+' invalid brief structure');
+ assert.ok(c.miniExample?.body&&c.selfCheck?.question&&c.selfCheck?.answer,c.id+' missing usable example/check');
+ for(const id of c.examIds)assert.ok(questionIds.has(id),c.id+' unknown example '+id);
+ for(const b of c.bookLinks)assert.ok(b.pdfPage>=1&&b.pdfPage<=628,c.id+' invalid book link');
+ for(const s of c.sourceSpans)assert.ok(s.pdfFrom===s.printFrom+22&&s.pdfTo===s.printTo+22,c.id+' incorrect source page mapping');
+ const visible=JSON.stringify({coreIdea:c.coreIdea,essentials:c.essentials,firstSteps:c.firstSteps,miniExample:c.miniExample,pitfalls:c.pitfalls,selfCheck:c.selfCheck});
+ assert.ok((visible.match(/[\u4e00-\u9fff]/g)||[]).length<=1200,c.id+' is too long for the brief');
+ assert.ok(!/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(visible),c.id+' bad text control character');
+}
 assert.equal(bookOriginals.length,40,'Each selected exercise needs its actual original');
 assert.equal(new Set(bookOriginals.map(b=>b.id)).size,40);
 const coveredConcepts=new Set(bookConcepts.flatMap(c=>c.topicCodes));
@@ -109,7 +125,8 @@ for(const q of [...drills,...book]){assert.ok(q.solution.length>300,q.id+' needs
 assert.ok(!(await fs.readFile(path.join(root,'dist/app.js'),'utf8')).includes("replace(/\\$|\\\\[a-zA-Z]+/g"),'Preview must preserve TeX commands');
 let errors=[],mathCount=0,figureCount=0;
 const handbookChecks=handbook.map(c=>({id:c.id,statement:c.formula,firstStep:c.memory,solution:c.explanation+'\n'+(Array.isArray(c.conditions)?c.conditions.join('\n'):c.conditions),answer:Array.isArray(c.pitfalls)?c.pitfalls.join('\n'):c.pitfalls,training:true,figures:(c.diagramPaths||[]).map(path=>({path}))}));
-for(const q of [...handbookChecks,{id:"handbook-notation",statement:d.referenceHandbook.notation,firstStep:"",solution:"",answer:"",training:true},...qs,...drills,...book,...methods.map(m=>({id:m.id,statement:m.why||'',firstStep:m.whenToUse||'',solution:m.derivation,answer:m.check||'',training:true})),...guides.map(g=>({id:g.id,statement:g.summary,firstStep:g.quickTakeaways.join('\n'),solution:g.body,answer:g.selfCheck.join('\n'),pitfalls:g.pitfalls,training:true})),...examMethods.map(m=>({id:m.targetId+'-methods',statement:m.scope,firstStep:m.recommended.why,solution:m.recommended.steps.join('\n')+'\n'+(m.alternatives||[]).map(a=>a.whenToUse+'\n'+a.steps.join('\n')).join('\n'),answer:m.comparison,training:true})),...bookConcepts.map(c=>({id:c.id,statement:c.summary,firstStep:c.coverageNote||'',solution:'',answer:'',training:true})),...(references.relations||[]).map((r,i)=>({id:'book-relation-'+i,statement:r.scope,firstStep:'',solution:r.explanation,answer:'',training:true}))]){
+const condensedChecks=condensed.chapters.map(c=>({id:c.id,statement:c.coreIdea,firstStep:c.firstSteps.map(s=>s.trigger+'\n'+s.action).join('\n'),solution:c.essentials.map(e=>e.title+'\n'+e.explanation+'\n'+e.formula).join('\n'),answer:c.miniExample.title+'\n'+c.miniExample.body+'\n'+c.pitfalls.join('\n')+'\n'+c.selfCheck.question+'\n'+c.selfCheck.answer,training:true}));
+for(const q of [...condensedChecks,...handbookChecks,{id:"handbook-notation",statement:d.referenceHandbook.notation,firstStep:"",solution:"",answer:"",training:true},...qs,...drills,...book,...methods.map(m=>({id:m.id,statement:m.why||'',firstStep:m.whenToUse||'',solution:m.derivation,answer:m.check||'',training:true})),...guides.map(g=>({id:g.id,statement:g.summary,firstStep:g.quickTakeaways.join('\n'),solution:g.body,answer:g.selfCheck.join('\n'),pitfalls:g.pitfalls,training:true})),...examMethods.map(m=>({id:m.targetId+'-methods',statement:m.scope,firstStep:m.recommended.why,solution:m.recommended.steps.join('\n')+'\n'+(m.alternatives||[]).map(a=>a.whenToUse+'\n'+a.steps.join('\n')).join('\n'),answer:m.comparison,training:true})),...bookConcepts.map(c=>({id:c.id,statement:c.summary,firstStep:c.coverageNote||'',solution:'',answer:'',training:true})),...(references.relations||[]).map((r,i)=>({id:'book-relation-'+i,statement:r.scope,firstStep:'',solution:r.explanation,answer:'',training:true}))]){
  for(const field of ['statement','firstStep','solution','answer',...(q.pitfalls||[]).map((_,i)=>'pitfall'+i)]){
   const value=field.startsWith('pitfall')?q.pitfalls[+field.slice(7)]:q[field];
   assert.equal(typeof value,'string',q.id+' '+field);
@@ -123,5 +140,5 @@ for(const q of [...handbookChecks,{id:"handbook-notation",statement:d.referenceH
 }
 for(const c of d.chapters){let list=qs.filter(q=>q.chapters.includes(c.chapter));assert.equal(list.length,c.count,c.chapter);assert.equal(new Set(list.map(q=>q.year)).size,c.year_count,c.chapter);}
 await fs.writeFile(path.join(root,'content/math-check.json'),JSON.stringify(errors,null,2));
-console.log(JSON.stringify({handbookCards:handbook.length,handbookTables:handbook.filter(c=>c.category==='table').length,questions:qs.length,examMethodSyntheses:examMethods.length,training:drills.length,textbookGroups:book.length,textbookOriginals:bookOriginals.length,conceptCards:bookConcepts.length,topicCoverage:coveredConcepts.size,textbookRelations:references.relations?.length,alternativeMethods:methods.length,courseDigests:guides.length,courseSources:sources.length,formulaExpressions:mathCount,figureReferences:figureCount,formulaErrors:errors.length,examples:errors.slice(0,12)}));
+console.log(JSON.stringify({condensedChapters:condensed.chapters.length,condensedBodyPages:condensed.auditedBodyPdfPages.length,handbookCards:handbook.length,handbookTables:handbook.filter(c=>c.category==='table').length,questions:qs.length,examMethodSyntheses:examMethods.length,training:drills.length,textbookGroups:book.length,textbookOriginals:bookOriginals.length,conceptCards:bookConcepts.length,topicCoverage:coveredConcepts.size,textbookRelations:references.relations?.length,alternativeMethods:methods.length,courseDigests:guides.length,courseSources:sources.length,formulaExpressions:mathCount,figureReferences:figureCount,formulaErrors:errors.length,examples:errors.slice(0,12)}));
 if(errors.length)process.exitCode=1;

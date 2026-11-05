@@ -89,7 +89,7 @@ window.createTextbookReader = function ({ D, escape, heading }) {
   const printInput = hasPrint(page) ? page.printPage : '';
   const inputValue = jumpMode === 'print' ? printInput : page.pdfPage;
   return `<section class="textbook-reader" data-textbook-reader data-current-pdf="${page.pdfPage}">
-   <div class="book-backline"><a href="#downloads">← 资料与安装</a>${downloadLink()}</div>
+   <div class="book-backline"><a href="#downloads">← 资料与安装</a><a class="book-download" href="#digest">先读原书精简版 →</a>${downloadLink()}</div>
    ${heading('整本教材 / 原书阅读', escape(book.title || '奥本海姆《信号与系统》第二版'), escape(modeNote))}
    <div class="book-page-heading"><div><strong>${escape(pageLabel(page))}</strong><span>${hasPrint(page) ? '按原书印刷页码标注' : '此页未标注正文印刷书页'}</span></div><span class="book-reading-location">${escape(entry?.title || '原书前置页')}${resumed ? '<small>接着上次阅读</small>' : ''}</span></div>
    ${notice ? `<p class="book-route-notice" role="status">${escape(notice)}</p>` : ''}

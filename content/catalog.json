@@ -1,5 +1,5 @@
 {
-  "version": "1.7.0",
+  "version": "1.8.0",
   "github": "https://github.com/Nishino0525Nanase/sysu-signals-study",
   "training": [
     {
@@ -1674,9 +1674,16 @@
   "files": [
     {
       "kind": "apk",
-      "title": "Android离线版 1.7.0",
-      "description": "内置628页奥本海姆原书、真题详解及公式速查；支持书页/PDF页跳转、目录和原图放大，可覆盖升级。",
-      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.7.0/sysu-signals-study-v1.7.0.apk"
+      "title": "Android离线版 1.8.0",
+      "description": "新增原书精读精简版，按11章串起核心概念、公式、第一步和易错点；内置全书及真题，可覆盖升级。",
+      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.8.0/sysu-signals-study-v1.8.0.apk"
+    },
+    {
+      "id": "textbook-condensed",
+      "kind": "pdf",
+      "title": "原书精读 · 中大备考精简版",
+      "description": "逐章核对原书正文与典型例题后整理，保留主线、适用条件、入手方法、小例子和易错点。",
+      "path": "downloads/textbook-condensed.pdf"
     },
     {
       "id": "textbook-pdf",
