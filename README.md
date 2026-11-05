@@ -5,7 +5,7 @@
 ## 使用
 
 - 网页：[中大信号研习室](https://nishino0525nanase.github.io/sysu-signals-study/)，由 Pages 工作流发布 `dist/`。
-- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”指向的 `sysu-signals-study-v1.8.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
+- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”指向的 `sysu-signals-study-v1.8.1.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
 - APK内置全部学习内容、公式字体和配图，核心阅读无需联网，不申请网络、定位、摄像头或账号权限。
 - 学习进度、收藏、错题、笔记保存在本机，支持导出和导入JSON备份。
 
@@ -111,3 +111,10 @@ Android使用JDK17、SDK platform35/build-tools35编译：设置`ANDROID_JAR`、
 - 新内容源`content/textbook-condensed.json`，页面`#digest`与`#digest?chapter=7`，支持连续阅读与同源彩色PDF下载。导出工具为`tools/export-textbook-condensed.py`。
 - 新核对原书例3.9与2024年第二题的实值、T=4、有限谐波、变换后奇性与平均功率条件完全对应。题内增加同题提示与原例截图，教材关系合计97条；判断内容对应，不据此推断命题来源。
 - PDF保留中文图解与母谱/第一步清单；详细证明、长表和原书图像通过链接按需展开。Android沿用原签名，内置精简讲义及全书。
+
+
+## 1.8.1 便捷翻页
+
+- 原书阅读增加常驻屏幕底部的上一页/下一页按钮；手机端位于学习导航上方，适配底部安全区。中间页码可展开PDF页/印刷书页跳转与目录入口。
+- 翻页、跳页及目录跳转后定位新页正文，连续翻阅不用反复经过页头。桌面支持左右方向键，输入或图像/题目弹窗打开时不触发背景翻页。
+- 固定工具条随离开原书页自动移除，打印时隐藏，原有学习记录与高清图查看保持可用。

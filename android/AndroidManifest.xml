@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="io.github.nishinonanase.sysusignals" android:versionCode="10" android:versionName="1.8.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="io.github.nishinonanase.sysusignals" android:versionCode="11" android:versionName="1.8.1">
  <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34"/>
  <application android:label="中大信号研习室" android:icon="@drawable/ic_launcher" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:usesCleartextTraffic="false" android:supportsRtl="true">
   <activity android:name=".MainActivity" android:exported="true" android:configChanges="orientation|screenSize|keyboardHidden">
