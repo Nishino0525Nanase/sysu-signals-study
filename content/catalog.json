@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "github": "https://github.com/Nishino0525Nanase/sysu-signals-study",
   "training": [
     {
@@ -1669,9 +1669,9 @@
   "files": [
     {
       "kind": "apk",
-      "title": "Android离线版 1.1.0",
-      "description": "内置真题、32道训练与40组奥本海姆课后题逐步答案；Android 7.0及以上。可覆盖升级。",
-      "path": "downloads/sysu-signals-study-v1.1.0.apk"
+      "title": "Android离线版 1.2.0",
+      "description": "中文图解、多种解法与逐题课程入口；核心答案离线可读，外部视频联网打开。Android 7.0及以上，可覆盖升级。",
+      "path": "downloads/sysu-signals-study-v1.2.0.apk"
     },
     {
       "kind": "xlsx",
@@ -1682,7 +1682,7 @@
     {
       "kind": "pdf",
       "title": "课后与专项训练逐步答案",
-      "description": "40组奥本海姆所选课后题、22道迁移题及10道模拟题，含完整逐步解答。",
+      "description": "40组课后题、32道训练的逐步答案，附中文图解及已核算的其他解法。",
       "path": "downloads/oppenheim-workbook.pdf"
     }
   ],

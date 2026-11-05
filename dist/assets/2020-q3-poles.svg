@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="550.4pt" height="417.358125pt" viewBox="0 0 550.4 417.358125" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="550.4pt" height="417.358125pt" viewBox="0 0 550.4 417.358125" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
@@ -21,29 +20,15 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 417.358125 
-L 550.4 417.358125 
-L 550.4 0 
-L 0 0 
-z
-" style="fill: #ffffff"/>
+   <path d="M 0 417.358125  L 550.4 417.358125  L 550.4 0  L 0 0  z " style="fill: #ffffff"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 7.2 172.810667 
-L 543.2 172.810667 
-L 543.2 115.696 
-L 7.2 115.696 
-z
-" style="fill: #ffffff"/>
+    <path d="M 7.2 172.810667  L 543.2 172.810667  L 543.2 115.696  L 7.2 115.696  z " style="fill: #ffffff"/>
    </g>
    <g id="PathCollection_1">
     <defs>
-     <path id="m02cff951df" d="M -4.1833 4.1833 
-L 4.1833 -4.1833 
-M -4.1833 -4.1833 
-L 4.1833 4.1833 
-" style="stroke: #d06a36; stroke-width: 1.5"/>
+     <path id="m02cff951df" d="M -4.1833 4.1833  L 4.1833 -4.1833  M -4.1833 -4.1833  L 4.1833 4.1833  " style="stroke: #d06a36; stroke-width: 1.5"/>
     </defs>
     <g clip-path="url(#p41dff49018)">
      <use xlink:href="#m02cff951df" x="61.576812" y="149.012889" style="fill: #d06a36; stroke: #d06a36; stroke-width: 1.5"/>
@@ -52,17 +37,7 @@ L 4.1833 4.1833
    </g>
    <g id="PathCollection_2">
     <defs>
-     <path id="C0_0_4cd55ed8b9" d="M 0 4.1833 
-C 1.109424 4.1833 2.173559 3.742521 2.95804 2.95804 
-C 3.742521 2.173559 4.1833 1.109424 4.1833 -0 
-C 4.1833 -1.109424 3.742521 -2.173559 2.95804 -2.95804 
-C 2.173559 -3.742521 1.109424 -4.1833 0 -4.1833 
-C -1.109424 -4.1833 -2.173559 -3.742521 -2.95804 -2.95804 
-C -3.742521 -2.173559 -4.1833 -1.109424 -4.1833 0 
-C -4.1833 1.109424 -3.742521 2.173559 -2.95804 2.95804 
-C -2.173559 3.742521 -1.109424 4.1833 0 4.1833 
-z
-"/>
+     <path id="C0_0_4cd55ed8b9" d="M 0 4.1833  C 1.109424 4.1833 2.173559 3.742521 2.95804 2.95804  C 3.742521 2.173559 4.1833 1.109424 4.1833 -0  C 4.1833 -1.109424 3.742521 -2.173559 2.95804 -2.95804  C 2.173559 -3.742521 1.109424 -4.1833 0 -4.1833  C -1.109424 -4.1833 -2.173559 -3.742521 -2.95804 -2.95804  C -3.742521 -2.173559 -4.1833 -1.109424 -4.1833 0  C -4.1833 1.109424 -3.742521 2.173559 -2.95804 2.95804  C -2.173559 3.742521 -1.109424 4.1833 0 4.1833  z "/>
     </defs>
     <g clip-path="url(#p41dff49018)">
      <use xlink:href="#C0_0_4cd55ed8b9" x="139.257971" y="149.012889" style="fill: none; stroke: #2463a6"/>
@@ -75,57 +50,48 @@ z
     <g id="xtick_1">
      <g id="line2d_1"/>
      <g id="text_1">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="61.576812" y="188.409104" transform="rotate(-0 61.576812 188.409104)">−1/b</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="61.576812" y="188.409104" transform="rotate(-0 61.576812 188.409104)">−1/b</text>
      </g>
     </g>
     <g id="xtick_2">
      <g id="line2d_2"/>
      <g id="text_2">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="139.257971" y="188.409104" transform="rotate(-0 139.257971 188.409104)">−1/√(ab)</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="139.257971" y="188.409104" transform="rotate(-0 139.257971 188.409104)">−1/√(ab)</text>
      </g>
     </g>
     <g id="xtick_3">
      <g id="line2d_3"/>
      <g id="text_3">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="216.93913" y="188.409104" transform="rotate(-0 216.93913 188.409104)">−1/a</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="216.93913" y="188.409104" transform="rotate(-0 216.93913 188.409104)">−1/a</text>
      </g>
     </g>
     <g id="xtick_4">
      <g id="line2d_4"/>
      <g id="text_4">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="294.62029" y="188.409104" transform="rotate(-0 294.62029 188.409104)">0</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="294.62029" y="188.409104" transform="rotate(-0 294.62029 188.409104)">0</text>
      </g>
     </g>
     <g id="xtick_5">
      <g id="line2d_5"/>
      <g id="text_5">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="449.982609" y="188.409104" transform="rotate(-0 449.982609 188.409104)">+1/√(ab)</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="449.982609" y="188.409104" transform="rotate(-0 449.982609 188.409104)">+1/√(ab)</text>
      </g>
     </g>
    </g>
    <g id="matplotlib.axis_2"/>
    <g id="line2d_6">
-    <path d="M 7.2 149.012889 
-L 543.2 149.012889 
-" clip-path="url(#p41dff49018)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
+    <path d="M 7.2 149.012889  L 543.2 149.012889  " clip-path="url(#p41dff49018)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
    </g>
    <g id="line2d_7">
-    <path d="M 294.62029 172.810667 
-L 294.62029 115.696 
-" clip-path="url(#p41dff49018)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
+    <path d="M 294.62029 172.810667  L 294.62029 115.696  " clip-path="url(#p41dff49018)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
    </g>
    <g id="text_6">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="275.2" y="109.696" transform="rotate(-0 275.2 109.696)">a&gt;b · two poles and two zeros before any cancellation</text>
+    <text style="font-size: 11px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="275.2" y="109.696" transform="rotate(-0 275.2 109.696)">a&gt;b：约分前有两个极点和两个零点</text>
    </g>
   </g>
   <g id="axes_2">
    <g id="patch_3">
-    <path d="M 7.2 282.645333 
-L 543.2 282.645333 
-L 543.2 225.530667 
-L 7.2 225.530667 
-z
-" style="fill: #ffffff"/>
+    <path d="M 7.2 282.645333  L 543.2 282.645333  L 543.2 225.530667  L 7.2 225.530667  z " style="fill: #ffffff"/>
    </g>
    <g id="PathCollection_3">
     <g clip-path="url(#pf5a8bcd4aa)">
@@ -135,17 +101,7 @@ z
    </g>
    <g id="PathCollection_4">
     <defs>
-     <path id="C1_0_6f5b2abe82" d="M 0 4.1833 
-C 1.109424 4.1833 2.173559 3.742521 2.95804 2.95804 
-C 3.742521 2.173559 4.1833 1.109424 4.1833 -0 
-C 4.1833 -1.109424 3.742521 -2.173559 2.95804 -2.95804 
-C 2.173559 -3.742521 1.109424 -4.1833 0 -4.1833 
-C -1.109424 -4.1833 -2.173559 -3.742521 -2.95804 -2.95804 
-C -3.742521 -2.173559 -4.1833 -1.109424 -4.1833 0 
-C -4.1833 1.109424 -3.742521 2.173559 -2.95804 2.95804 
-C -2.173559 3.742521 -1.109424 4.1833 0 4.1833 
-z
-"/>
+     <path id="C1_0_6f5b2abe82" d="M 0 4.1833  C 1.109424 4.1833 2.173559 3.742521 2.95804 2.95804  C 3.742521 2.173559 4.1833 1.109424 4.1833 -0  C 4.1833 -1.109424 3.742521 -2.173559 2.95804 -2.95804  C 2.173559 -3.742521 1.109424 -4.1833 0 -4.1833  C -1.109424 -4.1833 -2.173559 -3.742521 -2.95804 -2.95804  C -3.742521 -2.173559 -4.1833 -1.109424 -4.1833 0  C -4.1833 1.109424 -3.742521 2.173559 -2.95804 2.95804  C -2.173559 3.742521 -1.109424 4.1833 0 4.1833  z "/>
     </defs>
     <g clip-path="url(#pf5a8bcd4aa)">
      <use xlink:href="#C1_0_6f5b2abe82" x="139.257971" y="258.847556" style="fill: none; stroke: #2463a6"/>
@@ -158,57 +114,48 @@ z
     <g id="xtick_6">
      <g id="line2d_8"/>
      <g id="text_7">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="61.576812" y="298.243771" transform="rotate(-0 61.576812 298.243771)">−1/a</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="61.576812" y="298.243771" transform="rotate(-0 61.576812 298.243771)">−1/a</text>
      </g>
     </g>
     <g id="xtick_7">
      <g id="line2d_9"/>
      <g id="text_8">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="139.257971" y="298.243771" transform="rotate(-0 139.257971 298.243771)">−1/√(ab)</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="139.257971" y="298.243771" transform="rotate(-0 139.257971 298.243771)">−1/√(ab)</text>
      </g>
     </g>
     <g id="xtick_8">
      <g id="line2d_10"/>
      <g id="text_9">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="216.93913" y="298.243771" transform="rotate(-0 216.93913 298.243771)">−1/b</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="216.93913" y="298.243771" transform="rotate(-0 216.93913 298.243771)">−1/b</text>
      </g>
     </g>
     <g id="xtick_9">
      <g id="line2d_11"/>
      <g id="text_10">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="294.62029" y="298.243771" transform="rotate(-0 294.62029 298.243771)">0</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="294.62029" y="298.243771" transform="rotate(-0 294.62029 298.243771)">0</text>
      </g>
     </g>
     <g id="xtick_10">
      <g id="line2d_12"/>
      <g id="text_11">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="449.982609" y="298.243771" transform="rotate(-0 449.982609 298.243771)">+1/√(ab)</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="449.982609" y="298.243771" transform="rotate(-0 449.982609 298.243771)">+1/√(ab)</text>
      </g>
     </g>
    </g>
    <g id="matplotlib.axis_4"/>
    <g id="line2d_13">
-    <path d="M 7.2 258.847556 
-L 543.2 258.847556 
-" clip-path="url(#pf5a8bcd4aa)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
+    <path d="M 7.2 258.847556  L 543.2 258.847556  " clip-path="url(#pf5a8bcd4aa)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
    </g>
    <g id="line2d_14">
-    <path d="M 294.62029 282.645333 
-L 294.62029 225.530667 
-" clip-path="url(#pf5a8bcd4aa)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
+    <path d="M 294.62029 282.645333  L 294.62029 225.530667  " clip-path="url(#pf5a8bcd4aa)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
    </g>
    <g id="text_12">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="275.2" y="219.530667" transform="rotate(-0 275.2 219.530667)">a&lt;b · two poles and two zeros before any cancellation</text>
+    <text style="font-size: 11px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="275.2" y="219.530667" transform="rotate(-0 275.2 219.530667)">a&lt;b：约分前有两个极点和两个零点</text>
    </g>
   </g>
   <g id="axes_3">
    <g id="patch_4">
-    <path d="M 7.2 392.48 
-L 543.2 392.48 
-L 543.2 335.365333 
-L 7.2 335.365333 
-z
-" style="fill: #ffffff"/>
+    <path d="M 7.2 392.48  L 543.2 392.48  L 543.2 335.365333  L 7.2 335.365333  z " style="fill: #ffffff"/>
    </g>
    <g id="PathCollection_5">
     <g clip-path="url(#p5ce449c80b)">
@@ -216,57 +163,42 @@ z
     </g>
    </g>
    <g id="PathCollection_6">
-    <path d="M 449.982609 372.865522 
-C 451.092033 372.865522 452.156167 372.424743 452.940649 371.640262 
-C 453.72513 370.855781 454.165909 369.791646 454.165909 368.682222 
-C 454.165909 367.572798 453.72513 366.508664 452.940649 365.724182 
-C 452.156167 364.939701 451.092033 364.498922 449.982609 364.498922 
-C 448.873185 364.498922 447.80905 364.939701 447.024569 365.724182 
-C 446.240087 366.508664 445.799309 367.572798 445.799309 368.682222 
-C 445.799309 369.791646 446.240087 370.855781 447.024569 371.640262 
-C 447.80905 372.424743 448.873185 372.865522 449.982609 372.865522 
-L 449.982609 372.865522 
-z
-" clip-path="url(#p5ce449c80b)" style="fill: none; stroke: #2463a6"/>
+    <path d="M 449.982609 372.865522  C 451.092033 372.865522 452.156167 372.424743 452.940649 371.640262  C 453.72513 370.855781 454.165909 369.791646 454.165909 368.682222  C 454.165909 367.572798 453.72513 366.508664 452.940649 365.724182  C 452.156167 364.939701 451.092033 364.498922 449.982609 364.498922  C 448.873185 364.498922 447.80905 364.939701 447.024569 365.724182  C 446.240087 366.508664 445.799309 367.572798 445.799309 368.682222  C 445.799309 369.791646 446.240087 370.855781 447.024569 371.640262  C 447.80905 372.424743 448.873185 372.865522 449.982609 372.865522  L 449.982609 372.865522  z " clip-path="url(#p5ce449c80b)" style="fill: none; stroke: #2463a6"/>
    </g>
    <g id="matplotlib.axis_5">
     <g id="xtick_11">
      <g id="line2d_15"/>
      <g id="text_13">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="139.257971" y="408.078437" transform="rotate(-0 139.257971 408.078437)">−1/τ</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="139.257971" y="408.078437" transform="rotate(-0 139.257971 408.078437)">−1/τ</text>
      </g>
     </g>
     <g id="xtick_12">
      <g id="line2d_16"/>
      <g id="text_14">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="294.62029" y="408.078437" transform="rotate(-0 294.62029 408.078437)">0</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="294.62029" y="408.078437" transform="rotate(-0 294.62029 408.078437)">0</text>
      </g>
     </g>
     <g id="xtick_13">
      <g id="line2d_17"/>
      <g id="text_15">
-      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="449.982609" y="408.078437" transform="rotate(-0 449.982609 408.078437)">+1/τ</text>
+      <text style="font-size: 10px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="449.982609" y="408.078437" transform="rotate(-0 449.982609 408.078437)">+1/τ</text>
      </g>
     </g>
    </g>
    <g id="matplotlib.axis_6"/>
    <g id="line2d_18">
-    <path d="M 7.2 368.682222 
-L 543.2 368.682222 
-" clip-path="url(#p5ce449c80b)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
+    <path d="M 7.2 368.682222  L 543.2 368.682222  " clip-path="url(#p5ce449c80b)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
    </g>
    <g id="line2d_19">
-    <path d="M 294.62029 392.48 
-L 294.62029 335.365333 
-" clip-path="url(#p5ce449c80b)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
+    <path d="M 294.62029 392.48  L 294.62029 335.365333  " clip-path="url(#p5ce449c80b)" style="fill: none; stroke: #8995a5; stroke-linecap: square"/>
    </g>
    <g id="text_16">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="275.2" y="329.365333" transform="rotate(-0 275.2 329.365333)">a=b=τ · reduced allpass H(s)=(sτ−1)/(sτ+1)</text>
+    <text style="font-size: 11px; font-family: 'Noto Sans CJK SC'; text-anchor: middle" x="275.2" y="329.365333" transform="rotate(-0 275.2 329.365333)">a=b=τ：约分后的全通系统 H(s)=(sτ−1)/(sτ+1)</text>
    </g>
   </g>
   <g id="text_17">
-   <text style="font-size: 12px; font-family: 'DejaVu Sans'" transform="translate(145.719063 16.318125)">2020 Q3 · a=r₁C₂, b=r₂C₁; ○ zeros, × poles</text>
-   <text style="font-size: 12px; font-family: 'DejaVu Sans'" transform="translate(140.0725 29.7555)">Symbolic real-axis order (spacing schematic)</text>
+   <text style="font-size: 12px; font-family: 'Noto Sans CJK SC'" transform="translate(145.719063 16.318125)">2020年第三题：a=r₁C₂，b=r₂C₁；○表示零点，×表示极点</text>
+   <text style="font-size: 12px; font-family: 'Noto Sans CJK SC'" transform="translate(140.0725 29.7555)">实轴上的符号次序（间距为示意）</text>
   </g>
  </g>
  <defs>

@@ -1,0 +1,1478 @@
+{
+  "sources": [
+    {
+      "id": "SYSU-BILI-2024",
+      "title": "2024年中山大学884真题逐题讲解",
+      "url": "https://www.bilibili.com/video/BV1WU1xYKE8a/",
+      "platform": "B站",
+      "creator": "芝麻研途",
+      "chapters": [],
+      "targetIds": [
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10"
+      ],
+      "evidenceLevel": "搜索索引中的分P目录",
+      "summary": "分P目录列出2024年第1至10题，可按题号对照观看。",
+      "sourceLocator": "分P：1题（中山2024）至10题（中山2024）",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "verificationNote": "本次原视频页返回412，未读取字幕；不把目录当作已观看的内容。"
+    },
+    {
+      "id": "SYSU-BILI-2022",
+      "title": "中山大学884：2022年真题解析",
+      "url": "https://www.bilibili.com/video/BV1xg411U77p/",
+      "platform": "B站",
+      "creator": "以原视频发布页为准",
+      "chapters": [],
+      "years": [
+        2022
+      ],
+      "evidenceLevel": "搜索索引中的视频页面",
+      "summary": "页面标题及简介指向2022年中山大学884整卷解析，可用作同年度对照入口。",
+      "sourceLocator": "视频标题及作者简介",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "verificationNote": "本次原视频页返回412，未读取字幕；具体分题结论仍应与题面核对。"
+    },
+    {
+      "id": "SYSU-BILI-PREVIEW",
+      "title": "中山大学884历年真题讲解试读合集",
+      "url": "https://www.bilibili.com/video/BV17b411e7yw/",
+      "platform": "B站",
+      "creator": "网学天地二号",
+      "chapters": [],
+      "years": [
+        2012,
+        2013,
+        2014,
+        2015,
+        2017,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "evidenceLevel": "搜索索引中的分P目录",
+      "summary": "目录覆盖2012—2025中的若干年份，各分P标为试读或试听，可先定位对应年份。",
+      "sourceLocator": "按年份命名的分P目录",
+      "accessNote": "公开条目为试读或试听；完整课程请看发布者说明。本次未读取字幕。",
+      "verificationNote": "公开条目为试读/试听；本次未读取字幕，部分完整课程可能另有限制。"
+    },
+    {
+      "id": "SYSU-GITHUB-COURSE",
+      "title": "中山大学信号与系统课程资料目录",
+      "url": "https://github.com/SleepingMonster/SYSU_Courses/tree/main/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F",
+      "platform": "GitHub",
+      "creator": "SleepingMonster",
+      "chapters": [],
+      "evidenceLevel": "仓库目录及README已核对",
+      "summary": "作者的本科课程资料目录包含课件、作业答案和课程项目，可作为课程补充资料。",
+      "sourceLocator": "信号与系统目录：课件、答案、Project",
+      "accessNote": "属于本科课程资料，不能视为884官方答案；各文件尚未逐一核验。",
+      "verificationNote": "属于本科课程资料，不能视为884官方答案；各文件尚未逐一核验。"
+    },
+    {
+      "id": "CN-MOOC-XJTU",
+      "title": "西安交通大学：信号与系统",
+      "url": "https://www.icourse163.org/course/XJTU-1206497813",
+      "platform": "中国大学MOOC",
+      "creator": "西安交通大学课程团队",
+      "language": "中文",
+      "chapters": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "9",
+        "10"
+      ],
+      "evidenceLevel": "原平台课程介绍正文已读",
+      "summary": "课程介绍覆盖系统性质、特征函数、连续与离散傅里叶分析、抽样恢复、拉普拉斯与Z变换；强调连续与离散对照、数学公式背后的物理意义。",
+      "accessNote": "已核对公开课程介绍；具体课时与视频在原平台查看。",
+      "citationRefs": [
+        "turn18view3",
+        "turn18view5"
+      ],
+      "verificationUrl": "https://due.xjtu.edu.cn/info/1149/5065.htm",
+      "contentRead": true,
+      "transcriptRead": false,
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "已读取公开课程介绍；本次未进入注册后的教学视频，未读取视频字幕或逐课讲义。课程介绍可用于核对主题与教学组织，不能证明某个具体小问的解法。"
+    },
+    {
+      "id": "CN-MOOC-XDU",
+      "title": "西安电子科技大学：信号与系统（基础篇）",
+      "url": "https://www.icourse163.org/course/XDU-483006",
+      "platform": "中国大学MOOC",
+      "creator": "郭宝龙及西安电子科技大学课程团队",
+      "language": "中文",
+      "chapters": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "evidenceLevel": "原平台课程介绍正文已读",
+      "summary": "介绍围绕基本信号、信号分解和LTI系统特性展开，时域、频域依次推进，并配Matlab示例；页面说明基础篇涵盖连续和离散时域分析、连续傅里叶变换及离散傅里叶变换简述。",
+      "accessNote": "已核对公开课程介绍；具体课时与视频在原平台查看。",
+      "citationRefs": [
+        "turn18view4"
+      ],
+      "contentRead": true,
+      "transcriptRead": false,
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "已读取公开课程介绍；本次未进入注册后的教学视频，未读取视频字幕或逐课讲义。课程介绍可用于核对主题与教学组织，不能证明某个具体小问的解法。"
+    },
+    {
+      "id": "CN-MOOC-BJTU",
+      "title": "北京交通大学：信号与系统",
+      "url": "https://www.icourse163.org/course/NJTU-359003",
+      "platform": "中国大学MOOC",
+      "creator": "陈后金及北京交通大学课程团队",
+      "language": "中文",
+      "chapters": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "9",
+        "10"
+      ],
+      "evidenceLevel": "原平台课程介绍正文已读",
+      "summary": "课程以信号表示和系统描述组织知识，覆盖时域、频域、连续及离散系统的复频域分析与状态变量；适合对比同一问题在不同时域/变换域的描述。",
+      "accessNote": "已核对公开课程介绍；具体课时与视频在原平台查看。",
+      "citationRefs": [
+        "turn30view0"
+      ],
+      "contentRead": true,
+      "transcriptRead": false,
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "已读取公开课程介绍；本次未进入注册后的教学视频，未读取视频字幕或逐课讲义。课程介绍可用于核对主题与教学组织，不能证明某个具体小问的解法。"
+    },
+    {
+      "id": "CN-MOOC-NJUPT",
+      "title": "南京邮电大学：信号与系统",
+      "url": "https://www.icourse163.org/course/NJUPT-1206593813",
+      "platform": "中国大学MOOC",
+      "creator": "南京邮电大学课程团队",
+      "language": "中文",
+      "chapters": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "9",
+        "10"
+      ],
+      "evidenceLevel": "原平台课程介绍正文已读",
+      "summary": "课程介绍强调连续与离散、傅里叶与拉普拉斯及Z变换的联系和区别，并介绍连续系统状态变量分析；可作为概念辨析的补充入口。",
+      "accessNote": "已核对公开课程介绍；具体课时与视频在原平台查看。",
+      "citationRefs": [
+        "turn30view1"
+      ],
+      "contentRead": true,
+      "transcriptRead": false,
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "已读取公开课程介绍；本次未进入注册后的教学视频，未读取视频字幕或逐课讲义。课程介绍可用于核对主题与教学组织，不能证明某个具体小问的解法。"
+    },
+    {
+      "id": "CN-MOOC-NUIST",
+      "title": "南京信息工程大学：信号与系统",
+      "url": "https://www.icourse163.org/course/NUIST-1206804809",
+      "platform": "中国大学MOOC",
+      "creator": "南京信息工程大学课程团队",
+      "language": "中文",
+      "chapters": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "9",
+        "10"
+      ],
+      "evidenceLevel": "原平台课程介绍正文已读",
+      "summary": "围绕LTI系统，分别讨论连续与离散信号/系统的时域、频域、拉普拉斯与Z域分析；页面同时说明线上预复习与线下重点讲解的组织方式。",
+      "accessNote": "已核对公开课程介绍；具体课时与视频在原平台查看。",
+      "citationRefs": [
+        "turn30view2"
+      ],
+      "contentRead": true,
+      "transcriptRead": false,
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "已读取公开课程介绍；本次未进入注册后的教学视频，未读取视频字幕或逐课讲义。课程介绍可用于核对主题与教学组织，不能证明某个具体小问的解法。"
+    },
+    {
+      "id": "CN-BILI-CH12",
+      "title": "奥本海姆课后题全解：第一章和第二章",
+      "url": "https://www.bilibili.com/video/BV1nvZqYoEet/",
+      "platform": "B站",
+      "creator": null,
+      "language": "中文",
+      "chapters": [
+        "1",
+        "2"
+      ],
+      "evidenceLevel": "搜索索引中的分P/合集题号目录可读（非字幕）",
+      "summary": "索引中与本站所选题明确相同的目录有1.27、1.28和2.40；应在该作者的第一、二章视频内选择相应题号。",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "citationRefs": [
+        "turn32search1",
+        "turn32search0"
+      ],
+      "contentRead": false,
+      "transcriptRead": false,
+      "matchEvidence": [
+        {
+          "oid": "O01",
+          "partTitle": "1.27(奥本)",
+          "duration": "52:59"
+        },
+        {
+          "oid": "O02",
+          "partTitle": "1.28(奥本)",
+          "duration": "17:39"
+        },
+        {
+          "oid": "O05",
+          "partTitle": "2.40(奥本)",
+          "duration": "11:16"
+        }
+      ],
+      "directFetchStatus": "412",
+      "targetIds": [
+        "O01",
+        "O02",
+        "O05"
+      ],
+      "sourceLocator": "分P目录：1.27(奥本)（单集时长52:59）；1.28(奥本)（单集时长17:39）；2.40(奥本)（单集时长11:16）",
+      "verificationNote": "本次B站正文抓取及一次公开元数据请求遇到412，没有取得所列视频字幕/画面。此条主题或题号仅由搜索索引收录的原平台标题、作者简介及分P/合集目录核对，不是已观看视频的结论。"
+    },
+    {
+      "id": "CN-BILI-CH46",
+      "title": "奥本海姆课后题讲解：第四章和第六章",
+      "url": "https://www.bilibili.com/video/BV1HvZqYoEj4/",
+      "platform": "B站",
+      "creator": null,
+      "language": "中文",
+      "chapters": [
+        "4",
+        "6"
+      ],
+      "evidenceLevel": "搜索索引中的分P/合集题号目录可读（非字幕）",
+      "summary": "可按4.8、4.15、4.21、4.22、4.28、4.32、4.35、4.39、4.40定位本站课后题。第六章可见目录只列6.21至6.23，未据此认定包含本站6.26。",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "citationRefs": [
+        "turn32search0"
+      ],
+      "contentRead": false,
+      "transcriptRead": false,
+      "matchEvidence": [
+        {
+          "oid": "O12",
+          "partTitle": "4.8(奥本)",
+          "duration": "09:09"
+        },
+        {
+          "oid": "O13",
+          "partTitle": "4.15(奥本)",
+          "duration": "05:59"
+        },
+        {
+          "oid": "O14",
+          "partTitle": "4.21(奥本)",
+          "duration": "58:04"
+        },
+        {
+          "oid": "O15",
+          "partTitle": "4.22(奥本)",
+          "duration": "46:33"
+        },
+        {
+          "oid": "O16",
+          "partTitle": "4.28(奥本)",
+          "duration": "29:54"
+        },
+        {
+          "oid": "O17",
+          "partTitle": "4.32(奥本)",
+          "duration": "12:41"
+        },
+        {
+          "oid": "O18",
+          "partTitle": "4.35(奥本)",
+          "duration": "12:54"
+        },
+        {
+          "oid": "O19",
+          "partTitle": "4.39(奥本)",
+          "duration": "08:54"
+        },
+        {
+          "oid": "O20",
+          "partTitle": "4.40(奥本)",
+          "duration": "04:52"
+        }
+      ],
+      "directFetchStatus": "412",
+      "targetIds": [
+        "O12",
+        "O13",
+        "O14",
+        "O15",
+        "O16",
+        "O17",
+        "O18",
+        "O19",
+        "O20"
+      ],
+      "sourceLocator": "分P目录：4.8(奥本)（单集时长09:09）；4.15(奥本)（单集时长05:59）；4.21(奥本)（单集时长58:04）；4.22(奥本)（单集时长46:33）；4.28(奥本)（单集时长29:54）；4.32(奥本)（单集时长12:41）；4.35(奥本)（单集时长12:54）；4.39(奥本)（单集时长08:54）；4.40(奥本)（单集时长04:52）",
+      "verificationNote": "本次B站正文抓取及一次公开元数据请求遇到412，没有取得所列视频字幕/画面。此条主题或题号仅由搜索索引收录的原平台标题、作者简介及分P/合集目录核对，不是已观看视频的结论。"
+    },
+    {
+      "id": "CN-BILI-EXERCISES",
+      "title": "奥本海姆第二版信号与系统课后习题精讲",
+      "url": "https://www.bilibili.com/video/BV1jxHCehExm/",
+      "platform": "B站",
+      "creator": null,
+      "language": "中文",
+      "chapters": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6",
+        "7",
+        "9",
+        "10"
+      ],
+      "evidenceLevel": "搜索索引中的分P/合集题号目录可读（非字幕）",
+      "summary": "索引目录可定位1.27/1.28、3.4/3.11、所选若干第四章题、7.5/7.8、9.21/9.31和10.24。目录包含多个章节，需在页面分P或合集内按题号选择。",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "citationRefs": [
+        "turn24search1"
+      ],
+      "contentRead": false,
+      "transcriptRead": false,
+      "matchEvidence": [
+        {
+          "oid": "O01",
+          "partTitle": "1.27",
+          "duration": "37:39"
+        },
+        {
+          "oid": "O02",
+          "partTitle": "1.28",
+          "duration": "37:07"
+        },
+        {
+          "oid": "O07",
+          "partTitle": "3.4",
+          "duration": "22:11"
+        },
+        {
+          "oid": "O08",
+          "partTitle": "3.11",
+          "duration": "06:34"
+        },
+        {
+          "oid": "O12",
+          "partTitle": "4.8",
+          "duration": "05:04"
+        },
+        {
+          "oid": "O13",
+          "partTitle": "4.15",
+          "duration": "02:38"
+        },
+        {
+          "oid": "O14",
+          "partTitle": "4.21",
+          "duration": "44:25"
+        },
+        {
+          "oid": "O15",
+          "partTitle": "4.22",
+          "duration": "19:58"
+        },
+        {
+          "oid": "O16",
+          "partTitle": "4.28",
+          "duration": "37:36"
+        },
+        {
+          "oid": "O17",
+          "partTitle": "4.32",
+          "duration": "12:36"
+        },
+        {
+          "oid": "O18",
+          "partTitle": "4.35",
+          "duration": "08:21"
+        },
+        {
+          "oid": "O26",
+          "partTitle": "7.5",
+          "duration": "05:57"
+        },
+        {
+          "oid": "O27",
+          "partTitle": "7.8",
+          "duration": "08:45"
+        },
+        {
+          "oid": "O33",
+          "partTitle": "9.21",
+          "duration": "21:59"
+        },
+        {
+          "oid": "O34",
+          "partTitle": "9.31",
+          "duration": "05:45"
+        },
+        {
+          "oid": "O37",
+          "partTitle": "10.24",
+          "duration": "10:52"
+        }
+      ],
+      "directFetchStatus": "412",
+      "targetIds": [
+        "O01",
+        "O02",
+        "O07",
+        "O08",
+        "O12",
+        "O13",
+        "O14",
+        "O15",
+        "O16",
+        "O17",
+        "O18",
+        "O26",
+        "O27",
+        "O33",
+        "O34",
+        "O37"
+      ],
+      "sourceLocator": "分P目录：1.27（单集时长37:39）；1.28（单集时长37:07）；3.4（单集时长22:11）；3.11（单集时长06:34）；4.8（单集时长05:04）；4.15（单集时长02:38）；4.21（单集时长44:25）；4.22（单集时长19:58）；4.28（单集时长37:36）；4.32（单集时长12:36）；4.35（单集时长08:21）；7.5（单集时长05:57）；7.8（单集时长08:45）；9.21（单集时长21:59）；9.31（单集时长05:45）；10.24（单集时长10:52）",
+      "verificationNote": "本次B站正文抓取及一次公开元数据请求遇到412，没有取得所列视频字幕/画面。此条主题或题号仅由搜索索引收录的原平台标题、作者简介及分P/合集目录核对，不是已观看视频的结论。"
+    },
+    {
+      "id": "CN-BILI-YOUXUE",
+      "title": "奥本海姆第二版教材全书手把手精讲",
+      "url": "https://www.bilibili.com/video/BV1bGNRzhEVe/",
+      "platform": "B站",
+      "creator": "邮学考研（索引署名）",
+      "language": "中文",
+      "chapters": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "evidenceLevel": "搜索索引中的课程讲次目录可读（非字幕）",
+      "summary": "目录可见时域取样定理、调制解调、拉普拉斯定义及ROC、单边拉普拉斯反变换、RLC复频域、逆Z变换幂级数和部分分式等讲次；作为主题课程入口，不认定每个所选题已被讲解。",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "citationRefs": [
+        "turn32search2",
+        "turn27search13"
+      ],
+      "contentRead": false,
+      "transcriptRead": false,
+      "topicPointers": [
+        "第43–44讲：取样及取样定理",
+        "第49–53讲：拉普拉斯、ROC、反变换、微分方程",
+        "第58讲：RLC电路复频域分析",
+        "第63–65讲：逆Z变换和差分方程"
+      ],
+      "directFetchStatus": "未逐条抓正文，仅核对索引",
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "本次B站正文抓取及一次公开元数据请求遇到412，没有取得所列视频字幕/画面。此条主题或题号仅由搜索索引收录的原平台标题、作者简介及分P/合集目录核对，不是已观看视频的结论。"
+    },
+    {
+      "id": "CN-BILI-O128",
+      "title": "奥本海姆1.28：判断离散时间系统的性质",
+      "url": "https://www.bilibili.com/video/BV1Dm4y1h7zF",
+      "platform": "B站",
+      "creator": "通信考研小马哥（索引简介署名）",
+      "language": "中文",
+      "chapters": [
+        "1"
+      ],
+      "evidenceLevel": "搜索索引中的原视频题名及简介可读（非字幕）",
+      "summary": "原视频标题及作者简介明确对应奥本海姆1.28，适合对照系统五种性质的判断。未获取字幕，不能判断是否覆盖本站所选全部小问。",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "citationRefs": [
+        "turn37search0"
+      ],
+      "contentRead": false,
+      "transcriptRead": false,
+      "matchEvidence": [
+        {
+          "oid": "O02",
+          "partTitle": "1-28",
+          "duration": "25:10",
+          "scopeNote": "未核验具体小问范围"
+        }
+      ],
+      "directFetchStatus": "412",
+      "targetIds": [
+        "O02"
+      ],
+      "sourceLocator": "分P目录：1-28（单集时长25:10）",
+      "verificationNote": "本次B站正文抓取及一次公开元数据请求遇到412，没有取得所列视频字幕/画面。此条主题或题号仅由搜索索引收录的原平台标题、作者简介及分P/合集目录核对，不是已观看视频的结论。"
+    },
+    {
+      "id": "CN-BILI-PAN-SYSTEMS",
+      "title": "信号与系统超详细讲解",
+      "url": "https://www.bilibili.com/video/BV1Gy4y137EA/",
+      "platform": "B站",
+      "creator": "讲信号与系统的潘老师（索引署名）",
+      "language": "中文",
+      "chapters": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "evidenceLevel": "搜索索引中的作者课程简介与讲次目录可读（非字幕）",
+      "summary": "作者介绍说明连续部分可按知识点定位，目录出现单边拉普拉斯及其性质、初终值定理等；离散部分引导到作者数字信号处理系列，未把它冒充奥本海姆逐题答案。",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "citationRefs": [
+        "turn32search8",
+        "turn34search3"
+      ],
+      "contentRead": false,
+      "transcriptRead": false,
+      "topicPointers": [
+        "第38讲：单边拉普拉斯变换及性质",
+        "第43讲：初值定理和终值定理"
+      ],
+      "directFetchStatus": "未逐条抓正文，仅核对索引",
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "本次B站正文抓取及一次公开元数据请求遇到412，没有取得所列视频字幕/画面。此条主题或题号仅由搜索索引收录的原平台标题、作者简介及分P/合集目录核对，不是已观看视频的结论。"
+    },
+    {
+      "id": "CN-BILI-PAN-ALIAS",
+      "title": "不满足采样定理信号会怎么样：用图说明",
+      "url": "https://www.bilibili.com/video/BV1jE411N78g/",
+      "platform": "B站",
+      "creator": "讲信号与系统的潘老师（索引署名）",
+      "language": "中文",
+      "chapters": [
+        "7"
+      ],
+      "evidenceLevel": "搜索索引中的原视频题名及作者信息可读（非字幕）",
+      "summary": "题名明确采用图形说明未满足采样条件的现象，可作为混叠图示的补充观看入口；本次未读取实际画面或推导。",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "citationRefs": [
+        "turn34search14",
+        "turn37search3"
+      ],
+      "contentRead": false,
+      "transcriptRead": false,
+      "directFetchStatus": "未逐条抓正文，仅核对索引",
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "本次B站正文抓取及一次公开元数据请求遇到412，没有取得所列视频字幕/画面。此条主题或题号仅由搜索索引收录的原平台标题、作者简介及分P/合集目录核对，不是已观看视频的结论。"
+    },
+    {
+      "id": "CN-BILI-PAN-CONV",
+      "title": "解析法求解离散序列卷积和",
+      "url": "https://www.bilibili.com/video/BV1Q7411x7jZ/",
+      "platform": "B站",
+      "creator": null,
+      "language": "中文",
+      "chapters": [
+        "2"
+      ],
+      "evidenceLevel": "搜索索引收录的作者视频简介可读（非字幕）",
+      "summary": "作者简介说明用三个题目讲解按公式求离散卷积和的求和过程，依靠连加和等比数列。适合与本站卷积支撑法对照；没有识别为某个奥本海姆原题。",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "citationRefs": [
+        "turn37search11"
+      ],
+      "contentRead": false,
+      "transcriptRead": false,
+      "relatedLessonIds": [
+        "O03",
+        "E03",
+        "2022-02"
+      ],
+      "directFetchStatus": "未逐条抓正文，仅核对索引",
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "本次B站正文抓取及一次公开元数据请求遇到412，没有取得所列视频字幕/画面。此条主题或题号仅由搜索索引收录的原平台标题、作者简介及分P/合集目录核对，不是已观看视频的结论。"
+    },
+    {
+      "id": "CN-BILI-PAN-ZPROPS",
+      "title": "数字信号处理教程2-4：Z变换的性质",
+      "url": "https://www.bilibili.com/video/BV1CV411f7uG/",
+      "platform": "B站",
+      "creator": null,
+      "language": "中文",
+      "chapters": [
+        "10"
+      ],
+      "evidenceLevel": "搜索索引收录的作者视频简介可读（非字幕）",
+      "summary": "作者简介将性质分为构造新序列变换的线性/移位性质，以及用于系统分析的初终值、能量、卷积性质。可辅助选择变换工具，但未读取视频中的证明。",
+      "accessNote": "提供原站观看入口；本次仅核对可检索的题名或分P目录，未读取视频字幕。",
+      "citationRefs": [
+        "turn37search18"
+      ],
+      "contentRead": false,
+      "transcriptRead": false,
+      "directFetchStatus": "未逐条抓正文，仅核对索引",
+      "targetIds": [],
+      "sourceLocator": "课程介绍/视频目录",
+      "verificationNote": "本次B站正文抓取及一次公开元数据请求遇到412，没有取得所列视频字幕/画面。此条主题或题号仅由搜索索引收录的原平台标题、作者简介及分P/合集目录核对，不是已观看视频的结论。"
+    },
+    {
+      "id": "OCW-E03",
+      "title": "MIT OCW 第3讲｜系统性质：用平移实验和有界输入检验",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-3-signals-and-systems-part-ii/",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/880cd9825ddfc25b7bf716011d3b2e67_jGk3w1b7UXQ.pdf",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/7d288eb335275ac6b6f7b304eef8f2a8_jGk3w1b7UXQ.vtt",
+      "platform": "MIT公开课",
+      "creator": "Alan V. Oppenheim / Massachusetts Institute of Technology",
+      "chapters": [
+        "1"
+      ],
+      "evidenceLevel": "已读官方英文字幕/VTT；课程原页已核对",
+      "summary": "用两条平移路径定义时不变；因果性排除未来输入；稳定性要求每个有界输入对应有界输出。",
+      "sourceLocator": "45:29–49:30：时不变性的平移实验；36:26–37:22：因果性；44:30–45:18：有界输入而输出无界",
+      "citationRefs": [
+        "turn41view0"
+      ],
+      "accessNote": "官方英文课程；本条已读取公开字幕或讲义，本站用中文独立推导具体题目。"
+    },
+    {
+      "id": "OCW-E04",
+      "title": "MIT OCW 第4讲｜卷积：从冲激叠加到阶跃与矩形输入",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-4-convolution/",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/5e5e87d50ad1e1bfef082524e90ffb08_vyke3vF4Nk.pdf",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/da62d9b9ee5a531d81d5c6e0d8aebe68_vyke3vF4Nk.vtt",
+      "platform": "MIT公开课",
+      "creator": "Alan V. Oppenheim / Massachusetts Institute of Technology",
+      "chapters": [
+        "2"
+      ],
+      "evidenceLevel": "已读官方英文字幕/VTT及讲义正文",
+      "summary": "把信号分成移位冲激后叠加响应，得到卷积；同一思路可把矩形写成两个阶跃之差。",
+      "sourceLocator": "官方讲义PDF第1–2页、4.2–4.3和4.9–4.10；字幕22:47–29:30讨论阶跃与矩形输入",
+      "citationRefs": [
+        "turn20view0",
+        "turn29view0"
+      ],
+      "accessNote": "官方英文课程；本条已读取公开字幕或讲义，本站用中文独立推导具体题目。"
+    },
+    {
+      "id": "OCW-E05",
+      "title": "MIT OCW 第5讲｜LTI性质：逆系统、累加器与差分",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-5-properties-of-linear-time-invariant-systems/",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/7cb1b42ee9eed3b7e2a45fd52a10fcab_mC3TiBJiCsY.pdf",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/0234dba516a55c30b0b477824c6eb7b1_mC3TiBJiCsY.vtt",
+      "platform": "MIT公开课",
+      "creator": "Alan V. Oppenheim / Massachusetts Institute of Technology",
+      "chapters": [
+        "2"
+      ],
+      "evidenceLevel": "已读官方英文字幕/VTT",
+      "summary": "递推可通过相邻输出相减得到；级联系统的逆作用可用卷积恒等关系核验。",
+      "sourceLocator": "官方字幕35:48–38:47：累加器递推及其差分逆系统；07:21–09:07：卷积结合与分配",
+      "citationRefs": [
+        "turn41view1"
+      ],
+      "accessNote": "官方英文课程；本条已读取公开字幕或讲义，本站用中文独立推导具体题目。"
+    },
+    {
+      "id": "OCW-E07",
+      "title": "MIT OCW 第7讲｜连续傅里叶级数：特征函数与方波",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-7-continuous-time-fourier-series/",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/f0ef405432c984538e8c59c2a5a81278_nuzA75DpSuw.pdf",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/74790f9510ba579aa10aa17db10926c4_nuzA75DpSuw.vtt",
+      "platform": "MIT公开课",
+      "creator": "Alan V. Oppenheim / Massachusetts Institute of Technology",
+      "chapters": [
+        "3"
+      ],
+      "evidenceLevel": "已读官方英文字幕/VTT及讲义正文",
+      "summary": "LTI对单个复指数只改复振幅，周期信号可按谐波分解；方波对称性限制系数。",
+      "sourceLocator": "官方字幕07:39–10:27：复指数的特征函数；24:44起：反对称方波；讲义第1–2页",
+      "citationRefs": [
+        "turn20view2",
+        "turn29view3"
+      ],
+      "accessNote": "官方英文课程；本条已读取公开字幕或讲义，本站用中文独立推导具体题目。"
+    },
+    {
+      "id": "OCW-E09",
+      "title": "MIT OCW 第9讲｜傅里叶性质：相位、微分、积分与卷积",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-9-fourier-transform-properties/",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/c5eeaf57a5d0c100b0f8c0cbdb470d39_D1WF9YKqf3o.pdf",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/f08a548e5d965743b492eba8712d1a70_D1WF9YKqf3o.vtt",
+      "platform": "MIT公开课",
+      "creator": "Alan V. Oppenheim / Massachusetts Institute of Technology",
+      "chapters": [
+        "4",
+        "6"
+      ],
+      "evidenceLevel": "已读官方英文字幕/VTT及讲义正文",
+      "summary": "时间平移对应线性相位，微分把谱乘以jω；反向积分必须补回直流冲激；卷积在频域变成乘法。",
+      "sourceLocator": "官方字幕19:01–19:58：延时与线性相位；20:14–22:10：微分/积分及丢失常数；23:03起：卷积/调制；讲义9-2",
+      "citationRefs": [
+        "turn20view1",
+        "turn29view1"
+      ],
+      "accessNote": "官方英文课程；本条已读取公开字幕或讲义，本站用中文独立推导具体题目。"
+    },
+    {
+      "id": "OCW-E10",
+      "title": "MIT OCW 第10讲｜离散傅里叶级数：有限个谐波与周期性",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-10-discrete-time-fourier-series/",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/0e0484f952589facbec83d8b55a11fe6_TkMsVwzd1C0.pdf",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/4b4c798a07875b0c999928309825916d_TkMsVwzd1C0.vtt",
+      "platform": "MIT公开课",
+      "creator": "Alan V. Oppenheim / Massachusetts Institute of Technology",
+      "chapters": [
+        "3",
+        "5"
+      ],
+      "evidenceLevel": "已读官方英文字幕/VTT",
+      "summary": "离散复指数频率相差2π时相同，因此周期谐波和离散频谱须按周期理解。",
+      "sourceLocator": "官方字幕03:01–06:10：离散复指数特征函数；课程后段归纳频率2π周期性",
+      "citationRefs": [
+        "turn41view2"
+      ],
+      "accessNote": "官方英文课程；本条已读取公开字幕或讲义，本站用中文独立推导具体题目。"
+    },
+    {
+      "id": "OCW-E11",
+      "title": "MIT OCW 第11讲｜离散傅里叶变换：对称性与线性相位",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-11-discrete-time-fourier-transform/",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/25ec2290fd4e7c6c21e5e94ccd6f7a35_HKMY-8BqWWw.pdf",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/45a0f77c687655f19af19b29d46a4f95_HKMY-8BqWWw.vtt",
+      "platform": "MIT公开课",
+      "creator": "Alan V. Oppenheim / Massachusetts Institute of Technology",
+      "chapters": [
+        "5"
+      ],
+      "evidenceLevel": "已读官方英文字幕/VTT及讲义正文",
+      "summary": "实序列具有共轭对称谱；时间移位引入线性相位，可把频谱的形状与时移分开。",
+      "sourceLocator": "官方字幕03:00–04:55：2π周期性及共轭对称；07:09–08:49：移位和线性相位；08:52–09:23：Parseval",
+      "citationRefs": [
+        "turn41view3",
+        "turn29view2"
+      ],
+      "accessNote": "官方英文课程；本条已读取公开字幕或讲义，本站用中文独立推导具体题目。"
+    },
+    {
+      "id": "MIT-L13",
+      "title": "MIT第13讲：连续时间调制",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-13-continuous-time-modulation/",
+      "creator": "Alan V. Oppenheim / MIT OpenCourseWare",
+      "platform": "MIT公开课",
+      "chapters": [
+        "8"
+      ],
+      "evidenceLevel": "已读取官方英文字幕与文字稿",
+      "sourceLocator": "英文字幕约00:34:51起：同步调制要求频率、相位同步；随后讨论失配。",
+      "summary": "用频谱搬移与同步解调理解调制、接收相位及频率失配。",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/27c2da63e0f9eec6dcd0c6d1250ca4a0_UIgA0czNj5g.pdf",
+      "subtitleUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/bc15d68006df5b889c56f7a9ba3a49b4_UIgA0czNj5g.vtt",
+      "citationRefs": [
+        "turn43view0"
+      ],
+      "accessNote": "字幕与文字稿可公开读取；以下例题演算为独立推导，并非视频逐题原解。",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/bc15d68006df5b889c56f7a9ba3a49b4_UIgA0czNj5g.vtt"
+    },
+    {
+      "id": "MIT-L16",
+      "title": "MIT第16讲：抽样与混叠",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-16-sampling/",
+      "creator": "Alan V. Oppenheim / MIT OpenCourseWare",
+      "platform": "MIT公开课",
+      "chapters": [
+        "7"
+      ],
+      "evidenceLevel": "已读取官方英文字幕与文字稿",
+      "sourceLocator": "文字稿PDF第1–4页：抽样谱副本和正弦折叠；约00:24:56起为频闪实验。",
+      "summary": "官方视频既推导频谱副本，也用振荡器和频闪实验展示高频折叠成低频。",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/7f2665002625b25adb7d07ef26a1e910_P3eLer1edx8.pdf",
+      "subtitleUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/d5e4eae4520e533da4dcc3cedeaa011c_P3eLer1edx8.vtt",
+      "citationRefs": [
+        "turn25view0",
+        "turn40view1"
+      ],
+      "accessNote": "字幕与文字稿可公开读取；以下例题演算为独立推导，并非视频逐题原解。",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/d5e4eae4520e533da4dcc3cedeaa011c_P3eLer1edx8.vtt"
+    },
+    {
+      "id": "MIT-L17",
+      "title": "MIT第17讲：插值与恢复",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-17-interpolation/",
+      "creator": "Alan V. Oppenheim / MIT OpenCourseWare",
+      "platform": "MIT公开课",
+      "chapters": [
+        "7"
+      ],
+      "evidenceLevel": "已读取官方英文字幕与文字稿",
+      "sourceLocator": "英文字幕00:10:17起：将每个样本替换为移位的sin(x)/x函数并叠加。",
+      "summary": "把理想低通恢复解释成逐个样点的sinc插值，有助于理解移位抽样时钟。",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/0501fa1f18e397ba40bced826d0f4807_WV4JlBOQro.pdf",
+      "subtitleUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/951da72973945e609cac68dd5eaeb40f_WV4JlBOQro.vtt",
+      "citationRefs": [
+        "turn43view1"
+      ],
+      "accessNote": "字幕与文字稿可公开读取；以下例题演算为独立推导，并非视频逐题原解。",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/951da72973945e609cac68dd5eaeb40f_WV4JlBOQro.vtt"
+    },
+    {
+      "id": "MIT-L18",
+      "title": "MIT第18讲：连续信号的离散时间处理",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-18-discrete-time-processing-of-continuous-time-signals/",
+      "creator": "Alan V. Oppenheim / MIT OpenCourseWare",
+      "platform": "MIT公开课",
+      "chapters": [
+        "7",
+        "5"
+      ],
+      "evidenceLevel": "已读取官方英文字幕与文字稿",
+      "sourceLocator": "文字稿PDF第2–5页：Ω=ωT、数字滤波及返回连续时间；字幕约00:14:41起讨论等效连续系统。",
+      "summary": "C/D和D/C包含时间及频率坐标的重新标定，数字滤波频率必须与连续频率通过T换算。",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/4730355239bdc0bad0097e01e7a7d419_Q7aZNgY18b4.pdf",
+      "subtitleUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/93e0c6fa2c9154d6a65c9c6493603e41_Q7aZNgY18b4.vtt",
+      "citationRefs": [
+        "turn25view5",
+        "turn40view0",
+        "turn31view3"
+      ],
+      "accessNote": "字幕与文字稿可公开读取；以下例题演算为独立推导，并非视频逐题原解。",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/93e0c6fa2c9154d6a65c9c6493603e41_Q7aZNgY18b4.vtt"
+    },
+    {
+      "id": "MIT-L20",
+      "title": "MIT第20讲：拉普拉斯变换",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-20-the-laplace-transform/",
+      "creator": "Alan V. Oppenheim / MIT OpenCourseWare",
+      "platform": "MIT公开课",
+      "chapters": [
+        "9"
+      ],
+      "evidenceLevel": "已读取官方英文字幕与文字稿",
+      "sourceLocator": "英文字幕00:20:42–00:22:40附近：同一代数式的不同ROC；随后讲虚轴与傅里叶变换。",
+      "summary": "变换需同时给出代数表达式与收敛域，ROC是连续竖条带而非任意集合。",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/38c57c84076211185739598f014bd000_pSN7t79RxC4.pdf",
+      "subtitleUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/3f0f285144865615926d75a2dc466ca6_pSN7t79RxC4.vtt",
+      "citationRefs": [
+        "turn25view1",
+        "turn31view4",
+        "turn43view2"
+      ],
+      "accessNote": "字幕与文字稿可公开读取；以下例题演算为独立推导，并非视频逐题原解。",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/3f0f285144865615926d75a2dc466ca6_pSN7t79RxC4.vtt"
+    },
+    {
+      "id": "MIT-L22",
+      "title": "MIT第22讲：Z变换",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-22-the-z-transform/",
+      "creator": "Alan V. Oppenheim / MIT OpenCourseWare",
+      "platform": "MIT公开课",
+      "chapters": [
+        "10"
+      ],
+      "evidenceLevel": "已读取官方英文字幕与文字稿",
+      "sourceLocator": "英文字幕约00:23:58起：单位圆与DTFT；00:49:42起：由幂级数系数读出逆变换。",
+      "summary": "讲授Z变换的特征输入、ROC、零极点几何与幂级数逆变换。",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/7307dec93c706640702818b6bf84be1e_0Gat_aSzi5Y.pdf",
+      "subtitleUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/b8b27d7b73a15bdc981567c96166ebf7_0Gat_aSzi5Y.vtt",
+      "citationRefs": [
+        "turn25view4",
+        "turn40view2",
+        "turn31view5"
+      ],
+      "accessNote": "字幕与文字稿可公开读取；以下例题演算为独立推导，并非视频逐题原解。",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/b8b27d7b73a15bdc981567c96166ebf7_0Gat_aSzi5Y.vtt"
+    },
+    {
+      "id": "MIT-L25",
+      "title": "MIT第25讲：反馈",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-25-feedback/",
+      "creator": "Alan V. Oppenheim / MIT OpenCourseWare",
+      "platform": "MIT公开课",
+      "chapters": [
+        "11"
+      ],
+      "evidenceLevel": "已读取官方英文字幕与文字稿",
+      "sourceLocator": "英文字幕约00:21:14起推闭环方程；00:32:55起以特征方程根讨论稳定性；文字讲义25-7至25-9。",
+      "summary": "连续与离散反馈的代数结构相似，但稳定区域分别是左半平面和单位圆内部。",
+      "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/75c31445038919011a96b87464d63be9_S7MG1hgn0dY.pdf",
+      "subtitleUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/42ad3ae17e3c5fc39235488f9af0fbb2_S7MG1hgn0dY.vtt",
+      "citationRefs": [
+        "turn25view2",
+        "turn43view3"
+      ],
+      "accessNote": "字幕与文字稿可公开读取；以下例题演算为独立推导，并非视频逐题原解。",
+      "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/42ad3ae17e3c5fc39235488f9af0fbb2_S7MG1hgn0dY.vtt"
+    },
+    {
+      "id": "MIT-L6-NOTES",
+      "title": "MIT第6讲：微分、差分方程与初始条件",
+      "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/6df750c3a3ba75113f68842abf6abda7_MITRES_6_007S11_lec06.pdf",
+      "creator": "Alan V. Oppenheim / MIT OpenCourseWare",
+      "platform": "MIT公开课",
+      "chapters": [
+        "2",
+        "9",
+        "10"
+      ],
+      "evidenceLevel": "已读取官方讲义正文",
+      "sourceLocator": "讲义6-1至6-2，6.3–6.4；微分方程的齐次解、辅助条件和初始松弛。",
+      "summary": "方程本身并不唯一确定系统响应，必须配合初态；递推实现和积分器实现是时域分析的另一条路线。",
+      "citationRefs": [
+        "turn38view2"
+      ],
+      "accessNote": "可在原平台查阅课程和讲义。"
+    },
+    {
+      "id": "SPORS-Z",
+      "title": "Rostock大学：Z变换的卷积、移位与反转定理",
+      "url": "https://github.com/spatialaudio/signals-and-systems-lecture/blob/master/z_transform/theorems.ipynb",
+      "creator": "Sascha Spors，Rostock大学",
+      "platform": "GitHub",
+      "chapters": [
+        "10"
+      ],
+      "evidenceLevel": "已读取作者Notebook的Markdown正文与公式",
+      "sourceLocator": "Convolution Theorem、Shift Theorem、Reversal小节；通过公开raw文件读取。",
+      "summary": "用卷积与反转定理把相关序列的变换化成两个已知变换的乘积，并跟踪ROC交集。",
+      "license": "讲义文字与图CC BY 4.0；代码MIT；本项目仅链接并独立演算，不复制仓库代码/图。",
+      "citationRefs": [
+        "turn25view3",
+        "turn31view1"
+      ],
+      "accessNote": "可在原平台查阅课程和讲义。"
+    },
+    {
+      "id": "SPORS-STEP",
+      "title": "Rostock大学：阶跃响应与冲激响应",
+      "url": "https://github.com/spatialaudio/signals-and-systems-lecture/blob/master/systems_time_domain/step_response.ipynb",
+      "creator": "Sascha Spors，Rostock大学",
+      "platform": "GitHub",
+      "chapters": [
+        "2",
+        "10"
+      ],
+      "evidenceLevel": "已读取作者Notebook正文与公式",
+      "sourceLocator": "Step Response小节：连续时间的积分/微分关系；离散差分应用为本项目独立推导。",
+      "summary": "将阶跃响应视为冲激响应的累计，用反向的微分或差分还原冲激响应。",
+      "license": "文字/图CC BY 4.0；代码MIT。",
+      "citationRefs": [
+        "turn25view3",
+        "turn31view1"
+      ],
+      "accessNote": "可在原平台查阅课程和讲义。"
+    },
+    {
+      "id": "MIT-PROJECTION",
+      "title": "MIT 6.241J：内积、柯西不等式与投影定理",
+      "url": "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/37b7dadc2e54c4dd227b60ac24489b3e_MIT6_241JS11_lec01.pdf",
+      "creator": "Emilio Frazzoli / MIT",
+      "platform": "MIT公开课",
+      "chapters": [
+        "S"
+      ],
+      "evidenceLevel": "已读取官方讲义正文与公式",
+      "sourceLocator": "幻灯片18–21/22：内积、柯西不等式、投影定理及其证明。",
+      "summary": "最小误差等价于残差正交于所选子空间，函数拟合可直接写Gram矩阵正规方程。",
+      "citationRefs": [
+        "turn38view0",
+        "turn39view0"
+      ],
+      "accessNote": "可在原平台查阅课程和讲义。"
+    },
+    {
+      "id": "MIT-MATCHED",
+      "title": "MIT 6.011第24讲：匹配滤波",
+      "url": "https://www.ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/dfe2855f36e44436678bfd3736c937fe_MIT6_011S18lec24.pdf",
+      "creator": "MIT 6.011课程组（George Verghese、Alan V. Oppenheim、Peter Hagelstein）",
+      "platform": "MIT公开课",
+      "chapters": [
+        "S"
+      ],
+      "evidenceLevel": "已读取官方讲义正文",
+      "sourceLocator": "PDF第2–5页：检测器结构、相关统计量、匹配滤波的幅相与采样时刻性质。",
+      "summary": "在指定采样时刻让各频率成分相位对齐；本项目用卷积定义独立核验有限区间的投影系数。",
+      "citationRefs": [
+        "turn39view1",
+        "turn38view1"
+      ],
+      "accessNote": "可在原平台查阅课程和讲义。"
+    },
+    {
+      "id": "UA-ECE370",
+      "title": "Alabama大学ECE370信号与系统课程讲义源码",
+      "url": "https://github.com/zhengnanli/ss-notes",
+      "creator": "Zhengnan Li，University of Alabama",
+      "platform": "GitHub",
+      "chapters": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "evidenceLevel": "已核对作者README、课程目录及许可证声明",
+      "sourceLocator": "README：Course Information、Topics Covered、License；不把尚未读取的各讲正文声称为已学视频内容。",
+      "summary": "教师本人提供连续/离散系统、傅里叶分析、抽样与抗混叠的Typst讲义源码，可作为延伸阅读入口。",
+      "license": "讲义CC BY-SA 4.0；代码MIT；lib.typ另有Apache-2.0来源。",
+      "citationRefs": [
+        "turn31view0"
+      ],
+      "accessNote": "可在原平台查阅课程和讲义。"
+    }
+  ],
+  "methods": [
+    {
+      "id": "ALT-E01",
+      "title": "先挑输入造反例：快速排除时不变与稳定性",
+      "targetIds": [
+        "E01"
+      ],
+      "sourceIds": [
+        "OCW-E03"
+      ],
+      "why": "需要证明某性质不成立时，一个严格反例就足够。先用常数、单位阶跃或冲激把算子简化，通常比一直带着任意x更快；判“成立”仍须一般证明。",
+      "derivation": "### 1．A系统用单位冲激做两次平移实验\nA为 $T_A\\{x\\}(t)=x(t-1)+x(1-t)$。先输入 $x(t)=\\delta(t)$，由 $\\delta(1-t)=\\delta(t-1)$，得到 $y(t)=2\\delta(t-1)$。再把输入延迟1，即 $x_1(t)=\\delta(t-1)$。按原算子代入，每个x的整个自变量都减1：\n$$T_A\\{x_1\\}(t)=\\delta(t-2)+\\delta(-t)=\\delta(t-2)+\\delta(t).$$\n若时不变，应该得到原输出延迟1的 $2\\delta(t-2)$。实际多了原点冲激且系数也不同，所以A时变。这是“实际输出”和“应该输出”的比较，不能只平移画好的输入图。\n\n若把输入类限制为普通函数，也可取 $x(t)=t$：原输出恒为0，而延迟1后的输入为 $t-1$，实际输出 $(t-2)+(-t)=-2$，仍与原输出延迟后的0不同。此处只检验时不变，不要求试验输入有界。\n\n### 2．B系统用常数输入同时检验两项性质\nB为 $T_B\\{x\\}[n]=nx[n]$。取全时间 $x[n]=1$，有界输入产生 $y[n]=n$，因此B不满足BIBO稳定。再延迟输入1拍，常数输入仍为1，实际输出仍是n；原输出延迟则是 $n-1$，两者不同，所以B时变。输入不是零初态阶跃，而是定义在全部整数上的常数，这样比较最清楚。\n\n### 3．没有找到反例时，改用一般式证明\nC为滑动积分。对移位输入 $x_1(t)=x(t-t_0)$，作变量代换 $v=\\tau-t_0$：\n$$T_C\\{x_1\\}(t)=\\int_{t-2}^{t}x(\\tau-t_0)d\\tau=\\int_{t-t_0-2}^{t-t_0}x(v)dv=y(t-t_0).$$\n这才对任意输入和任意延时都成立，故C时不变。若 $|x|\\le M$，再有 $|y|\\le\\int_{t-2}^{t}M\\,d\\tau=2M$，故C稳定。A也有 $|y|\\le2M$。反例负责排除，一般界负责证明，二者不要混用。",
+      "whenToUse": "性质判断中先排除明显错误选项；对“是”的结论补一般证明。",
+      "check": "A的两个冲激位置不同；B用有界常数得到无界n；C的上、下限一起移动，积分长度始终为2。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E02",
+      "title": "把矩形卷积改成两次累计：少分一层积分区间",
+      "targetIds": [
+        "O04"
+      ],
+      "sourceIds": [
+        "OCW-E04",
+        "OCW-E05"
+      ],
+      "why": "本法专用于2.22(c)。先把矩形写为两个阶跃之差，计算一次累计函数，再作两个移位。它与逐点翻转滑动图等价，但不用在每段重新确定积分上下限。",
+      "derivation": "### 1．只处理本题(c)的信号\n$x(t)=\\sin(\\pi t)$ 于 $0<t<2$、外部为0；$h(t)=2$ 于 $1<t<3$、外部为0。因此\n$$h(t)=2[u(t-1)-u(t-3)].$$\n令 $F(t)=(x*u)(t)=\\int_{-\\infty}^{t}x(v)dv$。由线性、时移和结合性质，\n$$y(t)=x*h=2F(t-1)-2F(t-3).$$\n注意F是x的累计函数，不是h的累计函数；两种卷积次序都能用，但选x是因为一周期正弦的总积分为0。\n\n### 2．一次求完整F\n$t\\le0$ 时还没有积分到x，故F=0。$0<t<2$ 时\n$$F(t)=\\int_0^t\\sin\\pi v\\,dv=\\frac{1-\\cos\\pi t}{\\pi}.$$\n$t\\ge2$ 时整段正弦都积分完，$F(t)=\\int_0^2\\sin\\pi v\\,dv=0$。也就是说，累计函数不是一直停在非零常数，而是在2处回到0。\n\n### 3．观察两个F的支撑就能分段\n$F(t-1)$ 只在 $1<t<3$ 非零；$F(t-3)$ 只在 $3<t<5$ 非零。于是\n$$y(t)=\\begin{cases}\\dfrac2\\pi[1-\\cos\\pi(t-1)],&1<t<3,\\\\[2pt]\\dfrac2\\pi[\\cos\\pi(t-3)-1],&3<t<5,\\\\0,&\\text{其余}.\\end{cases}$$\n在1、3、5处按连续值取0。第一段是正隆起，第二段是负隆起；分别在2、4处达到 $4/\\pi$ 和 $-4/\\pi$。这里负号来自第二个阶跃被减去，不是由“图形向右移”自动产生。\n\n### 4．用微分关系作独立核验\n由 $F'=x$，应有 $y'(t)=2x(t-1)-2x(t-3)$；直接对两段结果求导正好得到它。再检查总面积0，与 $\\int x=0$、$\\int h=4$ 的乘积一致。若矩形有很多段，仍可把它写成多个移位阶跃，复用同一个F。",
+      "whenToUse": "一侧为矩形或阶跃线性组合；尤其累计函数比原卷积更简单时。",
+      "check": "支撑为[1,5]，在1、3、5连续为0，导数和总面积均可检查。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E03",
+      "title": "用移位相减消掉指数：把卷积化成一阶递推",
+      "targetIds": [
+        "E03"
+      ],
+      "sourceIds": [
+        "OCW-E05",
+        "OCW-E11"
+      ],
+      "why": "指数序列被一次“当前项减底数乘前项”后只剩起点冲激。先对卷积结果施加同一操作，可以用递推和初值确定答案，不必一开始就展开卷积和。",
+      "derivation": "### 1．找出指数序列的消去算子\n令 $p[n]=a^nu[n]$。当n>0，$p[n]-ap[n-1]=a^n-aa^{n-1}=0$；n=0时等于1；n<0时为0。因此\n$$p[n]-ap[n-1]=\\delta[n].$$\n本题另一个序列是 $q[n]=b^{n-2}u[n-2]$，$y=p*q$。对卷积两边作相同的移位相减，用线性与时移性质得\n$$y[n]-ay[n-1]=(p-ap[\\cdot-1])*q=\\delta*q=q[n].$$\n所以问题变成初始静止的一阶递推，且由支撑可知 $y[n]=0$ 于n<2、$y[2]=1$。\n\n### 2．不等底时用两个指数试探\n对n≥2，试写 $y[n]=C b^{n-2}+D a^{n-2}$。把它代入递推，a指数部分自动抵消，b指数部分给\n$$C[b^{n-2}-ab^{n-3}]=b^{n-2}.$$\n对n≥3约去非零 $b^{n-3}$，得 $C(b-a)=b$，故 $C=b/(b-a)$。初值 $C+D=1$ 再给 $D=-a/(b-a)$，从而\n$$y[n]=\\frac{b^{n-1}-a^{n-1}}{b-a}u[n-2],\\qquad a\\ne b.$$\n这两常数不是凭记忆配出来的，一个来自递推，另一个来自起点样值。\n\n### 3．等底时改用“指数乘一次多项式”\n若a=b，上面的C、D失效。设 $y[n]=K(n-1)a^{n-2}$ 于n≥2，代入得到\n$$y[n]-ay[n-1]=K[(n-1)-(n-2)]a^{n-2}=Ka^{n-2}.$$\n因此K=1，得 $y[n]=(n-1)a^{n-2}u[n-2]$。最后算头三点：1、a+b、$a^2+ab+b^2$；等底时成为1、2a、$3a^2$，与两种闭式一致。递推法也直接解释了为什么等底时会多出一个n因子。",
+      "whenToUse": "右边指数卷积、重复极点、想用递推核对卷积答案时。",
+      "check": "取n=2、3、4检查起点、项数和指数移位；a=b时用独立试探式，不能代入0/0。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E04",
+      "title": "先用实奇性合并积分：分段正弦积分直接求谱",
+      "targetIds": [
+        "O14"
+      ],
+      "sourceIds": [
+        "OCW-E09"
+      ],
+      "why": "本法针对4.21(g)。原解先求分布导数；这里直接用实奇信号的频谱公式，将正负时间合成正半轴的两个普通正弦积分，不需要先写冲激，也不经过除jω恢复积分常数。",
+      "derivation": "### 1．核对奇性，将正负半轴配对\n本题(g)在 $0<t<1$ 时 $x(t)=t$，在 $1<t<2$ 时 $x(t)=1$，正半轴其他位置为0；负半轴满足 $x(-t)=-x(t)$。从定义出发，分别把正、负时间写出：\n$$X(j\\omega)=\\int_0^{\\infty}x(t)e^{-j\\omega t}dt+\\int_{-\\infty}^{0}x(t)e^{-j\\omega t}dt.$$\n第二项令 $v=-t$，利用奇性变成 $-\\int_0^{\\infty}x(v)e^{j\\omega v}dv$。两项相减，用 $e^{-j\\theta}-e^{j\\theta}=-2j\\sin\\theta$，得\n$$X(j\\omega)=-2j\\int_0^{\\infty}x(t)\\sin(\\omega t)dt=-2j\\left[\\int_0^1t\\sin(\\omega t)dt+\\int_1^2\\sin(\\omega t)dt\\right].$$\n因此只需两个正半轴积分，结果应当是纯虚奇函数。\n\n### 2．第一段分部积分，保留全部端点\n对 $\\omega\\ne0$，取 $u=t$、$dv=\\sin(\\omega t)dt$，则 $du=dt$、$v=-\\cos(\\omega t)/\\omega$。于是\n$$I_1=\\int_0^1t\\sin(\\omega t)dt=\\left[-\\frac{t\\cos(\\omega t)}\\omega\\right]_0^1+\\frac1\\omega\\int_0^1\\cos(\\omega t)dt=-\\frac{\\cos\\omega}{\\omega}+\\frac{\\sin\\omega}{\\omega^2}.$$\n下端点的第一项因t=0而为0，第二项的下端点因sin0=0而为0。\n\n### 3．第二段直接积分，再消去中间的cosω\n$$I_2=\\int_1^2\\sin(\\omega t)dt=\\left[-\\frac{\\cos(\\omega t)}\\omega\\right]_1^2=\\frac{\\cos\\omega-\\cos2\\omega}{\\omega}.$$\n相加时 $-\\cos\\omega/\\omega$ 与 $+\\cos\\omega/\\omega$ 正好抵消：\n$$I_1+I_2=\\frac{\\sin\\omega}{\\omega^2}-\\frac{\\cos2\\omega}{\\omega}.$$\n乘回 $-2j$，得到\n$$\\boxed{X(j\\omega)=\\frac{2j(\\omega\\cos2\\omega-\\sin\\omega)}{\\omega^2},\\qquad\\omega\\ne0.}$$\n把分子、分母整理一下即为原解的 $[2\\sin\\omega/\\omega-2\\cos2\\omega]/(j\\omega)$，但求解过程采用直接积分而非分布微分。\n\n### 4．原点单独由面积求，不保留0/0\n有限支撑且可积保证X是连续普通函数，不包含额外的频域冲激。因为x为奇函数，正负面积抵消，\n$$X(0)=\\int_{-2}^{2}x(t)dt=0.$$\n也可展开 $\\omega\\cos2\\omega-\\sin\\omega=-(11/6)\\omega^3+O(\\omega^5)$，代入上式得到 $X(j\\omega)=-j(11/3)\\omega+O(\\omega^3)$，同样趋于0。\n\n### 5．用一阶矩独立检查低频符号和系数\n由定义，$X'(0)=-j\\int t x(t)dt$。本题tx为偶函数，所以\n$$\\int_{-2}^{2}t x(t)dt=2\\left[\\int_0^1t^2dt+\\int_1^2t\\,dt\\right]=2\\left(\\frac13+\\frac32\\right)=\\frac{11}{3}.$$\n因此 $X'(0)=-j11/3$，与上面的低频展开完全一致。这个检查能同时发现奇性合并时的负号错误和分部积分的端点遗漏。",
+      "whenToUse": "原信号实奇，且正半轴仅有少数常数或多项式分段时；先用对称性减少积分段数。",
+      "check": "X纯虚奇，X(0)=0；低频导数X′(0)=−j11/3，与一阶矩一致。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E05",
+      "title": "三角脉冲求两次导数：从拐点直接重建频谱",
+      "targetIds": [
+        "E09"
+      ],
+      "sourceIds": [
+        "OCW-E09"
+      ],
+      "why": "原解把三角形看作两个矩形卷积；这里用另一条路：分段一次函数的二阶导数集中在拐点。知道每处斜率跳变量，就能写出整个频谱。",
+      "derivation": "### 1．把每个三角脉冲的斜率跳变列出来\n单位三角 $\\Lambda(t)$ 的斜率依次为0、1、−1、0，所以二阶分布导数是\n$$\\Lambda''(t)=\\delta(t+1)-2\\delta(t)+\\delta(t-1).$$\n本题 $x=\\Lambda(t-1)+\\Lambda(t-3)$。第一个三角给0、1、2三处冲激，系数1、−2、1；第二个给2、3、4三处冲激，系数1、−2、1。同在2处的系数要相加：\n$$x''(t)=\\delta(t)-2\\delta(t-1)+2\\delta(t-2)-2\\delta(t-3)+\\delta(t-4).$$\n注意这里每个三角在底边连续为0，所以一阶导数没有冲激，第二阶才出现冲激。\n\n### 2．由拐点表直接写谱\n两次微分给 $(j\\omega)^2X$。右边冲激变换逐项相加：\n$$(j\\omega)^2X=1-2e^{-j\\omega}+2e^{-j2\\omega}-2e^{-j3\\omega}+e^{-j4\\omega}.$$\n提出中心相位 $e^{-j2\\omega}$，中括号化为\n$$e^{-j2\\omega}[2\\cos2\\omega-4\\cos\\omega+2]\n=-8e^{-j2\\omega}\\cos\\omega\\sin^2(\\omega/2).$$\n再除 $(j\\omega)^2=-\\omega^2$，负号抵消，得到\n$$X(j\\omega)=2e^{-j2\\omega}\\cos\\omega\\left[\\frac{\\sin(\\omega/2)}{\\omega/2}\\right]^2.$$\n与矩形卷积法一致，但整个计算没有做连续积分。\n\n### 3．检查原点和相位中心\n两三角总面积为2，故原点按连续延拓取 $X(0)=2$。中心在t=2，所以公共线性相位应为 $-2\\omega$；余下是实偶因子，这与图形关于2对称相符。遇到余下实因子变负时，相位还要加π，不能因为有公共相位就忽略符号翻转。\n\n### 4．频域积分沿用定义核验\n$x(0)=0$、$x(3)=1$，故 $\\int Xd\\omega=0$、$\\int Xe^{j3\\omega}d\\omega=2\\pi$。两个三角仅在零值端点相接，能量为 $4/3$，所以 $\\int|X|^2d\\omega=8\\pi/3$。这些检查同时约束尺度、时移和归一化因子。",
+      "whenToUse": "折线的拐点比其积分式更容易读出时；复杂折线也可用斜率跳变表。",
+      "check": "原点X(0)=2、中心相位−2ω、两三角能量4/3，三项应同时吻合。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E06",
+      "title": "用跳跃冲激求方波级数：先求导再除谐波频率",
+      "targetIds": [
+        "O07",
+        "E05"
+      ],
+      "sourceIds": [
+        "OCW-E07",
+        "OCW-E09"
+      ],
+      "why": "方波除了跳点外导数为0。先用跳跃量写出周期冲激列的系数，再除以jkω₀，能直接看出哪些谐波必为0；均值必须单独求。",
+      "derivation": "### 1．对O07写出一个周期内的跳跃\n该题T=2，故 $\\omega_0=\\pi$。在t=0处从−1.5跳到1.5，跳变量+3；t=1处从1.5跳到−1.5，跳变量−3。因此\n$$x'(t)=3\\sum_m\\delta(t-2m)-3\\sum_m\\delta(t-1-2m).$$\n一个周期内冲激 $A\\delta(t-t_i)$ 对级数第k项的贡献是 $A e^{-jk\\omega_0t_i}/T$，故导数系数\n$$d_k=\\frac32[1-e^{-jk\\pi}]=\\frac32[1-(-1)^k].$$\n另一方面，逐项微分 $a_ke^{jk\\pi t}$ 得 $jk\\pi a_k e^{jk\\pi t}$，所以对k≠0，\n$$\\boxed{a_k=\\frac{3[1-(-1)^k]}{2jk\\pi}.}$$\n偶数非零k系数为0，奇数k为 $3/(jk\\pi)$；均值 $a_0=(1.5-1.5)/2=0$。不能令k=0直接除0，因为求导已经丢掉了均值。\n\n### 2．对E05把跳点改为±1/2\nE05也是T=2，但矩形在 $|t|<1/2$ 为1，外部为0：t=−1/2处跳+1，t=1/2处跳−1。因此\n$$d_k=\\frac12[e^{jk\\pi/2}-e^{-jk\\pi/2}]=j\\sin(k\\pi/2).$$\n除以 $jk\\pi$ 得 $a_k=\\sin(k\\pi/2)/(k\\pi)$，k≠0；均值为宽1除周期2，$a_0=1/2$。若系统只通过 $|\\omega|<5\\pi/2$，只需检查k=0、±1、±2；其中±2本身为0，故\n$$y(t)=\\frac12+\\frac2\\pi\\cos\\pi t.$$\n\n### 3．说明与积分法的分工\n这条路在多跳点脉冲列特别快，因为每个跳点只产生一个复指数因子。它并没有改变傅里叶级数定义；跳点值采用中值约定也不改变系数。若题目明确要求从定义积分推导，仍应先给积分法，这条路可作第二解和谐波零点检查。",
+      "whenToUse": "周期阶梯信号有少量跳点；希望直接找奇偶谐波或核对系数时。",
+      "check": "均值另算；O07仅奇谐波且系数纯虚奇，E05系数实偶，滤波后只保留直流与基波。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E07",
+      "title": "对衰减参数求导：不用反复对复频率求导",
+      "targetIds": [
+        "O14"
+      ],
+      "sourceIds": [
+        "OCW-E09"
+      ],
+      "why": "本法针对4.21(e)的$te^{-2t}\\sin4t$。先把衰减常数看作参数，乘t就来自对这个参数求导；这样可以把易错的j因子从计算中移走。",
+      "derivation": "### 1．先保留一般参数a>0\n令 $g_a(t)=e^{-at}\\sin4t\\,u(t)$。用欧拉公式，或对左右两个复指数积分，有\n$$G_a(j\\omega)=\\frac1{2j}\\left[\\frac1{a+j\\omega-j4}-\\frac1{a+j\\omega+j4}\\right]\n=\\frac4{(a+j\\omega)^2+16}.$$\n这一步a尚未代成2，后面才能使用参数微分。\n\n### 2．将时域乘t改成对a求负导数\n因为 $\\partial e^{-at}/\\partial a=-te^{-at}$，所以\n$$-\\frac{\\partial g_a(t)}{\\partial a}=te^{-at}\\sin4t\\,u(t).$$\n当a限制在某个正数邻域内，$t e^{-at}$ 仍绝对可积，允许把参数导数移进积分。于是本题所求谱为 $-\\partial G_a/\\partial a$ 在a=2处的值。\n\n### 3．逐项计算，不引入额外j\n设 $D=(a+j\\omega)^2+16$，则 $\\partial D/\\partial a=2(a+j\\omega)$。因此\n$$\\frac{\\partial G_a}{\\partial a}=4(-D^{-2})\\,2(a+j\\omega)=-\\frac{8(a+j\\omega)}{D^2}.$$\n再乘前面的负号、代a=2：\n$$\\boxed{X(j\\omega)=\\frac{8(2+j\\omega)}{[(2+j\\omega)^2+16]^2}.}$$\n这里没有“j乘j等于−1”的化简，适合用来独立核验频域求导法的符号。若一开始就把a固定为2，不能再形式上对数字2求导，应先恢复成参数族。\n\n### 4．取零频率检验实际积分\n代ω=0得到 $X(0)=16/20^2=1/25$。另一方面，$\\int_0^\\infty e^{-at}\\sin4t\\,dt=4/(a^2+16)$；对a求负导数后代2也得1/25。对实输入还应有 $X(-j\\omega)=X^*(j\\omega)$，最终表达式符合。\n\n这条路线是把“对参数求导”应用到本题的独立推导；课程第9讲提供的是微分与傅里叶变换可互相转化的基本思路，不应误写成视频直接讲过本题。",
+      "whenToUse": "指数衰减中含t、t²等因子，又不想追踪复频率微分的j因子时。",
+      "check": "X(0)=1/25，且谱满足实信号的共轭对称；与频域求导法结果完全相同。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E08",
+      "title": "用矩形与阶跃卷积直接找饱和斜坡的直流冲激",
+      "targetIds": [
+        "E07"
+      ],
+      "sourceIds": [
+        "OCW-E04",
+        "OCW-E09"
+      ],
+      "why": "原解先微分再补积分常数。这里把斜坡本身识别为“归一化矩形的累计”，由阶跃的完整傅里叶变换直接保留δ项，可看清它的来源。",
+      "derivation": "### 1．验证卷积确实产生题给斜坡\n令 $p(t)=\\tfrac12[u(t+1)-u(t-1)]$。考虑 $p*u$：\n$$(p*u)(t)=\\int_{-\\infty}^t p(\\tau)d\\tau.$$\n$t<-1$时积分为0；$-1<t<1$时等于 $(t+1)/2$；$t>1$时为矩形总面积1。这与题给r的每一段完全相同，所以 $r=p*u$。这一步先在时域核验，避免只凭图像像斜坡就套变换。\n\n### 2．写出两个因子的完整变换\n矩形的谱是\n$$P(j\\omega)=\\frac12\\int_{-1}^{1}e^{-j\\omega t}dt=\\frac{\\sin\\omega}{\\omega},\\quad P(0)=1.$$\n单位阶跃的广义傅里叶变换为\n$$U(j\\omega)=\\pi\\delta(\\omega)+\\operatorname{PV}\\frac1{j\\omega}.$$\n原点主值不能省略；阶跃不是绝对可积函数，这不是普通反常积分给出的函数谱。\n\n### 3．先处理δ乘法，再保留主值项\n卷积变成相乘，且连续函数乘冲激满足 $P(\\omega)\\delta(\\omega)=P(0)\\delta(\\omega)$。于是\n$$\\boxed{R(j\\omega)=\\pi\\delta(\\omega)+\\frac{\\sin\\omega}{\\omega}\\operatorname{PV}\\frac1{j\\omega}.}$$\n冲激系数为π的原因，是矩形总面积P(0)=1乘以阶跃原有的π，而不是把 $\\sin\\omega/\\omega$ 在原点随意取0。\n\n### 4．检查为何仅除jω会少一项\n由 $r'=p$，有 $j\\omega R=P$。代上式，δ项被 $j\\omega$ 消去，剩下P，正好满足微分关系。另一方面 $r(t)+r(-t)=1$，其偶部是1/2，变换必须包含 $\\pi\\delta$；第二项则是纯虚奇分布。两个检查分别保证导数关系和直流常量都正确。\n\n当被累计的脉冲总面积为A时，同样路线给出δ系数 $\\pi A$。若原题要求微分性质，这条卷积法可作为对δ系数的独立解释。",
+      "whenToUse": "“累计后从一个常量过渡到另一个常量”的信号，尤其容易遗漏频域δ项时。",
+      "check": "矩形面积1决定δ系数π；乘jω后回到sinω/ω，偶部又要求常量1/2。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E09",
+      "title": "先移到对称中心，再成对相加：有限序列不用等比和",
+      "targetIds": [
+        "E11"
+      ],
+      "sourceIds": [
+        "OCW-E11"
+      ],
+      "why": "5个连续样本关于n=3对称。把公共时移因子提出后，剩余指数成共轭对，能直接写成有限余弦和；在分母为零的可去奇点附近（如 $\\omega=0$）比0/0的正弦比更稳健。",
+      "derivation": "### 1．先确定实际非零样本而不是只看阶跃\n$x[n]=u[n-1]-u[n-6]$，在n=1、2、3、4、5均为1，其他为0。中心为 $(1+5)/2=3$，故\n$$X(e^{j\\omega})=e^{-j\\omega}+e^{-j2\\omega}+e^{-j3\\omega}+e^{-j4\\omega}+e^{-j5\\omega}.$$\n提出 $e^{-j3\\omega}$ 后，每个指数都相对中心重新编号：\n$$X=e^{-j3\\omega}[e^{j2\\omega}+e^{j\\omega}+1+e^{-j\\omega}+e^{-j2\\omega}].$$\n\n### 2．将左右两两配成余弦\n用 $e^{j\\theta}+e^{-j\\theta}=2\\cos\\theta$，得到\n$$\\boxed{X(e^{j\\omega})=e^{-j3\\omega}(1+2\\cos\\omega+2\\cos2\\omega).}$$\n这一步没有分母，因此不会在ω=0等位置出现形式上的0/0。括号是实偶函数，公共因子负责中心3对应的线性相位。\n\n### 3．再与正弦比形式对照\n有限和恒等式给\n$$1+2\\cos\\omega+2\\cos2\\omega=\\frac{\\sin(5\\omega/2)}{\\sin(\\omega/2)}$$\n（分母为0处按连续延拓）。所以两种答案等价，但前者能直接代特殊频率：$X(0)=1+2+2=5$；在ω=π处，括号为 $1-2+2=1$，公共因子为 $e^{-j3\\pi}=-1$，故 $X(e^{j\\pi})=-1$。\n\n### 4．相位不只是−3ω\n括号为正时，谱的相位可取−3ω；括号为负时要再加π，零点处相位无定义。由样本直接求也可核对π点：$\\sum_{n=1}^5(-1)^n=-1$。由于样本为实数，负频谱应为正频谱的共轭，且整体仍按2π周期重复。不能把公共的线性相位单独看成全部相位，更不能把负幅度直接改成绝对值后漏掉π跳变。",
+      "whenToUse": "连续非零样本数量较少、序列对称，或要计算0/π等特殊频率时。",
+      "check": "X(0)=5、X(π)=−1；括号为实偶，中心移位因子为$e^{-j3\\omega}$。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E10",
+      "title": "两条谱线就能否定无失真：不用先求群时延",
+      "targetIds": [
+        "E10"
+      ],
+      "sourceIds": [
+        "OCW-E07",
+        "OCW-E09"
+      ],
+      "why": "要判断全通系统是否只对输入作整体平移，可以直接比较各频率所需的延时。对本题两条整数倍谱线，甚至能把是否存在同一个延时化成一个相位同余条件。",
+      "derivation": "### 1．明确本题输入和允许的无失真形式\n输入为 $x(t)=\\cos t+\\cos2t$，系统 $H(j\\omega)=(2-j\\omega)/(2+j\\omega)$。实系统对两余弦的输出分别乘以对应模并加对应相位。这里 $|H|=1$，故\n$$y(t)=\\cos(t+\\phi_1)+\\cos(2t+\\phi_2),$$\n其中 $\\phi_1=-2\\arctan(1/2)$，$\\phi_2=-2\\arctan1=-\\pi/2$。若存在无失真关系 $y(t)=Kx(t-t_0)$，幅度要求 $|K|=1$。\n\n### 2．先考虑K=1，消去未知延时\n同一延时要求 $\\phi_1\\equiv-t_0$、$\\phi_2\\equiv-2t_0$（模2π）。消去t₀便得到必要条件\n$$\\phi_2-2\\phi_1\\equiv0\\pmod{2\\pi}.$$\n本题左边为 $4\\arctan(1/2)-\\pi/2\\approx0.28379$，不等于任何2π整数倍。所以不存在正增益的整体延时。\n\n### 3．也要排除K=−1\n负增益给每条余弦同时增加π相位，条件变为 $\\phi_1\\equiv\\pi-t_0$、$\\phi_2\\equiv\\pi-2t_0$。消去t₀得到 $\\phi_2-2\\phi_1\\equiv-\\pi$（模2π）。0.28379同样不满足，因此也不存在负增益的整体延时。\n\n### 4．把结论与一般判据对齐\n由此已证明：连题给这个两频输入，都不是只作一次整体平移；自然更不能对任意输入无失真。一般判据仍是 $H(j\\omega)=Ke^{-j\\omega t_0}$ 在输入所占频带成立，要求模恒定且相位随频率线性。全通只保证模恒定，不能保证两条谱线受到一致的时间平移。若输入只有单条正弦，任何非零H在该频率都可表现为改振幅加相位，所以必须有多频分量才能检验这种波形畸变。",
+      "whenToUse": "多音信号、全通网络、想用少数谱线快速否定整体时移时；它是针对给定输入的判断。",
+      "check": "φ₂−2φ₁≈0.28379，既非0也非π（模2π），正负整体增益均被排除。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "判据深化"
+    },
+    {
+      "id": "ALT-E11",
+      "title": "利用窗内微分方程：把三项移频谱合成一个分式",
+      "targetIds": [
+        "O14"
+      ],
+      "sourceIds": [
+        "OCW-E09"
+      ],
+      "why": "本法针对4.21(c)的加余弦窗。原解是矩形谱加两份移频谱；这里利用原函数及一阶导数在端点均连续，建立一个没有端点冲激的微分恒等式。",
+      "derivation": "### 1．端点连续性决定能不能直接求两次导数\n令 $w(t)=1$ 于 $|t|<1$、其余为0，$x(t)=(1+\\cos\\pi t)w(t)$。在±1处，$1+\\cos\\pi t=0$，所以x没有幅值跳变；内侧导数 $-\\pi\\sin\\pi t$ 也为0，与外侧0衔接，所以x'同样连续。\n\n因此x''的分布表达中没有端点δ或δ'，其普通值在窗内是 $-\\pi^2\\cos\\pi t$、窗外为0。若误把本题当作普通截断余弦 $\\cos\\pi t\\,w(t)$，端点条件不同，不能照搬下一步。\n\n### 2．构造消掉窗内余弦的组合\n窗内有 $x''+\\pi^2x=-\\pi^2\\cos\\pi t+\\pi^2(1+\\cos\\pi t)=\\pi^2$；窗外两项都为0。因此\n$$x''(t)+\\pi^2x(t)=\\pi^2 w(t).$$\n取傅里叶变换，$x''\\leftrightarrow-\\omega^2X$，$W=2\\sin\\omega/\\omega$，所以\n$$(\\pi^2-\\omega^2)X(j\\omega)=\\frac{2\\pi^2\\sin\\omega}{\\omega}.$$\n由此得到一个紧凑表达式：\n$$\\boxed{X(j\\omega)=\\frac{2\\pi^2\\sin\\omega}{\\omega(\\pi^2-\\omega^2)}.}$$\n\n### 3．处理三个可去奇点\nω=0处用面积或sinω/ω极限得X(0)=2。ω=π处令ω=π+ε，则分子约为 $-2\\pi^2\\varepsilon$，分母约为 $-2\\pi^2\\varepsilon$，比值趋于1；由偶性，X(−π)=1。它们不是极点，而是同阶零点相消。\n\n### 4．与移频和式核验\n原解 $2\\sin\\omega/\\omega+\\sin(\\omega-\\pi)/(\\omega-\\pi)+\\sin(\\omega+\\pi)/(\\omega+\\pi)$，用 $\\sin(\\omega\\pm\\pi)=-\\sin\\omega$ 通分后正好得到本式。除了0、±π外，其他整数倍π均为谱零点；高频按 $1/\\omega^3$ 衰减，也和波形、斜率在窗边均连续相符。",
+      "whenToUse": "由多项式/正弦组成、且端点连续条件良好的加窗函数；求谱简式和零点时。",
+      "check": "X(0)=2，X(±π)=1；对任意非奇点可与三项移频和式数值比较。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "ALT-E12",
+      "title": "利用四拍循环：余弦指数卷积不必做部分分式",
+      "targetIds": [
+        "O23"
+      ],
+      "sourceIds": [
+        "OCW-E04",
+        "OCW-E10"
+      ],
+      "why": "本法只处理5.29(b)中输入(1/2)ⁿu[n]的那一问。输入与冲激响应具有相同指数底数，卷积中指数项会完全合并，剩下四拍重复的简单余弦和。",
+      "derivation": "### 1．把本小问的数据写全\n系统 $h[n]=(1/2)^n\\cos(\\pi n/2)u[n]$，输入 $x[n]=(1/2)^nu[n]$。两者都从0开始，卷积有效整数为0≤k≤n。因此n<0时输出0；n≥0时\n$$y[n]=\\sum_{k=0}^{n}(1/2)^k\\cos(\\pi k/2)(1/2)^{n-k}.$$\n注意被延时的是第二个序列的整个指标n−k；两个指数相乘后刚好是 $(1/2)^n$，所以\n$$y[n]=2^{-n}\\sum_{k=0}^{n}\\cos(\\pi k/2).$$\n\n### 2．先读一个四拍周期，再累计\n余弦序列从k=0开始依次为 $1,0,-1,0,1,0,-1,0,\\ldots$，每四项之和是0。故前n+1项的累计和只取决于n除以4的余数：\n$$S_n=\\sum_{k=0}^{n}\\cos(\\pi k/2)=\\begin{cases}1,&n\\equiv0,1\\pmod4,\\\\0,&n\\equiv2,3\\pmod4.\\end{cases}$$\n于是答案可以直接写成\n$$\\boxed{y[n]=\\begin{cases}2^{-n},&n\\ge0,\\ n\\equiv0,1\\pmod4,\\\\0,&\\text{其余}.\\end{cases}}$$\n此处零样本来自正负余弦项抵消，并非两个输入序列在那些时刻都为0。\n\n### 3．需要统一闭式时，再还原三角表达\n四个余数的指示值1、1、0、0可写成\n$$S_n=\\frac{1+\\cos(\\pi n/2)+\\sin(\\pi n/2)}2.$$\n所以等价答案为 $y[n]=2^{-n-1}[1+\\cos(\\pi n/2)+\\sin(\\pi n/2)]u[n]$。分别代n=0、1、2、3，得到1、1/2、0、0；n=4又回到1/16。\n\n### 4．说明适用条件\n这里快捷的原因是指数底数完全相同且余弦角频率使序列短周期重复。若底数不同，求和中会多出几何权重，不能只用“每四项抵消”；若输入是全时间余弦，则有效求和区间也不再是0至n，应改用特征函数频响法。本法没有替代原题其他输入小问，只是这一小问的第二解。",
+      "whenToUse": "指数底数相同，且离散正弦/余弦只有很短的样值周期时。",
+      "check": "输出头五项为1、1/2、0、0、1/16；n模4的两类零输出必须保留。",
+      "provenanceNote": "已读来源中的定义、性质或课堂例示，再按本站本题条件独立演算；这些具体题的中文计算不是视频逐字转写。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "LATE01",
+      "title": "把移位抽样看成换一个时间原点，再做sinc插值",
+      "targetIds": [
+        "E13",
+        "O26"
+      ],
+      "sourceIds": [
+        "MIT-L17"
+      ],
+      "why": "频域追踪每个副本的相位容易误加一个补偿延时；时域插值直接说明恢复的是哪个函数。",
+      "derivation": "### E13：先把不规则的写法变成普通均匀抽样\n本题采样间隔 $T=\\pi/4$、时钟偏移 $t_0$。定义 $q(t)=x(t+t_0)$，则普通样值 $q(nT)$ 就是题给的 $x(nT+t_0)$。平移不改变带宽，故 $q$ 仍带限于2，而奈奎斯特边界为 $\\pi/T=4>2$。\n\n对 $q$ 使用均匀样点的基数插值：\n$$q(v)=\\sum_{n=-\\infty}^{\\infty}q(nT)\\frac{\\sin[\\pi(v-nT)/T]}{\\pi(v-nT)/T}.$$\n要还原 $x(t)$，注意 $x(t)=q(t-t_0)$，所以代入 $v=t-t_0$，得到\n$$x(t)=\\sum_nx(nT+t_0)\\frac{\\sin[4(t-nT-t_0)]}{4(t-nT-t_0)}.$$\n因此把实际冲激样值串通过\n$$h_r(t)=\\frac{\\sin4t}{4t},\\qquad h_r(0)=1$$\n即可完成上式卷积。此核对应截止4、通带增益 $T=\\pi/4$ 的理想低通。它在 $t=nT+t_0$ 附近插值，未把整个函数多延迟 $t_0$；无需再添加反向延时。题目原解取截止3也成立，因为两者均保留中心带且不碰相邻副本。\n\n### O26：把1秒时钟偏移代入同一证明\n原题的奈奎斯特角频率为 $\\omega_0$，故原信号带宽为 $\\omega_0/2$。取 $t_0=1$，同样定义 $q(t)=x(t+1)$。只要 $T<2\\pi/\\omega_0$，上述插值成立；恢复器的通带增益为 $T$、相位为0，而不是 $e^{j\\omega}$。这个相位结论来自“样值位置和插值核一起平移”，不是忽略时钟偏移。",
+      "whenToUse": "移位冲激抽样、判断是否需补偿延时；先确认信号带限且严格满足抽样定理。",
+      "check": "在任一样点 $t=mT+t_0$ 处，核取值为 $\\sin[\\pi(m-n)]/[\\pi(m-n)]=\\delta[m-n]$，右式回到 $x(mT+t_0)$。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "LATE02",
+      "title": "先看样值的数字角频率，再判断混叠符号与慢波",
+      "targetIds": [
+        "E15",
+        "O27",
+        "2026-07"
+      ],
+      "sourceIds": [
+        "MIT-L16"
+      ],
+      "why": "仅画谱的绝对值会丢掉负频率正弦的符号；样值等式同时揭示奈奎斯特边界失效和频闪慢波。",
+      "derivation": "### E15：正弦先折到负频率，再还原\n$T=\\pi/4$，故抽样角频率 $\\omega_s=8$。直接在样点代入：\n$$x[n]=\\cos(\\pi n/2)+\\sin(7\\pi n/4).$$\n数字角频率按 $2\\pi$ 等价，$7\\pi/4=2\\pi-\\pi/4$。对整数 $n$，\n$$\\sin(7\\pi n/4)=\\sin(2\\pi n-\\pi n/4)=-\\sin(\\pi n/4).$$\n所以样值与连续低频信号 $\\cos2t-\\sin t$ 完全相同。它的两条频率都落在截止4的恢复通带内，题给通带增益为 $T$，恰好消去冲激抽样的 $1/T$，故最终输出为 $y(t)=\\cos2t-\\sin t$。不能只算“7折到1”而漏掉负号。\n\n### O27：等号处为什么不能照套无混叠结论\n这里 $T=0.2=1/5$。第 $k$ 项样值为 $2^{-k}\\sin(k\\pi n/5)$。$k=1,2,3,4$ 在主数字频率区间内；$k=5$ 却变为 $2^{-5}\\sin(\\pi n)=0$。整条最高谐波已在所有样点消失，任何恢复器都无法知道它的幅度。故输出只保留前四项，不能因为最高频率“正好等于”奈奎斯特频率就判全部可恢复。\n\n### 2026第七题：慢波就是每次抽样积累的小相位差\n设 $T_s=T+\\varepsilon$。原正弦的样点相位满足\n$$\\frac{2\\pi nT_s}{T}=2\\pi n+\\frac{2\\pi n\\varepsilon}{T}.$$\n删去整数圈 $2\\pi n$，把 $n=t/T_s$ 对应回连续时间，得到混叠角频率 $\\omega_a=2\\pi\\varepsilon/(TT_s)$。题给低通增益为1，幅度还保留抽样的 $1/T_s$：\n$$y(t)=\\frac1{T_s}\\left[A+B\\cos\\frac{2\\pi\\varepsilon t}{TT_s}\\right]=\\frac1{T_s}x\\!\\left(\\frac{\\varepsilon}{T_s}t\\right).$$\n要求 $|\\omega_a|<\\pi/T_s$，即 $|\\varepsilon|<T/2$；$\\varepsilon=0$ 时所有样点同相，输出退化为常数。",
+      "whenToUse": "有限个正弦的混叠、奈奎斯特边界和频闪示波；适用时必须同时核对恢复器增益。",
+      "check": "E15在整数 $n$ 上逐点等式成立；O27第五项所有样值为0；慢波频率乘 $T_s$ 后回到每拍相位 $2\\pi\\varepsilon/T$。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "样值法与原解对照"
+    },
+    {
+      "id": "LATE03",
+      "title": "交替正负抽样等价于先乘一个余弦时钟",
+      "targetIds": [
+        "E14",
+        "M05"
+      ],
+      "sourceIds": [
+        "MIT-L13",
+        "MIT-L16"
+      ],
+      "why": "从时钟在样点上的取值入手，能先确定副本中心与恢复器的两个增益因子。",
+      "derivation": "### E14：用样点权重构造等价调制\n本题 $T=\\pi/5$。在每个样点 $t=nT$ 有 $\\cos5nT=\\cos n\\pi=(-1)^n$，因而作为分布\n$$\\sum_n(-1)^n\\delta(t-nT)=\\cos5t\\sum_n\\delta(t-nT).$$\n这说明交替抽样可视为先把 $x(t)$ 乘 $\\cos5t$，再普通冲激抽样。余弦调制把原带宽2的三角谱分成中心为 $\\pm5$、各高1/2的两份；普通抽样以10为频率周期复制。来自相邻中心的两份半谱在同一位置相加，成为中心 $(2k+1)5$、完整高度 $1/T=5/\\pi$ 的原三角谱：\n$$X_p(j\\omega)=\\frac1T\\sum_kX(j[\\omega-(2k+1)5]).$$\n因此在 $[-12,12]$ 只有支撑 $[-7,-3]$ 与 $[3,7]$ 的两份。题给带通恰好全留这两份，逆变换时二者相加：\n$$y(t)=\\frac1T x(t)(e^{j5t}+e^{-j5t})=\\frac2T x(t)\\cos5t.$$\n恢复时再乘 $\\cos5t$，利用 $2\\cos^2 5t=1+\\cos10t$：\n$$y(t)\\cos5t=\\frac1T x(t)+\\frac1T x(t)\\cos10t.$$\n低频部分支撑于 $[-2,2]$，高频项支撑于 $[8,12]$ 及负镜像。选截止3、增益 $T=\\pi/5$ 的低通即可恢复。这里最后的增益消去 $1/T$；不应再无依据乘2。\n\n### M05：原样代入另外一组数值\n其 $T=\\pi/3$、时钟余弦为 $\\cos3t$、原带宽为1；带通 $2\\le|\\omega|\\le4$ 同样留下中心 $\\pm3$ 的两份。所以 $y=(6/\\pi)x\\cos3t$，再乘 $\\cos3t$ 后用截止2、增益 $\\pi/3$ 的低通，恢复为 $x$。",
+      "whenToUse": "交替冲激串、奇数倍频谱复制、全留一对副本的带通恢复。不要直接用于只截取半边谱的带通。",
+      "check": "采样时钟在每个冲激位置上的余弦权值恰为 $(-1)^n$；两次乘余弦后基带系数是 $1/T$，与恢复器增益 $T$ 抵消。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "等价视角"
+    },
+    {
+      "id": "LATE04",
+      "title": "载频与相位失配用积化和差一次算清",
+      "targetIds": [
+        "E16",
+        "O31",
+        "O32"
+      ],
+      "sourceIds": [
+        "MIT-L13"
+      ],
+      "why": "时域乘法能把差频和和频分开，少画两次卷积谱，也能看清输出何时只是常数倍。",
+      "derivation": "### E16：把两个载波先相乘\n先不处理 $x$，使用 $\\cos a\\cos b=[\\cos(a-b)+\\cos(a+b)]/2$：\n$$x(t)\\cos10t\\cos(11t+\\pi/3)=\\frac{x(t)}2\\cos(t+\\pi/3)+\\frac{x(t)}2\\cos(21t+\\pi/3).$$\n因为 $x$ 带宽为1，第一项的频谱最多到2，第二项在 $[20,22]$ 及其负镜像。截止3、增益1的低通完整保留差频项，故\n$$y(t)=\\frac12x(t)\\cos(t+\\pi/3).$$\n若接收频率改为10，积化和差的差角成为常数 $-\\pi/3$，基带为 $x\\cos(\\pi/3)/2=x/4$。因此同频时乘4即可恢复；失频时系数随时间变化、还有零点，任意一个固定增益都不能恢复所有输入。\n\n### O31：共同初相不妨碍同步解调\n两次载波完全相同，故\n$$x\\cos^2(\\omega_ct+\\theta_c)=\\frac{x}2+\\frac{x}2\\cos(2\\omega_ct+2\\theta_c).$$\n只要低通完整保留带宽 $\\omega_M$ 的基带，又截去和频带，即 $\\omega_M\\le\\omega_{co}\\le2\\omega_c-\\omega_M$，输出就是 $x/2$，不依赖共同的 $\\theta_c$。应区分“共同相位任意”和“发收相位不同”。\n\n### O32：差频为 $\\Delta\\omega$ 时\n同样算出 $x\\cos\\omega_ct\\cos\\omega_dt=x\\cos(\\Delta\\omega t)/2+x\\cos[(\\omega_c+\\omega_d)t]/2$。在题给完全分离条件下，输出为前项。再对余弦作频移，得到两份各1/4的原谱相加；重叠处应加高度，而不是取两者较大值。",
+      "whenToUse": "已知基带带宽及低通截止的同步/非同步解调。若和频、差频带相交，不能直接删掉和频项。",
+      "check": "令频差0、相差0时回到单位增益解调的 $x/2$；E16相差 $\\pi/3$ 再多乘 $\\cos(\\pi/3)$，得到 $x/4$。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "原解深化"
+    },
+    {
+      "id": "LATE05",
+      "title": "把连续复指数送入整条采样链，直接测出等效频响",
+      "targetIds": [
+        "2013-11"
+      ],
+      "sourceIds": [
+        "MIT-L18",
+        "MIT-L22"
+      ],
+      "why": "“等效连续系统”可理解为每个允许的连续频率通过后改变多少；不必一开始追踪任意频谱。",
+      "derivation": "### 1．为什么可以暂取 $x_c(t)=e^{j\\omega t}$\n这不是说所有输入都是复指数，而是把它当作一个探测频率。任意带限输入都可由允许频率的复指数线性叠加，所以先求每个探测分量的输出，之后即可叠加。\n\n### 2．抽样后指数的自变量变成什么\n取样时刻为 $nT_1$，因此 $x_d[n]=e^{j\\omega nT_1}$。这里数字角频率是 $\\Omega=\\omega T_1$，单位由弧度/秒变为弧度/样本；绝不能把连续的 $\\omega$ 原封不动代进数字滤波器。\n\n### 3．直接代差分方程求幅值\n题给 $y_d[n]-0.5y_d[n-1]=x_d[n]$。对全时间稳态指数，试设 $y_d[n]=A e^{j\\omega nT_1}$。代回并除去不为0的指数：\n$$A-0.5Ae^{-j\\omega T_1}=1,\\qquad A=\\frac1{1-0.5e^{-j\\omega T_1}}.$$\n这一步不需要另外背一套DTFT表，只用了延时一拍带来的因子。\n\n### 4．D/A的冲激串会多出哪些频率\n序列转成 $A\\sum_ne^{j\\omega nT_1}\\delta(t-nT_1)$，其连续谱为\n$$\\frac{2\\pi A}{T_1}\\sum_k\\delta\\!\\left(\\nu-\\omega-\\frac{2\\pi k}{T_1}\\right).$$\n设重构低通通带增益为 $K$，在无混叠及不切掉输入频带的条件下，只留 $k=0$，输出为 $(K/T_1)Ae^{j\\omega t}$。因此允许输入频带上的等效频响是\n$$H_{eq}(j\\omega)=\\frac{K/T_1}{1-0.5e^{-j\\omega T_1}}.$$\n若 $K=T_1$，抽样幅值因子被消掉；若图中默认 $K=1$，必须保留 $1/T_1$。还需 $\\omega_M\\le\\omega_0<2\\pi/T_1-\\omega_M$，否则本推导保留单一副本的前提失效。",
+      "whenToUse": "连续—离散—连续链的等效频响，特别适合先解释 $j\\omega$ 与 $e^{j\\Omega}$ 的区别。",
+      "check": "令 $\\omega=0$ 时数字滤波器的直流增益为2，整链应给出 $2K/T_1$；所得式在零频确实等于该值。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "原解深化"
+    },
+    {
+      "id": "LATE06",
+      "title": "不背左右边表：直接从收敛积分推出ROC与负号",
+      "targetIds": [
+        "E18",
+        "O34"
+      ],
+      "sourceIds": [
+        "MIT-L20"
+      ],
+      "why": "同一个有理式的三种时域答案，根源在积分在哪一侧收敛；直接算一次可避免左边信号漏负号。",
+      "derivation": "两题的代数式均为 $H(s)=1/[(s+1)(s-2)]$。先做部分分式：\n$$H(s)=-\\frac1{3(s+1)}+\\frac1{3(s-2)}.$$\n接下来不立即查表，而计算基本指数。对右边信号 $Ce^{pt}u(t)$，\n$$\\int_0^\\infty Ce^{-(s-p)t}dt=\\frac C{s-p},\\qquad\\Re s>p.$$\n对左边信号 $De^{pt}u(-t)$，\n$$\\int_{-\\infty}^0De^{-(s-p)t}dt=\\frac D{p-s}=-\\frac D{s-p},\\qquad\\Re s<p.$$\n所以频域同样的系数 $C/(s-p)$，若选择左边实现，时域系数必须变为 $-C$。\n\n**两项都右边：** 收敛域相交为 $\\Re s>2$，\n$$h_c(t)=\\frac13(e^{2t}-e^{-t})u(t).$$\n负时间为0，因果；但 $e^{2t}$ 随正时间增长，不稳定。\n\n**极点2取左、极点−1取右：** 交集为 $-1<\\Re s<2$，\n$$h_s(t)=-\\frac13e^{2t}u(-t)-\\frac13e^{-t}u(t).$$\n左尾向负无穷衰减，右尾向正无穷衰减；绝对积分为 $1/6+1/3=1/2$，故稳定。它含负时间部分，不因果；虚轴属于ROC，因而有通常的频率响应。\n\n**两项都左边：** 交集为 $\\Re s<-1$，\n$$h_l(t)=\\frac13(e^{-t}-e^{2t})u(-t).$$\n负时间有值且 $e^{-t}$ 向负无穷增长，故既非因果也不稳定。另一种“极点2右边、极点−1左边”的组合要求同时 $\\Re s>2$ 与 $\\Re s<-1$，没有交集，不能成为本有理式的有效双边变换。",
+      "whenToUse": "双边拉普拉斯的多ROC题，尤其左右指数叠加与稳定/因果二选一。",
+      "check": "稳定实现的两侧极限都为 $-1/3$，而另外两种都为0；三种 $h$ 连续且 $h\\prime(0^+)-h\\prime(0^-)=1$，与微分方程右端单位冲激一致。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "收敛原理推导"
+    },
+    {
+      "id": "LATE07",
+      "title": "把Z变换当作生成函数：比较系数得到递推",
+      "targetIds": [
+        "O37"
+      ],
+      "sourceIds": [
+        "MIT-L22",
+        "MIT-L6-NOTES"
+      ],
+      "why": "适用于原书10.24(b)的右边序列：不用反复长除，也不必先做部分分式，就能读出样值。",
+      "derivation": "本方法只处理原题(b)：\n$$X(z)=\\frac{1-\\tfrac12z^{-1}}{1+\\tfrac12z^{-1}},\\qquad x[n]\\text{为右边序列}.$$\n令 $q=z^{-1}$，把右边序列写成 $X=x[0]+x[1]q+x[2]q^2+\\cdots$。清掉分母：\n$$\\left(1+\\frac q2\\right)\\sum_{n=0}^\\infty x[n]q^n=1-\\frac q2.$$\n现在每个幂次分别比较，不需要对无限多项式真正相除：\n\n- 常数项：$x[0]=1$。\n- $q^1$项：$x[1]+x[0]/2=-1/2$，故 $x[1]=-1$。\n- $q^2$项：$x[2]+x[1]/2=0$，故 $x[2]=1/2$。\n- $q^3$项：$x[3]+x[2]/2=0$，故 $x[3]=-1/4$。\n\n对一般 $n\\ge2$，右端该幂次的系数为0，因而\n$$x[n]=-\\frac12x[n-1].$$\n从 $x[1]=-1$ 开始递推，得到 $x[n]=-(-1/2)^{n-1}$（$n\\ge1$）。因此\n$$\\boxed{x[n]=\\delta[n]-(-1/2)^{n-1}u[n-1].}$$\n这一生成函数在 $|q|<2$ 收敛，等价为 $|z|>1/2$。若题目给的是左边序列，应改为按 $z$ 的正幂展开；不能继续使用此处的 $n\\ge0$ 起点。把Z变换看成带收敛域的幂级数，恰好解释了为什么代数式相同而展开方向不同时，时域答案会不同。\n\n作为第三种校验，可将答案化成 $-\\delta[n]+2(-1/2)^nu[n]$；分别代 $n=0$ 和 $n\\ge1$，即可证明两种写法逐点相等。",
+      "whenToUse": "右边序列的逆Z变换；想快速求前几个样本或找到通项时，比长除法更清晰。",
+      "check": "前四项必须为 $1,-1,1/2,-1/4$；代回系数递推后，右端只在0、1两拍非零。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "LATE08",
+      "title": "先用冲激平衡找右极限初值，再用常微分方程求全响应",
+      "targetIds": [
+        "E22"
+      ],
+      "sourceIds": [
+        "MIT-L6-NOTES",
+        "MIT-L20"
+      ],
+      "why": "输入导数含冲激时，先解决0点跳变，再对 $t>0$ 解普通方程，可与单边拉普拉斯相互核验。",
+      "derivation": "题给 $y''+4y'+3y=2x'+x$、$x=u(t)$、$y(0^-)=1$、$y'(0^-)=0$。关键是 $x'=\\delta(t)$，因此不能把0点右初值直接照抄为左初值。\n\n### 1．先看是否允许 $y$ 自身跳变\n记 $J=y(0^+)-y(0^-)$。若 $J\\ne0$，则 $y'$ 中含 $J\\delta(t)$，$y''$ 中还含 $J\\delta'(t)$。右端只有 $2\\delta(t)+u(t)$，没有 $\\delta'$，所以比较 $\\delta'$ 系数得 $J=0$，即 $y(0^+)=1$。\n\n### 2．再比较单位冲激系数\n因 $y$ 连续，$y''$ 的冲激系数为 $y'(0^+)-y'(0^-)$；$4y'$ 不再产生冲激，$3y$ 也没有冲激。故\n$$y'(0^+)-0=2,\\qquad y'(0^+)=2.$$\n这一步等价于对方程在0点两侧作无穷小区间积分。\n\n### 3．在 $t>0$ 解普通方程\n此时冲激已过去，$u(t)=1$，所以 $y''+4y'+3y=1$。常数特解为 $1/3$，齐次特征根是−1、−3：\n$$y(t)=\\frac13+Ae^{-t}+Be^{-3t}.$$\n代入右极限初值：\n$$A+B=\\frac23,\\qquad -A-3B=2.$$\n用第一式加第二式得 $-2B=8/3$，于是 $B=-4/3,A=2$，最终\n$$\\boxed{y(t)=\\frac13+2e^{-t}-\\frac43e^{-3t},\\quad t\\ge0.}$$\n若要拆分，零输入由 $y_{zi}(0)=1,y'_{zi}(0)=0$ 求得 $3e^{-t}/2-e^{-3t}/2$；用全响应减去它，得零状态 $1/3+e^{-t}/2-5e^{-3t}/6$。不需要再重复做一遍部分分式。",
+      "whenToUse": "输入带阶跃、冲激或导数项而初值给在 $0^-$ 的系统题；先比较最高阶奇异项。",
+      "check": "全响应在0点值为 $1/3+2-4/3=1$，右导数为 $-2+4=2$；正时间代回左端等于1。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "其他解法"
+    },
+    {
+      "id": "LATE09",
+      "title": "二阶闭环稳定性用根的和、积，省去反复解根",
+      "targetIds": [
+        "M07"
+      ],
+      "sourceIds": [
+        "MIT-L25"
+      ],
+      "why": "先写闭环代数，再用实系数二阶多项式的根关系，可直接找出参数区间并检查临界情况。",
+      "derivation": "题给正反馈 $Y=kG(X+Y)$，$G=(s+1)/(s^2+2s+5)$。先移项：\n$$Y-kGY=kGX\\ \\Rightarrow\\ H_k(s)=\\frac{kG}{1-kG}=\\frac{k(s+1)}{s^2+(2-k)s+5-k}.$$\n正反馈的分母是 $1-kG$；不能直接套负反馈的加号。\n\n令特征根为 $r_1,r_2$，则由韦达定理\n$$r_1+r_2=k-2,\\qquad r_1r_2=5-k.$$\n若两根为实数，要同时严格负，必须和负、积正；反过来这两条也保证同号且都负。若为共轭复数，二者实部均为 $(k-2)/2$，和负便保证落在左半平面，积自动为正。因此二阶严格稳定条件可统一为\n$$2-k>0,\\qquad 5-k>0\\ \\Rightarrow\\ \\boxed{k<2}.$$\n本题非零 $k$ 时没有隐藏的极零抵消例外，因为分子零点在 $s=-1$，而分母在该点恒为4，不会抵消。$k=0$ 时传递函数为零，也属于所得区间。\n\n临界 $k=2$ 时分母为 $s^2+3$，两根在虚轴上。不能把“没有正实部根”误写成BIBO稳定；此时\n$$H_2=\\frac{2s}{s^2+3}+\\frac2{s^2+3},\\qquad h_2(t)=\\left[2\\cos\\sqrt3t+\\frac2{\\sqrt3}\\sin\\sqrt3t\\right]u(t).$$\n它没有衰减，绝对积分发散，故不BIBO稳定。用 $k=1$ 检查时，根实部为−1/2；用 $k=3$ 检查时，根实部为1/2，正好跨过所得边界。",
+      "whenToUse": "实参数的二阶因果闭环系统；若存在极零抵消，需先判断题目要求外部还是内部稳定。",
+      "check": "代入 $k=2$ 发现虚轴极点且时域不衰减，与严格不等号 $k<2$ 相符。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "判据深化"
+    },
+    {
+      "id": "LATE10",
+      "title": "延迟反馈按回声逐轮递推，不先展开拉普拉斯几何级数",
+      "targetIds": [
+        "O40"
+      ],
+      "sourceIds": [
+        "MIT-L25"
+      ],
+      "why": "原题11.22(c)是无限次延迟反馈；直接看每轮回传的冲激系数，比只写有理/指数分式更直观。",
+      "derivation": "本方法针对(c)：前向 $H=1/2$，反馈 $G=e^{-s/3}$，负反馈连接。令 $a=1/3$，时域输入输出关系为\n$$y(t)=\\frac12x(t)-\\frac12y(t-a).$$\n求因果冲激响应时，取 $x=\\delta$、$y=h$：\n$$h(t)=\\frac12\\delta(t)-\\frac12h(t-a).$$\n因果性告诉我们 $h(t)=0$ 于 $t<0$，所以0时刻只可能出现直接项 $\\delta(t)/2$。经过一段延时 $a$，直接项回到减法节点，其系数乘 $-1/2$，于是 $t=a$ 处冲激为 $-\\delta(t-a)/4$；再回传一次，$t=2a$ 处为 $\\delta(t-2a)/8$。\n\n若第 $k$ 轮系数记为 $c_k$，比较同一冲激位置得到\n$$c_0=\\frac12,\\qquad c_k=-\\frac12c_{k-1}\\quad(k\\ge1).$$\n递推解是 $c_k=(-1)^k2^{-(k+1)}$，因此\n$$\\boxed{h(t)=\\sum_{k=0}^{\\infty}\\frac{(-1)^k}{2^{k+1}}\\delta\\!\\left(t-\\frac k3\\right).}$$\n可以不用逐项积分普通函数的绝对值，而按冲激测度的总权重检查BIBO稳定：$\\sum_k|c_k|=\\sum_k2^{-(k+1)}=1<\\infty$。它与“直接路径加一次回波”的有限两项模型不同；这里每一次输出还会再次进入反馈环路。\n\n最后将整个冲激串代回递推式：$-h(t-a)/2$ 的第 $k-1$ 项恰好产生第 $k$ 项，而0时刻只由直接输入产生，逐位置系数完全一致。这个检查比在变换域把无限和先通分更接近系统结构。",
+      "whenToUse": "纯延时加固定增益的反馈、回声串和递归结构。必须先确认是真反馈环，而不是有限个前向回声支路。",
+      "check": "前三个冲激系数为 $1/2,-1/4,1/8$；总绝对权重为1；每拍系数满足 $c_k=-c_{k-1}/2$。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "时域递推深化"
+    },
+    {
+      "id": "LATE11",
+      "title": "把自相关改写为卷积，用反转定理一次得到Z变换",
+      "targetIds": [
+        "E21"
+      ],
+      "sourceIds": [
+        "SPORS-Z",
+        "MIT-L22"
+      ],
+      "why": "直接按k正负分别求无限和是一条方法；将相关写成反转卷积，可以先算变换再反推形状。",
+      "derivation": "已知 $x[n]=a^nu[n]$、$0<a<1$，且 $r[k]=\\sum_nx[n+k]x[n]$。把卷积 $(x*x_-)[k]$ 展开，其中 $x_-[n]=x[-n]$：\n$$(x*x_-)[k]=\\sum_mx[m]x[m-k].$$\n令 $m=n+k$ 就正好变成题给自相关，因此 $r=x*x_-$。原序列的双边Z变换是\n$$X(z)=\\frac1{1-az^{-1}},\\qquad |z|>a.$$\n由反转定理，$X_-(z)=X(1/z)=1/(1-az)$，收敛条件为 $|1/z|>a$，即 $|z|<1/a$。卷积定理于是给出\n$$R(z)=X(z)X(1/z)=\\frac1{(1-az^{-1})(1-az)},\\qquad a<|z|<1/a.$$\n注意第二项使用 $az$，不是再写一个 $az^{-1}$；这正是相关结果同时有左右两尾的原因。\n\n为了读回时域，可改写为两个几何级数：\n$$R(z)=\\frac1{1-a^2}\\left[1+\\frac{az^{-1}}{1-az^{-1}}+\\frac{az}{1-az}\\right].$$\n右边第一项给 $\\delta[k]$，第二项给 $a^ku[k-1]$，第三项给 $a^{-k}u[-k-1]$。合并即\n$$r[k]=\\frac{a^{|k|}}{1-a^2}.$$\nROC包含单位圆，所以可令 $z=e^{j\\omega}$：\n$$R(e^{j\\omega})=\\frac1{(1-ae^{-j\\omega})(1-ae^{j\\omega})}=\\frac1{1-2a\\cos\\omega+a^2}.$$\n复频域乘积还直接显示非负谱：单位圆上第二因子是第一因子的共轭，故 $R=|X|^2\\ge0$。",
+      "whenToUse": "实序列自相关的双边Z变换；复序列要把时间反转同时换成共轭反转，不能省略共轭。",
+      "check": "$r[0]=\\sum_{n\\ge0}a^{2n}=1/(1-a^2)$，且 $r[-k]=r[k]$；对应谱实、偶、非负。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "卷积法展开"
+    },
+    {
+      "id": "LATE12",
+      "title": "不用先归一化：Gram矩阵求最佳逼近，再做匹配滤波",
+      "targetIds": [
+        "M10"
+      ],
+      "sourceIds": [
+        "MIT-PROJECTION",
+        "MIT-MATCHED"
+      ],
+      "why": "换用简单基函数1和t求同一投影，展示正规方程为什么适用于非正交基，也能独立检查归一化系数。",
+      "derivation": "原题基函数张成的空间仍是所有一次多项式。先直接设 $\\hat x(t)=\\alpha+\\beta t$，在 $[0,1]$ 上逼近 $x=t^2$。投影定理要求残差分别正交于1和t：\n$$\\int_0^1(t^2-\\alpha-\\beta t)dt=0,\\qquad\\int_0^1t(t^2-\\alpha-\\beta t)dt=0.$$\n逐项积分给出正规方程\n$$\\begin{bmatrix}1&1/2\\\\1/2&1/3\\end{bmatrix}\\begin{bmatrix}\\alpha\\\\\\beta\\end{bmatrix}=\\begin{bmatrix}1/3\\\\1/4\\end{bmatrix}.$$\n第二行减去第一行的一半，得到 $(1/3-1/4)\\beta=1/4-1/6$，即 $\\beta=1$；再回代得 $\\alpha=-1/6$，故 $\\hat x=t-1/6$。\n\n现在换回题给的归一化基：\n$$a_0+a_1\\sqrt{12}(t-1/2)=\\left(a_0-\\frac{a_1\\sqrt{12}}2\\right)+a_1\\sqrt{12}t.$$\n比较t的系数得 $a_1=1/\\sqrt{12}=\\sqrt3/6$；比较常数得 $a_0=-1/6+1/2=1/3$。\n\n误差能量不必展开四次式。投影与残差正交，所以\n$$E_{\\min}=\\|x\\|^2-\\|\\hat x\\|^2=\\frac15-\\left(\\frac19+\\frac1{12}\\right)=\\frac1{180}.$$\n最后用滤波器在 $t=1$ 读出同样的内积。取支撑均为 $[0,1]$ 的\n$$h_0(t)=1,\\qquad h_1(t)=\\sqrt{12}(1/2-t).$$\n卷积在1时为 $y_i(1)=\\int_0^1x(\\tau)h_i(1-\\tau)d\\tau=\\int_0^1x(\\tau)\\phi_i(\\tau)d\\tau=a_i$。时间反转再延时1正是为了让卷积核在采样时刻变回原基函数。若题目是复基函数，匹配核必须是 $\\phi_i^*(1-t)$；本题基函数为实函数，才可省略星号。",
+      "whenToUse": "基函数没有归一化、或先换一组更简单的基再还原系数；投影空间保持相同即可。",
+      "check": "正规矩阵行列式 $1/3-1/4=1/12>0$，故系数唯一；直接积分残差平方同样得到 $1/180$。",
+      "provenance": "参考所列课程中的分析路线；以下代入、演算与例题核验均为本项目独立完成。",
+      "kind": "其他解法"
+    }
+  ]
+}

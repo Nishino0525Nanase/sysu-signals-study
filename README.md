@@ -1,11 +1,11 @@
 # 中大信号研习室
 
-中山大学信号与系统备考学习工具，独立仓库。包括2008—2026年所供真题的243个可见题组、逐题推导、90余幅图解、32道原创迁移与模拟训练、40组奥本海姆第二版所选课后题逐小问答案，以及逐章考点统计。
+中山大学信号与系统备考学习工具，独立仓库。包括2008—2026年所供真题的243个可见题组、逐题推导、100幅中文SVG图解与4幅训练配图、32道原创迁移与模拟训练、40组奥本海姆第二版所选课后题逐小问答案，以及逐章考点统计。
 
 ## 使用
 
 - 网页：[中大信号研习室](https://nishino0525nanase.github.io/sysu-signals-study/)，由 Pages 工作流发布 `dist/`。
-- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”中的 `sysu-signals-study-v1.1.0.apk`。最低 Android 7.0，可覆盖升级1.0.0/1.0.1并保留本机学习记录。
+- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”中的 `sysu-signals-study-v1.2.0.apk`。最低 Android 7.0，可覆盖升级1.0.0/1.0.1/1.1.0并保留本机学习记录。
 - APK内置全部学习内容、公式字体和配图，核心阅读无需联网，不申请网络、定位、摄像头或账号权限。
 - 学习进度、收藏、错题、笔记保存在本机，支持导出和导入JSON备份。
 
@@ -23,6 +23,7 @@
 content/2008.json … 2026.json  # 各年讲解与精确图引用
 content/assets/               # 原创SVG图解
 content/catalog.json          # 原创训练、原书课后逐步答案与资料目录
+content/resources.json        # 来源证据、题号映射和独立演算的其他解法
 content/statistics.json       # 章节计数与逐题标注
 dist/                         # 可直接托管的完整离线网页
 android/                      # 原生WebView封装，HTTPS本地资源、备份与文件选择
@@ -43,3 +44,13 @@ Android使用JDK17、SDK platform35/build-tools35编译：设置`ANDROID_JAR`、
 - 40组奥本海姆所选课后题增加逐小问答案入口，32道训练补齐具体最终结果。
 - 真题答案补充卷积支撑交集、系数积分、变换尺度、部分分式与初值等计算过程。
 - 阅读页默认展开详细答案；打印时保留答案正文；原有学习记录ID保持不变。
+
+## 1.2.0 中文图解、课程与其他解法
+
+- 图中英文语义注解、坐标说明、图例和单位全部改为中文，保留数学变量及标准运算符。
+- 课程资料按实际读取范围区分：已读官方讲义/字幕、已核对课程介绍、仅可检索的视频目录。B站未取得字幕的条目只作为观看导航。
+- 新增24条方法补充，覆盖30道对应题目；38条课程/资料入口包含12个B站、5个慕课、17个MIT课程/讲义及4个GitHub来源。
+- 其他解法按确切题号关联，参考一手课程的思路后独立推导，并写明适用条件和核验方法。外部资料的原文定位和作者信息保存在 `content/resources.json`。
+- 引用课程和仓库均保留原作者链接。数学演算与中文解说由本项目独立整理，不转载课程视频或原仓库的整份教材/答案。
+
+重绘中文图可分别运行 `tools/localize-early-figures.py`、`tools/localize-middle-figures.py`、`tools/localize-late-figures.py`；需要Matplotlib、NumPy/SciPy及Noto CJK字体。

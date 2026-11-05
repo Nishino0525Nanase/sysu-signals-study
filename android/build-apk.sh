@@ -6,6 +6,7 @@ cd "$(dirname "$0")"
 : "${SIGNING_KEYSTORE:?Set a private signing keystore path}"
 : "${SIGNING_PASSWORD_FILE:?Set a private signing password file path}"
 mkdir -p build/classes build/gen build/dex build/assets/www
+rm -f build/base.apk build/unsigned.apk build/aligned.apk build/signed.apk
 python3 - <<'PY'
 from pathlib import Path
 import shutil
@@ -22,8 +23,17 @@ else
 fi
 find build/classes -name '*.class' -print > build/classes.txt
 java -cp "$ANDROID_BUILD_TOOLS/lib/d8.jar" com.android.tools.r8.D8 --min-api 24 --lib "$ANDROID_JAR" --output build/dex @build/classes.txt
-cp build/base.apk build/unsigned.apk
-(cd build/dex && zip -q -j ../unsigned.apk classes.dex)
+python3 - <<'PY'
+import io, os, zipfile
+from pathlib import Path
+with zipfile.ZipFile(io.BytesIO(Path('build/base.apk').read_bytes())) as base:
+    assert base.testzip() is None, 'Resource archive integrity check failed'
+    with zipfile.ZipFile('build/unsigned.tmp', 'w') as package:
+        for entry in base.infolist():
+            package.writestr(entry,base.read(entry.filename))
+        package.write('build/dex/classes.dex','classes.dex',compress_type=zipfile.ZIP_DEFLATED)
+os.replace('build/unsigned.tmp','build/unsigned.apk')
+PY
 "$ANDROID_BUILD_TOOLS/zipalign" -f 4 build/unsigned.apk build/aligned.apk
 "$ANDROID_BUILD_TOOLS/apksigner" sign --ks "$SIGNING_KEYSTORE" --ks-key-alias sysusignals --ks-pass "file:$SIGNING_PASSWORD_FILE" --out build/signed.apk build/aligned.apk
 "$ANDROID_BUILD_TOOLS/apksigner" verify --verbose build/signed.apk

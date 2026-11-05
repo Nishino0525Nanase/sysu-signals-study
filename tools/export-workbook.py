@@ -12,6 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 BUILD = ROOT / "android/build/workbook"
 BUILD.mkdir(parents=True, exist_ok=True)
 catalog = json.loads((ROOT / "content/catalog.json").read_text())
+learning = json.loads((ROOT / "content/resources.json").read_text())
+sources = {r["id"]: r for r in learning["sources"]}
 assert len(catalog["oppenheim"]) == 40
 assert all(q.get("solution") for q in catalog["oppenheim"])
 
@@ -74,8 +76,32 @@ for heading, items in [
             caption = "对应图解" if isinstance(f, str) else f.get("caption") or f.get("title") or "对应图解"
             parts.append(f"![{caption}]({asset_path(name)}){{width=95%}}")
         parts.extend(["### 关键结果", q["answer"]])
+        for method in learning["methods"]:
+            if q["id"] not in method.get("targetIds", []):
+                continue
+            parts.extend(["### " + method.get("kind", "其他解法") + "：" + method["title"],
+                          method.get("why", ""), fix_images(method["derivation"])])
+            if method.get("whenToUse"):
+                parts.extend(["**什么时候用：**", method["whenToUse"]])
+            if method.get("check"):
+                parts.extend(["**怎样核验：**", method["check"]])
+            refs = [sources[i] for i in method.get("sourceIds", []) if i in sources]
+            if refs:
+                parts.append("思路参考：" + "；".join(
+                    f"[{ref['title']}]({ref['url']})" for ref in refs) + "。本题演算为独立整理。")
         if q.get("pitfalls"):
             parts.extend(["### 易错点与检查", "\n".join("- " + p for p in q["pitfalls"])])
+
+parts.extend(["\\newpage", "# 课程与来源导航",
+              "以下保留原课程入口及本次可读取的范围。B站目录与字幕读取情况分开注明，具体推导优先依据可读的一手讲义、字幕与独立演算。"])
+for source in learning["sources"]:
+    parts.extend(["## " + source["title"],
+                  f"**平台：** {source['platform']}。**发布者：** {source.get('creator', '')}。",
+                  source.get("summary", ""),
+                  "**读取范围：** " + source.get("evidenceLevel", ""),
+                  "**原文定位：** " + source.get("sourceLocator", ""),
+                  source.get("accessNote", ""),
+                  f"[打开原课程或资料]({source['url']})"])
 
 markdown = "\n\n".join(parts)
 subscripts = str.maketrans("₀₁₂₃₄₅₆₇₈₉ₖ", "0123456789k")
@@ -90,7 +116,7 @@ def normalize_unicode_math(text, inside_math=False):
         tex = m[1] + "^{" + m[2].translate(superscripts) + "}"
         return tex if inside_math else "$" + tex + "$"
     text = re.sub(r"([A-Za-zα-ωΑ-Ω]+)([₀₁₂₃₄₅₆₇₈₉ₖ]+)", sub, text)
-    return re.sub(r"([A-Za-zα-ωΑ-Ω]+)([⁻⁺ᵗⁿ²³]+)", sup, text)
+    return re.sub(r"([A-Za-zα-ωΑ-Ω0-9]+|\([^()\n]+\))([⁻⁺ᵗⁿ²³]+)", sup, text)
 
 
 segments = re.split(r"(\$\$[\s\S]*?\$\$|\$[^$\n]+\$)", markdown)

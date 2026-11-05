@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>fs.readFile(path.join(root,p),'utf8').then(JSON.parse);
 const catalog=await read('content/catalog.json'), statistics=await read('content/statistics.json');
+const learning=await read('content/resources.json');
 const topics=new Map(statistics.topics.map(t=>[t.code,t]));
 const exams=[];
 for(let year=2008;year<=2026;year++){
@@ -24,8 +25,12 @@ for(let year=2008;year<=2026;year++){
  exams.push(exam);
 }
 await fs.mkdir(path.join(root,'dist/assets'),{recursive:true});
-for(const name of await fs.readdir(path.join(root,'content/assets')))await fs.copyFile(path.join(root,'content/assets',name),path.join(root,'dist/assets',name));
-const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams};
+for(const name of await fs.readdir(path.join(root,'content/assets'))){
+ const destination=path.join(root,'dist/assets',name),temporary=destination+'.tmp';
+ await fs.writeFile(temporary,await fs.readFile(path.join(root,'content/assets',name)));
+ await fs.rename(temporary,destination);
+}
+const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams,resources:learning.sources,alternativeMethods:learning.methods};
 await fs.writeFile(path.join(root,'dist/data.js'),'window.SIGNAL_DATA='+JSON.stringify(data)+';\n');
 async function walk(dir){let result=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){let p=path.join(dir,e.name);if(e.isDirectory())result.push(...await walk(p));else result.push(p);}return result;}
 const files=await walk(path.join(root,'dist'));
