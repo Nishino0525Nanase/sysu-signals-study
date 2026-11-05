@@ -8,6 +8,7 @@ const catalog=await read('content/catalog.json'), statistics=await read('content
 const learning=await read('content/resources.json');
 const guides=await read('content/study-guides.json');
 const examMethods=await read('content/exam-methods.json');
+const textbookReferences=await read('content/textbook-links.json');
 const topics=new Map(statistics.topics.map(t=>[t.code,t]));
 const exams=[];
 for(let year=2008;year<=2026;year++){
@@ -28,17 +29,24 @@ for(let year=2008;year<=2026;year++){
 }
 await fs.mkdir(path.join(root,'dist/assets'),{recursive:true});
 for(const name of await fs.readdir(path.join(root,'content/assets'))){
+ if(!['.svg','.png','.jpg','.webp'].includes(path.extname(name))||/\.tmp\.|\.cn-tmp$/.test(name))continue;
  const destination=path.join(root,'dist/assets',name),temporary=destination+'.tmp';
  await fs.writeFile(temporary,await fs.readFile(path.join(root,'content/assets',name)));
  await fs.rename(temporary,destination);
 }
-const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams,resources:learning.sources,alternativeMethods:learning.methods,studyGuides:guides.guides,examMethods:examMethods.entries};
+const referenceFiles=new Set(['exercises','concepts','relationExcerpts'].flatMap(k=>(textbookReferences[k]||[]).flatMap(e=>e.excerpts.flatMap(f=>[f.path,f.thumb]))));
+for(const relativeFile of referenceFiles){
+ const file=path.join(root,'content',relativeFile);
+ const relative=path.relative(path.join(root,'content/references'),file),destination=path.join(root,'dist/references',relative);
+ await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination+'.tmp',await fs.readFile(file));await fs.rename(destination+'.tmp',destination);
+}
+const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams,resources:learning.sources,alternativeMethods:learning.methods,studyGuides:guides.guides,examMethods:examMethods.entries,textbookReferences};
 const compiled=path.join(root,'dist/data.js');
 await fs.writeFile(compiled+'.tmp','window.SIGNAL_DATA='+JSON.stringify(data)+';\n');
 await fs.rename(compiled+'.tmp',compiled);
 async function walk(dir){let result=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){let p=path.join(dir,e.name);if(e.isDirectory())result.push(...await walk(p));else result.push(p);}return result;}
 const files=await walk(path.join(root,'dist'));
-const assets=files.filter(p=>!p.endsWith('.apk')&&!p.endsWith('/sw.js')).map(p=>path.relative(path.join(root,'dist'),p).split(path.sep).join('/'));
+const assets=files.filter(p=>!p.endsWith('.apk')&&!p.endsWith('/sw.js')&&!/\.tmp(?:\.|$)|\.cn-tmp$/.test(p)).map(p=>path.relative(path.join(root,'dist'),p).split(path.sep).join('/'));
 const digest=crypto.createHash('sha256');
 for(const asset of [...assets].sort()){
  digest.update(asset).update(await fs.readFile(path.join(root,'dist',asset)));

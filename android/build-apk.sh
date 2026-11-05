@@ -12,7 +12,7 @@ from pathlib import Path
 import shutil
 src=Path('../dist'); dest=Path('build/assets/www')
 if dest.exists(): shutil.rmtree(dest)
-shutil.copytree(src,dest,ignore=shutil.ignore_patterns('*.apk','*.inspect.ndjson'))
+shutil.copytree(src,dest,ignore=shutil.ignore_patterns('*.apk','*.inspect.ndjson','*.tmp','*.tmp.*','*.cn-tmp'))
 PY
 "$ANDROID_BUILD_TOOLS/aapt" package -f -M AndroidManifest.xml -I "$ANDROID_JAR" -S res -J build/gen -A build/assets -F build/base.apk
 find src build/gen -name '*.java' -print > build/sources.txt

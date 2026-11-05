@@ -6,13 +6,17 @@ The website remains the canonical interactive edition; this PDF uses the same JS
 import json
 import re
 import subprocess
+import os
 from pathlib import Path
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 BUILD = ROOT / "android/build/workbook"
 BUILD.mkdir(parents=True, exist_ok=True)
 catalog = json.loads((ROOT / "content/catalog.json").read_text())
 learning = json.loads((ROOT / "content/resources.json").read_text())
+book_references = json.loads((ROOT / "content/textbook-links.json").read_text())
+book_by_id = {e["id"]: e for e in book_references["exercises"]}
 sources = {r["id"]: r for r in learning["sources"]}
 assert len(catalog["oppenheim"]) == 40
 assert all(q.get("solution") for q in catalog["oppenheim"])
@@ -37,6 +41,23 @@ def fix_images(text):
                   lambda m: f"![{m[1]}]({asset_path(m[2])}){{width=90%}}", text)
 
 
+def original_images(q):
+    entry = book_by_id.get(q["id"])
+    if not entry:
+        return []
+    pages = "、".join(map(str, entry.get("questionPrintPages", entry["printPages"])))
+    pdf_pages = "、".join(map(str, entry.get("questionPdfPages", entry["pdfPages"])))
+    items = ["### 上传中文版的教材原题", f"**原书{entry['bookQuestion']}：** 书页{pages}；PDF第{pdf_pages}页。", entry.get("displayNote", entry.get("scopeNote", ""))]
+    for excerpt in entry["excerpts"]:
+        source = ROOT / "dist" / excerpt["path"]
+        image_path = BUILD / (source.stem + "-original.png")
+        with Image.open(source) as image:
+            image.convert("RGB").save(image_path)
+        items.append(r"\begin{center}\includegraphics[width=.95\linewidth,height=.70\textheight,keepaspectratio]{" + str(image_path) + r"}\end{center}")
+        items.append(f"*原题摘图：书页{excerpt['printPage']}／PDF第{excerpt['pdfPage']}页。*")
+    return items
+
+
 parts = ["""---
 title: "中大信号研习室"
 subtitle: "奥本海姆课后题与专项训练 · 逐步答案"
@@ -50,7 +71,7 @@ toc-title: "题目导航"
 # 使用说明
 
 本册与网页共用逐题答案。每题依次给出必要已知、入手理由、逐步推导、关键结果及易错点。
-奥本海姆部分按英文第二版的题号与已选小问组织，用中文简述题意；原始图形与完整上下文请对照教材。
+奥本海姆部分按上传中文版第二版的原题逐项核对，并附原题截图；书页与PDF页分别标明。所选小问之外的内容不冒充已完整作答。
 推导为独立编写，题面存在条件歧义时分别说明成立范围。原创迁移和模拟题均给出完整题目与答案。
 
 建议先独立计算，再逐行核对。卷积先画支撑交集；频谱先标尺度、幅度与边界；变换先写收敛域；初态题先区分零输入和零状态。
@@ -68,6 +89,7 @@ for heading, items in [
         parts.extend(["\\newpage", f"## {q['id']}　{q['title']}"])
         if q.get("scope"):
             parts.append("**原书范围：** " + q["scope"] + "。")
+        parts.extend(original_images(q))
         parts.extend(["### 题意与已知", fix_images(q["statement"]),
                       "### 第一步为什么这样想", q["firstStep"],
                       "### 逐步解答", fix_images(q["solution"])])
@@ -153,6 +175,7 @@ header.write_text(r"""
 \providecommand{\sgn}{\operatorname{sgn}}
 """)
 output = ROOT / "dist/downloads/oppenheim-workbook.pdf"
+temporary_output = BUILD / "oppenheim-workbook.pdf"
 subprocess.run([
     "pandoc", str(md_path), "--standalone", "--toc", "--toc-depth=2", "--pdf-engine=xelatex",
     "--resource-path=" + str(ROOT / "dist"), "--include-in-header=" + str(header),
@@ -162,7 +185,10 @@ subprocess.run([
     "-V", "mainfont=Noto Serif CJK SC", "-V", "sansfont=Noto Sans CJK SC",
     "-V", "monofont=DejaVu Sans Mono", "-V", "linestretch=1.22",
     "-V", "colorlinks=true", "-V", "linkcolor=studygreen",
-    "-o", str(output),
+    "-o", str(temporary_output),
 ], check=True)
+temporary_copy=output.with_suffix('.pdf.tmp')
+temporary_copy.write_bytes(temporary_output.read_bytes())
+os.replace(temporary_copy,output)
 print(json.dumps({"output": str(output), "bytes": output.stat().st_size,
                   "textbook_groups": 40, "training": 32}, ensure_ascii=False))

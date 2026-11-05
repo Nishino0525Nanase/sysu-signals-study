@@ -1,0 +1,2396 @@
+{
+  "settings": {
+    "dpiTarget": 300,
+    "maxEdge": 3000,
+    "avoidRasterUpscale": true,
+    "webpQuality": 96,
+    "thumbnailMaxEdge": 600,
+    "contrast": 1.025,
+    "unsharp": {
+      "radius": 0.55,
+      "percent": 65,
+      "threshold": 3
+    }
+  },
+  "count": 65,
+  "oldTotalBytes": 6334482,
+  "fullTotalBytes": 16347186,
+  "thumbnailTotalBytes": 1412160,
+  "pages": [
+    {
+      "file": "2008_1.webp",
+      "year": 2008,
+      "pdfPage": 1,
+      "sourcePdf": "2008年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        1428.0,
+        2013.0
+      ],
+      "oldDimensions": [
+        2000,
+        2819
+      ],
+      "oldBytes": 175122,
+      "dimensions": [
+        1428,
+        2013
+      ],
+      "bytes": 264320,
+      "sha256": "4bcd790d3988e087df9f043a58f47abc893b545cffd87d3693e14319d75ffb95",
+      "thumbnail": "thumbs/2008_1.webp",
+      "thumbnailDimensions": [
+        426,
+        600
+      ],
+      "thumbnailBytes": 28110,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1428,
+        2013
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2008_2.webp",
+      "year": 2008,
+      "pdfPage": 2,
+      "sourcePdf": "2008年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        1428.0,
+        2013.0
+      ],
+      "oldDimensions": [
+        2000,
+        2819
+      ],
+      "oldBytes": 123928,
+      "dimensions": [
+        1428,
+        2013
+      ],
+      "bytes": 188662,
+      "sha256": "271e34da7332ccf1608aeb54d9d4227efc09477b793ec080c1e123eacd9db8b8",
+      "thumbnail": "thumbs/2008_2.webp",
+      "thumbnailDimensions": [
+        426,
+        600
+      ],
+      "thumbnailBytes": 18604,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1428,
+        2013
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2008_3.webp",
+      "year": 2008,
+      "pdfPage": 3,
+      "sourcePdf": "2008年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        1428.0,
+        2013.0
+      ],
+      "oldDimensions": [
+        2000,
+        2819
+      ],
+      "oldBytes": 59002,
+      "dimensions": [
+        1428,
+        2013
+      ],
+      "bytes": 85084,
+      "sha256": "db7b2f42396c46bbf1769fc52749433cffce990243ff7bedb66bd9c261407bf0",
+      "thumbnail": "thumbs/2008_3.webp",
+      "thumbnailDimensions": [
+        426,
+        600
+      ],
+      "thumbnailBytes": 8592,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1428,
+        2013
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2009_1.webp",
+      "year": 2009,
+      "pdfPage": 1,
+      "sourcePdf": "2009年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        2480.0,
+        3507.0
+      ],
+      "oldDimensions": [
+        2000,
+        2829
+      ],
+      "oldBytes": 265180,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 551832,
+      "sha256": "8542d561bedf981bbeb1097de633d6b6547d6ffa63599fc7bf0888bca1390a5e",
+      "thumbnail": "thumbs/2009_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 27064,
+      "effectiveRenderDpi": 61.6,
+      "renderScale": 0.85543,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2480,
+        3507
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2009_2.webp",
+      "year": 2009,
+      "pdfPage": 2,
+      "sourcePdf": "2009年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        2480.0,
+        3507.0
+      ],
+      "oldDimensions": [
+        2000,
+        2829
+      ],
+      "oldBytes": 160908,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 361824,
+      "sha256": "74892933b5265a518658fe1415edb6ffc273284f17336ab5cf18a2eb5796079f",
+      "thumbnail": "thumbs/2009_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 17266,
+      "effectiveRenderDpi": 61.6,
+      "renderScale": 0.85543,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2480,
+        3507
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2009_3.webp",
+      "year": 2009,
+      "pdfPage": 3,
+      "sourcePdf": "2009年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        2480.0,
+        3507.0
+      ],
+      "oldDimensions": [
+        2000,
+        2829
+      ],
+      "oldBytes": 187518,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 423810,
+      "sha256": "510b2a6b24248d506037eae07f1e648ccfac16d6fd69a1800d098ef198d5639e",
+      "thumbnail": "thumbs/2009_3.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 19198,
+      "effectiveRenderDpi": 61.6,
+      "renderScale": 0.85543,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2480,
+        3507
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2010_1.webp",
+      "year": 2010,
+      "pdfPage": 1,
+      "sourcePdf": "2010年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.2,
+        841.68
+      ],
+      "oldDimensions": [
+        953,
+        1347
+      ],
+      "oldBytes": 92778,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 379678,
+      "sha256": "a46a7e190c72e89f09962c786cf222ec32dacc639b01bc74d924e7a343750a8f",
+      "thumbnail": "thumbs/2010_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 28748,
+      "effectiveRenderDpi": 256.6,
+      "renderScale": 3.5643,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2480,
+        3507
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 4.16667
+    },
+    {
+      "file": "2010_2.webp",
+      "year": 2010,
+      "pdfPage": 2,
+      "sourcePdf": "2010年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.2,
+        841.68
+      ],
+      "oldDimensions": [
+        953,
+        1347
+      ],
+      "oldBytes": 52742,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 214882,
+      "sha256": "6b3bbe18d913e51c3a96223163ae040f8397e9df5a2527d06ac5ca90bd9ffc7f",
+      "thumbnail": "thumbs/2010_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 17038,
+      "effectiveRenderDpi": 256.6,
+      "renderScale": 3.5643,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2480,
+        3507
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 4.16667
+    },
+    {
+      "file": "2010_3.webp",
+      "year": 2010,
+      "pdfPage": 3,
+      "sourcePdf": "2010年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.2,
+        841.68
+      ],
+      "oldDimensions": [
+        953,
+        1347
+      ],
+      "oldBytes": 56062,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 228362,
+      "sha256": "fea58d1c1a1c48e07f83ba81fc6c25e87abf9ad02cd00900ade5496f78bd1e4f",
+      "thumbnail": "thumbs/2010_3.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 18270,
+      "effectiveRenderDpi": 256.6,
+      "renderScale": 3.5643,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2480,
+        3507
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 4.16667
+    },
+    {
+      "file": "2010_4.webp",
+      "year": 2010,
+      "pdfPage": 4,
+      "sourcePdf": "2010年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.2,
+        841.68
+      ],
+      "oldDimensions": [
+        953,
+        1347
+      ],
+      "oldBytes": 31028,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 129472,
+      "sha256": "8aab6ebb9d3cc79f82803ef27bf1c8573cec3df525375a3a13fab75b0c753b9a",
+      "thumbnail": "thumbs/2010_4.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 9276,
+      "effectiveRenderDpi": 256.6,
+      "renderScale": 3.5643,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2480,
+        3507
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 4.16667
+    },
+    {
+      "file": "2011_1.webp",
+      "year": 2011,
+      "pdfPage": 1,
+      "sourcePdf": "2011年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        552.6,
+        765.0
+      ],
+      "oldDimensions": [
+        995,
+        1377
+      ],
+      "oldBytes": 69574,
+      "dimensions": [
+        1535,
+        2125
+      ],
+      "bytes": 194336,
+      "sha256": "4cc5bb32865aee2afc71a913ee25cb2cfd2d3c1bf77aecf9951d84061b7389ce",
+      "thumbnail": "thumbs/2011_1.webp",
+      "thumbnailDimensions": [
+        433,
+        600
+      ],
+      "thumbnailBytes": 22154,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2011_2.webp",
+      "year": 2011,
+      "pdfPage": 2,
+      "sourcePdf": "2011年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        552.6,
+        765.0
+      ],
+      "oldDimensions": [
+        995,
+        1377
+      ],
+      "oldBytes": 75682,
+      "dimensions": [
+        1535,
+        2125
+      ],
+      "bytes": 207588,
+      "sha256": "48a3bef6de43e8596a11997855c47af329613de3f78c802864b55658ca4acf33",
+      "thumbnail": "thumbs/2011_2.webp",
+      "thumbnailDimensions": [
+        433,
+        600
+      ],
+      "thumbnailBytes": 22644,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2011_3.webp",
+      "year": 2011,
+      "pdfPage": 3,
+      "sourcePdf": "2011年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        552.6,
+        765.0
+      ],
+      "oldDimensions": [
+        995,
+        1377
+      ],
+      "oldBytes": 54118,
+      "dimensions": [
+        1535,
+        2125
+      ],
+      "bytes": 168474,
+      "sha256": "d7146e11b89bc11869cda1e20c38eabf7ebd01906509ba8378af951bc49dd44a",
+      "thumbnail": "thumbs/2011_3.webp",
+      "thumbnailDimensions": [
+        433,
+        600
+      ],
+      "thumbnailBytes": 16542,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2012_1.webp",
+      "year": 2012,
+      "pdfPage": 1,
+      "sourcePdf": "2012年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        552.6,
+        765.0
+      ],
+      "oldDimensions": [
+        885,
+        1224
+      ],
+      "oldBytes": 95682,
+      "dimensions": [
+        1535,
+        2125
+      ],
+      "bytes": 324004,
+      "sha256": "42d05e23fca5391cd003f099655cb0431ed27e6576aff7a677f9ef392efba20c",
+      "thumbnail": "thumbs/2012_1.webp",
+      "thumbnailDimensions": [
+        433,
+        600
+      ],
+      "thumbnailBytes": 35478,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2012_2.webp",
+      "year": 2012,
+      "pdfPage": 2,
+      "sourcePdf": "2012年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        609.29,
+        765.0
+      ],
+      "oldDimensions": [
+        975,
+        1224
+      ],
+      "oldBytes": 72552,
+      "dimensions": [
+        1693,
+        2125
+      ],
+      "bytes": 236036,
+      "sha256": "79cb991eb450f38498fa6661dff7b4aeda7314af8b19af79b1878e2ef4083160",
+      "thumbnail": "thumbs/2012_2.webp",
+      "thumbnailDimensions": [
+        478,
+        600
+      ],
+      "thumbnailBytes": 26906,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2012_3.webp",
+      "year": 2012,
+      "pdfPage": 3,
+      "sourcePdf": "2012年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        552.6,
+        765.0
+      ],
+      "oldDimensions": [
+        885,
+        1224
+      ],
+      "oldBytes": 67658,
+      "dimensions": [
+        1535,
+        2125
+      ],
+      "bytes": 232342,
+      "sha256": "cfde6bf0aacddafa014ca7f7a92e804a218aa9676ec5a802f309adce08e7050b",
+      "thumbnail": "thumbs/2012_3.webp",
+      "thumbnailDimensions": [
+        433,
+        600
+      ],
+      "thumbnailBytes": 25500,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2012_4.webp",
+      "year": 2012,
+      "pdfPage": 4,
+      "sourcePdf": "2012年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        609.29,
+        765.0
+      ],
+      "oldDimensions": [
+        975,
+        1224
+      ],
+      "oldBytes": 65644,
+      "dimensions": [
+        1693,
+        2125
+      ],
+      "bytes": 213084,
+      "sha256": "9080f1fca89d26af6fcae55cbe354bb73c26cff04e13b25267c1a8a3fa72961a",
+      "thumbnail": "thumbs/2012_4.webp",
+      "thumbnailDimensions": [
+        478,
+        600
+      ],
+      "thumbnailBytes": 23324,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2013_1.webp",
+      "year": 2013,
+      "pdfPage": 1,
+      "sourcePdf": "2013年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.32,
+        841.92
+      ],
+      "oldDimensions": [
+        1072,
+        1516
+      ],
+      "oldBytes": 97724,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 325136,
+      "sha256": "e3122e191e8aa6a6f0a840d3d6eab55fa1d766b1d8596363f6a5353b41b55926",
+      "thumbnail": "thumbs/2013_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 25750,
+      "effectiveRenderDpi": 256.6,
+      "renderScale": 3.56328,
+      "sourceKind": "vector_or_mixed",
+      "note": "原页矢量/文字可在目标尺寸重渲染。"
+    },
+    {
+      "file": "2013_2.webp",
+      "year": 2013,
+      "pdfPage": 2,
+      "sourcePdf": "2013年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.32,
+        841.92
+      ],
+      "oldDimensions": [
+        1072,
+        1516
+      ],
+      "oldBytes": 74374,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 247206,
+      "sha256": "4300da9a3532bca1c5aef99b324e2db36acf3013201ad0a88c1974fc1e679743",
+      "thumbnail": "thumbs/2013_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 19100,
+      "effectiveRenderDpi": 256.6,
+      "renderScale": 3.56328,
+      "sourceKind": "vector_or_mixed",
+      "note": "原页矢量/文字可在目标尺寸重渲染。"
+    },
+    {
+      "file": "2013_3.webp",
+      "year": 2013,
+      "pdfPage": 3,
+      "sourcePdf": "2013年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.32,
+        841.92
+      ],
+      "oldDimensions": [
+        1072,
+        1516
+      ],
+      "oldBytes": 81496,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 272958,
+      "sha256": "3a4ee62dfd895d1ff86d6c80f49c7e8c73d94f2fa9ed7297dd11d2b0a2f803ba",
+      "thumbnail": "thumbs/2013_3.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 21042,
+      "effectiveRenderDpi": 256.6,
+      "renderScale": 3.56328,
+      "sourceKind": "vector_or_mixed",
+      "note": "原页矢量/文字可在目标尺寸重渲染。"
+    },
+    {
+      "file": "2013_4.webp",
+      "year": 2013,
+      "pdfPage": 4,
+      "sourcePdf": "2013年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.32,
+        841.92
+      ],
+      "oldDimensions": [
+        1072,
+        1516
+      ],
+      "oldBytes": 87550,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 296786,
+      "sha256": "d7b2c1f43a00ad499178d30225d5cb4e7e7e0a7aa4f225659695171cbe2ba5e1",
+      "thumbnail": "thumbs/2013_4.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 21084,
+      "effectiveRenderDpi": 256.6,
+      "renderScale": 3.56328,
+      "sourceKind": "vector_or_mixed",
+      "note": "原页矢量/文字可在目标尺寸重渲染。"
+    },
+    {
+      "file": "2013_5.webp",
+      "year": 2013,
+      "pdfPage": 5,
+      "sourcePdf": "2013年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.32,
+        841.92
+      ],
+      "oldDimensions": [
+        1072,
+        1516
+      ],
+      "oldBytes": 28558,
+      "dimensions": [
+        2122,
+        3000
+      ],
+      "bytes": 95900,
+      "sha256": "6a39611954075bd62f227a21af69e2429a144e83d92597aa805c1453792004be",
+      "thumbnail": "thumbs/2013_5.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 7186,
+      "effectiveRenderDpi": 256.6,
+      "renderScale": 3.56328,
+      "sourceKind": "vector_or_mixed",
+      "note": "原页矢量/文字可在目标尺寸重渲染。"
+    },
+    {
+      "file": "2014_1.webp",
+      "year": 2014,
+      "pdfPage": 1,
+      "sourcePdf": "2014年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        552.6,
+        765.0
+      ],
+      "oldDimensions": [
+        885,
+        1224
+      ],
+      "oldBytes": 74678,
+      "dimensions": [
+        1535,
+        2125
+      ],
+      "bytes": 235922,
+      "sha256": "bcc97bb08e3bafd98b73f4b623fc674e65ff97240f824d0bb3ac28ed6564ff0c",
+      "thumbnail": "thumbs/2014_1.webp",
+      "thumbnailDimensions": [
+        433,
+        600
+      ],
+      "thumbnailBytes": 28406,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2014_2.webp",
+      "year": 2014,
+      "pdfPage": 2,
+      "sourcePdf": "2014年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        586.61,
+        765.0
+      ],
+      "oldDimensions": [
+        939,
+        1224
+      ],
+      "oldBytes": 72410,
+      "dimensions": [
+        1630,
+        2125
+      ],
+      "bytes": 228158,
+      "sha256": "5536ed5a76376ee818adcc29d609e02fc1a6273afd5d333b083939346a511fb1",
+      "thumbnail": "thumbs/2014_2.webp",
+      "thumbnailDimensions": [
+        460,
+        600
+      ],
+      "thumbnailBytes": 27020,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2014_3.webp",
+      "year": 2014,
+      "pdfPage": 3,
+      "sourcePdf": "2014年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        552.6,
+        765.0
+      ],
+      "oldDimensions": [
+        885,
+        1224
+      ],
+      "oldBytes": 95530,
+      "dimensions": [
+        1535,
+        2125
+      ],
+      "bytes": 311174,
+      "sha256": "49dc116f76b497fef1f20626c4256fc92278333ef9feb70c646845cfe0c17142",
+      "thumbnail": "thumbs/2014_3.webp",
+      "thumbnailDimensions": [
+        433,
+        600
+      ],
+      "thumbnailBytes": 35010,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        3070,
+        2125
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2015_1.webp",
+      "year": 2015,
+      "pdfPage": 1,
+      "sourcePdf": "2015年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.08,
+        841.68
+      ],
+      "oldDimensions": [
+        1072,
+        1516
+      ],
+      "oldBytes": 127558,
+      "dimensions": [
+        1653,
+        2338
+      ],
+      "bytes": 346106,
+      "sha256": "9a92efe448e147a549325592ab24f0e5a9d167a425ca7041e5c1d088cd394850",
+      "thumbnail": "thumbs/2015_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 34850,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1653,
+        2338
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2015_2.webp",
+      "year": 2015,
+      "pdfPage": 2,
+      "sourcePdf": "2015年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.08,
+        841.68
+      ],
+      "oldDimensions": [
+        1072,
+        1516
+      ],
+      "oldBytes": 110758,
+      "dimensions": [
+        1653,
+        2338
+      ],
+      "bytes": 299214,
+      "sha256": "47eeb779f00b0bc15356be22fe477ad98fc0a300a5738827b1cbeb02d0083995",
+      "thumbnail": "thumbs/2015_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 29196,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1653,
+        2338
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2016_1.webp",
+      "year": 2016,
+      "pdfPage": 1,
+      "sourcePdf": "2016年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.08,
+        841.68
+      ],
+      "oldDimensions": [
+        953,
+        1347
+      ],
+      "oldBytes": 69988,
+      "dimensions": [
+        1653,
+        2338
+      ],
+      "bytes": 225694,
+      "sha256": "4386fa1bf181c6a61779bf85797f5ac4346b4f06ee974f85d0f0a616f7d09c4e",
+      "thumbnail": "thumbs/2016_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 23978,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1653,
+        2338
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2016_2.webp",
+      "year": 2016,
+      "pdfPage": 2,
+      "sourcePdf": "2016年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.08,
+        841.68
+      ],
+      "oldDimensions": [
+        953,
+        1347
+      ],
+      "oldBytes": 56350,
+      "dimensions": [
+        1653,
+        2338
+      ],
+      "bytes": 192464,
+      "sha256": "b16704cd080e41f12e7a7f4e5b45a5c635ad4b0482d0899d87491d9e5cae0504",
+      "thumbnail": "thumbs/2016_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 18792,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1653,
+        2338
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2016_3.webp",
+      "year": 2016,
+      "pdfPage": 3,
+      "sourcePdf": "2016年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.08,
+        841.68
+      ],
+      "oldDimensions": [
+        953,
+        1347
+      ],
+      "oldBytes": 62804,
+      "dimensions": [
+        1653,
+        2338
+      ],
+      "bytes": 216122,
+      "sha256": "77934f7272b0c5bb23721301be951418f0c07d080cc60e327ae7d33d086819a2",
+      "thumbnail": "thumbs/2016_3.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 19526,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1653,
+        2338
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2016_4.webp",
+      "year": 2016,
+      "pdfPage": 4,
+      "sourcePdf": "2016年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.08,
+        841.68
+      ],
+      "oldDimensions": [
+        953,
+        1347
+      ],
+      "oldBytes": 2442,
+      "dimensions": [
+        1653,
+        2338
+      ],
+      "bytes": 7402,
+      "sha256": "f0b444a163eb25a7f7da52beb36b6905d9f0bf31b93f6053bf888dfd3fe7ab11",
+      "thumbnail": "thumbs/2016_4.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 552,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77778,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1653,
+        2338
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77778
+    },
+    {
+      "file": "2017_1.webp",
+      "year": 2017,
+      "pdfPage": 1,
+      "sourcePdf": "2017年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        597.0,
+        839.0
+      ],
+      "oldDimensions": [
+        1075,
+        1511
+      ],
+      "oldBytes": 98300,
+      "dimensions": [
+        1659,
+        2331
+      ],
+      "bytes": 315736,
+      "sha256": "f0a2037bfb0586bf4388e9e9a1ac5cb28748fde388b5abf5fd620e2e42456d2b",
+      "thumbnail": "thumbs/2017_1.webp",
+      "thumbnailDimensions": [
+        427,
+        600
+      ],
+      "thumbnailBytes": 27296,
+      "effectiveRenderDpi": 200.0,
+      "renderScale": 2.77831,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1659,
+        2331
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77831
+    },
+    {
+      "file": "2017_2.webp",
+      "year": 2017,
+      "pdfPage": 2,
+      "sourcePdf": "2017年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        596.0,
+        839.0
+      ],
+      "oldDimensions": [
+        1073,
+        1511
+      ],
+      "oldBytes": 233990,
+      "dimensions": [
+        1657,
+        2332
+      ],
+      "bytes": 1253876,
+      "sha256": "c3c53155228a405de3e0c46f5f7cda13438e07004472376e78dfcf2cfd76b4eb",
+      "thumbnail": "thumbs/2017_2.webp",
+      "thumbnailDimensions": [
+        426,
+        600
+      ],
+      "thumbnailBytes": 41804,
+      "effectiveRenderDpi": 200.1,
+      "renderScale": 2.7795,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1658,
+        2332
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.7795
+    },
+    {
+      "file": "2017_3.webp",
+      "year": 2017,
+      "pdfPage": 3,
+      "sourcePdf": "2017年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        598.0,
+        840.0
+      ],
+      "oldDimensions": [
+        1077,
+        1512
+      ],
+      "oldBytes": 82502,
+      "dimensions": [
+        1662,
+        2335
+      ],
+      "bytes": 278870,
+      "sha256": "55abf6f074db95f9056a05c16c972d9d82256d5c224dc2cf3ebdfef5ac9e7c9a",
+      "thumbnail": "thumbs/2017_3.webp",
+      "thumbnailDimensions": [
+        427,
+        600
+      ],
+      "thumbnailBytes": 22614,
+      "effectiveRenderDpi": 200.1,
+      "renderScale": 2.77926,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1662,
+        2336
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77926
+    },
+    {
+      "file": "2017_4.webp",
+      "year": 2017,
+      "pdfPage": 4,
+      "sourcePdf": "2017年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        598.0,
+        840.0
+      ],
+      "oldDimensions": [
+        1077,
+        1512
+      ],
+      "oldBytes": 143398,
+      "dimensions": [
+        1662,
+        2335
+      ],
+      "bytes": 876404,
+      "sha256": "a687529ecab6d9d13cbca53fc29cab9267264f5dac4b59d445c04453d6aeb370",
+      "thumbnail": "thumbs/2017_4.webp",
+      "thumbnailDimensions": [
+        427,
+        600
+      ],
+      "thumbnailBytes": 22786,
+      "effectiveRenderDpi": 200.1,
+      "renderScale": 2.77926,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1662,
+        2335
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 2.77926
+    },
+    {
+      "file": "2018_1.webp",
+      "year": 2018,
+      "pdfPage": 1,
+      "sourcePdf": "2018年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        596.0,
+        850.0
+      ],
+      "oldDimensions": [
+        1073,
+        1530
+      ],
+      "oldBytes": 102018,
+      "dimensions": [
+        2104,
+        3000
+      ],
+      "bytes": 441654,
+      "sha256": "dafd3752c32b9fcd3b548e7921886d268e9d449adb637de6539adb366bf991b7",
+      "thumbnail": "thumbs/2018_1.webp",
+      "thumbnailDimensions": [
+        421,
+        600
+      ],
+      "thumbnailBytes": 27728,
+      "effectiveRenderDpi": 254.1,
+      "renderScale": 3.52941,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2484,
+        3545
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 4.16779
+    },
+    {
+      "file": "2018_2.webp",
+      "year": 2018,
+      "pdfPage": 2,
+      "sourcePdf": "2018年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.0,
+        849.0
+      ],
+      "oldDimensions": [
+        1071,
+        1529
+      ],
+      "oldBytes": 106394,
+      "dimensions": [
+        2103,
+        3000
+      ],
+      "bytes": 496478,
+      "sha256": "10467831e8d1038e3127e70c7ed13eed29246e35c65e250ffad949f9b3880ce0",
+      "thumbnail": "thumbs/2018_2.webp",
+      "thumbnailDimensions": [
+        421,
+        600
+      ],
+      "thumbnailBytes": 28392,
+      "effectiveRenderDpi": 254.4,
+      "renderScale": 3.53357,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2483,
+        3538
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 4.16726
+    },
+    {
+      "file": "2018_3.webp",
+      "year": 2018,
+      "pdfPage": 3,
+      "sourcePdf": "2018年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        596.0,
+        850.0
+      ],
+      "oldDimensions": [
+        1073,
+        1530
+      ],
+      "oldBytes": 108098,
+      "dimensions": [
+        2104,
+        3000
+      ],
+      "bytes": 463910,
+      "sha256": "878bb431d448d49227d0d29e1555f2e3ad67f7ed7e8aaebbabdd60786c6fde97",
+      "thumbnail": "thumbs/2018_3.webp",
+      "thumbnailDimensions": [
+        421,
+        600
+      ],
+      "thumbnailBytes": 27810,
+      "effectiveRenderDpi": 254.1,
+      "renderScale": 3.52941,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        2485,
+        3545
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 4.16946
+    },
+    {
+      "file": "2019_1.webp",
+      "year": 2019,
+      "pdfPage": 1,
+      "sourcePdf": "2019年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.44,
+        836.28
+      ],
+      "oldDimensions": [
+        953,
+        1339
+      ],
+      "oldBytes": 85406,
+      "dimensions": [
+        2137,
+        3000
+      ],
+      "bytes": 331528,
+      "sha256": "65b660657ec8f82912320db5596fea3e71bcbe12511da9b841effd0a6648f0bc",
+      "thumbnail": "thumbs/2019_1.webp",
+      "thumbnailDimensions": [
+        427,
+        600
+      ],
+      "thumbnailBytes": 29174,
+      "effectiveRenderDpi": 258.3,
+      "renderScale": 3.58732,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        3308,
+        4646
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 5.55556
+    },
+    {
+      "file": "2019_2.webp",
+      "year": 2019,
+      "pdfPage": 2,
+      "sourcePdf": "2019年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.8,
+        838.08
+      ],
+      "oldDimensions": [
+        954,
+        1341
+      ],
+      "oldBytes": 89494,
+      "dimensions": [
+        2133,
+        3000
+      ],
+      "bytes": 353004,
+      "sha256": "a4ea8911a8a70953ac533388a0e0b92446ca64248a43889a2728f04cbd50d7c6",
+      "thumbnail": "thumbs/2019_2.webp",
+      "thumbnailDimensions": [
+        427,
+        600
+      ],
+      "thumbnailBytes": 29930,
+      "effectiveRenderDpi": 257.7,
+      "renderScale": 3.57961,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        3310,
+        4656
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 5.55556
+    },
+    {
+      "file": "2019_3.webp",
+      "year": 2019,
+      "pdfPage": 3,
+      "sourcePdf": "2019年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.8,
+        839.52
+      ],
+      "oldDimensions": [
+        954,
+        1344
+      ],
+      "oldBytes": 68770,
+      "dimensions": [
+        2130,
+        3000
+      ],
+      "bytes": 269090,
+      "sha256": "3f7183f70e9776b2556075a203b934ae5f2dced7e4529a686d63c9b60f83aa9c",
+      "thumbnail": "thumbs/2019_3.webp",
+      "thumbnailDimensions": [
+        426,
+        600
+      ],
+      "thumbnailBytes": 23932,
+      "effectiveRenderDpi": 257.3,
+      "renderScale": 3.57347,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        3310,
+        4664
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 5.55556
+    },
+    {
+      "file": "2019_4.webp",
+      "year": 2019,
+      "pdfPage": 4,
+      "sourcePdf": "2019年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        596.16,
+        839.52
+      ],
+      "oldDimensions": [
+        954,
+        1344
+      ],
+      "oldBytes": 33524,
+      "dimensions": [
+        2131,
+        3000
+      ],
+      "bytes": 126008,
+      "sha256": "67c3535fcb6d2a89f871f3ff5c4d1c6bc67023c7063b2a48ae31310155ec3ffb",
+      "thumbnail": "thumbs/2019_4.webp",
+      "thumbnailDimensions": [
+        426,
+        600
+      ],
+      "thumbnailBytes": 11622,
+      "effectiveRenderDpi": 257.3,
+      "renderScale": 3.57347,
+      "sourceKind": "high_resolution_raster",
+      "note": "原始嵌图足以支持本次重渲染尺寸。",
+      "dominantEmbeddedPixels": [
+        3312,
+        4664
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 5.55556
+    },
+    {
+      "file": "2020_1.webp",
+      "year": 2020,
+      "pdfPage": 1,
+      "sourcePdf": "2020年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1721.78,
+        2434.7
+      ],
+      "oldDimensions": [
+        2000,
+        2828
+      ],
+      "oldBytes": 191590,
+      "dimensions": [
+        1722,
+        2435
+      ],
+      "bytes": 286598,
+      "sha256": "3770c42786faece2950a601dcb9c772722bf7fa76117da10a067a3ec00de618b",
+      "thumbnail": "thumbs/2020_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 24924,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.00012,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1722,
+        2435
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.00012
+    },
+    {
+      "file": "2020_2.webp",
+      "year": 2020,
+      "pdfPage": 2,
+      "sourcePdf": "2020年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1722.0,
+        2435.0
+      ],
+      "oldDimensions": [
+        2000,
+        2827
+      ],
+      "oldBytes": 165364,
+      "dimensions": [
+        1722,
+        2435
+      ],
+      "bytes": 252796,
+      "sha256": "d2bf93e36102e75be3237328923ab3c4b52f2eaa6c1bbbfcd3d3da0df16fb833",
+      "thumbnail": "thumbs/2020_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 22816,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1722,
+        2435
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2020_3.webp",
+      "year": 2020,
+      "pdfPage": 3,
+      "sourcePdf": "2020年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1789.0,
+        2344.0
+      ],
+      "oldDimensions": [
+        2000,
+        2620
+      ],
+      "oldBytes": 126626,
+      "dimensions": [
+        1789,
+        2344
+      ],
+      "bytes": 197242,
+      "sha256": "900b10da0ff94bb04249116f4a02443cdfe19e2d63601fcc23659b50c2a9524e",
+      "thumbnail": "thumbs/2020_3.webp",
+      "thumbnailDimensions": [
+        458,
+        600
+      ],
+      "thumbnailBytes": 18456,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1789,
+        2344
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2021_1.webp",
+      "year": 2021,
+      "pdfPage": 1,
+      "sourcePdf": "2021年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        1080.0,
+        1361.0
+      ],
+      "oldDimensions": [
+        1944,
+        2450
+      ],
+      "oldBytes": 63404,
+      "dimensions": [
+        1080,
+        1361
+      ],
+      "bytes": 57228,
+      "sha256": "8cd719b2807373418d9d1feccf6c7550c7cca7b3eebb453fbac20bcc990126a2",
+      "thumbnail": "thumbs/2021_1.webp",
+      "thumbnailDimensions": [
+        476,
+        600
+      ],
+      "thumbnailBytes": 13268,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1080,
+        1361
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2021_2.webp",
+      "year": 2021,
+      "pdfPage": 2,
+      "sourcePdf": "2021年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        1080.0,
+        1263.0
+      ],
+      "oldDimensions": [
+        1944,
+        2274
+      ],
+      "oldBytes": 39078,
+      "dimensions": [
+        1080,
+        1263
+      ],
+      "bytes": 33548,
+      "sha256": "4cb404705f12a1305dd7c85a605a7cf78cab7ed70b2420cdd9496cc77640868e",
+      "thumbnail": "thumbs/2021_2.webp",
+      "thumbnailDimensions": [
+        513,
+        600
+      ],
+      "thumbnailBytes": 8126,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1080,
+        1263
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2021_3.webp",
+      "year": 2021,
+      "pdfPage": 3,
+      "sourcePdf": "2021年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        1080.0,
+        1276.0
+      ],
+      "oldDimensions": null,
+      "oldBytes": 0,
+      "dimensions": [
+        1080,
+        1276
+      ],
+      "bytes": 60586,
+      "sha256": "6d836b99682bc42a0e42d41a6216be1f8016852e7cc8caaf31b94d26cb5835f9",
+      "thumbnail": "thumbs/2021_3.webp",
+      "thumbnailDimensions": [
+        508,
+        600
+      ],
+      "thumbnailBytes": 15872,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1080,
+        1276
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2021_4.webp",
+      "year": 2021,
+      "pdfPage": 4,
+      "sourcePdf": "2021年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        1080.0,
+        1316.0
+      ],
+      "oldDimensions": [
+        1944,
+        2369
+      ],
+      "oldBytes": 78324,
+      "dimensions": [
+        1080,
+        1316
+      ],
+      "bytes": 70342,
+      "sha256": "d79f9731480086f69e42d7a9f413478116085950702df23df33b309e1d5a9aec",
+      "thumbnail": "thumbs/2021_4.webp",
+      "thumbnailDimensions": [
+        492,
+        600
+      ],
+      "thumbnailBytes": 15850,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1080,
+        1316
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2022_1.webp",
+      "year": 2022,
+      "pdfPage": 1,
+      "sourcePdf": "2022年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.0,
+        842.0
+      ],
+      "oldDimensions": [
+        1071,
+        1516
+      ],
+      "oldBytes": 45008,
+      "dimensions": [
+        1080,
+        1529
+      ],
+      "bytes": 67062,
+      "sha256": "91213d44f7a468b5c870226ff061a91d0e35359a282c3d90763c24d39dcedebc",
+      "thumbnail": "thumbs/2022_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 14590,
+      "effectiveRenderDpi": 130.7,
+      "renderScale": 1.81513,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1080,
+        1528
+      ],
+      "dominantEmbeddedCoverage": 0.9998,
+      "nativePageScale": 1.81513
+    },
+    {
+      "file": "2022_2.webp",
+      "year": 2022,
+      "pdfPage": 2,
+      "sourcePdf": "2022年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.0,
+        842.0
+      ],
+      "oldDimensions": [
+        1071,
+        1516
+      ],
+      "oldBytes": 59162,
+      "dimensions": [
+        1280,
+        1812
+      ],
+      "bytes": 104478,
+      "sha256": "128f44b8c3143736f9e987869d6e0c1ac540f75e6c051dffb85f727bc6725afb",
+      "thumbnail": "thumbs/2022_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 19572,
+      "effectiveRenderDpi": 154.9,
+      "renderScale": 2.15126,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        1811
+      ],
+      "dominantEmbeddedCoverage": 0.9998,
+      "nativePageScale": 2.15126
+    },
+    {
+      "file": "2022_3.webp",
+      "year": 2022,
+      "pdfPage": 3,
+      "sourcePdf": "2022年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.0,
+        842.0
+      ],
+      "oldDimensions": [
+        1071,
+        1516
+      ],
+      "oldBytes": 56588,
+      "dimensions": [
+        1280,
+        1812
+      ],
+      "bytes": 100232,
+      "sha256": "e973a199390653b589914388d5588d309a724a18c19cd620e3a9148baea03924",
+      "thumbnail": "thumbs/2022_3.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 17882,
+      "effectiveRenderDpi": 154.9,
+      "renderScale": 2.15126,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        1811
+      ],
+      "dominantEmbeddedCoverage": 0.9998,
+      "nativePageScale": 2.15126
+    },
+    {
+      "file": "2022_4.webp",
+      "year": 2022,
+      "pdfPage": 4,
+      "sourcePdf": "2022年中山大学信号与系统考研真题.pdf",
+      "pagePoints": [
+        595.0,
+        842.0
+      ],
+      "oldDimensions": [
+        1071,
+        1516
+      ],
+      "oldBytes": 42796,
+      "dimensions": [
+        1280,
+        1812
+      ],
+      "bytes": 74828,
+      "sha256": "fc6d9985386b7bee0464e10ee0d5ac2c8b6d2139e0ab9ab09155183d2a2cd31c",
+      "thumbnail": "thumbs/2022_4.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 12762,
+      "effectiveRenderDpi": 154.9,
+      "renderScale": 2.15126,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        1811
+      ],
+      "dominantEmbeddedCoverage": 0.9998,
+      "nativePageScale": 2.15126
+    },
+    {
+      "file": "2023_1.webp",
+      "year": 2023,
+      "pdfPage": 1,
+      "sourcePdf": "2023年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1280.0,
+        1810.0
+      ],
+      "oldDimensions": [
+        2000,
+        2828
+      ],
+      "oldBytes": 215902,
+      "dimensions": [
+        1280,
+        1810
+      ],
+      "bytes": 214284,
+      "sha256": "a3906c8ae6a19886e75616e2e6e2e52477e999e774f2440f1ed57a6359ff5b2c",
+      "thumbnail": "thumbs/2023_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 29184,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        1810
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2023_2.webp",
+      "year": 2023,
+      "pdfPage": 2,
+      "sourcePdf": "2023年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1280.0,
+        1810.0
+      ],
+      "oldDimensions": [
+        2000,
+        2828
+      ],
+      "oldBytes": 185010,
+      "dimensions": [
+        1280,
+        1810
+      ],
+      "bytes": 187254,
+      "sha256": "5a003b77ab1848f99a9371eef4a525002b6853439a59827b3797984900dda178",
+      "thumbnail": "thumbs/2023_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 26502,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        1810
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2023_3.webp",
+      "year": 2023,
+      "pdfPage": 3,
+      "sourcePdf": "2023年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1280.0,
+        1810.0
+      ],
+      "oldDimensions": [
+        2000,
+        2828
+      ],
+      "oldBytes": 127442,
+      "dimensions": [
+        1280,
+        1810
+      ],
+      "bytes": 124488,
+      "sha256": "ad8285ef25a0cb6a6b553cf9ea07303c289d4a383527a69d65cc73900ac5c08e",
+      "thumbnail": "thumbs/2023_3.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 17514,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        1810
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2023_4.webp",
+      "year": 2023,
+      "pdfPage": 4,
+      "sourcePdf": "2023年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1280.0,
+        1814.05
+      ],
+      "oldDimensions": [
+        2000,
+        2835
+      ],
+      "oldBytes": 78830,
+      "dimensions": [
+        1280,
+        1815
+      ],
+      "bytes": 74830,
+      "sha256": "5e6d3e812257a0b26428986fefc9c5e5728f96a2a3be43defbc60ad589ca6f58",
+      "thumbnail": "thumbs/2023_4.webp",
+      "thumbnailDimensions": [
+        423,
+        600
+      ],
+      "thumbnailBytes": 10362,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        992
+      ],
+      "dominantEmbeddedCoverage": 0.5468,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2024_1.webp",
+      "year": 2024,
+      "pdfPage": 1,
+      "sourcePdf": "2024年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1280.0,
+        1810.0
+      ],
+      "oldDimensions": [
+        2000,
+        2828
+      ],
+      "oldBytes": 211684,
+      "dimensions": [
+        1280,
+        1810
+      ],
+      "bytes": 213190,
+      "sha256": "2f80af0cd0ca196c7a0719c1f14a151d4551eae38f50dd15aa83e3d444e051c6",
+      "thumbnail": "thumbs/2024_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 28456,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        1810
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2024_2.webp",
+      "year": 2024,
+      "pdfPage": 2,
+      "sourcePdf": "2024年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1280.0,
+        1810.0
+      ],
+      "oldDimensions": null,
+      "oldBytes": 0,
+      "dimensions": [
+        1280,
+        1810
+      ],
+      "bytes": 180198,
+      "sha256": "a240a0ffdc05b6dbc7af483bd48e54312e81996601e6c0690b3f722ea9e23610",
+      "thumbnail": "thumbs/2024_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 24416,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        1810
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2024_3.webp",
+      "year": 2024,
+      "pdfPage": 3,
+      "sourcePdf": "2024年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1280.0,
+        1592.77
+      ],
+      "oldDimensions": [
+        2000,
+        2489
+      ],
+      "oldBytes": 109356,
+      "dimensions": [
+        1280,
+        1593
+      ],
+      "bytes": 108222,
+      "sha256": "0337fc89f143f68e314e0f4da6cf7d411aa31e7a2e8d73e09e3287a161134380",
+      "thumbnail": "thumbs/2024_3.webp",
+      "thumbnailDimensions": [
+        482,
+        600
+      ],
+      "thumbnailBytes": 17070,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1280,
+        1366
+      ],
+      "dominantEmbeddedCoverage": 0.8576,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2025_1.webp",
+      "year": 2025,
+      "pdfPage": 1,
+      "sourcePdf": "2025年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1721.0,
+        2436.0
+      ],
+      "oldDimensions": [
+        2000,
+        2831
+      ],
+      "oldBytes": 242182,
+      "dimensions": [
+        1721,
+        2436
+      ],
+      "bytes": 383626,
+      "sha256": "850c33a0d063a8a7d4e7507f98911cb9488d6547ab17ca957193024563750710",
+      "thumbnail": "thumbs/2025_1.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 32258,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1721,
+        2436
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2025_2.webp",
+      "year": 2025,
+      "pdfPage": 2,
+      "sourcePdf": "2025年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1721.0,
+        2436.0
+      ],
+      "oldDimensions": [
+        2000,
+        2831
+      ],
+      "oldBytes": 152676,
+      "dimensions": [
+        1721,
+        2436
+      ],
+      "bytes": 237372,
+      "sha256": "44cd7518cde72c6d296f01017f457e85c8e5c22c498493589d6d048d83ab6bfa",
+      "thumbnail": "thumbs/2025_2.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 20540,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1721,
+        2436
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2025_4.webp",
+      "year": 2025,
+      "pdfPage": 4,
+      "sourcePdf": "2025年中山大学884信号与系统考研真题.pdf",
+      "pagePoints": [
+        1721.0,
+        2436.0
+      ],
+      "oldDimensions": [
+        2000,
+        2831
+      ],
+      "oldBytes": 130902,
+      "dimensions": [
+        1721,
+        2436
+      ],
+      "bytes": 204910,
+      "sha256": "12edb05c613a6791b8600523f0f90615d86d0972382bb451bd40d8c5f24b32d0",
+      "thumbnail": "thumbs/2025_4.webp",
+      "thumbnailDimensions": [
+        424,
+        600
+      ],
+      "thumbnailBytes": 18628,
+      "effectiveRenderDpi": 72.0,
+      "renderScale": 1.0,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1721,
+        2436
+      ],
+      "dominantEmbeddedCoverage": 1.0,
+      "nativePageScale": 1.0
+    },
+    {
+      "file": "2026_1.webp",
+      "year": 2026,
+      "pdfPage": 1,
+      "sourcePdf": "2026年中山大学信号与系统考研真题.pdf.pdf",
+      "pagePoints": [
+        612.0,
+        792.0
+      ],
+      "oldDimensions": [
+        1102,
+        1426
+      ],
+      "oldBytes": 43590,
+      "dimensions": [
+        1113,
+        1440
+      ],
+      "bytes": 76238,
+      "sha256": "08fa932a15dcbcddcdc6826475b5484fccbd0e1f99a59c898e6c03fecb360304",
+      "thumbnail": "thumbs/2026_1.webp",
+      "thumbnailDimensions": [
+        464,
+        600
+      ],
+      "thumbnailBytes": 14092,
+      "effectiveRenderDpi": 130.9,
+      "renderScale": 1.81818,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1080,
+        1440
+      ],
+      "dominantEmbeddedCoverage": 0.9706,
+      "nativePageScale": 1.81818
+    },
+    {
+      "file": "2026_2.webp",
+      "year": 2026,
+      "pdfPage": 2,
+      "sourcePdf": "2026年中山大学信号与系统考研真题.pdf.pdf",
+      "pagePoints": [
+        612.0,
+        792.0
+      ],
+      "oldDimensions": [
+        1102,
+        1426
+      ],
+      "oldBytes": 69676,
+      "dimensions": [
+        1113,
+        1440
+      ],
+      "bytes": 127044,
+      "sha256": "71e47c174a8007a9299d272dd5c2d29c57e96047d8b0a872c0bbd3dbbcb63b69",
+      "thumbnail": "thumbs/2026_2.webp",
+      "thumbnailDimensions": [
+        464,
+        600
+      ],
+      "thumbnailBytes": 19726,
+      "effectiveRenderDpi": 130.9,
+      "renderScale": 1.81818,
+      "sourceKind": "native_raster_limited",
+      "note": "原件栅格像素限制；没有放大插值或伪造细节。",
+      "dominantEmbeddedPixels": [
+        1080,
+        1440
+      ],
+      "dominantEmbeddedCoverage": 0.9706,
+      "nativePageScale": 1.81818
+    }
+  ],
+  "limitations": [
+    "源PDF缺失或被裁切的公式不能通过提高DPI恢复；不作内容补绘。",
+    "较低清的2021、2023、2024、2026等原件只能保留现有数学笔画，输出像素多不代表信息更多。",
+    "仅重渲染现有sources文件集合：2025重复第3页仍不加入；2026只取题面前两页。",
+    "页尺寸有时以像素数作为PDF点数写入，effectiveRenderDpi仅为PDF坐标比例，不能据此推断纸面扫描精度。"
+  ]
+}

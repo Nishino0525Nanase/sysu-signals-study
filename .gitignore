@@ -9,3 +9,12 @@ node_modules/
 
 __pycache__/
 *.py[cod]
+
+# Previous APKs remain available from GitHub Releases.
+dist/downloads/sysu-signals-study-v1.3.0.apk
+dist/downloads/sysu-signals-study-v1.4.0.apk
+dist/downloads/sysu-signals-study-v1.4.0.apk.sha256
+
+*.tmp
+*.tmp.*
+*.cn-tmp

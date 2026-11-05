@@ -12,9 +12,29 @@ const katex=context.module.exports;
 const qs=d.exams.flatMap(e=>e.questions),drills=d.training,book=d.oppenheim;
 const sources=d.resources||[],methods=d.alternativeMethods||[],guides=d.studyGuides||[];
 const examMethods=d.examMethods||[];
+const references=d.textbookReferences||{},bookOriginals=references.exercises||[],bookConcepts=references.concepts||[];
 assert.equal(qs.length,243);assert.equal(new Set(qs.map(q=>q.id)).size,243);assert.equal(drills.length,32);assert.equal(d.oppenheim.length,40);
 assert.equal(new Set([...qs,...drills,...book].map(q=>q.id)).size,315);
 const questionIds=new Set([...qs,...drills,...book].map(q=>q.id));
+assert.equal(bookOriginals.length,40,'Each selected exercise needs its actual original');
+assert.equal(new Set(bookOriginals.map(b=>b.id)).size,40);
+const coveredConcepts=new Set(bookConcepts.flatMap(c=>c.topicCodes));
+for(const t of d.topics)assert.ok(coveredConcepts.has(t.code),'Missing textbook basis for '+t.code);
+for(const r of [...bookOriginals,...bookConcepts,...(references.relationExcerpts||[])]){
+ assert.ok(r.excerpts?.length,r.id+' missing original image');
+ for(const f of r.excerpts){
+  assert.ok(f.pdfPage>0&&f.pdfPage<=references.book.pdfPages,r.id+' invalid PDF page');
+  assert.ok(f.width>0&&f.height>0,r.id+' invalid image dimensions');
+  for(const pathName of [f.path,f.thumb])assert.ok((await fs.stat(path.join(root,'dist',pathName))).size>100,r.id+' missing/empty original image');
+ }
+}
+for(const r of references.relations||[]){
+ assert.ok(questionIds.has(r.questionId),'Unknown matching question '+r.questionId);
+ assert.ok(['同题','结构相似','同知识点'].includes(r.kind),'Unclassified textbook match');
+ assert.ok(r.explanation&&r.scope&&r.confidence==='verified','Unverified textbook match '+r.questionId);
+ if(r.exerciseId)assert.ok(bookOriginals.some(b=>b.id===r.exerciseId),'Unknown matched textbook exercise');
+ else assert.ok((references.relationExcerpts||[]).some(b=>b.id===r.excerptId),'Missing source crop for extra matched exercise');
+}
 const sourceIds=new Set(sources.map(r=>r.id));
 const examIds=new Set(qs.map(q=>q.id)),methodIds=new Map(methods.map(m=>[m.id,m]));
 assert.equal(examMethods.length,qs.length,'Every visible exam group needs a method synthesis');
@@ -55,7 +75,7 @@ for(const g of guides){
 for(const q of [...drills,...book]){assert.ok(q.solution.length>300,q.id+' needs a worked solution');assert.ok(!/^(最终表达式|各问具体表达式).*(见|推导)/.test(q.answer),q.id+' needs a concrete answer');}
 assert.ok(!(await fs.readFile(path.join(root,'dist/app.js'),'utf8')).includes("replace(/\\$|\\\\[a-zA-Z]+/g"),'Preview must preserve TeX commands');
 let errors=[],mathCount=0,figureCount=0;
-for(const q of [...qs,...drills,...book,...methods.map(m=>({id:m.id,statement:m.why||'',firstStep:m.whenToUse||'',solution:m.derivation,answer:m.check||'',training:true})),...guides.map(g=>({id:g.id,statement:g.summary,firstStep:g.quickTakeaways.join('\n'),solution:g.body,answer:g.selfCheck.join('\n'),pitfalls:g.pitfalls,training:true})),...examMethods.map(m=>({id:m.targetId+'-methods',statement:m.scope,firstStep:m.recommended.why,solution:m.recommended.steps.join('\n')+'\n'+(m.alternatives||[]).map(a=>a.whenToUse+'\n'+a.steps.join('\n')).join('\n'),answer:m.comparison,training:true}))]){
+for(const q of [...qs,...drills,...book,...methods.map(m=>({id:m.id,statement:m.why||'',firstStep:m.whenToUse||'',solution:m.derivation,answer:m.check||'',training:true})),...guides.map(g=>({id:g.id,statement:g.summary,firstStep:g.quickTakeaways.join('\n'),solution:g.body,answer:g.selfCheck.join('\n'),pitfalls:g.pitfalls,training:true})),...examMethods.map(m=>({id:m.targetId+'-methods',statement:m.scope,firstStep:m.recommended.why,solution:m.recommended.steps.join('\n')+'\n'+(m.alternatives||[]).map(a=>a.whenToUse+'\n'+a.steps.join('\n')).join('\n'),answer:m.comparison,training:true})),...bookConcepts.map(c=>({id:c.id,statement:c.summary,firstStep:c.coverageNote||'',solution:'',answer:'',training:true})),...(references.relations||[]).map((r,i)=>({id:'book-relation-'+i,statement:r.scope,firstStep:'',solution:r.explanation,answer:'',training:true}))]){
  for(const field of ['statement','firstStep','solution','answer',...(q.pitfalls||[]).map((_,i)=>'pitfall'+i)]){
   const value=field.startsWith('pitfall')?q.pitfalls[+field.slice(7)]:q[field];
   assert.equal(typeof value,'string',q.id+' '+field);
@@ -65,9 +85,9 @@ for(const q of [...qs,...drills,...book,...methods.map(m=>({id:m.id,statement:m.
   }
  }
  for(const f of q.figures||[]){let name=typeof f==='string'?f:f.path||f.file||f.src;assert.ok(name,q.id);await fs.access(path.join(root,'dist/assets',path.basename(name)));figureCount++;}
- if(!q.training&&!q.textbook)for(const p of q.sourcePages||[])await fs.access(path.join(root,`dist/sources/${q.year}_${p}.webp`));
+ if(!q.training&&!q.textbook)for(const p of q.sourcePages||[])for(const suffix of ['','-thumb'])assert.ok((await fs.stat(path.join(root,`dist/sources/${q.year}_${p}${suffix}.webp`))).size>100,'Empty original page '+q.year+' '+p);
 }
 for(const c of d.chapters){let list=qs.filter(q=>q.chapters.includes(c.chapter));assert.equal(list.length,c.count,c.chapter);assert.equal(new Set(list.map(q=>q.year)).size,c.year_count,c.chapter);}
 await fs.writeFile(path.join(root,'content/math-check.json'),JSON.stringify(errors,null,2));
-console.log(JSON.stringify({questions:qs.length,examMethodSyntheses:examMethods.length,newIndependentAlternatives:examMethods.reduce((n,m)=>n+(m.alternatives||[]).filter(a=>a.kind==='另一解法').length,0),training:drills.length,textbookGroups:book.length,alternativeMethods:methods.length,courseDigests:guides.length,courseSources:sources.length,formulaExpressions:mathCount,figureReferences:figureCount,formulaErrors:errors.length,examples:errors.slice(0,12)}));
+console.log(JSON.stringify({questions:qs.length,examMethodSyntheses:examMethods.length,training:drills.length,textbookGroups:book.length,textbookOriginals:bookOriginals.length,conceptCards:bookConcepts.length,topicCoverage:coveredConcepts.size,textbookRelations:references.relations?.length,alternativeMethods:methods.length,courseDigests:guides.length,courseSources:sources.length,formulaExpressions:mathCount,figureReferences:figureCount,formulaErrors:errors.length,examples:errors.slice(0,12)}));
 if(errors.length)process.exitCode=1;

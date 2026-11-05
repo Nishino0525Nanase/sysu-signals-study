@@ -224,7 +224,7 @@ def draw_enhanced_e():
     tri=lambda z:np.maximum(1-np.abs(z),0)
     l=tri(w-delta)/4;r=tri(w+delta)/4;s=l+r
     fig,axs=plt.subplots(2,1,figsize=(10.5,6.5),sharex=True,constrained_layout=True)
-    axs[0].plot(w,l,color=green,lw=2,label=r'右移分量 $X(j(\omega-\Delta\omega))/4$');axs[0].plot(w,r,color=amber,lw=2,label=r'左移分量 $X(j(\omega+\Delta\omega))/4$');axs[0].set_ylabel('移频分量');axs[0].legend(frameon=False,fontsize=10);axs[0].set_title(r'O32 / 8.23：两份移频频谱相加 ($\omega_M=1,\ |\Delta\omega|=0.3$)',loc='left',fontsize=12)
+    axs[0].plot(w,l,color=green,lw=2,label=r'右移分量 $X(j(\omega-\Delta\omega))/4$');axs[0].plot(w,r,color=amber,lw=2,label=r'左移分量 $X(j(\omega+\Delta\omega))/4$');axs[0].set_ylabel('移频分量');axs[0].legend(frameon=False,fontsize=10);axs[0].set_title(r'O32单位增益变式（原题增益2）：两份移频谱相加 ($\omega_M=1,\ |\Delta\omega|=0.3$)',loc='left',fontsize=12)
     axs[1].plot(w,s,color=green,lw=2.5);axs[1].fill_between(w,s,color=green,alpha=.17);axs[1].set_ylabel(r'输出频谱 $X_{out}(j\omega)$');axs[1].set_xlabel(r'归一化角频率 $\omega/\omega_M$')
     axs[1].annotate(r'中央平台： $\frac{1}{2}(1-d/\omega_M)=0.35$',xy=(0,.35),xytext=(.37,.48),arrowprops={'arrowstyle':'->','color':green},fontsize=10)
     for ax in axs:
