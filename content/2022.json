@@ -1,0 +1,193 @@
+{
+  "year": 2022,
+  "note": "原图共4页，覆盖全部可见10组大题；为匹配索引，将第二题两小问独立成条，共11条。第五题保留未指定的ω0并讨论共振，第九题说明识别H(s)所用LTI假设。",
+  "questions": [
+    {
+      "ref": "一",
+      "title": "固定单边抽样时刻的系统性质",
+      "statement": "$y(t)=x(t)\\sum_{k=0}^{\\infty}\\delta(t-k)$。判断线性、时不变、可逆、记忆及因果性。输入取可在抽样点取值的一般连续时间信号。",
+      "firstStep": "写成 $y(t)=\\sum_{k\\ge0}x(k)\\delta(t-k)$，区分“仅依赖当下输入”与“固定抽样时钟”。",
+      "solution": "固定函数（或分布）相乘满足叠加：$T\\{ax_1+bx_2\\}=aT\\{x_1\\}+bT\\{x_2\\}$，故**线性**。\n\n**时变。** 对延时 $t_0$ 的输入，输出为 $\\sum_{k\\ge0}x(k-t_0)\\delta(t-k)$；原输出延时则为 $\\sum_{k\\ge0}x(k)\\delta(t-t_0-k)$。冲激位置一般不同。连整数延时也会受到单边起点0的影响。\n\n**不可逆。** 样点以外的信息丢失。例如零信号与 $x(t)=\\sin\\pi t$ 都得到零输出，故不同输入不能由输出区分。\n\n**无记忆。** 每个时刻的输出只使用同一时刻的输入值；在冲激时刻使用 $x(k)$，不使用其它时刻值。\n\n**因果。** 无须未来输入，当前及过去输入已经决定当前输出。理想冲激抽样不适合把普通函数的输出幅值界直接代入稳定性定义，本题也未要求稳定性。",
+      "answer": "线性、时变、不可逆、无记忆、因果。",
+      "pitfalls": [
+        "固定抽样乘法是无记忆，但不是时不变。",
+        "不可逆要给出不同输入产生相同输出的例子。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "二(1)",
+      "title": "右边指数卷积的支撑先行",
+      "statement": "计算 $3^nu[n-2]*5^{n+2}u[n+1]$。",
+      "firstStep": "把卷积变量记为 $k$，先联立 $k\\ge2$ 与 $n-k\\ge-1$，得到有限求和上下限。",
+      "solution": "卷积为\n$$y[n]=\\sum_k3^ku[k-2]\\,5^{n-k+2}u[n-k+1].$$\n非零条件是 $2\\le k\\le n+1$，只有 $n\\ge1$ 才存在项。因此\n$$y[n]=5^{n+2}\\sum_{k=2}^{n+1}(3/5)^k\n=5^{n+2}\\frac{(3/5)^2[1-(3/5)^n]}{1-3/5}.$$\n最终\n$$\\boxed{y[n]=\\frac{45}{2}(5^n-3^n)u[n-1]}.$$\n首项检查：$n=1$ 时只有 $k=2$，值为 $3^2\\cdot5=45$，与公式一致。",
+      "answer": "$\\frac{45}{2}(5^n-3^n)u[n-1]$。",
+      "pitfalls": [
+        "第二个序列的起点为 $n=-1$，卷积起点为 $2+(-1)=1$。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "二(2)",
+      "title": "冲激取样后积分",
+      "statement": "计算 $\\int_{-\\infty}^{t}\\cos\\tau\\,\\delta(\\tau)\\,d\\tau$。",
+      "firstStep": "先用 $g(\\tau)\\delta(\\tau)=g(0)\\delta(\\tau)$，再积分。",
+      "solution": "因为 $\\cos0=1$，所以 $\\cos\\tau\\delta(\\tau)=\\delta(\\tau)$。从负无穷积至 $t$ 得到\n$$\\boxed{\\int_{-\\infty}^{t}\\cos\\tau\\delta(\\tau)d\\tau=u(t)}.$$\n$t<0$ 时为0，$t>0$ 时为1；原点若采用对称约定则 $u(0)=1/2$。单点约定不影响分布等式。",
+      "answer": "$u(t)$。",
+      "pitfalls": [
+        "冲激先取出 $\\cos0$，不是把结果写成 $\\cos t\\,u(t)$。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "三",
+      "title": "冲激尺度与反转后的跳跃导数",
+      "statement": "原图 $x(t)$ 含原点强度3的冲激，以及 $0<t<3$ 上从2线性降到0的斜坡，其余为0。画 $x(-3t+3)$，并求其对 $t$ 的导数。",
+      "firstStep": "把原图拆成普通函数与冲激。普通函数变换区间端点，冲激单独使用 $\\delta(at-b)=\\delta(t-b/a)/|a|$。",
+      "solution": "原信号可写为\n$$x(t)=3\\delta(t)+\\left(2-\\frac23t\\right)[u(t)-u(t-3)].$$\n原区间 $0<t<3$ 变为 $0<t<1$，代入幅值得 $2-\\frac23(3-3t)=2t$；冲激由 $t=0$ 移至新坐标 $t=1$，且强度变为 $3/3=1$。故\n$$\\boxed{x(-3t+3)=\\delta(t-1)+2t[u(t)-u(t-1)]}.$$\n波形是在 $(0,1)$ 从0升到2的直线，$t=1$ 另有强度1冲激，区间外普通部分为0。\n\n分布求导时，直线段导数为2，右端从2跳回0产生 $-2\\delta(t-1)$；原冲激导数为 $\\delta^\\prime(t-1)$。因此\n$$\\boxed{\\frac{d}{dt}x(-3t+3)=2[u(t)-u(t-1)]-2\\delta(t-1)+\\delta^\\prime(t-1)}.$$\n原点普通波形从0接入，没有额外冲激。",
+      "answer": "$x(-3t+3)=\\delta(t-1)+2t[u(t)-u(t-1)]$；导数为 $2[u(t)-u(t-1)]-2\\delta(t-1)+\\delta^\\prime(t-1)$。",
+      "pitfalls": [
+        "冲激强度由3变为1，不能只移动位置。",
+        "普通波形右端跳变与原冲激的导数须同时保留。"
+      ],
+      "sourcePages": [
+        1,
+        2
+      ],
+      "figures": [
+        "2022-q3-wave.svg"
+      ]
+    },
+    {
+      "ref": "四",
+      "title": "周期输入经过指数系统的输出级数",
+      "statement": "$h(t)=e^{-4t}u(t)$。分别对输入 $\\sum_{n\\in\\mathbb Z}(-1)^n\\delta(t-n)$，以及周期1、$|t|<1/4$ 为1/2、$1/4<|t|<1/2$ 为0的矩形，求输出傅里叶级数系数 $b_k$。",
+      "firstStep": "稳态周期响应满足 $b_k=a_kH(jk\\omega_0)$；两个输入的基本周期不同，必须分别确定基频。",
+      "solution": "系统频响 $H(j\\omega)=1/(4+j\\omega)$。\n\n**(1) 交替冲激串。** 基本周期2，$\\omega_0=\\pi$。一周期内在0处冲激为1、1处为−1，所以\n$$a_k=\\frac12[1-e^{-jk\\pi}]=\\frac{1-(-1)^k}{2}.$$\n于是\n$$\\boxed{b_k=\\frac{1-(-1)^k}{2(4+jk\\pi)}}.$$\n偶数谐波和直流均为0，奇数谐波系数为 $1/(4+jk\\pi)$。\n\n**(2) 周期矩形。** 基频 $\\omega_0=2\\pi$，\n$$a_0=\\frac14,\\qquad a_k=\\frac12\\int_{-1/4}^{1/4}e^{-j2\\pi kt}dt=\\frac{\\sin(k\\pi/2)}{2\\pi k}\\quad(k\\ne0).$$\n故\n$$\\boxed{b_0=\\frac1{16},\\qquad b_k=\\frac{\\sin(k\\pi/2)}{2\\pi k(4+j2\\pi k)},\\ k\\ne0}.$$\n这些系数对应稳定LTI系统的双边稳态周期输出；未附加独立初态瞬态。",
+      "answer": "交替串：$b_k=[1-(-1)^k]/[2(4+jk\\pi)]$；矩形：$b_0=1/16$，其余如式。",
+      "pitfalls": [
+        "第一问周期为2，第二问周期为1。",
+        "矩形幅度为1/2，直流平均值为1/4。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": []
+    },
+    {
+      "ref": "五",
+      "title": "无穷谐波与周期微分方程的共振条件",
+      "statement": "$f(t)=1+\\sum_{n=1}^{\\infty}2^{-n}\\cos(n\\pi t)$。求最小正周期、奇偶性，以及满足 $x^{\\prime\\prime}+\\omega_0^2x=f(t)$ 的周期函数 $x(t)$。题图未给 $\\omega_0$ 数值。",
+      "firstStep": "利用非零的一次谐波确定最小周期；微分方程按每一余弦谐波分别求解，并先检查分母是否为零。",
+      "solution": "级数绝对且一致收敛，因为 $\\sum2^{-n}<\\infty$。每项以2为周期，且一次谐波系数非零，所以 $\\boxed{T_{\\min}=2}$。每项均为偶函数，因此 $\\boxed{f(-t)=f(t)}$。\n\n设寻找2周期特解 $x_p(t)=a_0+\\sum_{n\\ge1}a_n\\cos(n\\pi t)$。代入得到\n$$\\omega_0^2a_0=1,\\qquad(\\omega_0^2-n^2\\pi^2)a_n=2^{-n}.$$\n若 $\\omega_0\\ne0$ 且 $\\omega_0\\ne n\\pi$（$n\\ge1$），则\n$$\\boxed{x_p(t)=\\frac1{\\omega_0^2}+\\sum_{n=1}^{\\infty}\\frac{2^{-n}}{\\omega_0^2-n^2\\pi^2}\\cos(n\\pi t)}.$$\n这是2周期解。一般解还可加 $C\\cos\\omega_0t+D\\sin\\omega_0t$；若要求整个解仍为周期函数，非零齐次项只能在 $\\omega_0/\\pi$ 为有理数时与特解有共同周期，否则应取 $C=D=0$。若特指2周期解，上式就是非共振条件下唯一的2周期解。\n\n**共振例外：** $\\omega_0=0$ 时非零直流项导致二次增长，不能有周期解；$\\omega_0=m\\pi$ 时第 $m$ 项非零，产生 $2^{-m}t\\sin(m\\pi t)/(2m\\pi)$ 的共振项，也不能有周期解。若题中 $\\omega_0$ 被理解为 $f$ 的基频 $\\pi$，结论应是“无周期解”，不能把零分母忽略。",
+      "answer": "$T_{\\min}=2$，$f$ 为偶函数；非共振周期特解系数为 $2^{-n}/(\\omega_0^2-n^2\\pi^2)$；$\\omega_0=m\\pi$（含0）时无周期解。",
+      "pitfalls": [
+        "题图没有给自然频率数值，答案必须保留参数并说明共振。",
+        "不能在共振时直接删除对应非零谐波。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": []
+    },
+    {
+      "ref": "六",
+      "title": "1.1倍周期抽样产生11倍慢波",
+      "statement": "$x(t)=2+\\cos(2\\pi t/T)$，$p(t)=\\sum_n\\delta(t-\\frac{11}{10}nT)$，后接单位增益低通 $H=1$（$|\\omega|<10\\pi/(11T)$）。求 $X,P,X_s$ 及输出。",
+      "firstStep": "抽样间隔 $T_s=11T/10$ 比原周期略长，比较 $\\omega_0$ 与 $\\omega_s$ 的差频，这正是落入低通的慢波。",
+      "solution": "令 $\\omega_0=2\\pi/T$，$T_s=11T/10$，$\\omega_s=2\\pi/T_s=20\\pi/(11T)$。有\n$$X(\\omega)=4\\pi\\delta(\\omega)+\\pi[\\delta(\\omega-\\omega_0)+\\delta(\\omega+\\omega_0)],$$\n$$P(\\omega)=\\frac{2\\pi}{T_s}\\sum_k\\delta(\\omega-k\\omega_s),$$\n$$X_s(\\omega)=\\frac1{T_s}\\sum_k\\{4\\pi\\delta(\\omega-k\\omega_s)+\\pi\\delta(\\omega-k\\omega_s-\\omega_0)+\\pi\\delta(\\omega-k\\omega_s+\\omega_0)\\}.$$\n低通截止为 $\\omega_s/2$。直流复制谱只通过 $k=0$，余弦谱通过的唯一一对位于\n$$\\pm(\\omega_0-\\omega_s)=\\pm\\frac{2\\pi}{11T}.$$\n故\n$$Y(\\omega)=\\frac1{T_s}\\left[4\\pi\\delta(\\omega)+\\pi\\delta\\left(\\omega-\\frac{2\\pi}{11T}\\right)+\\pi\\delta\\left(\\omega+\\frac{2\\pi}{11T}\\right)\\right],$$\n$$\\boxed{y(t)=\\frac{10}{11T}\\left[2+\\cos\\frac{2\\pi t}{11T}\\right]}.$$\n余弦周期变为 $11T$。这是欠采样后的差频慢波；低通增益题给1，因此必须保留 $1/T_s$ 幅度因子。",
+      "answer": "$y(t)=\\frac{10}{11T}[2+\\cos(2\\pi t/(11T))]$。",
+      "pitfalls": [
+        "输出是混叠后的差频，不是原频率。",
+        "题给低通增益1，不能擅自补偿为 $T_s$。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": [
+        "2022-q6-spectrum.svg"
+      ]
+    },
+    {
+      "ref": "七",
+      "title": "双三角波：线性相位还要考虑实谱变号",
+      "statement": "$f(t)$ 由中心在1与3、峰值1、半底宽1的两个三角脉冲组成。求相位、$\\int F(\\omega)d\\omega$、$\\int F(\\omega)e^{j3\\omega}d\\omega$、$F(0)$，并画 $\\mathcal F^{-1}\\{\\Re F\\}$。",
+      "firstStep": "将两个三角形写成同一原型的平移和。傅里叶逆变换在 $t=0,3$ 的取值直接给出两个积分，无需积分复杂频谱。",
+      "solution": "令 $\\Lambda(t)=(1-|t|)_+$，则 $f(t)=\\Lambda(t-1)+\\Lambda(t-3)$，且 $\\mathcal F\\{\\Lambda\\}=\\operatorname{sa}^2(\\omega/2)$。因此\n$$F(\\omega)=\\operatorname{sa}^2(\\omega/2)(e^{-j\\omega}+e^{-j3\\omega})\n=2\\operatorname{sa}^2(\\omega/2)\\cos\\omega\\,e^{-j2\\omega}.$$\n**(1)** 由于前面的实因子会变号，相位应写为\n$$\\varphi(\\omega)\\equiv\\begin{cases}-2\\omega,&\\cos\\omega>0,\\\\-2\\omega+\\pi,&\\cos\\omega<0,\\end{cases}\\pmod{2\\pi}.$$\n频谱零点处相位未定义；不能一律写成 $-2\\omega$。\n\n**(2)** 由逆变换 $\\int Fd\\omega=2\\pi f(0)=0$。\n\n**(3)** $\\int F(\\omega)e^{j3\\omega}d\\omega=2\\pi f(3)=2\\pi$。\n\n**(4)** $F(0)=\\int f(t)dt=1+1=2$。\n\n**(5)** 对实信号，频谱实部对应时域偶部：\n$$\\mathcal F^{-1}\\{\\Re F\\}=\\frac{f(t)+f(-t)}2\n=\\frac12[\\Lambda(t-1)+\\Lambda(t-3)+\\Lambda(t+1)+\\Lambda(t+3)].$$\n图中应在 $t=\\pm1,\\pm3$ 画高度 $1/2$ 的四个三角形，支撑为 $[-4,4]$，在 $-2,0,2$ 处降至0。",
+      "answer": "相位为 $-2\\omega$ 加上 $\\cos\\omega$ 变号引起的 $\\pi$；三个数值依次为 $0,2\\pi,2$；实部逆变换为偶部。",
+      "pitfalls": [
+        "关于 $t=2$ 对称只能保证线性相位乘实谱，实谱负值仍引起相位跳变。",
+        "频域实部对应时域偶部，不是时域实部。"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "figures": [
+        "2022-q7-wave.svg"
+      ]
+    },
+    {
+      "ref": "八",
+      "title": "由共轭极点反求LC参数",
+      "statement": "电压源后串联 $L$，负载为 $C$ 与 $R=2\\,\\Omega$ 并联，输出取负载电压；$H(0)=1$，极点 $-1\\pm j$。求 $L,C$。",
+      "firstStep": "先用阻抗分压写 $H(s)$，再将分母归一化与 $s^2+2s+2$ 比较系数。",
+      "solution": "并联负载阻抗 $Z_p=R/(1+sRC)$，因此\n$$H(s)=\\frac{Z_p}{sL+Z_p}=\\frac1{LCs^2+(L/R)s+1}\n=\\frac{1/(LC)}{s^2+\\frac1{RC}s+\\frac1{LC}}.$$\n给定极点产生首一分母\n$$(s+1-j)(s+1+j)=s^2+2s+2.$$\n比较可得 $1/(RC)=2$、$1/(LC)=2$。代入 $R=2$：\n$$\\boxed{C=\\frac14\\,\\mathrm F,\\qquad L=2\\,\\mathrm H}.$$\n由 $H(0)=1$ 得到完整函数 $H(s)=2/(s^2+2s+2)$，与阻抗式的直流值一致。",
+      "answer": "$L=2$ H，$C=1/4$ F；$H(s)=2/(s^2+2s+2)$。",
+      "pitfalls": [
+        "极点已归一化后再比较系数。",
+        "输出跨并联负载，不是跨电感。"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "figures": []
+    },
+    {
+      "ref": "九",
+      "title": "同初态差分消去零输入响应",
+      "statement": "同一初态下，输入 $\\delta(t)$ 时输出 $\\delta(t)+e^{-t}u(t)$；输入 $u(t)$ 时输出 $3e^{-t}u(t)$。求 $H,h,y_{zi}$；输入 $x_3=tu(t)+(t-1)u(t-1)$ 的零状态及全响应；给框图与幅频。按题意将动态部分视为LTI。",
+      "firstStep": "两次实验的初态相同，输出之差只含零状态响应，因此可用 $H=(Y_1-Y_2)/(X_1-X_2)$，绝不能把第一次输出直接当 $h$。",
+      "solution": "拉普拉斯域有\n$$Y_1=H+Y_{zi}=1+\\frac1{s+1},\\qquad Y_2=H/s+Y_{zi}=\\frac3{s+1}.$$\n相减得到\n$$H(1-1/s)=1-\\frac2{s+1}=\\frac{s-1}{s+1},$$\n故\n$$\\boxed{H(s)=\\frac{s}{s+1}=1-\\frac1{s+1}},\\quad\\boxed{h(t)=\\delta(t)-e^{-t}u(t)}.$$\n再代回任一实验：$\\boxed{y_{zi}(t)=2e^{-t}u(t)}$。\n\n单位斜坡 $tu(t)$ 的零状态输出为\n$$\\mathcal L^{-1}\\left\\{\\frac{s}{s+1}\\frac1{s^2}\\right\\}=(1-e^{-t})u(t).$$\n利用叠加和时移，\n$$\\boxed{y_{zs}(t)=(1-e^{-t})u(t)+[1-e^{-(t-1)}]u(t-1)}.$$\n同初态全响应为\n$$\\boxed{y(t)=(1+e^{-t})u(t)+[1-e^{-(t-1)}]u(t-1)}.$$\n例如 $0<t<1$ 时为 $1+e^{-t}$，$t>1$ 时为 $2+e^{-t}-e^{-(t-1)}$，在 $t=1$ 连续。\n\n实现可设 $q^\\prime=x-q$，$y=x-q$：加法器计算 $x-q$，一路直出为 $y$，一路经过积分器得到 $q$ 并负反馈。幅频为\n$$|H(j\\omega)|=\\frac{|\\omega|}{\\sqrt{1+\\omega^2}},$$\n为一阶高通，直流为0，$|\\omega|\\to\\infty$ 时趋于1，在 $|\\omega|=1$ 时为 $1/\\sqrt2$。\n\n严格说“增量线性”本身并不推出时不变性；上述 $H(s)$ 与卷积题目是在常规LTI动态假设下的答案。若不作此假设，仅两次输入输出实验不足以唯一确定任意时变系统。",
+      "answer": "$H=s/(s+1)$，$h=\\delta-e^{-t}u$，$y_{zi}=2e^{-t}u$；斜坡零状态为两个移位 $1-e^{-t}$ 之和。",
+      "pitfalls": [
+        "非零初态实验的冲激输入输出不等于单位冲激响应。",
+        "先相减消初态，再识别传递函数。"
+      ],
+      "sourcePages": [
+        3,
+        4
+      ],
+      "figures": [
+        "2022-q9-highpass.svg",
+        "2022-q9-block.svg"
+      ]
+    },
+    {
+      "ref": "十",
+      "title": "参数零点抵消与因果系统的稳定性",
+      "statement": "图中内部状态 $w[n]$ 经两个串联延时，反馈系数 $10/3,-1$；输出为 $kw[n]+w[n-1]$。求 $H,h$、差分方程，按 $k$ 分析极点ROC稳定性，稳定时求单位阶跃输出。按零初态因果结构理解。",
+      "firstStep": "先标出加法器后的内部量 $w[n]$：$w=x+(10/3)w[n-1]-w[n-2]$。再看输出分子能否约去模大于1的极点。",
+      "solution": "结构给出\n$$w[n]=x[n]+\\frac{10}3w[n-1]-w[n-2],\\qquad y[n]=kw[n]+w[n-1].$$\n因此\n$$\\boxed{H(z)=\\frac{k+z^{-1}}{1-\\frac{10}3z^{-1}+z^{-2}}=\\frac{k+z^{-1}}{(1-3z^{-1})(1-\\frac13z^{-1})}}.$$\n未约分的极点为 $3,1/3$。令\n$$A=\\frac{9k+3}{8},\\qquad B=-\\frac{k+3}{8},$$\n则 $H=A/(1-3z^{-1})+B/(1-\\frac13z^{-1})$，因果响应为\n$$\\boxed{h[n]=\\left[\\frac{9k+3}{8}3^n-\\frac{k+3}{8}\\left(\\frac13\\right)^n\\right]u[n]}.$$\n\n输入输出差分式为\n$$\\boxed{y[n]-\\frac{10}3y[n-1]+y[n-2]=kx[n]+x[n-1]}.$$\n\n**按参数分析（ROC由因果结构确定）：**\n\n- $k\\ne-1/3,-3$：极点 $3,1/3$，ROC $|z|>3$，不含单位圆，系统不稳定。\n- $k=-3$：抵消 $1/3$，$H=-3/(1-3z^{-1})$，ROC $|z|>3$，仍不稳定。\n- $k=-1/3$：抵消3，$H=-(1/3)/(1-\\frac13z^{-1})$，ROC $|z|>1/3$，包含单位圆，外部BIBO稳定。\n\n当 $k=0$ 时没有额外抵消，仍属第一类。若只给有理函数而没有结构，可能另选双边ROC；本题的两个延时结构指定了因果递推，不能为取得稳定性擅自改选ROC。\n\n稳定参数 $k=-1/3$ 时，$h[n]=-(1/3)(1/3)^nu[n]$，单位阶跃输出为\n$$\\boxed{y[n]=-\\frac12\\left[1-\\left(\\frac13\\right)^{n+1}\\right]u[n]}.$$\n初值 $y[0]=-1/3$，终值 $-1/2=H(1)$。这里的稳定指零状态输入输出BIBO稳定；原二阶内部结构仍保留被输出抵消的 $3^n$ 模态，若考虑内部初态或数值误差，内部稳定性不同。",
+      "answer": "$H=(k+z^{-1})/[(1-3z^{-1})(1-z^{-1}/3)]$；因果外部稳定仅 $k=-1/3$；阶跃输出 $-[1-(1/3)^{n+1}]u[n]/2$。",
+      "pitfalls": [
+        "极点抵消后须重新确定外部传递函数ROC。",
+        "外部BIBO稳定与含隐藏模态的内部稳定性不同。"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "figures": [
+        "2022-q10-poles.svg"
+      ]
+    }
+  ]
+}

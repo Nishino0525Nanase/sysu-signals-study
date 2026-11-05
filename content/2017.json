@@ -1,0 +1,194 @@
+{
+  "year": 2017,
+  "note": "按原卷4页逐题核对。傅里叶变换采用 X(jω)=∫x(t)e^(−jωt)dt；Sa(v)=sin(v)/v。题五(4)按顺承题五(3)激励给具体结果，并保留一般输入表达式。",
+  "questions": [
+    {
+      "ref": "一1",
+      "title": "周期矩形波能否产生二次谐波",
+      "statement": "输入为周期 $T=2$、幅度1、每周期在 $[0,1)$ 为1的矩形波。问能否通过LTI系统得到 $y(t)=\\sin(2\\pi t)$。",
+      "firstStep": "先算目标频率在输入傅里叶级数中的系数；LTI系统只能改变已有谐波的幅相。",
+      "solution": "输入基频 $\\omega_0=\\pi$，复指数傅里叶系数为\n$$a_k=\\frac12\\int_0^1e^{-jk\\pi t}\\,dt=\\frac{1-e^{-jk\\pi}}{2jk\\pi},\\quad k\\ne0,\\qquad a_0=\\frac12.$$\n所有非零偶数 $k$ 都有 $a_k=0$。目标信号是第二次谐波，$b_2=1/(2j)$、$b_{-2}=-1/(2j)$。对于具有通常稳态响应的LTI系统，$b_k=H(jk\\pi)a_k$，因此 $b_{\\pm2}=0$，与目标不符，不能实现。这里讨论输入引起的响应；不能用另外指定初始储能产生的自由振荡冒充LTI滤波结果。",
+      "answer": "不能实现：输入在 $\\omega=\\pm2\\pi$ 处的谐波系数为0。",
+      "pitfalls": [
+        "周期是2，因此目标是第二谐波。",
+        "LTI不发生频率搬移。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "一2",
+      "title": "双边拉普拉斯中的反褶与ROC",
+      "statement": "$g(t)=x(t)+\\alpha x(-t)$，$x(t)=\\beta e^{-t}u(t)$；要求 $G(s)=s/(s^2-1)$，ROC为 $-1<\\Re s<1$。",
+      "firstStep": "分别保留右边指数与左边指数的收敛条件，再合并分子。",
+      "solution": "右边项 $\\mathcal L\\{\\beta e^{-t}u(t)\\}=\\beta/(s+1)$，ROC为 $\\Re s>-1$。左边项\n$$\\mathcal L\\{\\alpha\\beta e^tu(-t)\\}=\\alpha\\beta\\int_{-\\infty}^{0}e^{(1-s)t}dt=\\frac{\\alpha\\beta}{1-s},\\quad\\Re s<1.$$\n故交集正是给定条带，且\n$$G(s)=\\frac{\\beta}{s+1}-\\frac{\\alpha\\beta}{s-1}=\\frac{\\beta(1-\\alpha)s-\\beta(1+\\alpha)}{s^2-1}.$$\n比较分子得 $\\beta(1-\\alpha)=1$、$\\beta(1+\\alpha)=0$，因此 $\\alpha=-1$、$\\beta=1/2$。",
+      "answer": "$\\alpha=-1,\\ \\beta=1/2$。",
+      "pitfalls": [
+        "左边指数的变换为 $1/(1-s)$，有负号差异。",
+        "ROC必须同时写出，不能只比较有理式。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "一3",
+      "title": "平方抽样函数的因果与稳定性",
+      "statement": "$h(t)=\\operatorname{Sa}^2(2t)$，其中 $\\operatorname{Sa}(v)=\\sin v/v$；判断LTI系统因果性和稳定性。",
+      "firstStep": "因果看负时间是否为零；稳定看冲激响应绝对可积。",
+      "solution": "$h(t)$ 是偶函数，负时间一般不为0，因此系统非因果。另一方面 $h(t)\\ge0$，且原点极限为1，不存在不可积奇点；无穷远按 $1/t^2$ 衰减。直接利用标准积分\n$$\\int_{-\\infty}^{\\infty}|h(t)|dt=\\int_{-\\infty}^{\\infty}\\left(\\frac{\\sin2t}{2t}\\right)^2dt=\\frac\\pi2<\\infty.$$\n所以系统BIBO稳定。",
+      "answer": "非因果，BIBO稳定；$\\|h\\|_1=\\pi/2$。",
+      "pitfalls": [
+        "负时间有响应就不因果。",
+        "原点是可去奇点，不能看到 $t^{-2}$ 就判发散。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "一4",
+      "title": "环形ROC选择双边逆Z变换",
+      "statement": "$F(z)=(z+2)/(2z^2-7z+3)$，ROC为 $1/2<|z|<3$，求 $f[k]$。",
+      "firstStep": "把极点分成ROC内侧的右边序列与ROC外侧的左边序列。",
+      "solution": "因式分解并部分分式展开：\n$$F(z)=\\frac{z+2}{2(z-1/2)(z-3)}=-\\frac{1/2}{z-1/2}+\\frac1{z-3}.$$\n第一项要求 $|z|>1/2$，用 $1/(z-a)\\leftrightarrow a^{k-1}u[k-1]$；第二项要求 $|z|<3$，用 $1/(z-a)\\leftrightarrow-a^{k-1}u[-k]$。所以\n$$f[k]=-\\left(\\frac12\\right)^k u[k-1]-3^{k-1}u[-k].$$\n核验 $k=0$ 只有左边项，为 $-1/3$；两项的ROC交集正是题给圆环。",
+      "answer": "$f[k]=-(1/2)^ku[k-1]-3^{k-1}u[-k]$。",
+      "pitfalls": [
+        "$1/(z-a)$ 与 $z/(z-a)$ 的时移差1。",
+        "外侧极点3对应左边序列并带负号。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "二",
+      "title": "周期矩形波通过延时理想低通",
+      "statement": "$h(t)=\\sin[\\tfrac{3\\pi}{2}(t-1)]/[\\pi(t-1)]$；$x(t)$为周期2、幅度1、每周期在 $[-1/4,1/4]$ 为1的矩形波，求 $y(t)$。",
+      "firstStep": "由sinc认出截止频率和时延，再只保留通带内的傅里叶级数项。",
+      "solution": "冲激响应对应\n$$H(j\\omega)=e^{-j\\omega}\\mathbf1_{|\\omega|<3\\pi/2}.$$\n输入周期 $T=2$、$\\omega_0=\\pi$。系数\n$$a_0=\\frac14,\\qquad a_k=\\frac12\\int_{-1/4}^{1/4}e^{-jk\\pi t}dt=\\frac{\\sin(k\\pi/4)}{k\\pi}.$$\n截止频率只允许 $k=0,\\pm1$，其中 $a_{\\pm1}=\\sqrt2/(2\\pi)$。于是\n$$y(t)=\\frac14+\\frac{\\sqrt2}{\\pi}\\cos[\\pi(t-1)]=\\frac14-\\frac{\\sqrt2}{\\pi}\\cos(\\pi t).$$\n输出的直流保持不变，基波时延1对应相位 $-\\pi$；其余谐波被去掉。",
+      "answer": "$y(t)=1/4-(\\sqrt2/\\pi)\\cos(\\pi t)$。",
+      "pitfalls": [
+        "脉冲宽度为1/2，占空比1/4。",
+        "低通有时延，不能只保留谐波而漏掉相位。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "三",
+      "title": "由矩形差输入和折线输出辨识系统",
+      "statement": "$x(t)=u(t)-2u(t-1)+u(t-2)$；输出依次连接 $(0,0),(1,1),(2,-1),(3,0)$，区间外为0。求 $h(t)$、阶跃响应及输入 $x_1(t)=\\sin\\pi t[u(t)-u(t-1)]$ 的输出，并画波形。",
+      "firstStep": "把折线求导，利用 $y\\prime=x*h\\prime$ 或直接比较分段斜率，找出宽1的积分窗。",
+      "solution": "令 $r(t)=tu(t)$。由输出斜率 $1,-2,1,0$ 得\n$$y(t)=r(t)-3r(t-1)+3r(t-2)-r(t-3),\\quad Y(s)=\\frac{(1-e^{-s})^3}{s^2}.$$\n输入 $X(s)=(1-e^{-s})^2/s$，所以\n$$H(s)=\\frac{1-e^{-s}}s,\\qquad h(t)=u(t)-u(t-1).$$\n阶跃响应\n$$s(t)=r(t)-r(t-1)=\\begin{cases}0&t<0,\\\\t&0\\le t<1,\\\\1&t\\ge1.\\end{cases}$$\n第二个输入的输出是长度1滑动积分：\n$$y_1(t)=\\int_{t-1}^{t}x_1(\\tau)d\\tau=\\begin{cases}0&t<0,\\\\(1-\\cos\\pi t)/\\pi&0\\le t\\le1,\\\\(1+\\cos[\\pi(t-1)])/\\pi&1\\le t\\le2,\\\\0&t>2.\\end{cases}$$\n其中 $y_1(1)=2/\\pi$，在 $[0,1]$ 上升、在 $[1,2]$ 下降；$h$为宽1矩形，$s$为上升后保持的斜坡，精确波形见图。",
+      "answer": "$h=u(t)-u(t-1)$；$s=r(t)-r(t-1)$；$y_1$如分段式，峰值 $2/\\pi$。",
+      "pitfalls": [
+        "输出在1到2的斜率是−2。",
+        "卷积积分必须同时限制 $0\\le\\tau\\le1$ 和 $t-1\\le\\tau\\le t$。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": [
+        "2017_q3_waveforms.svg"
+      ]
+    },
+    {
+      "ref": "四",
+      "title": "有限半波余弦的完整频谱",
+      "statement": "$x(t)=\\cos(\\pi t/\\tau)[u(t+\\tau/2)-u(t-\\tau/2)]$，$\\tau>0$。求傅里叶变换并画频谱。",
+      "firstStep": "矩形窗乘余弦，频域是两个平移的sinc相加；也可直接积分检验可去奇点。",
+      "solution": "记 $W(j\\omega)=2\\sin(\\omega\\tau/2)/\\omega$，余弦调制给出\n$$X(j\\omega)=\\frac{\\sin[(\\omega-\\pi/\\tau)\\tau/2]}{\\omega-\\pi/\\tau}+\\frac{\\sin[(\\omega+\\pi/\\tau)\\tau/2]}{\\omega+\\pi/\\tau}.$$\n化简为\n$$X(j\\omega)=\\frac{2\\pi\\tau\\cos(\\omega\\tau/2)}{\\pi^2-\\omega^2\\tau^2}.$$\n在 $\\omega=\\pm\\pi/\\tau$ 分子分母同时为0，原积分或极限给 $X=\\tau/2$，并非零点；$X(0)=2\\tau/\\pi$。真正零点是 $\\omega=\\pm3\\pi/\\tau,\\pm5\\pi/\\tau,\\ldots$。$X$实偶，幅度为上述实函数的绝对值，相位在正值瓣为0、负值瓣为 $\\pi$（模 $2\\pi$），零点相位未定义。图同时给有符号谱、幅度和相位，以免把负旁瓣当作负幅度。",
+      "answer": "$X(j\\omega)=2\\pi\\tau\\cos(\\omega\\tau/2)/(\\pi^2-\\omega^2\\tau^2)$；$X(\\pm j\\pi/\\tau)=\\tau/2$。",
+      "pitfalls": [
+        "$\\pm\\pi/\\tau$ 是可去奇点。",
+        "实偶频谱不意味着处处非负。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": [
+        "2017_q4_spectrum.svg"
+      ]
+    },
+    {
+      "ref": "五",
+      "title": "抽样带通恢复与希尔伯特调制",
+      "statement": "乘法器后接滤波器。(1)(2) $|\\omega|\\le\\omega_m<\\pi/4$，$p(t)=\\sum_k\\delta(t-4k)$；滤波器通带为 $[7\\pi/4,9\\pi/4]$ 及其负频镜像，增益1，相位在每段由 $\\pi/8$ 线性降至 $-\\pi/8$。(3) $x(t)=\\sin(\\pi t/2)\\cos(2\\pi t)/(\\pi t)$，求谱。(4)用(3)输入，改用 $p(t)=\\cos2\\pi t$ 和 $H=-j\\operatorname{sgn}\\omega$（$|\\omega|<2\\pi$），求输出。",
+      "firstStep": "采样先确定复制间隔和系数，再用通带选中哪两个副本；最后把带内相位改写成以副本中心为基准的时延。",
+      "solution": "**(1)** $T_s=4$，$\\omega_s=\\pi/2$，因此\n$$X_s(j\\omega)=\\frac14\\sum_{k=-\\infty}^{\\infty}X[j(\\omega-k\\pi/2)].$$\n由于 $\\omega_m<\\pi/4$，相邻副本不重叠。**(2)** 正通带只选 $k=4$，负通带只选 $k=-4$。读相位斜率为 $(-\\pi/4)/(\\pi/2)=-1/2$，故\n$$Y(j\\omega)=\\frac14X[j(\\omega-2\\pi)]e^{-j(\\omega-2\\pi)/2}+\\frac14X[j(\\omega+2\\pi)]e^{-j(\\omega+2\\pi)/2}.$$\n逆变换得\n$$y(t)=\\frac12x(t-1/2)\\cos(2\\pi t).$$\n注意相位在各副本中心为0，因此这是延时的包络乘未额外移相的载波。未知输入频谱的具体形状未给出，不能虚画成三角形；副本严格支撑为 $[k\\pi/2-\\omega_m,k\\pi/2+\\omega_m]$；附图给能够确定的滤波器及(3)(4)频谱。\n\n**(3)** 设 $a(t)=\\sin(\\pi t/2)/(\\pi t)$，则 $A(j\\omega)=\\mathbf1_{|\\omega|<\\pi/2}$，所以\n$$X(j\\omega)=\\frac12\\mathbf1_{|\\omega-2\\pi|<\\pi/2}+\\frac12\\mathbf1_{|\\omega+2\\pi|<\\pi/2}.$$\n两个矩形分别位于 $[3\\pi/2,5\\pi/2]$ 和 $[-5\\pi/2,-3\\pi/2]$，高度 $1/2$。\n\n**(4)** 沿用(3)的激励，乘载波后\n$$x(t)p(t)=a(t)\\cos^2(2\\pi t)=\\tfrac12a(t)+\\tfrac12a(t)\\cos4\\pi t.$$\n$|\\omega|<2\\pi$ 的滤波器只保留基带 $A/2$，再乘 $-j\\operatorname{sgn}\\omega$。于是\n$$y(t)=\\frac{1}{2\\pi}\\int_0^{\\pi/2}\\sin(\\omega t)d\\omega=\\frac{1-\\cos(\\pi t/2)}{2\\pi t},$$\n在 $t=0$ 连续延拓为0。若(4)单独理解为任意原始输入，则只能写 $Y=-(j/2)\\operatorname{sgn}\\omega\\,\\mathbf1_{|\\omega|<2\\pi}[X(j(\\omega-2\\pi))+X(j(\\omega+2\\pi))]$；上述具体结果采用题目顺承的(3)输入。",
+      "answer": "(1)$X_s=\\frac14\\sum_kX(\\omega-k\\pi/2)$；(2)$y=\\frac12x(t-1/2)\\cos2\\pi t$；(4)$y=(1-\\cos(\\pi t/2))/(2\\pi t)$。",
+      "pitfalls": [
+        "采样系数是1/4。",
+        "带内相位须以±2π为中心读取。",
+        "第(4)小问输入的顺承已明确说明。"
+      ],
+      "sourcePages": [
+        2,
+        3
+      ],
+      "figures": [
+        "2017_q5_sampling.svg"
+      ]
+    },
+    {
+      "ref": "六",
+      "title": "同初态两次实验分离零输入响应",
+      "statement": "同一初态下，输入 $\\delta(t)$ 的全响应为 $\\delta(t)+e^{-t}u(t)$，输入 $u(t)$ 的全响应为 $3e^{-t}u(t)$。求输入 $e^{-2t}u(t)$ 与 $t[u(t)-u(t-1)]$ 的全响应。",
+      "firstStep": "两次全响应相减可消去相同的零输入响应，从而辨识传递函数。",
+      "solution": "写 $Y_1=H+Y_{zi}$、$Y_2=H/s+Y_{zi}$，相减：\n$$H(s)(1-1/s)=1-\\frac2{s+1}=\\frac{s-1}{s+1},$$\n所以 $H=s/(s+1)$，$Y_{zi}=2/(s+1)$，即 $h=\\delta-e^{-t}u$、$y_{zi}=2e^{-t}u$。\n\n**(1)** $X_3=1/(s+2)$，\n$$Y_{zs,3}=\\frac{s}{(s+1)(s+2)}=-\\frac1{s+1}+\\frac2{s+2}.$$\n加上同一零输入响应，得到 $y_3(t)=[e^{-t}+2e^{-2t}]u(t)$。\n\n**(2)** $x_4=tu(t)-[(t-1)+1]u(t-1)$。该系统对斜坡的零状态响应为 $(1-e^{-t})u(t)$，对阶跃为 $e^{-t}u(t)$，因此\n$$y_{zs,4}(t)=(1-e^{-t})u(t)-u(t-1).$$\n全响应\n$$y_4(t)=(1+e^{-t})u(t)-u(t-1)=\\begin{cases}0&t<0,\\\\1+e^{-t}&0\\le t<1,\\\\e^{-t}&t\\ge1.\\end{cases}$$\n$t=1$ 输入突降1，因为 $h$包含直通冲激，输出也突降1。",
+      "answer": "$y_3=(e^{-t}+2e^{-2t})u$；$y_4=(1+e^{-t})u-u(t-1)$。",
+      "pitfalls": [
+        "不能把冲激输入的全响应直接当h。",
+        "截断斜坡须同时减去延时斜坡和延时阶跃。"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "figures": []
+    },
+    {
+      "ref": "七",
+      "title": "双边离散系统与单位圆内极点重构",
+      "statement": "$H(z)=z/[(z-0.5)(z-2)(z-3)]$，ROC $0.5<|z|<2$。判断因果稳定、求h、判断DTFT，取单位圆内零极点构造因果 $H_1$并画幅频。",
+      "firstStep": "ROC含单位圆意味着稳定，但环形ROC意味着双边；逆变换逐个极点选左右序列。",
+      "solution": "**(1)** ROC不是最外极点外侧，故非因果；单位圆包含于ROC，故稳定。**(2)** 展开\n$$H(z)=\\frac4{15}\\frac z{z-1/2}-\\frac23\\frac z{z-2}+\\frac25\\frac z{z-3}.$$\n极点 $1/2$ 对应右边，其余对应左边，得到\n$$h[n]=\\frac4{15}(1/2)^nu[n]+\\frac23 2^nu[-n-1]-\\frac25 3^nu[-n-1].$$\n**(3)** DTFT存在，因为 $h$绝对可和，或等价地ROC含 $|z|=1$。其频响就是把 $z=e^{j\\omega}$ 代入原式。\n\n**(4)** 单位圆内有零点0与极点1/2。保留单位增益，\n$$H_1(z)=\\frac z{z-1/2}=\\frac1{1-(1/2)z^{-1}},\\quad |z|>1/2.$$\n$$|H_1(e^{j\\omega})|=\\frac1{\\sqrt{5/4-\\cos\\omega}}.$$\n它以 $2\\pi$ 为周期，在 $\\omega=0$ 为2，在 $\\omega=\\pi$ 为2/3，是低通型。仅给零极点不能规定总增益；若取常数 $K$，以上幅度整体乘 $|K|$。",
+      "answer": "非因果、稳定，DTFT存在；$H_1=z/(z-1/2)$，ROC $|z|>1/2$。",
+      "pitfalls": [
+        "单位圆外的极点不妨碍双边系统稳定。",
+        "由零极点重构还差任意常数增益。"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "figures": [
+        "2017_q7_magnitude.svg"
+      ]
+    },
+    {
+      "ref": "八",
+      "title": "反馈积分器系统的传递函数及初态响应",
+      "statement": "原图上支路为 $2/s$ 加增益−1反馈；下支路串联 $1/s$，第一级增益2反馈、第二级增益−2反馈，两路输出相加。输入 $\\delta(t)-3e^{-t}u(t)$，初态 $y(0^-)=1,y\\prime(0^-)=-2$。求H、零极点、稳定性、h、微分方程及零状态/零输入响应。",
+      "firstStep": "各局部反馈环先化简，再并联；初态响应用最终输入输出方程而非把全响应当冲激响应。",
+      "solution": "**(1)** 上支路 $H_a=(2/s)/(1+2/s)=2/(s+2)$；下支路的两个闭环分别是 $1/(s-2)$ 和 $1/(s+2)$，故\n$$H(s)=\\frac2{s+2}+\\frac1{(s-2)(s+2)}=\\frac{2s-3}{s^2-4}.$$\n**(2)** 零点 $3/2$，极点 $\\pm2$。系统因果，ROC为 $\\Re s>2$，有右半平面极点，故不稳定。\n\n**(3)** 部分分式为 $H=(1/4)/(s-2)+(7/4)/(s+2)$，所以\n$$h(t)=\\left(\\tfrac14e^{2t}+\\tfrac74e^{-2t}\\right)u(t).$$\n**(4)** 交叉相乘得 $y\\prime\\prime-4y=2x\\prime-3x$。\n\n**(5)** $X=1-3/(s+1)=(s-2)/(s+1)$，所以\n$$Y_{zs}=\\frac{(2s-3)(s-2)}{(s-2)(s+2)(s+1)}=\\frac7{s+2}-\\frac5{s+1},$$\n$$y_{zs}(t)=(7e^{-2t}-5e^{-t})u(t).$$\n零输入解 $Ae^{2t}+Be^{-2t}$ 满足 $A+B=1,2A-2B=-2$，得 $A=0,B=1$，故 $y_{zi}=e^{-2t}u(t)$。若合成全响应，则 $y=(8e^{-2t}-5e^{-t})u(t)$。本次输入恰好消去不稳定模态，不能据单次输出衰减就宣称系统稳定。零极点图见附图。",
+      "answer": "$H=(2s-3)/(s^2-4)$，不稳定；$y_{zs}=(7e^{-2t}-5e^{-t})u$，$y_{zi}=e^{-2t}u$。",
+      "pitfalls": [
+        "下支路第一级反馈是正2，极点为+2。",
+        "稳定性由系统极点判，不能被特定输入的抵消误导。"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "figures": [
+        "2017_q8_poles.svg"
+      ]
+    }
+  ]
+}

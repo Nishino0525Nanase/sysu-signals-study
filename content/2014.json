@@ -1,0 +1,232 @@
+{
+  "year": 2014,
+  "note": "逐题核对原卷。连续傅里叶变换采用X(jω)=∫x(t)e^(−jωt)dt；sinc按原题归一化定义。",
+  "questions": [
+    {
+      "ref": "1(1)",
+      "title": "不稳定的一阶因果系统",
+      "statement": "零初态系统 $y\\prime(t)=3y(t)+2x(t)$。判断线性、时不变、稳定性、记忆性和因果性。",
+      "firstStep": "先把微分方程转成冲激响应；同一表达式可同时判断记忆、因果和稳定。",
+      "solution": "零状态传递函数与冲激响应为\n$$H(s)=\\frac{2}{s-3},\\qquad h(t)=2e^{3t}u(t).$$\n方程及零初态满足叠加，故**线性**；系数为常数且初始条件按零状态理解，故**时不变**。响应\n$$y(t)=2\\int_{-\\infty}^{t}e^{3(t-\\tau)}x(\\tau)\\,d\\tau$$\n只依赖过去和当前输入，故**因果、有记忆**。它不稳定：$\\int_0^\\infty2e^{3t}dt=\\infty$。也可给有界输入 $u(t)$，得到 $y(t)=\\frac23(e^{3t}-1)u(t)$，输出无界。",
+      "answer": "线性、时不变、不稳定、有记忆、因果。",
+      "pitfalls": [
+        "微分方程中指数增长项的符号决定稳定性；不能见到一阶系统就判稳定。",
+        "零初态是线性判定的关键条件。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "1(2)",
+      "title": "指数乘法映射的五种性质",
+      "statement": "$y(t)=e^{-t}x(t)$，时间范围按连续时间双边 $t\\in\\mathbb R$ 理解。判断五种性质。",
+      "firstStep": "先分别比较延时输入的输出与原输出的延时，再用常数输入检验双边时间稳定性。",
+      "solution": "乘以确定函数不破坏叠加，因此线性。对延时 $t_0$，\n$$T\\{x(t-t_0)\\}=e^{-t}x(t-t_0),\\quad y(t-t_0)=e^{-(t-t_0)}x(t-t_0),$$\n通常不等，所以时变。$y(t)$只使用同一时刻的$x(t)$，所以无记忆且因果。\n双边时间上，输入 $x(t)=1$ 有界，但输出 $e^{-t}$ 在 $t\\to-\\infty$ 时无界，故不稳定。若另外把信号和判定区间限定为 $t\\ge0$，则 $|e^{-t}|\\le1$，此时应判稳定；原题未作此限制。",
+      "answer": "双边时间：线性、时变、不稳定、无记忆、因果；仅在 t≥0 判定时稳定。",
+      "pitfalls": [
+        "不要把默认的双边时间偷偷改成 t≥0；需说明时间域约定。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "2(1)",
+      "title": "冲激导数的抽样作用",
+      "statement": "计算 $\\int_{-3}^{3}t^2\\delta\\prime(t-1)\\,dt$。",
+      "firstStep": "冲激导数作用在光滑函数上时，会把导数转移给该函数并带负号。",
+      "solution": "由于 $t=1$ 位于积分区间内部，使用分布恒等式\n$$\\int f(t)\\delta\\prime(t-a)\\,dt=-f\\prime(a).$$\n令 $f(t)=t^2$，便有 $f\\prime(1)=2$，所以积分等于 $-2$。",
+      "answer": "$-2$。",
+      "pitfalls": [
+        "δ′不是普通冲激，不能直接代入得到1。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "2(2)",
+      "title": "变上限积分中的反向冲激",
+      "statement": "计算 $\\int_0^t(\\tau^2+2)\\delta(2-\\tau)\\,d\\tau$。",
+      "firstStep": "先用冲激的偶性化成 δ(τ−2)，再判断冲激位置是否被积分区间覆盖。",
+      "solution": "$\\delta(2-\\tau)=\\delta(\\tau-2)$，尺度绝对值为1。冲激处函数值为 $2^2+2=6$。因此\n$$\\int_0^t(\\tau^2+2)\\delta(2-\\tau)\\,d\\tau=6u(t-2).$$\n即 $t<2$ 为0，$t>2$ 为6。在 $t=2$ 这一端点，数值取决于所用的阶跃端点约定；常用 $u(0)=1/2$ 时为3。",
+      "answer": "$6u(t-2)$。",
+      "pitfalls": [
+        "冲激反转不带负号；尺度公式使用绝对值。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "2(3)",
+      "title": "左边指数与延时阶跃卷积",
+      "statement": "$f(t)=e^{2t}u(-t)$，$h(t)=u(t-3)$，求 $y=f*h$。",
+      "firstStep": "把两个阶跃改写为积分变量的约束，积分上限取二者较小值。",
+      "solution": "卷积积分中，$u(-\\tau)$要求 $\\tau\\le0$，$u(t-\\tau-3)$要求 $\\tau\\le t-3$。故\n$$y(t)=\\int_{-\\infty}^{\\min(0,t-3)}e^{2\\tau}d\\tau=\\frac12e^{2\\min(0,t-3)}.$$\n写成分段形式为\n$$y(t)=\\begin{cases}\\frac12e^{2(t-3)},&t<3,\\\\\\frac12,&t\\ge3.\\end{cases}$$\n或 $\\frac12e^{2(t-3)}u(3-t)+\\frac12u(t-3)$，拼接点按同一端点约定处理。",
+      "answer": "t<3 时为 ½e^{2(t−3)}，t≥3 时为 ½。",
+      "pitfalls": [
+        "此题 f 为左边信号；积分下限是负无穷。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "2(4)",
+      "title": "饱和斜坡的广义傅里叶变换",
+      "statement": "图示 $x(t)=0$（$t<-1$），$x(t)=(t+1)/2$（$-1\\le t\\le1$），$x(t)=1$（$t>1$），求 $X(j\\omega)$。",
+      "firstStep": "原信号有非零直流背景。先求导得到有限矩形，再补回求导时消失的直流冲激。",
+      "solution": "导数为 $x\\prime(t)=\\frac12[u(t+1)-u(t-1)]$，因而\n$$j\\omega X(j\\omega)=\\frac12\\int_{-1}^{1}e^{-j\\omega t}dt=\\frac{\\sin\\omega}{\\omega}.$$\n又有 $x(t)+x(-t)=1$，所以偶部是 $1/2$，其变换是 $\\pi\\delta(\\omega)$。最终\n$$X(j\\omega)=\\pi\\delta(\\omega)+\\frac{\\sin\\omega}{\\omega}\\operatorname{PV}\\!\\frac1{j\\omega}.$$\n这里第二项是主值分布；它不能在 $\\omega=0$ 当普通函数直接代值。检查：乘 $j\\omega$ 后直流冲激消失，恰好得到导数的矩形谱。",
+      "answer": "$X=\\pi\\delta(\\omega)+(\\sin\\omega/\\omega)\\operatorname{PV}(1/j\\omega)$。",
+      "pitfalls": [
+        "只写 sinω/(jω²) 会漏掉 πδ(ω)。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "2(5)",
+      "title": "双三角谱的能量",
+      "statement": "$X(j\\omega)$是两个互不重叠三角形：中心分别 $-3,1$，峰高均为2，各半宽2；即支撑为 $[-5,-1]$ 和 $[-1,3]$。求 $\\int|x(t)|^2dt$，不直接求 x。",
+      "firstStep": "能量直接使用 Parseval；积分是三角形高度的平方，而非三角形面积。",
+      "solution": "采用 $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$ 的约定，\n$$E=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}|X(j\\omega)|^2d\\omega.$$\n每个三角形可写成 $2\\Lambda((\\omega-\\omega_c)/2)$。一个三角形的平方积分为\n$$2\\int_0^2(2-v)^2dv=\\frac{16}{3}.$$\n两个三角形仅在高度为0的端点相接，因此平方积分相加：$32/3$。故\n$$E=\\frac{16}{3\\pi}.$$",
+      "answer": "$E=16/(3\\pi)$。",
+      "pitfalls": [
+        "把 |X|² 的积分算成 |X| 的面积会得到错误答案。"
+      ],
+      "sourcePages": [
+        1,
+        2
+      ],
+      "figures": [
+        "2014_q2_spectrum.svg"
+      ]
+    },
+    {
+      "ref": "2(6)",
+      "title": "频谱中心偏移与时域相位",
+      "statement": "沿用题2(5)的双三角谱，把 $x(t)$ 写作 $r(t)e^{j\\theta(t)}$，其中 $r,\\theta$ 均为实函数，利用变换性质求相位。",
+      "firstStep": "两三角形围绕 ω=−1 对称，把频谱平移回原点便得到实偶时域函数。",
+      "solution": "令 $G(\\omega)=X(j(\\omega-1))$，则 $G$ 的三角峰位于 $\\pm2$，是实偶函数。因此其逆变换 $g(t)$ 为实偶函数，而\n$$X(j\\omega)=G(\\omega+1)\\quad\\Longrightarrow\\quad x(t)=e^{-jt}g(t).$$\n所以可直接取 $r(t)=g(t)$、$\\theta(t)=-t$。若进一步展开，\n$$g(t)=\\frac4\\pi\\left(\\frac{\\sin t}{t}\\right)^2\\cos2t.$$\n原题只要求$r$实，并未要求$r\\ge0$；故 $\\theta=-t$ 已满足。若把$r$约定为非负的模，则在 $g(t)<0$ 的区间应加 $\\pi$，在 $x(t)=0$ 处相位未定义。",
+      "answer": "允许有符号实包络时 $\\theta(t)=-t$；非负包络相位需随 cos2t 的符号加 π。",
+      "pitfalls": [
+        "实包络和非负振幅不是同一个约定；不能忽略零点处相位不定。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": [
+        "2014_q2_spectrum.svg"
+      ]
+    },
+    {
+      "ref": "3",
+      "title": "交替冲激序列的傅里叶级数",
+      "statement": "周期冲激在 $t=-2+8m$ 处权值+1，在 $t=2+8m$ 处权值−1。求傅里叶级数并画频谱。",
+      "firstStep": "一周期中只需对两个冲激抽样；先确认周期为8而非相邻冲激距离4。",
+      "solution": "信号为 $x(t)=\\sum_m[\\delta(t+2-8m)-\\delta(t-2-8m)]$，基本周期 $T_0=8$，$\\omega_0=\\pi/4$。取一周期 $[-4,4)$，\n$$c_k=\\frac18\\left(e^{jk\\pi/2}-e^{-jk\\pi/2}\\right)=\\frac j4\\sin\\frac{k\\pi}{2}.$$\n因此\n$$x(t)=\\sum_{k=-\\infty}^{\\infty}\\frac j4\\sin\\frac{k\\pi}{2}\\,e^{jk\\pi t/4}.$$\n偶次系数为0；$k=4m+1$ 时 $c_k=j/4$，$k=4m+3$ 时 $c_k=-j/4$。幅度谱的所有奇次谱线高 $1/4$，相位分别为 $+\\pi/2$、$-\\pi/2$；零系数处不标相位。若画连续时间傅里叶变换谱，冲激权值应另乘 $2\\pi$：$X=2\\pi\\sum c_k\\delta(\\omega-k\\pi/4)$。",
+      "answer": "$T_0=8,\\ \\omega_0=\\pi/4,\\ c_k=(j/4)\\sin(k\\pi/2)$。",
+      "pitfalls": [
+        "平移4会改变信号符号，故4不是周期。",
+        "级数系数与傅里叶变换的冲激权值相差2π。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": [
+        "2014_q3_fourier.svg"
+      ]
+    },
+    {
+      "ref": "4",
+      "title": "全通系统的相位失真与群时延",
+      "statement": "$H(j\\omega)=(1-j\\omega)/(1+j\\omega)$。求恒定幅度A、群时延并作图；输入 $\\cos2t+\\cos5t$，求输出并判断波形失真。",
+      "firstStep": "先分离幅度与相位，再分别作用于两个余弦频率。全通只保证幅度，不保证相位线性。",
+      "solution": "分子分母模均为 $\\sqrt{1+\\omega^2}$，所以 $|H|=1$，$A=1$。取连续展开相位\n$$\\phi(\\omega)=-2\\arctan\\omega,\\qquad \\tau_g(\\omega)=-\\frac{d\\phi}{d\\omega}=\\frac2{1+\\omega^2}.$$\n群时延为偶函数，$\\tau_g(0)=2$，随 $|\\omega|$ 增大趋于0。\n对余弦使用 $A\\cos(\\omega t+\\phi)$ 的稳态响应规则，得到\n$$y(t)=\\cos(2t-2\\arctan2)+\\cos(5t-2\\arctan5).$$\n相位分别约为 $-2.2143$ 和 $-2.7468$ rad。相位延迟 $\\arctan2\\approx1.1071$ 与 $\\frac25\\arctan5\\approx0.5494$ 不同；也不存在同一纯延迟能使两个相位同时匹配模 $2\\pi$。例如若匹配则需 $5\\phi(2)-2\\phi(5)$ 是 $2\\pi$ 整数倍，而实际约 $-5.5779$。因此两频分量相对相位改变，波形发生相位失真。",
+      "answer": "$A=1,\\ \\tau_g=2/(1+\\omega^2)$；输出如上，存在相位失真。",
+      "pitfalls": [
+        "群时延为负相位导数；全通不等于无失真。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": [
+        "2014_q4_group_delay.svg"
+      ]
+    },
+    {
+      "ref": "5",
+      "title": "正反馈参数与临界稳定",
+      "statement": "前向支路 $G(s)=Ks/(s^2+4s+3)$，图中输出以正号反馈。求闭环 $H$、稳定范围，以及临界时 h。",
+      "firstStep": "反馈符号决定分母中的减号；先写 Y=G(X+Y)。",
+      "solution": "由 $Y=G(X+Y)$ 得\n$$H(s)=\\frac{G(s)}{1-G(s)}=\\frac{Ks}{s^2+(4-K)s+3}.$$\n二阶实系数多项式的全部根位于左半平面，当且仅当 $4-K>0$ 且 $3>0$。所以因果系统在 $K<4$ 时 BIBO 稳定；$K=0$ 的传递函数为0，也包含在此范围内。\n临界点为 $K=4$，极点 $s=\\pm j\\sqrt3$，\n$$H(s)=\\frac{4s}{s^2+3},\\qquad h(t)=4\\cos(\\sqrt3t)u(t).$$\n此时自然响应不增长，但 $h$ 不绝对可积；它是通常教材所说的临界稳定，而不是 BIBO 稳定。$K>4$ 时至少存在右半平面极点。",
+      "answer": "$H=Ks/[s^2+(4-K)s+3]$；稳定 K<4；临界 K=4，h=4cos(√3t)u(t)。",
+      "pitfalls": [
+        "原图为正反馈；误写1+G会把稳定范围整个改错。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": []
+    },
+    {
+      "ref": "6",
+      "title": "二阶差分方程的三种响应",
+      "statement": "因果系统 $y[n]+3y[n-1]+2y[n-2]=x[n]$（$n\\ge0$）。$x[n]=3(1/2)^nu[n]$，$y[-1]=-2,y[-2]=2$。求 H、h、稳定性、零输入、零状态与全响应。",
+      "firstStep": "系统函数对应零状态；先因式分解，再用初始值单独解齐次响应。",
+      "solution": "零状态变换得到\n$$H(z)=\\frac1{1+3z^{-1}+2z^{-2}}=\\frac{-1}{1+z^{-1}}+\\frac2{1+2z^{-1}},\\quad |z|>2.$$\n故\n$$h[n]=[-(-1)^n+2(-2)^n]u[n].$$\n极点为 $-1,-2$，因果ROC不含单位圆，故不稳定。\n零输入时 $y_{zi}[0]=-3(-2)-2(2)=2$，$y_{zi}[1]=-3(2)-2(-2)=-2$。设 $A(-1)^n+B(-2)^n$，解得 $A=2,B=0$，所以 $y_{zi}[n]=2(-1)^nu[n]$（此式表示$n\\ge0$的响应）。\n零状态时\n$$Y_{zs}(z)=\\frac3{(1-\\frac12z^{-1})(1+z^{-1})(1+2z^{-1})}$$\n$$=\\frac{1/5}{1-\\frac12z^{-1}}-\\frac2{1+z^{-1}}+\\frac{24/5}{1+2z^{-1}}.$$\n于是\n$$y_{zs}[n]=\\left[\\frac15(\\tfrac12)^n-2(-1)^n+\\frac{24}5(-2)^n\\right]u[n],$$\n$$y[n]=\\left[\\frac15(\\tfrac12)^n+\\frac{24}5(-2)^n\\right]u[n].$$\n检查 $y[0]=5$，满足 $5+3(-2)+2(2)=3=x[0]$；$y[1]=-9.5$，满足 $-9.5+15-4=1.5$。",
+      "answer": "$h=[-(-1)^n+2(-2)^n]u[n]$，不稳定；全响应 $[(1/5)(1/2)^n+(24/5)(-2)^n]u[n]$。",
+      "pitfalls": [
+        "零输入响应不能把给定的过去初值当成0。",
+        "最终的u[n]只限定所求n≥0段，不取代题设的负索引初值。"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "figures": []
+    },
+    {
+      "ref": "7",
+      "title": "sinc²信号的抽样与抗混叠",
+      "statement": "$x(t)=100\\operatorname{sinc}^2(100t)$，$\\operatorname{sinc}t=\\sin(\\pi t)/(\\pi t)$；A/D抽样率190 Hz。求频谱带宽、能否重建；滤波器 $h(t)=150\\operatorname{sinc}(150t)$ 的类型截止频率和频响；先滤波再抽样时，能否恢复y与原x。",
+      "firstStep": "本题 sinc 是归一化定义，最好先用 Hz 写变换，避免 π 与2π错位。",
+      "solution": "用 Hz 变量 $f$，变换对给出\n$$100\\operatorname{sinc}^2(100t)\\longleftrightarrow X(f)=\\Lambda(f/100),$$\n其中 $\\Lambda(v)=\\max(1-|v|,0)$。因此 $X(j\\omega)=\\Lambda(\\omega/(200\\pi))$，带宽为100 Hz（最高角频率 $200\\pi$）。\n直接抽样时 $190<2\\times100=200$ Hz，相邻副本在90—100 Hz及其负频对称区间重叠，不能由一般样本唯一重建原信号。\n滤波器由 $150\\operatorname{sinc}(150t)\\leftrightarrow\\operatorname{rect}(f/150)$ 得知是理想低通，通带增益1、截止频率 $f_c=75$ Hz，即 $\\omega_c=150\\pi$：\n$$H(f)=\\begin{cases}1,&|f|<75,\\\\0,&|f|>75.\\end{cases}$$\n先滤波后 $Y(f)=\\Lambda(f/100)\\operatorname{rect}(f/150)$，带宽75 Hz。由于 $190>150$，可以从 $y[n]$ 无混叠重建 $y(t)$；一种插值式为\n$$y(t)=\\sum_{n=-\\infty}^{\\infty}y[n]\\operatorname{sinc}(190t-n).$$\n但不能据此恢复原 $x(t)$，因为75—100 Hz的非零谱已被滤掉，滤波器在该区间为0，无法求逆。这是滤波造成的信息丢失，与后级是否满足抽样定理是两件事。",
+      "answer": "原带宽100 Hz，直接190 Hz抽样混叠；低通fc=75 Hz后可重建y，不能恢复原x。",
+      "pitfalls": [
+        "150 sinc(150t) 的截止是75 Hz，不能直接当150 Hz。",
+        "能恢复滤波输出不等于能恢复滤波前原信号。"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "figures": [
+        "2014_q7_sampling.svg"
+      ]
+    },
+    {
+      "ref": "8",
+      "title": "反求输入与冲激送限幅器的定义问题",
+      "statement": "因果LTI系统 $H(s)=5(s+3)/(s^2+2s+5)$。（1）$y_1=[\\cos2(t-1)+\\sin2(t-1)]e^{-(t-1)}u(t-1)$，求输入。（2）输入 $\\delta(t)$，输出送入 $z_2=y_2$（$y_2>0$）否则0的限幅器，求其拉普拉斯变换。",
+      "firstStep": "先逐字核对分子：原图是5(s+3)，不是5s(s+3)。因此h没有直接冲激项，限幅运算可以按普通函数处理。",
+      "solution": "（1）由延时性质，\n$$Y_1(s)=e^{-s}\\frac{s+3}{(s+1)^2+4}.$$\n相除得 $X_1(s)=e^{-s}/5$，所以\n$$x_1(t)=\\frac15\\delta(t-1).$$\n（2）$Y_2=H$，部分分解为\n$$h(t)=y_2(t)=5e^{-t}[\\cos2t+\\sin2t]u(t)=5\\sqrt2e^{-t}\\cos(2t-\\pi/4)u(t).$$\n这是一普通函数，正值区间为 $[0,3\\pi/8)$，以及 $[7\\pi/8+m\\pi,\\ 11\\pi/8+m\\pi)$（$m=0,1,\\ldots$）。令 $q=s+1$，定义\n$$F_q(t)=\\frac{e^{-qt}}{q^2+4}\\bigl[(-q-2)\\cos2t+(2-q)\\sin2t\\bigr],$$\n则 $F_q\\prime(t)=e^{-qt}(\\cos2t+\\sin2t)$。截取正半波后\n$$Z_2(s)=5\\left[F_q(3\\pi/8)-F_q(0)+\\frac{F_q(11\\pi/8)-F_q(7\\pi/8)}{1-e^{-q\\pi}}\\right],\\quad\\Re s>-1.$$\n这是已求和的闭式。用端点三角值还可化为\n$$Z_2(s)=\\frac{5}{q^2+4}\\left[q+2+2\\sqrt2e^{-3\\pi q/8}+\\frac{2\\sqrt2(e^{-7\\pi q/8}+e^{-11\\pi q/8})}{1-e^{-\\pi q}}\\right].$$\n闭式中某些可去奇点按连续延拓取值；收敛域由半波包络 $e^{-t}$ 决定。",
+      "answer": "$x_1=\\delta(t-1)/5$；h=5e^{−t}(cos2t+sin2t)u(t)，限幅后Z₂为正文闭式，ROC Re s>−1。",
+      "pitfalls": [
+        "务必看清原图分子5(s+3)，多抄一个s会把题意和答案全部改变。",
+        "正值区间不是每半周期都保留，必须先找零点和符号。"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "figures": []
+    }
+  ]
+}

@@ -1,0 +1,4009 @@
+{
+  "chapters": [
+    {
+      "chapter": "1",
+      "name": "信号与系统",
+      "priority": "必熟",
+      "focus": "定义判性质；波形变换、周期、冲激。用短题保持准确率。",
+      "count": 55,
+      "years": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2026
+      ],
+      "year_count": 17,
+      "recent": 10,
+      "recent_years": 4,
+      "types": 10
+    },
+    {
+      "chapter": "2",
+      "name": "线性时不变系统",
+      "priority": "主攻",
+      "focus": "卷积、阶跃与冲激响应、同初态辨识、零输入与零状态。",
+      "count": 62,
+      "years": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "year_count": 19,
+      "recent": 12,
+      "recent_years": 5,
+      "types": 9
+    },
+    {
+      "chapter": "3",
+      "name": "周期信号的傅里叶级数表示",
+      "priority": "主攻",
+      "focus": "分段波形求系数；系数性质、谐波功率、反推信号。",
+      "count": 25,
+      "years": [
+        2009,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "year_count": 16,
+      "recent": 7,
+      "recent_years": 4,
+      "types": 7
+    },
+    {
+      "chapter": "4",
+      "name": "连续时间傅里叶变换",
+      "priority": "主攻",
+      "focus": "性质法求谱、幅相谱反变换、Parseval及频域积分。",
+      "count": 46,
+      "years": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "year_count": 19,
+      "recent": 9,
+      "recent_years": 5,
+      "types": 7
+    },
+    {
+      "chapter": "5",
+      "name": "离散时间傅里叶变换",
+      "priority": "必熟",
+      "focus": "2π周期、单位圆频响、离散谱和输出；与第10章联练。",
+      "count": 19,
+      "years": [
+        2008,
+        2009,
+        2011,
+        2012,
+        2013,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2023,
+        2024,
+        2026
+      ],
+      "year_count": 13,
+      "recent": 4,
+      "recent_years": 3,
+      "types": 3
+    },
+    {
+      "chapter": "6",
+      "name": "信号与系统的时域和频域特性",
+      "priority": "必熟",
+      "focus": "幅相响应、滤波类型、全通、群时延与无失真条件。",
+      "count": 32,
+      "years": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2014,
+        2015,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2026
+      ],
+      "year_count": 16,
+      "recent": 9,
+      "recent_years": 4,
+      "types": 3
+    },
+    {
+      "chapter": "7",
+      "name": "抽样",
+      "priority": "主攻",
+      "focus": "逐级画谱、混叠、恢复增益；交替抽样、门控及慢波。",
+      "count": 25,
+      "years": [
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "year_count": 18,
+      "recent": 6,
+      "recent_years": 5,
+      "types": 7
+    },
+    {
+      "chapter": "8",
+      "name": "通信系统",
+      "priority": "联练",
+      "focus": "调制解调、希尔伯特与单边带；与第4、7章组合练。",
+      "count": 16,
+      "years": [
+        2009,
+        2010,
+        2012,
+        2013,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "year_count": 13,
+      "recent": 6,
+      "recent_years": 4,
+      "types": 3
+    },
+    {
+      "chapter": "9",
+      "name": "拉普拉斯变换",
+      "priority": "主攻",
+      "focus": "电路/方程/结构到H(s)、极点、ROC、响应与初态。",
+      "count": 49,
+      "years": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "year_count": 19,
+      "recent": 10,
+      "recent_years": 5,
+      "types": 7
+    },
+    {
+      "chapter": "10",
+      "name": "Z变换",
+      "priority": "主攻",
+      "focus": "差分/结构到H(z)、ROC、因果稳定、初态与逆系统。",
+      "count": 41,
+      "years": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "year_count": 18,
+      "recent": 9,
+      "recent_years": 5,
+      "types": 9
+    },
+    {
+      "chapter": "11",
+      "name": "线性反馈系统",
+      "priority": "专项",
+      "focus": "闭环函数和参数稳定范围；延时反馈与回波。",
+      "count": 8,
+      "years": [
+        2008,
+        2010,
+        2012,
+        2014,
+        2016,
+        2020,
+        2023,
+        2025
+      ],
+      "year_count": 8,
+      "recent": 2,
+      "recent_years": 2,
+      "types": 2
+    },
+    {
+      "chapter": "S",
+      "name": "补充专题",
+      "priority": "补齐",
+      "focus": "正交投影、最小误差、匹配滤波、相关函数。配合第3章。",
+      "count": 4,
+      "years": [
+        2011,
+        2023,
+        2024,
+        2026
+      ],
+      "year_count": 4,
+      "recent": 3,
+      "recent_years": 3,
+      "types": 3
+    }
+  ],
+  "topics": [
+    {
+      "code": "1.01",
+      "name": "时域变换与波形",
+      "chapter": "1",
+      "count": 10,
+      "year_count": 7,
+      "recent": 2
+    },
+    {
+      "code": "1.02",
+      "name": "周期性与基本周期",
+      "chapter": "1",
+      "count": 6,
+      "year_count": 6,
+      "recent": 1
+    },
+    {
+      "code": "1.03",
+      "name": "能量功率概念",
+      "chapter": "1",
+      "count": 8,
+      "year_count": 4,
+      "recent": 0
+    },
+    {
+      "code": "1.04",
+      "name": "线性判定",
+      "chapter": "1",
+      "count": 16,
+      "year_count": 13,
+      "recent": 2
+    },
+    {
+      "code": "1.05",
+      "name": "时不变判定",
+      "chapter": "1",
+      "count": 17,
+      "year_count": 13,
+      "recent": 4
+    },
+    {
+      "code": "1.06",
+      "name": "一般系统因果性",
+      "chapter": "1",
+      "count": 16,
+      "year_count": 13,
+      "recent": 3
+    },
+    {
+      "code": "1.07",
+      "name": "一般系统稳定性",
+      "chapter": "1",
+      "count": 7,
+      "year_count": 6,
+      "recent": 0
+    },
+    {
+      "code": "1.08",
+      "name": "记忆性",
+      "chapter": "1",
+      "count": 8,
+      "year_count": 7,
+      "recent": 3
+    },
+    {
+      "code": "1.09",
+      "name": "可逆性",
+      "chapter": "1",
+      "count": 1,
+      "year_count": 1,
+      "recent": 1
+    },
+    {
+      "code": "1.10",
+      "name": "冲激尺度、抽样与导数",
+      "chapter": "1",
+      "count": 15,
+      "year_count": 8,
+      "recent": 3
+    },
+    {
+      "code": "2.01",
+      "name": "连续卷积",
+      "chapter": "2",
+      "count": 11,
+      "year_count": 9,
+      "recent": 3
+    },
+    {
+      "code": "2.02",
+      "name": "离散卷积",
+      "chapter": "2",
+      "count": 5,
+      "year_count": 5,
+      "recent": 1
+    },
+    {
+      "code": "2.03",
+      "name": "阶跃响应与冲激响应互求",
+      "chapter": "2",
+      "count": 12,
+      "year_count": 8,
+      "recent": 4
+    },
+    {
+      "code": "2.04",
+      "name": "零输入、零状态与全响应",
+      "chapter": "2",
+      "count": 18,
+      "year_count": 14,
+      "recent": 3
+    },
+    {
+      "code": "2.05",
+      "name": "同初态相减辨识",
+      "chapter": "2",
+      "count": 4,
+      "year_count": 4,
+      "recent": 1
+    },
+    {
+      "code": "2.06",
+      "name": "由输入输出反求h或输入",
+      "chapter": "2",
+      "count": 14,
+      "year_count": 10,
+      "recent": 6
+    },
+    {
+      "code": "2.07",
+      "name": "由h判断LTI系统因果稳定",
+      "chapter": "2",
+      "count": 9,
+      "year_count": 6,
+      "recent": 2
+    },
+    {
+      "code": "2.08",
+      "name": "级联并联与等效系统",
+      "chapter": "2",
+      "count": 7,
+      "year_count": 7,
+      "recent": 0
+    },
+    {
+      "code": "2.09",
+      "name": "初始静止与LTI条件",
+      "chapter": "2",
+      "count": 3,
+      "year_count": 3,
+      "recent": 1
+    },
+    {
+      "code": "3.01",
+      "name": "连续傅里叶级数系数",
+      "chapter": "3",
+      "count": 18,
+      "year_count": 14,
+      "recent": 5
+    },
+    {
+      "code": "3.02",
+      "name": "离散傅里叶级数系数",
+      "chapter": "3",
+      "count": 1,
+      "year_count": 1,
+      "recent": 0
+    },
+    {
+      "code": "3.03",
+      "name": "级数性质与系数运算",
+      "chapter": "3",
+      "count": 6,
+      "year_count": 6,
+      "recent": 4
+    },
+    {
+      "code": "3.04",
+      "name": "周期输入的LTI响应",
+      "chapter": "3",
+      "count": 10,
+      "year_count": 7,
+      "recent": 3
+    },
+    {
+      "code": "3.05",
+      "name": "谐波功率与级数Parseval",
+      "chapter": "3",
+      "count": 3,
+      "year_count": 3,
+      "recent": 2
+    },
+    {
+      "code": "3.06",
+      "name": "由系数约束反推信号",
+      "chapter": "3",
+      "count": 2,
+      "year_count": 2,
+      "recent": 1
+    },
+    {
+      "code": "3.07",
+      "name": "级数收敛与Gibbs现象",
+      "chapter": "3",
+      "count": 2,
+      "year_count": 1,
+      "recent": 0
+    },
+    {
+      "code": "4.01",
+      "name": "连续傅里叶正变换",
+      "chapter": "4",
+      "count": 15,
+      "year_count": 11,
+      "recent": 3
+    },
+    {
+      "code": "4.02",
+      "name": "傅里叶变换性质",
+      "chapter": "4",
+      "count": 19,
+      "year_count": 16,
+      "recent": 5
+    },
+    {
+      "code": "4.03",
+      "name": "周期信号与冲激线谱",
+      "chapter": "4",
+      "count": 7,
+      "year_count": 7,
+      "recent": 2
+    },
+    {
+      "code": "4.04",
+      "name": "逆变换与幅相谱",
+      "chapter": "4",
+      "count": 10,
+      "year_count": 9,
+      "recent": 2
+    },
+    {
+      "code": "4.05",
+      "name": "非周期输入的频域响应",
+      "chapter": "4",
+      "count": 6,
+      "year_count": 4,
+      "recent": 0
+    },
+    {
+      "code": "4.06",
+      "name": "Parseval、积分与频谱矩",
+      "chapter": "4",
+      "count": 3,
+      "year_count": 3,
+      "recent": 2
+    },
+    {
+      "code": "4.07",
+      "name": "时限带限关系",
+      "chapter": "4",
+      "count": 2,
+      "year_count": 2,
+      "recent": 0
+    },
+    {
+      "code": "5.01",
+      "name": "DTFT及2π周期性",
+      "chapter": "5",
+      "count": 12,
+      "year_count": 10,
+      "recent": 4
+    },
+    {
+      "code": "5.02",
+      "name": "DTFT性质与频谱搬移",
+      "chapter": "5",
+      "count": 2,
+      "year_count": 2,
+      "recent": 0
+    },
+    {
+      "code": "5.03",
+      "name": "离散系统的频域响应",
+      "chapter": "5",
+      "count": 11,
+      "year_count": 8,
+      "recent": 3
+    },
+    {
+      "code": "6.01",
+      "name": "幅相响应与滤波类型",
+      "chapter": "6",
+      "count": 28,
+      "year_count": 15,
+      "recent": 8
+    },
+    {
+      "code": "6.02",
+      "name": "群时延与无失真",
+      "chapter": "6",
+      "count": 4,
+      "year_count": 4,
+      "recent": 1
+    },
+    {
+      "code": "6.03",
+      "name": "理想滤波器h与阶跃响应",
+      "chapter": "6",
+      "count": 2,
+      "year_count": 2,
+      "recent": 0
+    },
+    {
+      "code": "7.01",
+      "name": "冲激抽样与频谱复制",
+      "chapter": "7",
+      "count": 18,
+      "year_count": 15,
+      "recent": 5
+    },
+    {
+      "code": "7.02",
+      "name": "混叠与抽样间隔条件",
+      "chapter": "7",
+      "count": 24,
+      "year_count": 18,
+      "recent": 5
+    },
+    {
+      "code": "7.03",
+      "name": "恢复滤波器与增益",
+      "chapter": "7",
+      "count": 21,
+      "year_count": 18,
+      "recent": 5
+    },
+    {
+      "code": "7.04",
+      "name": "交替符号冲激抽样",
+      "chapter": "7",
+      "count": 2,
+      "year_count": 2,
+      "recent": 0
+    },
+    {
+      "code": "7.05",
+      "name": "周期门控/脉冲抽样",
+      "chapter": "7",
+      "count": 3,
+      "year_count": 3,
+      "recent": 2
+    },
+    {
+      "code": "7.06",
+      "name": "连续信号的离散处理",
+      "chapter": "7",
+      "count": 3,
+      "year_count": 3,
+      "recent": 0
+    },
+    {
+      "code": "7.07",
+      "name": "抽样示波与慢波",
+      "chapter": "7",
+      "count": 4,
+      "year_count": 4,
+      "recent": 2
+    },
+    {
+      "code": "8.01",
+      "name": "连续调制与相干解调",
+      "chapter": "8",
+      "count": 13,
+      "year_count": 11,
+      "recent": 6
+    },
+    {
+      "code": "8.02",
+      "name": "希尔伯特、单边带与正交解调",
+      "chapter": "8",
+      "count": 5,
+      "year_count": 5,
+      "recent": 1
+    },
+    {
+      "code": "8.03",
+      "name": "离散调制",
+      "chapter": "8",
+      "count": 2,
+      "year_count": 2,
+      "recent": 0
+    },
+    {
+      "code": "9.01",
+      "name": "拉普拉斯正逆变换及性质",
+      "chapter": "9",
+      "count": 34,
+      "year_count": 18,
+      "recent": 5
+    },
+    {
+      "code": "9.02",
+      "name": "s平面ROC与双边信号",
+      "chapter": "9",
+      "count": 7,
+      "year_count": 6,
+      "recent": 1
+    },
+    {
+      "code": "9.03",
+      "name": "微分方程/响应与H(s)",
+      "chapter": "9",
+      "count": 21,
+      "year_count": 14,
+      "recent": 5
+    },
+    {
+      "code": "9.04",
+      "name": "连续零极点、因果稳定",
+      "chapter": "9",
+      "count": 27,
+      "year_count": 17,
+      "recent": 6
+    },
+    {
+      "code": "9.05",
+      "name": "连续系统框图与积分器实现",
+      "chapter": "9",
+      "count": 12,
+      "year_count": 10,
+      "recent": 3
+    },
+    {
+      "code": "9.06",
+      "name": "电路建模与系统函数",
+      "chapter": "9",
+      "count": 7,
+      "year_count": 7,
+      "recent": 2
+    },
+    {
+      "code": "9.07",
+      "name": "连续初值终值定理",
+      "chapter": "9",
+      "count": 4,
+      "year_count": 3,
+      "recent": 1
+    },
+    {
+      "code": "10.01",
+      "name": "Z正逆变换及性质",
+      "chapter": "10",
+      "count": 25,
+      "year_count": 16,
+      "recent": 6
+    },
+    {
+      "code": "10.02",
+      "name": "z平面ROC与双边序列",
+      "chapter": "10",
+      "count": 14,
+      "year_count": 9,
+      "recent": 1
+    },
+    {
+      "code": "10.03",
+      "name": "差分/阶跃响应与H(z)",
+      "chapter": "10",
+      "count": 24,
+      "year_count": 15,
+      "recent": 6
+    },
+    {
+      "code": "10.04",
+      "name": "离散零极点、因果稳定",
+      "chapter": "10",
+      "count": 15,
+      "year_count": 12,
+      "recent": 5
+    },
+    {
+      "code": "10.05",
+      "name": "离散框图与最少延时实现",
+      "chapter": "10",
+      "count": 13,
+      "year_count": 11,
+      "recent": 3
+    },
+    {
+      "code": "10.06",
+      "name": "离散初态与响应",
+      "chapter": "10",
+      "count": 4,
+      "year_count": 4,
+      "recent": 2
+    },
+    {
+      "code": "10.07",
+      "name": "逆系统",
+      "chapter": "10",
+      "count": 1,
+      "year_count": 1,
+      "recent": 1
+    },
+    {
+      "code": "10.08",
+      "name": "离散初值终值定理",
+      "chapter": "10",
+      "count": 1,
+      "year_count": 1,
+      "recent": 0
+    },
+    {
+      "code": "10.09",
+      "name": "Z变换与单位圆频响",
+      "chapter": "10",
+      "count": 8,
+      "year_count": 8,
+      "recent": 3
+    },
+    {
+      "code": "11.01",
+      "name": "闭环函数与反馈参数稳定",
+      "chapter": "11",
+      "count": 7,
+      "year_count": 7,
+      "recent": 2
+    },
+    {
+      "code": "11.02",
+      "name": "延时反馈与回波",
+      "chapter": "11",
+      "count": 1,
+      "year_count": 1,
+      "recent": 0
+    },
+    {
+      "code": "S.01",
+      "name": "正交展开与最小均方误差",
+      "chapter": "S",
+      "count": 2,
+      "year_count": 2,
+      "recent": 2
+    },
+    {
+      "code": "S.02",
+      "name": "匹配滤波与投影",
+      "chapter": "S",
+      "count": 1,
+      "year_count": 1,
+      "recent": 1
+    },
+    {
+      "code": "S.03",
+      "name": "相关函数及其变换",
+      "chapter": "S",
+      "count": 2,
+      "year_count": 2,
+      "recent": 1
+    }
+  ],
+  "index": [
+    {
+      "year": 2008,
+      "question": "一",
+      "page": "1",
+      "summary": "六种输入输出映射的线性、时不变和因果性",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "二(1)",
+      "page": "1",
+      "summary": "非周期信号是否都是能量信号",
+      "codes": [
+        "1.03"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "二(2)",
+      "page": "1",
+      "summary": "能量信号是否都非周期",
+      "codes": [
+        "1.03"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "二(3)",
+      "page": "1",
+      "summary": "两个功率信号之积",
+      "codes": [
+        "1.03"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "二(4)",
+      "page": "1",
+      "summary": "两个功率信号之和",
+      "codes": [
+        "1.03"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "三",
+      "page": "1",
+      "summary": "截断指数与冲激输入，卷积及消除响应尾部",
+      "codes": [
+        "2.01"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "四(1)",
+      "page": "2",
+      "summary": "给定ROC的逆Z变换",
+      "codes": [
+        "10.01",
+        "10.02"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "四(2)",
+      "page": "2",
+      "summary": "延时和指数加权的Z变换及ROC",
+      "codes": [
+        "10.01",
+        "10.02"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "四(3)",
+      "page": "2",
+      "summary": "有理拉普拉斯逆变换",
+      "codes": [
+        "9.01"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "四(4)",
+      "page": "2",
+      "summary": "带线性相位的矩形频谱逆变换",
+      "codes": [
+        "4.02",
+        "4.04"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "四(5)",
+      "page": "2",
+      "summary": "因果序列初值和终值",
+      "codes": [
+        "10.08"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "五",
+      "page": "2",
+      "summary": "矩形输入通过理想低通后的输出频谱",
+      "codes": [
+        "4.01",
+        "4.05",
+        "6.01"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "六",
+      "page": "2",
+      "summary": "三点移动平均，h、频响、有限长和滤波类型",
+      "codes": [
+        "5.01",
+        "6.01",
+        "10.03"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "七",
+      "page": "3",
+      "summary": "有源电路放大倍数的稳定范围",
+      "codes": [
+        "9.04",
+        "9.06",
+        "11.01"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2008,
+      "question": "八",
+      "page": "3",
+      "summary": "证明信号不能同时严格时限与带限",
+      "codes": [
+        "4.07"
+      ],
+      "source": "2008年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一1",
+      "page": "1",
+      "summary": "两个周期信号之和的周期性",
+      "codes": [
+        "1.02"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一2",
+      "page": "1",
+      "summary": "所有连续周期信号频谱是否都收敛",
+      "codes": [
+        "3.07"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一3",
+      "page": "1",
+      "summary": "冲激信号的面积与能量",
+      "codes": [
+        "1.03",
+        "1.10"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一4",
+      "page": "1",
+      "summary": "时限与带限能否同时成立",
+      "codes": [
+        "4.07"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一5",
+      "page": "1",
+      "summary": "时间尺度变换系统的线性与因果性",
+      "codes": [
+        "1.04",
+        "1.06"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一6",
+      "page": "1",
+      "summary": "系统函数和初始状态能否确定零输入响应",
+      "codes": [
+        "2.04",
+        "9.03"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一7",
+      "page": "1",
+      "summary": "Z变换单位圆与频率响应",
+      "codes": [
+        "10.02",
+        "10.09",
+        "5.01"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一8",
+      "page": "1",
+      "summary": "终值定理的适用条件",
+      "codes": [
+        "9.07"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一9",
+      "page": "1",
+      "summary": "h绝对可积与系统稳定",
+      "codes": [
+        "2.07"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "一10",
+      "page": "1",
+      "summary": "圆外ROC与因果性",
+      "codes": [
+        "10.02",
+        "10.04"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "二",
+      "page": "1",
+      "summary": "Gibbs、带延时理想低通的h和阶跃响应",
+      "codes": [
+        "3.07",
+        "6.03"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "三1",
+      "page": "2",
+      "summary": "冲激尺度积分",
+      "codes": [
+        "1.10"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "三2",
+      "page": "2",
+      "summary": "冲激导数积分",
+      "codes": [
+        "1.10"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "三3",
+      "page": "2",
+      "summary": "右边指数与有限长序列卷积",
+      "codes": [
+        "2.02"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "三4",
+      "page": "2",
+      "summary": "正指数正弦乘t，通常傅里叶变换存在性辨析",
+      "codes": [
+        "4.01",
+        "4.02"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "三5",
+      "page": "2",
+      "summary": "非真分式拉普拉斯逆变换",
+      "codes": [
+        "9.01"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "三6",
+      "page": "2",
+      "summary": "幂级数法求对数形式逆Z变换",
+      "codes": [
+        "10.01",
+        "10.02"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "四",
+      "page": "2",
+      "summary": "周期信号欠采样、低通输出与慢波",
+      "codes": [
+        "4.03",
+        "7.01",
+        "7.02",
+        "7.03",
+        "7.07"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "五",
+      "page": "3",
+      "summary": "差分系统按稳定/因果条件选择h",
+      "codes": [
+        "10.01",
+        "10.02",
+        "10.03",
+        "10.04"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "六",
+      "page": "3",
+      "summary": "RLC系统函数、消除正弦稳态分量及输出",
+      "codes": [
+        "9.01",
+        "9.03",
+        "9.06"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2009,
+      "question": "七",
+      "page": "3",
+      "summary": "离散零极点图、调制关系和滤波类型",
+      "codes": [
+        "6.01",
+        "8.03",
+        "10.04",
+        "5.02"
+      ],
+      "source": "2009年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "一1",
+      "page": "1",
+      "summary": "非周期信号是否均为能量信号",
+      "codes": [
+        "1.03"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "一2",
+      "page": "1",
+      "summary": "卷积法的LTI适用条件",
+      "codes": [
+        "2.09"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "一3",
+      "page": "1",
+      "summary": "LTI级联顺序与等效系统",
+      "codes": [
+        "2.08"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "一4",
+      "page": "1",
+      "summary": "连续非周期信号的频谱是否周期",
+      "codes": [
+        "4.04"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "一5",
+      "page": "1",
+      "summary": "最小相位系统零点位置",
+      "codes": [
+        "9.04"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "二1",
+      "page": "1",
+      "summary": "离散三角函数和的基本周期",
+      "codes": [
+        "1.02"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "二2",
+      "page": "1",
+      "summary": "连续冲激的尺度性质",
+      "codes": [
+        "1.10"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "二3",
+      "page": "1",
+      "summary": "反褶平移序列映射的系统性质",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06",
+        "1.07"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "二4",
+      "page": "1",
+      "summary": "离散冲激加权序列求和",
+      "codes": [
+        "1.10"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "二5",
+      "page": "1",
+      "summary": "余弦调制后的奈奎斯特频率",
+      "codes": [
+        "7.02",
+        "8.01"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "三1",
+      "page": "2",
+      "summary": "指数与常数的连续卷积",
+      "codes": [
+        "2.01"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "三2",
+      "page": "2",
+      "summary": "两个矩形脉冲卷积",
+      "codes": [
+        "2.01"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "三3",
+      "page": "2",
+      "summary": "冲激与冲激导数积分",
+      "codes": [
+        "1.10"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "三4",
+      "page": "2",
+      "summary": "延时指数导数的傅里叶变换",
+      "codes": [
+        "4.01",
+        "4.02"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "三5",
+      "page": "2",
+      "summary": "给定ROC的拉普拉斯逆变换",
+      "codes": [
+        "9.01",
+        "9.02"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "三6",
+      "page": "2",
+      "summary": "环形ROC的逆Z变换",
+      "codes": [
+        "10.01",
+        "10.02"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "四1",
+      "page": "2",
+      "summary": "指数非线性映射的线性与时不变",
+      "codes": [
+        "1.04",
+        "1.05"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "四2",
+      "page": "2",
+      "summary": "矩形幅度、分段相位的冲激响应",
+      "codes": [
+        "4.04",
+        "6.03"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "五",
+      "page": "3",
+      "summary": "正反馈系统函数、稳定参数和h",
+      "codes": [
+        "9.01",
+        "9.04",
+        "11.01"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "六",
+      "page": "3",
+      "summary": "归一化冲激抽样，延时恢复及相减结构",
+      "codes": [
+        "4.01",
+        "7.01",
+        "7.02",
+        "7.03"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2010,
+      "question": "七",
+      "page": "4",
+      "summary": "离散零极点及h初值确定系统和指数输入响应",
+      "codes": [
+        "10.01",
+        "10.03",
+        "10.04"
+      ],
+      "source": "2010年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "一(1)",
+      "page": "1",
+      "summary": "阶跃组合的波形",
+      "codes": [
+        "1.01"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "一(2)",
+      "page": "1",
+      "summary": "延时sinc波形",
+      "codes": [
+        "1.01"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "一(3)",
+      "page": "1",
+      "summary": "衰减正弦离散序列波形",
+      "codes": [
+        "1.01"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "一(4)",
+      "page": "1",
+      "summary": "含阶跃指数正弦导数的波形",
+      "codes": [
+        "1.01",
+        "1.10"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "二(1)",
+      "page": "1",
+      "summary": "连续衰减复指数h判断稳定",
+      "codes": [
+        "2.07"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "二(2)",
+      "page": "1",
+      "summary": "连续指数余弦h判断稳定",
+      "codes": [
+        "2.07"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "二(3)",
+      "page": "1",
+      "summary": "离散n乘余弦h判断稳定",
+      "codes": [
+        "2.07"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "二(4)",
+      "page": "1",
+      "summary": "离散左边指数h判断稳定",
+      "codes": [
+        "2.07"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "三",
+      "page": "1",
+      "summary": "离散指数h和冲激组合输入的响应",
+      "codes": [
+        "2.02"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "四",
+      "page": "2",
+      "summary": "周期方波通过已知频率响应系统",
+      "codes": [
+        "3.01",
+        "3.04"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "五",
+      "page": "2",
+      "summary": "连续零极点图确定H、阶跃及幅频特性",
+      "codes": [
+        "6.01",
+        "9.01",
+        "9.04"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "六",
+      "page": "2",
+      "summary": "一阶离散全通、框图、稳定及ROC",
+      "codes": [
+        "6.01",
+        "10.02",
+        "10.04",
+        "10.05",
+        "10.09",
+        "5.01"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "七",
+      "page": "2—3",
+      "summary": "自相关的卷积表示、傅里叶和拉普拉斯及ROC",
+      "codes": [
+        "2.08",
+        "4.02",
+        "9.02",
+        "S.03"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2011,
+      "question": "八",
+      "page": "3",
+      "summary": "T加小偏差抽样、低通输出和慢波系数",
+      "codes": [
+        "4.03",
+        "7.01",
+        "7.02",
+        "7.03",
+        "7.07"
+      ],
+      "source": "2011年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "一1",
+      "page": "1",
+      "summary": "稳定因果连续系统极点位置",
+      "codes": [
+        "9.04"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "一2",
+      "page": "1",
+      "summary": "正弦余弦乘输入的系统性质",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "一3",
+      "page": "1",
+      "summary": "离散余弦的周期性",
+      "codes": [
+        "1.02"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "一4",
+      "page": "1",
+      "summary": "X在零频处与时域面积",
+      "codes": [
+        "4.02"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "一5",
+      "page": "1",
+      "summary": "拉普拉斯逆变换",
+      "codes": [
+        "9.01"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "二1",
+      "page": "1",
+      "summary": "含n的右边序列Z变换与ROC",
+      "codes": [
+        "10.01",
+        "10.02"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "二2",
+      "page": "1",
+      "summary": "有理傅里叶谱逆变换",
+      "codes": [
+        "4.04"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "二3",
+      "page": "1—2",
+      "summary": "同初态下阶跃和双倍阶跃反推组合输入响应",
+      "codes": [
+        "2.04",
+        "2.05"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "二4",
+      "page": "2",
+      "summary": "初始松弛微分系统及平方映射的性质",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "二5",
+      "page": "2",
+      "summary": "矩形h对输入导数的响应",
+      "codes": [
+        "1.10",
+        "2.01"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "二6",
+      "page": "2",
+      "summary": "三角函数和的指定谐波系数",
+      "codes": [
+        "3.01"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "二7",
+      "page": "2",
+      "summary": "周期正弦和输入理想滤波后的输出",
+      "codes": [
+        "3.04",
+        "6.01"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "三1",
+      "page": "2",
+      "summary": "周期三角波系数选择滤波频带得到指定谐波",
+      "codes": [
+        "3.01",
+        "3.04",
+        "6.01"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "三2",
+      "page": "3",
+      "summary": "因果差分系统h与全时域余弦响应",
+      "codes": [
+        "5.03",
+        "10.01",
+        "10.03"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "三3",
+      "page": "3",
+      "summary": "调制、均匀采样、序列转冲激串和恢复",
+      "codes": [
+        "7.01",
+        "7.02",
+        "7.03",
+        "7.06",
+        "8.01"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "三4",
+      "page": "3",
+      "summary": "级联并联h图反求未知支路",
+      "codes": [
+        "2.01",
+        "2.06",
+        "2.08"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "三5",
+      "page": "4",
+      "summary": "已知闭环函数反求支路及稳定参数",
+      "codes": [
+        "9.03",
+        "9.04",
+        "11.01"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "三6",
+      "page": "4",
+      "summary": "周期阶跃响应反求差分、框图、极点稳定",
+      "codes": [
+        "2.03",
+        "10.03",
+        "10.04",
+        "10.05"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2012,
+      "question": "三7",
+      "page": "4",
+      "summary": "积分器框图求H、极点、h及初态响应",
+      "codes": [
+        "2.04",
+        "9.01",
+        "9.04",
+        "9.05"
+      ],
+      "source": "2012年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "一1",
+      "page": "1",
+      "summary": "非线性时变映射的线性、时不变、因果性",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "一2",
+      "page": "1",
+      "summary": "略高于奈奎斯特抽样的恢复截止频率范围",
+      "codes": [
+        "7.02",
+        "7.03"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "一3",
+      "page": "1",
+      "summary": "阶跃序列的Z变换反求H",
+      "codes": [
+        "2.03",
+        "10.03"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "一4",
+      "page": "1",
+      "summary": "卷积型积分的拉普拉斯及ROC",
+      "codes": [
+        "9.01",
+        "9.02"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "一5",
+      "page": "1",
+      "summary": "由输入输出频谱及延时输入求输出",
+      "codes": [
+        "4.02",
+        "4.05"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "一6",
+      "page": "1",
+      "summary": "耦合差分方程组求子系统函数",
+      "codes": [
+        "10.03"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "二1",
+      "page": "1—2",
+      "summary": "阶跃响应求h、性质、频响和差分",
+      "codes": [
+        "2.03",
+        "2.07",
+        "1.08",
+        "5.01",
+        "10.03"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "二2(1)",
+      "page": "2",
+      "summary": "同初态阶跃与双倍阶跃响应推断双极矩形响应",
+      "codes": [
+        "2.04",
+        "2.05"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "二2(2)",
+      "page": "2",
+      "summary": "离散阶跃响应反推差分和框图",
+      "codes": [
+        "2.03",
+        "10.03",
+        "10.05"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "二3",
+      "page": "2—3",
+      "summary": "分段周期波形、因果判断、FS和微分系统周期输出",
+      "codes": [
+        "1.01",
+        "1.06",
+        "3.01",
+        "3.04",
+        "9.03",
+        "9.04"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "二4",
+      "page": "3",
+      "summary": "连续信号经离散滤波的抽样条件和等效连续频响",
+      "codes": [
+        "5.03",
+        "7.02",
+        "7.03",
+        "7.06"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "二5",
+      "page": "3—4",
+      "summary": "带载波相位偏差的正交解调、谱及包络",
+      "codes": [
+        "8.01",
+        "8.02"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "二6",
+      "page": "4",
+      "summary": "由指数输入输出求h，再求初态全响应",
+      "codes": [
+        "2.04",
+        "2.06",
+        "9.01",
+        "9.03"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "二7",
+      "page": "4—5",
+      "summary": "双边h的H及ROC、傅里叶存在、方程和实现",
+      "codes": [
+        "4.01",
+        "9.01",
+        "9.02",
+        "9.03",
+        "9.04",
+        "9.05"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2013,
+      "question": "二8",
+      "page": "5",
+      "summary": "离散反馈框图求差分、h、稳定和正弦响应",
+      "codes": [
+        "5.03",
+        "10.01",
+        "10.03",
+        "10.04",
+        "10.05"
+      ],
+      "source": "2013年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "1(1)",
+      "page": "1",
+      "summary": "零初态一阶微分系统的五种性质",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06",
+        "1.07",
+        "1.08"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "1(2)",
+      "page": "1",
+      "summary": "指数乘输入映射的五种性质",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06",
+        "1.07",
+        "1.08"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "2(1)",
+      "page": "1",
+      "summary": "冲激导数积分",
+      "codes": [
+        "1.10"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "2(2)",
+      "page": "1",
+      "summary": "冲激尺度与反褶积分",
+      "codes": [
+        "1.10"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "2(3)",
+      "page": "1",
+      "summary": "左边指数和阶跃卷积",
+      "codes": [
+        "2.01"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "2(4)",
+      "page": "1",
+      "summary": "饱和斜坡的傅里叶变换",
+      "codes": [
+        "4.01",
+        "4.02"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "2(5)",
+      "page": "1—2",
+      "summary": "利用双三角频谱求信号能量",
+      "codes": [
+        "4.06"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "2(6)",
+      "page": "2",
+      "summary": "由频谱性质求时域相位",
+      "codes": [
+        "4.02",
+        "4.04"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "3",
+      "page": "2",
+      "summary": "交替周期冲激的级数系数及谱图",
+      "codes": [
+        "3.01",
+        "4.03"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "4",
+      "page": "2",
+      "summary": "全通幅度、群时延、余弦和输出及失真",
+      "codes": [
+        "3.04",
+        "6.01",
+        "6.02"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "5",
+      "page": "2",
+      "summary": "反馈参数稳定范围及临界h",
+      "codes": [
+        "9.01",
+        "9.04",
+        "11.01"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "6",
+      "page": "3",
+      "summary": "二阶差分系统的h、稳定、零输入零状态全响应",
+      "codes": [
+        "2.04",
+        "10.01",
+        "10.03",
+        "10.04",
+        "10.06"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "7",
+      "page": "3",
+      "summary": "sinc平方抽样、带宽、抗混叠滤波与可恢复性",
+      "codes": [
+        "4.01",
+        "6.01",
+        "7.01",
+        "7.02",
+        "7.03"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2014,
+      "question": "8",
+      "page": "3",
+      "summary": "由H和输出反求输入，限幅后拉普拉斯",
+      "codes": [
+        "2.06",
+        "9.01",
+        "9.03"
+      ],
+      "source": "2014年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "一1",
+      "page": "1",
+      "summary": "余弦乘冲激的积分",
+      "codes": [
+        "1.10"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "一2",
+      "page": "1",
+      "summary": "离散延时冲激输入输出反求h",
+      "codes": [
+        "2.06"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "一3",
+      "page": "1",
+      "summary": "两个有限长序列卷积",
+      "codes": [
+        "2.02"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "二1",
+      "page": "1",
+      "summary": "偶数索引保留映射的五种性质",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06",
+        "1.07",
+        "1.08"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "二2(1)",
+      "page": "1",
+      "summary": "奇信号反褶后改变符号",
+      "codes": [
+        "1.01"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "二2(2)",
+      "page": "1",
+      "summary": "周期信号是否通常为能量有限",
+      "codes": [
+        "1.03"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "二2(3)",
+      "page": "1",
+      "summary": "频率比为2的正余弦和的周期性",
+      "codes": [
+        "1.02"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "二2(4)",
+      "page": "1",
+      "summary": "冲激面积和能量",
+      "codes": [
+        "1.03",
+        "1.10"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "二2(5)",
+      "page": "1",
+      "summary": "余弦与能量信号卷积的形式",
+      "codes": [
+        "4.05"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "三",
+      "page": "1",
+      "summary": "锯齿波傅里叶级数及一二次谐波功率",
+      "codes": [
+        "3.01",
+        "3.05"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "四",
+      "page": "1",
+      "summary": "冲激导数和延时阶跃支路的幅相及sinc响应",
+      "codes": [
+        "2.08",
+        "4.02",
+        "4.05",
+        "6.01"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "五",
+      "page": "2",
+      "summary": "有限谐波周期信号的抽样谱、混叠和输出级数",
+      "codes": [
+        "3.01",
+        "4.03",
+        "7.01",
+        "7.02",
+        "7.03"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "六",
+      "page": "2",
+      "summary": "归一化抽样并与原信号相减后低通",
+      "codes": [
+        "7.01",
+        "7.02",
+        "7.03"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "七",
+      "page": "2",
+      "summary": "二阶微分系统全响应分解、H、稳定和特征输入",
+      "codes": [
+        "2.04",
+        "4.05",
+        "9.01",
+        "9.03",
+        "9.04"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2015,
+      "question": "八",
+      "page": "2",
+      "summary": "含参数离散框图、H、h、差分、ROC稳定和阶跃",
+      "codes": [
+        "10.01",
+        "10.02",
+        "10.03",
+        "10.04",
+        "10.05"
+      ],
+      "source": "2015年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2016,
+      "question": "一",
+      "page": "1",
+      "summary": "矩形和含常数阶跃的连续卷积",
+      "codes": [
+        "2.01"
+      ],
+      "source": "2016年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2016,
+      "question": "二",
+      "page": "1",
+      "summary": "线性非时变即LTI的叠加响应与卷积",
+      "codes": [
+        "2.02",
+        "2.06"
+      ],
+      "source": "2016年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2016,
+      "question": "三",
+      "page": "1",
+      "summary": "复指数和的基频及非零级数系数",
+      "codes": [
+        "1.02",
+        "3.01"
+      ],
+      "source": "2016年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2016,
+      "question": "四",
+      "page": "1",
+      "summary": "周期三角频谱的逆傅里叶变换",
+      "codes": [
+        "4.02",
+        "4.04"
+      ],
+      "source": "2016年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2016,
+      "question": "五",
+      "page": "2",
+      "summary": "冲激抽样后带通移相输出及恢复",
+      "codes": [
+        "7.01",
+        "7.02",
+        "7.03",
+        "8.01"
+      ],
+      "source": "2016年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2016,
+      "question": "六",
+      "page": "2",
+      "summary": "交替冲激抽样三角频谱和恢复条件",
+      "codes": [
+        "7.02",
+        "7.03",
+        "7.04"
+      ],
+      "source": "2016年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2016,
+      "question": "七",
+      "page": "3",
+      "summary": "二阶微分方程的直接实现、极点、三种响应",
+      "codes": [
+        "2.04",
+        "9.01",
+        "9.03",
+        "9.04",
+        "9.05"
+      ],
+      "source": "2016年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2016,
+      "question": "八",
+      "page": "3",
+      "summary": "含纯延时反馈积分系统H、h、零极点稳定",
+      "codes": [
+        "9.01",
+        "9.04",
+        "9.05",
+        "11.02"
+      ],
+      "source": "2016年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2016,
+      "question": "九",
+      "page": "3",
+      "summary": "离散框图、差分、h、初态响应及余弦输入",
+      "codes": [
+        "2.04",
+        "5.03",
+        "10.01",
+        "10.03",
+        "10.05",
+        "10.06"
+      ],
+      "source": "2016年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "一1",
+      "page": "1",
+      "summary": "LTI不能生成输入中没有的谐波",
+      "codes": [
+        "3.01",
+        "3.04"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "一2",
+      "page": "1",
+      "summary": "反褶叠加指数的双边拉普拉斯及ROC",
+      "codes": [
+        "9.01",
+        "9.02"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "一3",
+      "page": "1",
+      "summary": "sinc平方h的因果与稳定判定",
+      "codes": [
+        "2.07"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "一4",
+      "page": "1",
+      "summary": "给定环形ROC的逆Z变换",
+      "codes": [
+        "10.01",
+        "10.02"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "二",
+      "page": "1",
+      "summary": "周期矩形输入通过延时理想低通",
+      "codes": [
+        "3.01",
+        "3.04",
+        "6.01"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "三",
+      "page": "2",
+      "summary": "由波形输入输出求h、阶跃及半正弦脉冲响应",
+      "codes": [
+        "2.01",
+        "2.03",
+        "2.06"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "四",
+      "page": "2",
+      "summary": "有限半波余弦的傅里叶变换及谱图",
+      "codes": [
+        "4.01",
+        "4.02"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "五",
+      "page": "2—3",
+      "summary": "抽样带通移相、恢复和希尔伯特调制变式",
+      "codes": [
+        "4.01",
+        "7.01",
+        "7.02",
+        "7.03",
+        "8.01",
+        "8.02"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "六",
+      "page": "3",
+      "summary": "同初态冲激和阶跃实验求其他输入全响应",
+      "codes": [
+        "2.04",
+        "2.05",
+        "9.01",
+        "9.03"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "七",
+      "page": "3",
+      "summary": "双边离散ROC、稳定、h、频响及因果重构",
+      "codes": [
+        "6.01",
+        "10.01",
+        "10.02",
+        "10.04",
+        "10.09",
+        "5.01"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2017,
+      "question": "八",
+      "page": "4",
+      "summary": "积分器框图求H、零极点、方程与初态响应",
+      "codes": [
+        "2.04",
+        "9.01",
+        "9.03",
+        "9.04",
+        "9.05"
+      ],
+      "source": "2017年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "一1",
+      "page": "1",
+      "summary": "已知反褶尺度波形反推含阶跃信号",
+      "codes": [
+        "1.01"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "一2",
+      "page": "1",
+      "summary": "周期分段斜坡的傅里叶级数",
+      "codes": [
+        "3.01"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "一3",
+      "page": "1",
+      "summary": "两谐波输出相位满足无失真的条件",
+      "codes": [
+        "6.02"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "一4",
+      "page": "1",
+      "summary": "含初态平方时变映射的性质",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06",
+        "1.07",
+        "1.08",
+        "2.04"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "二",
+      "page": "1",
+      "summary": "已知频率响应求连续阶跃响应",
+      "codes": [
+        "2.03",
+        "4.04"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "三",
+      "page": "2",
+      "summary": "余弦正弦和希尔伯特支路、抽样和低通逐级画谱",
+      "codes": [
+        "7.01",
+        "7.02",
+        "7.03",
+        "8.01",
+        "8.02"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "四",
+      "page": "2",
+      "summary": "对称五抽头FIR的差分、频响与选频参数",
+      "codes": [
+        "5.01",
+        "5.03",
+        "6.01",
+        "10.03",
+        "10.05"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "五",
+      "page": "3",
+      "summary": "离散阶跃响应求h、差分和最少延时图",
+      "codes": [
+        "2.03",
+        "10.01",
+        "10.03",
+        "10.05"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "六",
+      "page": "3",
+      "summary": "两次离散调制的等效h、H、滤波类型和稳态",
+      "codes": [
+        "2.08",
+        "5.01",
+        "5.03",
+        "6.01",
+        "8.03",
+        "10.09",
+        "5.02"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "七",
+      "page": "3",
+      "summary": "连续积分器图到H、微分方程和h",
+      "codes": [
+        "9.01",
+        "9.03",
+        "9.05"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2018,
+      "question": "八",
+      "page": "3",
+      "summary": "连续零极点到稳定、实现、阶跃和幅频",
+      "codes": [
+        "6.01",
+        "9.01",
+        "9.04",
+        "9.05"
+      ],
+      "source": "2018年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "一1",
+      "page": "1",
+      "summary": "余弦输入映射的线性、时不变、稳定",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.07"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "一2",
+      "page": "1",
+      "summary": "由已知波形变换后的傅里叶表达式",
+      "codes": [
+        "4.02"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "一3",
+      "page": "1",
+      "summary": "起始时刻无储能的阶跃响应反求冲激响应",
+      "codes": [
+        "2.03",
+        "2.09"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "一4",
+      "page": "1",
+      "summary": "实偶N等于6序列的DFS系数约束",
+      "codes": [
+        "3.02",
+        "3.03",
+        "3.06"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "5",
+      "page": "1",
+      "summary": "由指数h反求连续微分方程",
+      "codes": [
+        "9.03"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "6",
+      "page": "2",
+      "summary": "加直流、调制、低通、抽样和带通逐级画谱",
+      "codes": [
+        "7.01",
+        "7.02",
+        "8.01"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "7",
+      "page": "2",
+      "summary": "并联离散支路反求h、各路响应、差分和最少延时",
+      "codes": [
+        "2.06",
+        "2.08",
+        "5.03",
+        "10.01",
+        "10.03",
+        "10.05"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "8",
+      "page": "2—3",
+      "summary": "预滤波、采样、离散系统和理想重构",
+      "codes": [
+        "7.01",
+        "7.02",
+        "7.03",
+        "7.06"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "9",
+      "page": "3",
+      "summary": "RC桥式全通电路、零极点与正弦零状态输出",
+      "codes": [
+        "6.01",
+        "9.01",
+        "9.04",
+        "9.06"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "10",
+      "page": "3",
+      "summary": "微分方程直接实现、极点稳定与初态三种响应",
+      "codes": [
+        "2.04",
+        "9.01",
+        "9.03",
+        "9.04",
+        "9.05"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "11",
+      "page": "4",
+      "summary": "已知截断指数与全时域指数输出反求系统及常数响应",
+      "codes": [
+        "2.06",
+        "5.03",
+        "10.01",
+        "10.03"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2019,
+      "question": "12",
+      "page": "4",
+      "summary": "因果有理Z逆变换及序列截断后的Z变换",
+      "codes": [
+        "10.01",
+        "10.02"
+      ],
+      "source": "2019年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "一",
+      "page": "1",
+      "summary": "非线性与时间反转组合的系统性质",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "二",
+      "page": "1",
+      "summary": "阶跃矩形组合的波形和傅里叶变换",
+      "codes": [
+        "1.01",
+        "4.01"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "三",
+      "page": "1",
+      "summary": "RC电路系统函数、零极点与全通条件",
+      "codes": [
+        "6.01",
+        "9.04",
+        "9.06"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "四",
+      "page": "1",
+      "summary": "最小相位、拉普拉斯逆变换及初终值",
+      "codes": [
+        "9.01",
+        "9.04",
+        "9.07"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "五",
+      "page": "2",
+      "summary": "微分系统非零初态全响应与自由强迫稳态分解",
+      "codes": [
+        "2.04",
+        "9.01",
+        "9.03"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "六",
+      "page": "2",
+      "summary": "正反馈H、参数稳定及临界h",
+      "codes": [
+        "9.01",
+        "9.04",
+        "11.01"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "七",
+      "page": "2",
+      "summary": "矩形幅谱和符号相位的逆变换与波形",
+      "codes": [
+        "4.04"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "八",
+      "page": "2",
+      "summary": "三角形式与复指数形式的FS和幅相线谱",
+      "codes": [
+        "3.01",
+        "3.03",
+        "4.03"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "九",
+      "page": "3",
+      "summary": "sinc输入抽样谱、最大间隔、恢复与混叠图",
+      "codes": [
+        "4.01",
+        "7.01",
+        "7.02",
+        "7.03"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2020,
+      "question": "十",
+      "page": "3",
+      "summary": "微分方程的H、h、初始值与系统框图",
+      "codes": [
+        "9.01",
+        "9.03",
+        "9.05",
+        "9.07"
+      ],
+      "source": "2020年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2021,
+      "question": "一",
+      "page": "1",
+      "summary": "含sgn、积分、反褶的映射按性质选参数",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06",
+        "1.07"
+      ],
+      "source": "2021年中山大学信号与系统考研真题.pdf",
+      "note": "整理版编号由七跳至九，未见八；仅统计可见题。"
+    },
+    {
+      "year": 2021,
+      "question": "二",
+      "page": "1",
+      "summary": "两个希尔伯特系统级联与直流输入作用",
+      "codes": [
+        "2.08",
+        "4.02",
+        "8.02"
+      ],
+      "source": "2021年中山大学信号与系统考研真题.pdf",
+      "note": "整理版编号由七跳至九，未见八；仅统计可见题。"
+    },
+    {
+      "year": 2021,
+      "question": "三",
+      "page": "1",
+      "summary": "换路RLC电路及零输入零状态自由强迫分解",
+      "codes": [
+        "2.04",
+        "9.01",
+        "9.06"
+      ],
+      "source": "2021年中山大学信号与系统考研真题.pdf",
+      "note": "整理版编号由七跳至九，未见八；仅统计可见题。"
+    },
+    {
+      "year": 2021,
+      "question": "四",
+      "page": "1—2",
+      "summary": "梯形幅频与线性相位，h积分及复指数响应",
+      "codes": [
+        "4.05",
+        "6.01",
+        "6.02"
+      ],
+      "source": "2021年中山大学信号与系统考研真题.pdf",
+      "note": "整理版编号由七跳至九，未见八；仅统计可见题。"
+    },
+    {
+      "year": 2021,
+      "question": "五",
+      "page": "2",
+      "summary": "梯形脉冲的傅里叶变换",
+      "codes": [
+        "4.01",
+        "4.02"
+      ],
+      "source": "2021年中山大学信号与系统考研真题.pdf",
+      "note": "整理版编号由七跳至九，未见八；仅统计可见题。"
+    },
+    {
+      "year": 2021,
+      "question": "六",
+      "page": "2—3",
+      "summary": "交替冲激抽样、带通输出和两种恢复及最大间隔",
+      "codes": [
+        "7.02",
+        "7.03",
+        "7.04"
+      ],
+      "source": "2021年中山大学信号与系统考研真题.pdf",
+      "note": "整理版编号由七跳至九，未见八；仅统计可见题。"
+    },
+    {
+      "year": 2021,
+      "question": "七",
+      "page": "3—4",
+      "summary": "周期三角脉冲抽样的谱和低通输出",
+      "codes": [
+        "3.01",
+        "7.02",
+        "7.05"
+      ],
+      "source": "2021年中山大学信号与系统考研真题.pdf",
+      "note": "整理版编号由七跳至九，未见八；仅统计可见题。"
+    },
+    {
+      "year": 2021,
+      "question": "九",
+      "page": "4",
+      "summary": "直接路径与一个回波的有限冲激响应、H及零点ROC幅频",
+      "codes": [
+        "6.01",
+        "9.01",
+        "9.02",
+        "9.04"
+      ],
+      "source": "2021年中山大学信号与系统考研真题.pdf",
+      "note": "整理版编号由七跳至九，未见八；仅统计可见题。"
+    },
+    {
+      "year": 2021,
+      "question": "十",
+      "page": "4",
+      "summary": "二阶差分H、h、幅相特性和最少延时图",
+      "codes": [
+        "6.01",
+        "10.01",
+        "10.03",
+        "10.05",
+        "10.09",
+        "5.01"
+      ],
+      "source": "2021年中山大学信号与系统考研真题.pdf",
+      "note": "整理版编号由七跳至九，未见八；仅统计可见题。"
+    },
+    {
+      "year": 2022,
+      "question": "一",
+      "page": "1",
+      "summary": "输入乘单边冲激串的线性时不变可逆记忆因果",
+      "codes": [
+        "1.04",
+        "1.05",
+        "1.06",
+        "1.08",
+        "1.09"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "二(1)",
+      "page": "1",
+      "summary": "两个移位右边指数序列卷积",
+      "codes": [
+        "2.02"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "二(2)",
+      "page": "1",
+      "summary": "带上限冲激积分",
+      "codes": [
+        "1.10"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "三",
+      "page": "1—2",
+      "summary": "含冲激波形反褶压缩平移及导数",
+      "codes": [
+        "1.01",
+        "1.10"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "四",
+      "page": "2",
+      "summary": "交替冲激和周期矩形通过指数h的输出FS",
+      "codes": [
+        "3.01",
+        "3.04"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "五",
+      "page": "2",
+      "summary": "无穷谐波级数的最小周期奇偶与周期微分解",
+      "codes": [
+        "1.02",
+        "3.01",
+        "3.03",
+        "3.04",
+        "9.03"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "六",
+      "page": "2",
+      "summary": "间隔1.1T的周期信号抽样及低通慢波",
+      "codes": [
+        "4.03",
+        "7.01",
+        "7.02",
+        "7.03",
+        "7.07"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "七",
+      "page": "3",
+      "summary": "双三角波的相位、频域积分、矩与实部逆变换",
+      "codes": [
+        "4.02",
+        "4.04",
+        "4.06"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "八",
+      "page": "3",
+      "summary": "由极点和直流增益求RLC参数",
+      "codes": [
+        "9.04",
+        "9.06"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "九",
+      "page": "3—4",
+      "summary": "同初态实验确定H、h、零输入、斜坡响应和框图幅频",
+      "codes": [
+        "2.04",
+        "2.05",
+        "6.01",
+        "9.01",
+        "9.03",
+        "9.05"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "question": "十",
+      "page": "4",
+      "summary": "参数离散框图、h、差分、极点ROC稳定和阶跃",
+      "codes": [
+        "10.01",
+        "10.02",
+        "10.03",
+        "10.04",
+        "10.05"
+      ],
+      "source": "2022年中山大学信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "一1",
+      "page": "1",
+      "summary": "单组波形能否确定因果、时不变和记忆性",
+      "codes": [
+        "1.05",
+        "1.06",
+        "1.08"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "一2",
+      "page": "1",
+      "summary": "含输入平方的微分系统线性与时不变",
+      "codes": [
+        "1.04",
+        "1.05"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "二",
+      "page": "1",
+      "summary": "积分输入输出表达式识别冲激响应",
+      "codes": [
+        "2.06"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "三",
+      "page": "1",
+      "summary": "周期方波与载波的级数、功率及乘积系数",
+      "codes": [
+        "3.01",
+        "3.03",
+        "3.05",
+        "8.01"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "四",
+      "page": "1—2",
+      "summary": "非单位正交基的最小误差系数及完备性",
+      "codes": [
+        "S.01"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "五",
+      "page": "2",
+      "summary": "希尔伯特支路证明单边带，给出输出谱",
+      "codes": [
+        "8.01",
+        "8.02"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "六",
+      "page": "2",
+      "summary": "sinc平方移频信号、无失真、抽样输出与最大间隔和恢复",
+      "codes": [
+        "4.01",
+        "4.02",
+        "6.02",
+        "7.01",
+        "7.02",
+        "7.03"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "七",
+      "page": "2—3",
+      "summary": "含微分反馈的H、参数稳定、h和由衰减图反求参数",
+      "codes": [
+        "9.01",
+        "9.04",
+        "9.05",
+        "11.01"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "八",
+      "page": "3",
+      "summary": "连续零极点及h初值确定H、选频及幅相图",
+      "codes": [
+        "6.01",
+        "9.04",
+        "9.07"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "九",
+      "page": "3—4",
+      "summary": "离散零极点增益、频响滤波类型和指数阶跃响应",
+      "codes": [
+        "5.03",
+        "6.01",
+        "10.01",
+        "10.03",
+        "10.04",
+        "10.09",
+        "5.01"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2023,
+      "question": "十",
+      "page": "4",
+      "summary": "离散阶跃响应反求h、H、稳定和差分",
+      "codes": [
+        "2.03",
+        "10.01",
+        "10.03",
+        "10.04"
+      ],
+      "source": "2023年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "一",
+      "page": "1",
+      "summary": "有限长正弦h，初始静止、因果稳定记忆、阶跃和sgn响应",
+      "codes": [
+        "1.08",
+        "2.01",
+        "2.03",
+        "2.07",
+        "2.09"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "二",
+      "page": "1",
+      "summary": "FS对称平移系数和功率条件反推实周期信号",
+      "codes": [
+        "3.03",
+        "3.05",
+        "3.06"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "三",
+      "page": "1",
+      "summary": "分段周期斜坡的三角形式FS",
+      "codes": [
+        "3.01"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "四",
+      "page": "1—2",
+      "summary": "周期矩形门控抽样、sinc平方频谱和恢复",
+      "codes": [
+        "4.01",
+        "7.02",
+        "7.03",
+        "7.05"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "五",
+      "page": "2",
+      "summary": "延时、偏频载波调制和同步解调低通输出",
+      "codes": [
+        "4.02",
+        "8.01"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "六",
+      "page": "2",
+      "summary": "差分高通的DTFT、离散尺度冲激与周期输入输出谱",
+      "codes": [
+        "1.10",
+        "3.04",
+        "5.01",
+        "5.03",
+        "6.01",
+        "10.03"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "七",
+      "page": "2",
+      "summary": "由连续阶跃响应和零状态输出反求输入",
+      "codes": [
+        "2.03",
+        "2.06",
+        "9.03"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "八",
+      "page": "2—3",
+      "summary": "连续零极点求H、ROC、最少积分器实现、阶跃和幅频",
+      "codes": [
+        "6.01",
+        "9.01",
+        "9.02",
+        "9.04",
+        "9.05"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "九",
+      "page": "3",
+      "summary": "复序列相关函数的Z变换",
+      "codes": [
+        "10.01",
+        "S.03"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2024,
+      "question": "十",
+      "page": "3",
+      "summary": "非零初态离散框图、H、零输入值、频响存在与幅频",
+      "codes": [
+        "2.04",
+        "6.01",
+        "10.03",
+        "10.04",
+        "10.05",
+        "10.06",
+        "10.09",
+        "5.01"
+      ],
+      "source": "2024年中山大学884信号与系统考研真题.pdf",
+      "note": ""
+    },
+    {
+      "year": 2025,
+      "question": "一",
+      "page": "1",
+      "summary": "滑动指数积分求h、因果稳定和截断输入响应",
+      "codes": [
+        "2.01",
+        "2.06",
+        "2.07"
+      ],
+      "source": "2025年中山大学884信号与系统考研真题.pdf",
+      "note": "第2、3页重复，缺第4、5题，仅统计可见题。"
+    },
+    {
+      "year": 2025,
+      "question": "二",
+      "page": "1",
+      "summary": "移位卷积积分识别输入",
+      "codes": [
+        "2.06"
+      ],
+      "source": "2025年中山大学884信号与系统考研真题.pdf",
+      "note": "第2、3页重复，缺第4、5题，仅统计可见题。"
+    },
+    {
+      "year": 2025,
+      "question": "三",
+      "page": "1",
+      "summary": "三角包络载波调制信号的FS",
+      "codes": [
+        "3.01",
+        "3.03",
+        "8.01"
+      ],
+      "source": "2025年中山大学884信号与系统考研真题.pdf",
+      "note": "第2、3页重复，缺第4、5题，仅统计可见题。"
+    },
+    {
+      "year": 2025,
+      "question": "六",
+      "page": "2",
+      "summary": "带通解调、低通后抽样、混叠条件和重构",
+      "codes": [
+        "4.04",
+        "7.01",
+        "7.02",
+        "7.03",
+        "8.01"
+      ],
+      "source": "2025年中山大学884信号与系统考研真题.pdf",
+      "note": "第2、3页重复，缺第4、5题，仅统计可见题。"
+    },
+    {
+      "year": 2025,
+      "question": "七",
+      "page": "2",
+      "summary": "卷积积分方程求x、系统辨识、阶跃及稳定",
+      "codes": [
+        "2.03",
+        "2.06",
+        "9.01",
+        "9.03",
+        "9.04"
+      ],
+      "source": "2025年中山大学884信号与系统考研真题.pdf",
+      "note": "第2、3页重复，缺第4、5题，仅统计可见题。"
+    },
+    {
+      "year": 2025,
+      "question": "八",
+      "page": "2及4",
+      "summary": "连续零极点增益与反馈参数稳定、阶跃响应",
+      "codes": [
+        "9.01",
+        "9.04",
+        "11.01"
+      ],
+      "source": "2025年中山大学884信号与系统考研真题.pdf",
+      "note": "第2、3页重复，缺第4、5题，仅统计可见题。"
+    },
+    {
+      "year": 2025,
+      "question": "九",
+      "page": "4",
+      "summary": "离散零极点、产生单位冲激的逆输入与稳定",
+      "codes": [
+        "10.01",
+        "10.04",
+        "10.07"
+      ],
+      "source": "2025年中山大学884信号与系统考研真题.pdf",
+      "note": "第2、3页重复，缺第4、5题，仅统计可见题。"
+    },
+    {
+      "year": 2025,
+      "question": "十",
+      "page": "4",
+      "summary": "由初态及全响应反求离散零输入和输入",
+      "codes": [
+        "2.04",
+        "2.06",
+        "10.01",
+        "10.03",
+        "10.05",
+        "10.06"
+      ],
+      "source": "2025年中山大学884信号与系统考研真题.pdf",
+      "note": "第2、3页重复，缺第4、5题，仅统计可见题。"
+    },
+    {
+      "year": 2026,
+      "question": "一",
+      "page": "1",
+      "summary": "时变冲激响应核的时不变和因果判定",
+      "codes": [
+        "1.05",
+        "1.06"
+      ],
+      "source": "2026年中山大学信号与系统考研真题.pdf.pdf",
+      "note": "整理版：只统计前两页题面，后附解析不重复计数。"
+    },
+    {
+      "year": 2026,
+      "question": "二",
+      "page": "1",
+      "summary": "有限长输入和五种H(z)匹配输出幅频图",
+      "codes": [
+        "5.01",
+        "5.03",
+        "6.01",
+        "10.09"
+      ],
+      "source": "2026年中山大学信号与系统考研真题.pdf.pdf",
+      "note": "整理版：只统计前两页题面，后附解析不重复计数。"
+    },
+    {
+      "year": 2026,
+      "question": "三",
+      "page": "1—2",
+      "summary": "sinc与矩形卷积的积分及频域能量积分",
+      "codes": [
+        "2.01",
+        "4.02",
+        "4.06"
+      ],
+      "source": "2026年中山大学信号与系统考研真题.pdf.pdf",
+      "note": "整理版：只统计前两页题面，后附解析不重复计数。"
+    },
+    {
+      "year": 2026,
+      "question": "四",
+      "page": "2",
+      "summary": "时间压缩、载波混频、周期门控和冲激抽样后的频谱",
+      "codes": [
+        "1.01",
+        "4.01",
+        "4.02",
+        "7.01",
+        "7.05",
+        "8.01"
+      ],
+      "source": "2026年中山大学信号与系统考研真题.pdf.pdf",
+      "note": "整理版：只统计前两页题面，后附解析不重复计数。"
+    },
+    {
+      "year": 2026,
+      "question": "五",
+      "page": "2",
+      "summary": "奇偶正交、单位正交基展开、误差、匹配滤波",
+      "codes": [
+        "S.01",
+        "S.02"
+      ],
+      "source": "2026年中山大学信号与系统考研真题.pdf.pdf",
+      "note": "整理版：只统计前两页题面，后附解析不重复计数。"
+    },
+    {
+      "year": 2026,
+      "question": "六",
+      "page": "2",
+      "summary": "RLC输入输出方程、H(s)、频响及低高频极限",
+      "codes": [
+        "6.01",
+        "9.03",
+        "9.06"
+      ],
+      "source": "2026年中山大学信号与系统考研真题.pdf.pdf",
+      "note": "整理版：只统计前两页题面，后附解析不重复计数。"
+    },
+    {
+      "year": 2026,
+      "question": "七",
+      "page": "2",
+      "summary": "示波抽样的慢波、放大系数及恢复低通",
+      "codes": [
+        "4.03",
+        "7.01",
+        "7.02",
+        "7.03",
+        "7.07"
+      ],
+      "source": "2026年中山大学信号与系统考研真题.pdf.pdf",
+      "note": "整理版：只统计前两页题面，后附解析不重复计数。"
+    }
+  ]
+}

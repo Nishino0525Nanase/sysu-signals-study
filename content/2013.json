@@ -1,0 +1,267 @@
+{
+  "year": 2013,
+  "note": "已逐页核对原图。一6按原图重复的2y2[n−1]逐字求解并标记疑似录入问题；二2(1)已知响应公式在原PDF中损坏，保留精确的y1、y2组合，不虚构指数；二4保留未标明的恢复通带增益。",
+  "questions": [
+    {
+      "ref": "一1",
+      "title": "平方、偏置与显含时间分别破坏什么性质",
+      "statement": "$y(t)=(x(t)+3)^2\\sin(\\omega_ct)$，$\\omega_c$ 为常数。在“线性、时不变、因果性”中判断系统不具有的性质。",
+      "firstStep": "先用零输入检验线性，再用移位比较检验时不变性。",
+      "solution": "对于一般 $\\omega_c\\ne0$，零输入产生 $9\\sin\\omega_ct\\ne0$，故不线性；即使去掉偏置，平方项本身也不满足叠加。\n\n输入延时得到 $(x(t-t_0)+3)^2\\sin\\omega_ct$，而原输出延时为 $(x(t-t_0)+3)^2\\sin[\\omega_c(t-t_0)]$，一般不同，因此时变。\n\n输出只使用同一时刻 $x(t)$，所以因果且无记忆。答案是**不具有线性和时不变性**。退化的 $\\omega_c=0$ 会使整个算子恒为零，此时反而线性且时不变；通常题意默认载频非零。",
+      "answer": "一般非零载频时，不具有线性、时不变性；具有因果性。",
+      "pitfalls": [
+        "零输入检验即可快速否定线性。",
+        "ωc=0 是需要单列的退化情形。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "一2",
+      "title": "恢复截止频率必须位于原谱与第一镜像之间",
+      "statement": "$x(t)=1+\\cos2\\pi t+\\sin3\\pi t$，按奈奎斯特率的1.2倍理想采样，求恢复低通截止频率范围。",
+      "firstStep": "最高普通频率为1.5 Hz，先求实际采样频率，再找第一镜像的最低频率。",
+      "solution": "最高角频率 $\\omega_M=3\\pi$，奈奎斯特率为 $3$ Hz，实际采样频率\n$$f_s=1.2\\times3=3.6\\text{ Hz},\\quad\\Omega_s=7.2\\pi.$$\n恢复滤波器应通过原谱最外侧 $3\\pi$，并阻挡第一复制谱的最内侧 $\\Omega_s-\\omega_M=4.2\\pi$。因此取\n$$\\boxed{3\\pi<\\omega_c<4.2\\pi\\quad\\text{rad/s}}$$\n即可；普通频率形式为 $1.5<f_c<2.1$ Hz。若理想滤波器特别规定截止点本身具有通带全增益，左端可取等号；若截止点规定为零增益，右端可取等号。由于本题在端点有冲激谱线，未说明边界取值时用严格不等式最清楚。恢复通带增益应取 $T_s=1/3.6=5/18$。",
+      "answer": "$3\\pi<\\omega_c<4.2\\pi$ rad/s（安全严格范围）。",
+      "pitfalls": [
+        "“1.2倍奈奎斯特率”是采样率3.6Hz，不是1.8Hz。",
+        "端点有谱线时要明确滤波器的边界取值。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": [
+        "2013_sampling_gap.svg"
+      ]
+    },
+    {
+      "ref": "一3",
+      "title": "阶跃响应的 Z 变换怎样变成系统函数",
+      "statement": "单位阶跃响应 $g[n]$ 的变换 $G(z)=\\dfrac{z^2+1}{(z+1)(z-1)^2}$，求 $H(z)$。",
+      "firstStep": "使用 $H=G/U$ 与 $U=z/(z-1)$，不要把 $G$ 直接当 $H$。",
+      "solution": "单位阶跃满足 $U(z)=z/(z-1)$，零状态输出 $G=HU$，所以\n$$H(z)=\\frac{z-1}{z}G(z)=\\boxed{\\frac{z^2+1}{z(z+1)(z-1)}}.$$\n这也等价于时域 $h[n]=g[n]-g[n-1]$。有理式本身不能单独确定 ROC；如果补充因果，则 ROC 为 $|z|>1$，系统有单位圆未约消极点，因而不稳定。",
+      "answer": "$H(z)=(z^2+1)/[z(z+1)(z-1)]$。",
+      "pitfalls": [
+        "除以 U(z) 时不可漏掉分母的 z。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "一4",
+      "title": "卷积型积分的拉普拉斯变换",
+      "statement": "$x(t)=u(t)\\int_0^t e^{-\\lambda(t-\\tau)}\\cos(\\omega_0\\tau)d\\tau$，求变换与 ROC。",
+      "firstStep": "将积分识别为 $e^{-\\lambda t}u(t)$ 与 $\\cos\\omega_0t\\,u(t)$ 的卷积。",
+      "solution": "两个右边因子的变换分别是\n$$\\frac1{s+\\lambda},\\quad\\frac{s}{s^2+\\omega_0^2}.$$\n故\n$$\\boxed{X(s)=\\frac{s}{(s+\\lambda)(s^2+\\omega_0^2)}.}$$\n当 $\\lambda,\\omega_0$ 为实参数时，右边卷积的 ROC 位于最右未约消极点之外，通常为\n$$\\boxed{\\Re s>\\max(-\\lambda,0).}$$\n若题目默认 $\\lambda>0$，便简化为 $\\Re s>0$。例如 $\\lambda=0$ 时会约消原点的因子，但 $\\pm j\\omega_0$ 仍使 ROC 为右半平面；退化的 $\\omega_0=0$ 可直接将余弦换成1核验。",
+      "answer": "$X(s)=s/[(s+\\lambda)(s^2+\\omega_0^2)]$，通常 ROC $\\Re s>\\max(-\\lambda,0)$。",
+      "pitfalls": [
+        "不能把积分上限 t 误当成两个时域函数的普通乘积。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "一5",
+      "title": "LTI 系统中延时与倍乘直接传递",
+      "statement": "$X(j\\omega)=1/(j\\omega+2)$，原输出 $Y(j\\omega)=1/[(j\\omega+1)(j\\omega+3)]$。输入改为 $2x(t-2)$，求新输出。",
+      "firstStep": "不必先求 $H$，直接用线性与时不变性写成 $2y(t-2)$。",
+      "solution": "原输出谱拆为\n$$Y(j\\omega)=\\frac12\\left[\\frac1{j\\omega+1}-\\frac1{j\\omega+3}\\right],$$\n所以\n$$y(t)=\\frac12(e^{-t}-e^{-3t})u(t).$$\n新输出为\n$$\\boxed{y_{new}(t)=[e^{-(t-2)}-e^{-3(t-2)}]u(t-2).}$$\n频域核验：输入乘 $2e^{-j2\\omega}$，输出谱也乘同一因子。",
+      "answer": "$[e^{-(t-2)}-e^{-3(t-2)}]u(t-2)$。",
+      "pitfalls": [
+        "移位要同时作用于两个指数与阶跃。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "一6",
+      "title": "耦合差分方程消元，并保留原文重复项",
+      "statement": "按可见原文：$y_1[n]-4y_1[n-1]-y_2[n]=x[n-1]$；$y_1[n-1]+2y_2[n-1]+y_2[n]+2y_2[n-1]=x[n]-3x[n-1]$。求从 $x$ 到 $y_1$ 的 $H_1(z)$。",
+      "firstStep": "原文第二式两次出现 $2y_2[n-1]$，先按字面合并成 $4y_2[n-1]$，不可自行改成 n−2。",
+      "solution": "令 $q=z^{-1}$，零状态变换后\n$$(1-4q)Y_1-Y_2=qX,\\qquad qY_1+(1+4q)Y_2=(1-3q)X.$$\n由第一式 $Y_2=(1-4q)Y_1-qX$，代入第二式：\n$$[q+(1+4q)(1-4q)]Y_1=[1-3q+q(1+4q)]X.$$\n于是\n$$\\boxed{H_1(z)=\\frac{1-2z^{-1}+4z^{-2}}{1+z^{-1}-16z^{-2}}=\\frac{z^2-2z+4}{z^2+z-16}.}$$\n这是对当前可见题面逐字计算的结果。重复项可能源于排版或录入问题；在没有更清晰原卷的情况下，不能声称第二个延时必定是别的值。",
+      "answer": "按题面重复的 n−1 项：$H_1=(z^2-2z+4)/(z^2+z-16)$。",
+      "pitfalls": [
+        "第二式的两个2y2[n−1]必须相加，不能擅改题。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "二1",
+      "title": "衰减阶跃响应对应一个高通零点",
+      "statement": "离散 LTI 系统输入 $u[n]$，输出 $(1/2)^nu[n]$。求并画 $h[n]$；判断记忆、因果、稳定；求频响和差分方程。",
+      "firstStep": "对阶跃响应作一阶后向差分。",
+      "solution": "令 $g[n]=(1/2)^nu[n]$，则\n$$h[n]=g[n]-g[n-1]=\\delta[n]-(1/2)^nu[n-1].$$\n所以 $h[0]=1$，$h[1]=-1/2$，$h[2]=-1/4$，以后负值几何衰减，$n<0$ 为零。\n\n由于 $h[1]\\ne0$，输出依赖过去输入，系统**有记忆**。$h[n]=0$ 对所有 $n<0$ 成立，故**因果**。绝对和\n$$\\sum_n|h[n]|=1+\\sum_{n=1}^\\infty2^{-n}=2,$$\n所以**稳定**，频率响应存在且\n$$\\boxed{H(e^{j\\omega})=\\frac{1-e^{-j\\omega}}{1-\\frac12e^{-j\\omega}}.}$$\n交叉相乘得到\n$$\\boxed{y[n]-\\tfrac12y[n-1]=x[n]-x[n-1].}$$\n直流处 $H(1)=0$，因此阶跃响应衰减至0也符合高通特性。",
+      "answer": "$h[n]=\\delta[n]-(1/2)^nu[n-1]$；有记忆、因果、稳定；频响和差分式见上。",
+      "pitfalls": [
+        "h[0]=1，不能将负指数尾延伸到0使其抵消。"
+      ],
+      "sourcePages": [
+        1,
+        2
+      ],
+      "figures": [
+        "2013_impulse_stem.svg"
+      ]
+    },
+    {
+      "ref": "二2(1)",
+      "title": "题面公式损坏时仍可完成同初态精确组合",
+      "statement": "同初态增量线性时不变因果系统，对 $u(t)$、$2u(t)$ 的全响应记为原题 $y_1(t),y_2(t)$；当前扫描中两式的指数、系数与括号发生重叠，无法可靠转写。输入 $x_3(t)=u(t)-2u(t-1)+u(t-2)$（0到1为1、1到2为−1），求全响应。",
+      "firstStep": "先用 $y_2-y_1$ 得零状态单位阶跃响应；即使原式局部损坏，组合关系依然可以严格确定。",
+      "solution": "记共同初态响应 $z(t)$、零状态阶跃响应 $s(t)$。由\n$$y_1=z+s,\\qquad y_2=z+2s,$$\n得\n$$s=y_2-y_1,\\qquad z=2y_1-y_2.$$\n按原图矩形，$x_3=u-2u(t-1)+u(t-2)$，因此\n$$y_3=z+s-2s(t-1)+s(t-2).$$\n代入化简为\n$$\\boxed{y_3(t)=y_1(t)-2[y_2(t-1)-y_1(t-1)]+[y_2(t-2)-y_1(t-2)].}$$\n其中原题 $y_1,y_2$ 都是因果全响应，延时后自带相应阶跃；若把它们记为仅 $t\\ge0$ 的表达式，则第二、三项应分别补乘 $u(t-1)$、$u(t-2)$。\n\n分段看，$0\\le t<1$ 时 $y_3=y_1(t)$；$1\\le t<2$ 时多出 $-2[y_2(t-1)-y_1(t-1)]$；$t\\ge2$ 再加 $y_2(t-2)-y_1(t-2)$。这是对可见题面可给出的精确答案。原PDF的两条已知响应本身排版损坏，不能虚构指数以生成貌似具体的数值展开；拿到清晰式子后只需直接代入上框。",
+      "answer": "$y_3=y_1-2(y_2-y_1)(t-1)+(y_2-y_1)(t-2)$；原扫描的两条已知全响应公式待清晰原卷核定。",
+      "pitfalls": [
+        "同初态响应不是普通线性映射，初态项只计一次。",
+        "原题第二输入是2u(t)，不是斜坡。",
+        "公式损坏处保留精确符号，不编造指数。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": [
+        "2013_bipolar_input.svg"
+      ]
+    },
+    {
+      "ref": "二2(2)",
+      "title": "三个指数的阶跃响应合成为二阶差分系统",
+      "statement": "输入 $u[n]$ 时零状态响应 $g[n]=(2^n+3\\cdot5^n+10)u[n]$。求差分方程与实现框图。",
+      "firstStep": "先求阶跃响应变换，再乘 $1-z^{-1}$；常数10对应的 z=1 因子会约消。",
+      "solution": "令 $q=z^{-1}$，\n$$G(z)=\\frac1{1-2q}+\\frac3{1-5q}+\\frac{10}{1-q}.$$\n于是\n$$H(z)=(1-q)G(z)=\\frac{14-85q+111q^2}{1-7q+10q^2}.$$\n差分方程为\n$$\\boxed{y[n]-7y[n-1]+10y[n-2]=14x[n]-85x[n-1]+111x[n-2].}$$\n可用直接Ⅱ型实现：定义中间序列 $w[n]$，\n$$w[n]=x[n]+7w[n-1]-10w[n-2],$$\n$$y[n]=14w[n]-85w[n-1]+111w[n-2].$$\n只需一个两级延时链，反馈系数 $7,-10$，前馈系数 $14,-85,111$。若按因果系统解释，极点2与5，ROC $|z|>5$，故不稳定；这与阶跃响应指数增长一致。",
+      "answer": "$y[n]-7y[n-1]+10y[n-2]=14x[n]-85x[n-1]+111x[n-2]$。",
+      "pitfalls": [
+        "常数项10不要误当10δ[n]。",
+        "公分母中 z=1 因子会被求H时的差分消去。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": [
+        "2013_direct2.svg"
+      ]
+    },
+    {
+      "ref": "二3",
+      "title": "单边斜坡脉冲的周期延拓与逐谐波滤波",
+      "statement": "周期 $T_0=4$，一周期内 $x(t)=1-t$（$0\\le t\\le1$），其余 $[-2,0]\\cup[1,2]$ 为0。①画 $[-6,6]$ 波形并判断能否是因果冲激响应；②求 $a_k$；③因果系统 $y\\prime+y=x$ 求 $H,h$、稳定性；④证明题给周期输出展开式。",
+      "firstStep": "先确定基频 $\\pi/2$，系数积分只在0到1非零，再把每个系数乘 $H(jk\\omega_0)$。",
+      "solution": "①波形由每隔4重复的下降线段组成：在 $[4m,4m+1]$ 上 $x(t)=1-(t-4m)$，其余为0。$[-6,6]$ 内有 $[-4,-3]$、$[0,1]$、$[4,5]$ 三段下降斜坡。由于在负时间区间 $[-4,-3]$ 已非零，不能作为因果系统的冲激响应。\n\n② $\\omega_0=\\pi/2$，平均值为\n$$a_0=\\frac14\\int_0^1(1-t)dt=\\frac18.$$\n对 $k\\ne0$，令 $\\alpha=k\\pi/2$，分部积分得\n$$a_k=\\frac14\\int_0^1(1-t)e^{-j\\alpha t}dt=\\frac1{4j\\alpha}+\\frac{1-e^{-j\\alpha}}{4\\alpha^2},$$\n即\n$$\\boxed{a_k=\\frac1{j2k\\pi}+\\frac{1-e^{-jk\\pi/2}}{k^2\\pi^2},\\quad k\\ne0.}$$\n\n③零初态因果系统\n$$H(s)=\\frac1{s+1},\\quad\\Re s>-1,\\qquad h(t)=e^{-t}u(t).$$\n极点在 $-1$，$\\int|h|dt=1$，故稳定。\n\n④对周期零状态/稳态输出，$b_k=a_k/(1+jk\\pi/2)$。因为输入实值，$b_{-k}=b_k^*$，合并共轭频率对：\n$$y(t)=a_0+\\sum_{k=1}^{\\infty}\\frac{4|a_k|}{\\sqrt{4+k^2\\pi^2}}\\cos\\left(\\frac{k\\pi t}{2}-\\arctan\\frac{k\\pi}{2}+\\arg a_k\\right).$$\n这就是题中待证式。$a_0=1/8$，系统直流增益为1，所以输出平均值也为1/8。若另给非零初态，还应加齐次暂态 $Ce^{-t}$，题式表示周期稳态而非任意全响应。",
+      "answer": "$a_0=1/8$，$a_k=1/(j2k\\pi)+(1-e^{-jk\\pi/2})/(k^2\\pi^2)$；$H=1/(s+1)$、$h=e^{-t}u$，稳定；周期输出式见推导。",
+      "pitfalls": [
+        "周期信号在负时间也重复，不能作非零因果冲激响应。",
+        "周期输出公式描述稳态，非零初态会额外产生暂态。"
+      ],
+      "sourcePages": [
+        2,
+        3
+      ],
+      "figures": [
+        "2013_periodic_ramp.svg"
+      ]
+    },
+    {
+      "ref": "二4",
+      "title": "数字滤波器处理连续信号的等效频响",
+      "statement": "连续信号经周期 $T_1$ 理想抽样、数字滤波 $y[n]-0.5y[n-1]=x[n]$、序列转冲激串与截止 $\\omega_0$ 的理想低通。求避免混叠和丢失的 $T_1,\\omega_M$ 条件，以及整体等效 $H(j\\omega)$。",
+      "firstStep": "区分两个约束：抽样复制不重叠，恢复低通既要放过原谱又要挡住第一镜像。",
+      "solution": "设 $\\Omega_s=2\\pi/T_1$，输入支撑 $|\\omega|\\le\\omega_M$。必须满足\n$$\\Omega_s>2\\omega_M,\\qquad\\omega_M\\le\\omega_0<\\Omega_s-\\omega_M.$$\n若要避开边界谱线约定，可用严格 $\\omega_M<\\omega_0<\\Omega_s-\\omega_M$。对于已知固定 $\\omega_0$，可等价写为\n$$\\omega_M\\le\\omega_0,\\qquad T_1<\\frac{2\\pi}{\\omega_0+\\omega_M}.$$\n\n数字滤波器\n$$H_d(e^{j\\Omega})=\\frac1{1-0.5e^{-j\\Omega}}.$$\n抽样把连续角频率 $\\omega$ 对应到数字角频率 $\\Omega=\\omega T_1$，而冲激抽样/重构链保留 $1/T_1$ 的谱幅因子。若恢复低通通带增益记为 $K$，整体频响在无混叠的输入频带上为\n$$\\boxed{H_{eq}(j\\omega)=\\frac{K/T_1}{1-0.5e^{-j\\omega T_1}},\\quad |\\omega|\\le\\omega_M,}$$\n通带外由恢复器截断。原图只标截止频率，没有标通带增益；若默认单位增益 $K=1$，分子就是 $1/T_1$；若采用标准幅度恢复增益 $K=T_1$，则分子为1。两者的频率映射相同，但幅度不同。整体等效描述针对满足带限条件的输入；对任意连续输入，理想抽样链一般不能直接视为无混叠 LTI 滤波器。",
+      "answer": "$\\omega_M\\le\\omega_0<2\\pi/T_1-\\omega_M$；$H_{eq}=(K/T_1)/(1-0.5e^{-j\\omega T_1})$，原图未给K。",
+      "pitfalls": [
+        "数字角频率是ωT1，不是ω/T1。",
+        "恢复低通的增益未标明时要保留K，不能默默消去采样幅度。"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "figures": [
+        "2013_digital_reconstruction.svg"
+      ]
+    },
+    {
+      "ref": "二5",
+      "title": "I/Q 解调为什么消除载波相位",
+      "statement": "发送 $y=(1+x)\\cos(\\omega_ct+\\theta_t)$，接收端相位为 $\\theta_r$，$|x(t)|<1$、最高频率 $\\omega_M<\\omega_c$。接收信号分别乘 $\\cos\\omega_ct$、$\\sin\\omega_ct$，经截止 $\\omega_c$、单位增益低通，再平方求和开方。求两路混频谱、低通谱、时域与最终 $r(t)$。",
+      "firstStep": "令 $m(t)=1+x(t)$，先用积化和差分离基带项与 $2\\omega_c$ 项；Q路的基带符号要单独核对。",
+      "solution": "令 $\\theta=\\theta_r$，$M(j\\omega)=2\\pi\\delta(\\omega)+X(j\\omega)$。积化和差得到\n$$y_I(t)=\\tfrac12m(t)[\\cos\\theta+\\cos(2\\omega_ct+\\theta)],$$\n$$y_Q(t)=\\tfrac12m(t)[-\\sin\\theta+\\sin(2\\omega_ct+\\theta)].$$\n因此频谱为\n$$Y_I(j\\omega)=\\tfrac12\\cos\\theta\\,M(j\\omega)+\\tfrac14e^{j\\theta}M[j(\\omega-2\\omega_c)]+\\tfrac14e^{-j\\theta}M[j(\\omega+2\\omega_c)],$$\n$$Y_Q(j\\omega)=-\\tfrac12\\sin\\theta\\,M(j\\omega)+\\frac1{4j}\\{e^{j\\theta}M[j(\\omega-2\\omega_c)]-e^{-j\\theta}M[j(\\omega+2\\omega_c)]\\}.$$\n这些谱均由基带三角谱加直流冲激，以及搬到 $\\pm2\\omega_c$ 的三角谱加冲激构成，复权系数如上。图中的普通曲线表示连续部分，竖箭头表示冲激，不把冲激当作有限高度的谱线。\n\n由于 $\\omega_M<\\omega_c$，基带完全位于低通内，而二倍载频边带从 $2\\omega_c-\\omega_M>\\omega_c$ 开始，完全被去掉。故\n$$W_I(j\\omega)=\\tfrac12\\cos\\theta\\,[2\\pi\\delta(\\omega)+X(j\\omega)],$$\n$$W_Q(j\\omega)=-\\tfrac12\\sin\\theta\\,[2\\pi\\delta(\\omega)+X(j\\omega)].$$\n对应时域\n$$w_I(t)=\\tfrac12[1+x(t)]\\cos\\theta,\\qquad w_Q(t)=-\\tfrac12[1+x(t)]\\sin\\theta.$$\n平方相加为 $\\omega(t)=\\tfrac14[1+x(t)]^2$，开方得\n$$\\boxed{r(t)=\\tfrac12|1+x(t)|=\\tfrac12[1+x(t)].}$$\n最后一步使用 $|x(t)|<1$，使 $1+x(t)>0$。因此输出与未知载波相位无关，去直流并放大2倍即可恢复 $x(t)$。若低通通带增益不是1，则结果还要乘其增益绝对值。",
+      "answer": "$w_I=(1+x)\\cos\\theta_r/2$，$w_Q=-(1+x)\\sin\\theta_r/2$；$r=(1+x)/2$，与相位无关。",
+      "pitfalls": [
+        "Q路基带为负sinθ。",
+        "谱中1对应2πδ(ω)，不能漏掉载波冲激。",
+        "开方先得绝对值，再用|x|<1去掉。"
+      ],
+      "sourcePages": [
+        3,
+        4
+      ],
+      "figures": [
+        "2013_iq_spectra.svg"
+      ]
+    },
+    {
+      "ref": "二6",
+      "title": "输入输出辨识出含直通项的二阶系统",
+      "statement": "因果 LTI 系统，输入 $e^{-3t}u(t)$、零状态输出 $(e^{-t}-e^{-2t}+e^{-3t})u(t)$。求 $h$；当 $y(0^-)=2,y\\prime(0^-)=1$ 时求零输入和全响应。",
+      "firstStep": "用零状态的 $H=Y/X$ 辨识系统，注意高频极限不为零，冲激响应中有 $\\delta(t)$。",
+      "solution": "有\n$$X=\\frac1{s+3},\\quad Y=\\frac1{s+1}-\\frac1{s+2}+\\frac1{s+3},$$\n所以\n$$H(s)=1+\\frac{s+3}{(s+1)(s+2)}=1+\\frac2{s+1}-\\frac1{s+2}=\\frac{s^2+4s+5}{s^2+3s+2}.$$\n因果 ROC 为 $\\Re s>-1$，得到\n$$\\boxed{h(t)=\\delta(t)+2e^{-t}u(t)-e^{-2t}u(t).}$$\n零输入齐次方程为 $y\\prime\\prime+3y\\prime+2y=0$，故 $y_{zi}=Ce^{-t}+De^{-2t}$。由\n$$C+D=2,\\qquad-C-2D=1,$$\n得 $C=5,D=-3$，所以\n$$\\boxed{y_{zi}(t)=(5e^{-t}-3e^{-2t})u(t)\\quad(t\\ge0).}$$\n加上题给零状态响应：\n$$\\boxed{y(t)=(6e^{-t}-4e^{-2t}+e^{-3t})u(t)\\quad(t\\ge0).}$$\n核对初始左右极限：由于有直接通路，输入在0从0跳到1，故全输出从2跳到3；$y\\prime(0^+)=-1$，也不等于题给 $y\\prime(0^-)=1$。把0−条件当成0+条件直接代全响应会得到错误常数。",
+      "answer": "$h=\\delta+2e^{-t}u-e^{-2t}u$；$y_{zi}=(5e^{-t}-3e^{-2t})u$；全响应 $(6e^{-t}-4e^{-2t}+e^{-3t})u$。",
+      "pitfalls": [
+        "H 的分子分母同阶意味着存在冲激直通项。",
+        "初始条件在0−，不能强制全响应在0+仍取相同数值。"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "figures": []
+    },
+    {
+      "ref": "二7",
+      "title": "双边冲激响应决定稳定非因果 ROC",
+      "statement": "$h(t)=\\delta(t)-\\tfrac43e^{-t}u(t)+\\tfrac13e^{2t}u(-t)$。求 $H$、ROC、因果稳定、傅里叶谱、微分方程与积分器直接型实现。",
+      "firstStep": "左边指数的变换带负号：$e^{at}u(-t)\\leftrightarrow-1/(s-a)$，ROC 为 $\\Re s<a$。",
+      "solution": "逐项变换得\n$$H(s)=1-\\frac4{3(s+1)}-\\frac1{3(s-2)}=\\boxed{\\frac{s^2-\\frac83s+\\frac13}{s^2-s-2}},$$\nROC 取交集\n$$\\boxed{-1<\\Re s<2.}$$\n由于 $h(t)$ 在 $t<0$ 非零，系统**非因果**。其绝对可积的普通部分为 $4/3+1/6=3/2$，再加单位冲激的有限直通增益，总变差 $5/2$，所以**BIBO 稳定**。右半平面极点2没有破坏本题的稳定性，因为该极点对应左边衰减模式，ROC 仍包含虚轴。\n\n傅里叶变换存在，直接令 $s=j\\omega$：\n$$\\boxed{H(j\\omega)=1-\\frac4{3(1+j\\omega)}+\\frac1{3(2-j\\omega)}.}$$\n分母乘开，对应微分方程\n$$\\boxed{y\\prime\\prime-y\\prime-2y=x\\prime\\prime-\\tfrac83x\\prime+\\tfrac13x.}$$\n\n形式上的直接Ⅱ型可令 $w\\prime=v$、$v\\prime=x+v+2w$，则\n$$y=x-\\tfrac53v+\\tfrac73w.$$\n因此两个积分器串联生成 $v,w$，反馈系数为 $+1,+2$，输出对 $x,v,w$ 的系数为 $1,-5/3,7/3$。**这个微分方程/框图还必须配合双边边界条件才对应本题 ROC**：若所有积分器都从过去按因果零状态启动，会得到 ROC $\\Re s>2$ 的另一系统，既非本题 $h$ 也不稳定。\n\n一个明确的实现约束是引入\n$$v_1(t)=\\int_{-\\infty}^{t}e^{-(t-\\tau)}x(\\tau)d\\tau,\\qquad v_2(t)=-\\int_t^{\\infty}e^{2(t-\\tau)}x(\\tau)d\\tau,$$\n取 $y=x-\\frac43v_1-\\frac13v_2$。第二支路使用未来输入并在 $+\\infty$ 设边界，正是非因果左边模式；它说明单靠普通因果积分器框图不能指定本题的稳定双边系统。",
+      "answer": "$H=(s^2-\\frac83s+\\frac13)/(s^2-s-2)$，ROC $-1<\\Re s<2$；非因果、稳定，傅里叶变换存在；方程与实现需配双边边界。",
+      "pitfalls": [
+        "左边指数变换有负号。",
+        "非因果稳定系统可以有右半平面极点。",
+        "同一微分方程可以对应不同ROC，框图必须说明边界条件。"
+      ],
+      "sourcePages": [
+        4,
+        5
+      ],
+      "figures": [
+        "2013_bilateral_roc.svg",
+        "2013_noncausal_direct.svg"
+      ]
+    },
+    {
+      "ref": "二8",
+      "title": "从反馈图读出一阶离散全通",
+      "statement": "因果系统图：输入一路延时D，一路增益1/2相加；输出经延时D与增益−1/2反馈。求差分、$h$、稳定性及 $x[n]=\\cos(2\\pi n/3)$ 时输出。",
+      "firstStep": "逐支路写输出求和：$x[n-1]+\\frac12x[n]-\\frac12y[n-1]$。",
+      "solution": "差分方程为\n$$\\boxed{y[n]+\\tfrac12y[n-1]=\\tfrac12x[n]+x[n-1].}$$\n系统函数\n$$H(z)=\\frac{\\frac12+z^{-1}}{1+\\frac12z^{-1}}=\\frac12+\\frac{\\frac34z^{-1}}{1+\\frac12z^{-1}},\\quad |z|>\\tfrac12.$$\n所以\n$$\\boxed{h[n]=\\tfrac12\\delta[n]+\\tfrac34(-\\tfrac12)^{n-1}u[n-1].}$$\n它绝对可和，$\\sum|h|=1/2+(3/4)/(1-1/2)=2$，所以稳定。零点 $-2$ 与极点 $-1/2$ 互为倒数，且 $|H(e^{j\\omega})|=1$，是单位增益全通。\n\n在 $\\omega=2\\pi/3$ 处，\n$$H(e^{j2\\pi/3})=\\frac{\\frac12+e^{-j2\\pi/3}}{1+\\frac12e^{-j2\\pi/3}}=\\frac12-j\\frac{\\sqrt3}2=e^{-j\\pi/3}.$$\n输入为全时域余弦，所以\n$$\\boxed{y[n]=\\cos(2\\pi n/3-\\pi/3).}$$\n振幅不变，但相位延后 $\\pi/3$；若输入另乘 $u[n]$，还需加入开机暂态。",
+      "answer": "差分式见上；$h=\\frac12\\delta+\\frac34(-\\frac12)^{n-1}u[n-1]$；稳定；$y=\\cos(2\\pi n/3-\\pi/3)$。",
+      "pitfalls": [
+        "反馈增益是−1/2。",
+        "稳定性看极点模，交替符号不影响绝对可和。"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "figures": [
+        "2013_allpass_response.svg"
+      ]
+    }
+  ]
+}

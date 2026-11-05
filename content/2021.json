@@ -1,0 +1,160 @@
+{
+  "year": 2021,
+  "note": "整理版原图共4页，题号从七直接跳至九；只收录可见九组题，不补造第八题。第九题按原文“一个回波”保留有限两项；第七题区分一般参数与红字临界假设。",
+  "questions": [
+    {
+      "ref": "一",
+      "title": "线性、时不变、因果且稳定的参数交集",
+      "statement": "$y(t)=A\\operatorname{sgn}[f(t)]+B\\int_{-\\infty}^{t}f(x)\\,dx+Cf(-t)$。要求系统同时因果、稳定、线性、时不变，求 $A,B,C$。",
+      "firstStep": "每次用一个性质排除一个独立算子，最后取条件交集。不要只对某个特定输入检验。",
+      "solution": "符号函数不齐次：例如 $\\operatorname{sgn}(2f)=\\operatorname{sgn}(f)$，而线性性要求输出加倍。积分项与反转项本身线性，不能对所有输入抵消符号项，故 $A=0$。\n\n$f(-t)$ 对一般延时不满足时不变性，且在 $t<0$ 读取未来输入，因此 $C=0$。\n\n剩下积分器，冲激响应 $h(t)=Bu(t)$。当 $B\\ne0$ 时其绝对积分发散；更直接地，对有界输入 $f(t)=u(t)$，输出为 $Btu(t)$，无界。因此稳定要求 $B=0$。\n\n于是唯一交集为 $\\boxed{A=B=C=0}$；零系统确实同时满足四项性质。",
+      "answer": "$A=B=C=0$。",
+      "pitfalls": [
+        "积分器因果、线性且时不变，但不是BIBO稳定。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "二",
+      "title": "两次希尔伯特变换与直流分量",
+      "statement": "两个冲激响应均为主值意义 $1/(\\pi t)$ 的系统级联；当输入为直流时求输出，并解释系统作用。",
+      "firstStep": "使用希尔伯特变换频响 $-j\\operatorname{sgn}\\omega$，直流频率 $\\omega=0$ 必须单独讨论。",
+      "solution": "对每一级，在主值意义下\n$$h_H(t)=\\operatorname{pv}\\frac1{\\pi t},\\qquad H_H(j\\omega)=-j\\operatorname{sgn}\\omega.$$\n因此非零频率处总频响为 $(-j\\operatorname{sgn}\\omega)^2=-1$：正负频率均反相 $\\pi$。\n\n直流输入 $x(t)=C$ 的希尔伯特变换为0（采用对称主值、直流增益0的常用约定），故第一级后已为0，最终 $\\boxed{y(t)=0}$。\n\n若 $x(t)=C+x_{ac}(t)$，且交流部分属于可定义希尔伯特变换的信号类，则输出为 $y(t)=-x_{ac}(t)$：消除直流，其余部分反相。对有限能量信号通常直接写 $\\mathcal H^2x=-x$，但常数信号不是有限能量信号，不能据此对本题直流写成 $-C$。理想 $1/(\\pi t)$ 不绝对可积，其运算采用主值定义。",
+      "answer": "直流输入的输出为0；交流频率分量经两次变换后反相。",
+      "pitfalls": [
+        "不能忽略直流所在的零频率。",
+        "“两次希尔伯特等于取负”须说明适用信号类。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "三",
+      "title": "换路RLC：初始电感电流与四种分解",
+      "statement": "$t<0$ 开关接1：10 V电源串10 Ω，驱动并联 $C=1$ F、$R=2$ Ω、$L=1$ H，已稳态；$t=0$ 改接2：10 V串2 Ω。求并联端电压 $v_0(t)$ 全响应、零输入、零状态、自由、强迫分量。",
+      "firstStep": "换路前直流稳态下电容开路、电感短路。先求 $v_C(0^-),i_L(0^-)$，再在换路后列KCL；两种初态不能只保留电压。",
+      "solution": "换路前电感短路，故 $v_C(0^-)=0$；通过10 Ω的电流全部进入电感，$i_L(0^-)=10/10=1$ A。连续性给出 $v_0(0^+)=0,i_L(0^+)=1$。\n\n换路后KCL为\n$$v_0^\\prime+\\frac{v_0}{2}+i_L=\\frac{10-v_0}{2},\\qquad i_L^\\prime=v_0.$$\n即 $v_0^\\prime+v_0+i_L=5$，所以 $v_0^\\prime(0^+)=4$；对 $t>0$ 求导得 $v_0^{\\prime\\prime}+v_0^\\prime+v_0=0$。根为 $-1/2\\pm j\\sqrt3/2$，因此\n$$\\boxed{v_0(t)=\\frac8{\\sqrt3}e^{-t/2}\\sin\\frac{\\sqrt3t}{2},\\quad t\\ge0}.$$\n\n**零输入：** 把换路后10 V电源置零，保留初态，KCL给 $v_{zi}^\\prime(0^+)=-1$，故\n$$v_{zi}(t)=-\\frac2{\\sqrt3}e^{-t/2}\\sin\\frac{\\sqrt3t}{2}.$$\n**零状态：** 初始储能置零，保留电源，此时 $v_{zs}^\\prime(0^+)=5$，\n$$v_{zs}(t)=\\frac{10}{\\sqrt3}e^{-t/2}\\sin\\frac{\\sqrt3t}{2}.$$\n两者相加得到全响应。\n\n**自由/强迫分解：** 输出的直流特解为0，因为稳态电感再次短路；所以强迫响应可取0，自由响应等于上述全响应。零状态响应含自然模态，不应因为它由电源产生就把它全称为强迫特解。",
+      "answer": "$v_0=8e^{-t/2}\\sin(\\sqrt3t/2)/\\sqrt3$；零输入系数 $-2/\\sqrt3$，零状态 $10/\\sqrt3$；自由为全响应、强迫为0。",
+      "pitfalls": [
+        "换路前的1 A电感电流不能漏。",
+        "换路后的源内阻为2 Ω，且与并联2 Ω共同形成阻尼。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "figures": []
+    },
+    {
+      "ref": "四",
+      "title": "频域原点积分与复指数特征函数",
+      "statement": "$|H(j\\omega)|$ 为中心高度1的梯形，在 $\\omega=\\omega_0$ 仍为1；相频曲线过原点、在 $\\omega=1$ 时为 $k$，即 $\\varphi(\\omega)=k\\omega$。求 $\\int h(t)dt$；输入 $e^{j\\omega_0t}$ 时求输出。",
+      "firstStep": "积分等于零频率变换值；复指数是LTI系统的特征函数，只需读取对应频率的复增益。",
+      "solution": "由变换定义，\n$$\\int_{-\\infty}^{\\infty}h(t)dt=H(0)=|H(0)|e^{j\\varphi(0)}=1.$$\n\n对输入 $x(t)=e^{j\\omega_0t}$，\n$$y(t)=H(j\\omega_0)e^{j\\omega_0t}.$$\n图示该频率处幅值为1、相位为 $k\\omega_0$，因此\n$$\\boxed{y(t)=e^{jk\\omega_0}e^{j\\omega_0t}=e^{j\\omega_0(t+k)}}.$$\n正相位斜率对应时间超前 $k$（若 $k>0$）。题目没有标梯形外沿的截止值，但这两个所问仅需 $\\omega=0,\\omega_0$ 的读数，不需要补造截止频率。",
+      "answer": "$\\int h=1$；$y(t)=e^{j\\omega_0(t+k)}$。",
+      "pitfalls": [
+        "图中相位斜率是正 $k$，不能习惯性写成时延。"
+      ],
+      "sourcePages": [
+        1,
+        2
+      ],
+      "figures": []
+    },
+    {
+      "ref": "五",
+      "title": "梯形脉冲的卷积表示",
+      "statement": "$x(t)$ 在 $0\\to t_0$ 线性从0升到1，$t_0\\to3t_0$ 为1，$3t_0\\to4t_0$ 降到0，区间外为0。求傅里叶变换。",
+      "firstStep": "梯形是宽 $3t_0$ 与宽 $t_0$ 的矩形卷积，再平移至中心 $2t_0$，用卷积定理可直接保留线性相位。",
+      "solution": "定义 $r_a(t)=1$（$|t|<a/2$）、带外0，则\n$$x(t)=\\frac1{t_0}(r_{3t_0}*r_{t_0})(t-2t_0).$$\n两个矩形重叠长度最大 $t_0$，除以 $t_0$ 后平台正好为1。又\n$$\\mathcal F\\{r_a\\}=a\\operatorname{sa}(\\omega a/2),$$\n因此\n$$\\boxed{X(j\\omega)=3t_0\\operatorname{sa}\\left(\\frac{3\\omega t_0}{2}\\right)\\operatorname{sa}\\left(\\frac{\\omega t_0}{2}\\right)e^{-j2\\omega t_0}}.$$\n也可由二阶导数得到等价式\n$$X(j\\omega)=\\frac{1-e^{-j\\omega t_0}-e^{-j3\\omega t_0}+e^{-j4\\omega t_0}}{t_0(j\\omega)^2}.$$\n原点 $X(0)=3t_0$，等于平台面积 $2t_0$ 加两侧三角形面积 $t_0$。",
+      "answer": "$X=3t_0\\operatorname{sa}(3\\omega t_0/2)\\operatorname{sa}(\\omega t_0/2)e^{-j2\\omega t_0}$。",
+      "pitfalls": [
+        "梯形关于 $t=2t_0$ 对称，而不是关于0对称。",
+        "卷积前矩形宽度为 $3t_0$ 与 $t_0$。"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "figures": []
+    },
+    {
+      "ref": "六",
+      "title": "交替冲激抽样：带通留下半边谱",
+      "statement": "$F(\\omega)=(1-|\\omega|/\\omega_m)_+$；$p(t)=\\sum_n(-1)^n\\delta(t-nT_s)$。后接单位增益带通 $H=1$（$\\pi/T_s<|\\omega|<3\\pi/T_s$）。对 $T_s<\\pi/(2\\omega_m)$ 画抽样谱及输出谱，分别设计恢复器，并求两处均可恢复时最大 $T_s$。",
+      "firstStep": "交替冲激串的谱中心在奇数倍 $\\pi/T_s$。把通带端点与每份复制谱中心对齐，会发现端点恰好切过复制谱中心，不能把它当成两份完整带通谱。",
+      "solution": "令 $a=\\pi/T_s$，$F(\\omega)=(1-|\\omega|/\\omega_m)_+$。交替串可写为普通抽样串乘 $\\cos at$，因此\n$$P(\\omega)=\\frac{2\\pi}{T_s}\\sum_{k\\in\\mathbb Z}\\delta(\\omega-(2k+1)a),$$\n$$F_p(\\omega)=\\frac1{T_s}\\sum_kF(\\omega-(2k+1)a),$$\n$$Y(\\omega)=\\mathbf1_{a<|\\omega|<3a}\\,F_p(\\omega).$$\n题设 $a>2\\omega_m$ 时各复制谱分离。正通带中保留中心 $a$ 那份谱的**右半边**及中心 $3a$ 那份谱的**左半边**；负通带为其镜像。图以 $a=3\\omega_m$ 的合法比例显示这些半边。\n\n**从 $f_p$ 恢复。** 先乘 $\\cos at$，由于在抽样点 $(-1)^n\\cos(n\\pi)=1$，得到普通抽样串 $\\sum_nf(nT_s)\\delta(t-nT_s)$；再接增益 $T_s$、截止 $\\omega_m$ 的低通，即得 $f(t)$。\n\n**从 $y$ 恢复。** 先乘 $2T_s\\cos at$，其频谱为 $T_s[Y(\\omega-a)+Y(\\omega+a)]$。对 $0<\\omega<\\omega_m$，只有 $Y(\\omega+a)$ 提供所需的正半谱 $F(\\omega)/T_s$；对 $-\\omega_m<\\omega<0$，只有 $Y(\\omega-a)$ 提供负半谱。因此再接单位增益、截止 $\\omega_m$ 的低通即可恢复。端点取值不影响连续信号逆变换。\n\n**最大间隔。** 交替符号只改变样值符号，不改变信息量。奇数中心间距为 $2a$，无混叠要求 $2a\\ge2\\omega_m$，即\n$$\\boxed{T_{s,\\max}=\\pi/\\omega_m}.$$\n此时带通仍保留拼回原谱所需的两个半边；其它半边经混频后只落在恢复通带外。原题前三问给的 $T_s<\\pi/(2\\omega_m)$ 是更严格的充分条件，不是第四问最大值。",
+      "answer": "$F_p=T_s^{-1}\\sum_kF(\\omega-(2k+1)\\pi/T_s)$；从 $y$ 用 $2T_s\\cos(\\pi t/T_s)$ 混频再低通；最大 $T_s=\\pi/\\omega_m$。",
+      "pitfalls": [
+        "带通边界位于谱中心，只留下半谱。",
+        "从抽样信号和从带通输出恢复所需的混频增益不同。"
+      ],
+      "sourcePages": [
+        2,
+        3
+      ],
+      "figures": [
+        "2021-q6-spectrum.svg"
+      ]
+    },
+    {
+      "ref": "七",
+      "title": "周期三角门控：系数决定各复制谱高度",
+      "statement": "输入 $F(\\omega)=1$（$|\\omega|<\\omega_m$）。周期门控 $\\Lambda_T(t)$ 的每个三角脉冲中心在 $nT$，峰值 $\\tau$、半底宽 $\\tau$，$T=4\\tau$；求门控谱、$[-4\\omega_m,4\\omega_m]$ 内抽样谱及截止 $5\\pi/T$、增益1低通的输出。整理页红字另取无混叠临界 $\\omega_m=\\pi/(4\\tau)$。",
+      "firstStep": "先求单个高度为 $\\tau$ 的三角形面积 $\\tau^2$，再除以周期求傅里叶级数系数。先保留一般带宽，画指定区间时再说明是否采用红字临界条件。",
+      "solution": "令 $\\Omega=2\\pi/T=\\pi/(2\\tau)$。单个脉冲为 $(\\tau-|t|)_+$，其变换为 $\\tau^2\\operatorname{sa}^2(\\omega\\tau/2)$。周期化后\n$$c_k=\\frac{\\tau^2}{T}\\operatorname{sa}^2\\left(\\frac{k\\Omega\\tau}{2}\\right)\n=\\frac\\tau4\\operatorname{sa}^2\\left(\\frac{k\\pi}{4}\\right),$$\n$$\\boxed{\\mathcal F\\{\\Lambda_T\\}=2\\pi\\sum_kc_k\\delta(\\omega-k\\Omega)}.$$\n其中 $c_0=\\tau/4,c_{\\pm1}=2\\tau/\\pi^2,c_{\\pm2}=\\tau/\\pi^2,c_{\\pm3}=2\\tau/(9\\pi^2)$，$c_{4m}=0$（$m\\ne0$）。门控后\n$$F_s(\\omega)=\\sum_kc_k\\mathbf1_{|\\omega-k\\Omega|<\\omega_m}.$$\n这给出一般参数下的精确谱；各谱可能重叠，重叠处应相加。\n\n按整理页红字的**临界取值** $\\omega_m=\\Omega/2$，谱是首尾相接的矩形：中心位于 $2k\\omega_m$，区间为 $((2k-1)\\omega_m,(2k+1)\\omega_m)$，高度 $c_k$。在 $[-4\\omega_m,4\\omega_m]$ 中可见 $k=0,\\pm1$ 的整份以及 $k=\\pm2$ 的半份，图据此绘制。\n\n低通截止 $5\\pi/T=5\\Omega/2$。在无混叠条件 $\\omega_m\\le\\Omega/2$ 下，它恰好完整通过 $k=0,\\pm1,\\pm2$，其余阻断（边界点不影响逆变换）。由于 $f(t)=\\sin(\\omega_mt)/(\\pi t)$，\n$$\\boxed{y(t)=\\frac{\\sin\\omega_mt}{\\pi t}\\left[\\frac\\tau4+\\frac{4\\tau}{\\pi^2}\\cos\\Omega t+\\frac{2\\tau}{\\pi^2}\\cos2\\Omega t\\right]}.$$\n$t=0$ 按连续极限取值。若不采用红字条件且允许 $\\omega_m>\\Omega/2$，上式不再普适，精确答案应写成\n$$Y(\\omega)=\\mathbf1_{|\\omega|<5\\Omega/2}\\sum_kc_k\\mathbf1_{|\\omega-k\\Omega|<\\omega_m},\\qquad y=\\mathcal F^{-1}Y.$$\n因此原图未独立指定 $\\omega_m$ 与 $\\tau$ 关系时，必须说明使用了无混叠或临界假设。",
+      "answer": "$c_k=\\tau\\operatorname{sa}^2(k\\pi/4)/4$；无混叠时 $y=f[\\tau/4+4\\tau\\cos\\Omega t/\\pi^2+2\\tau\\cos2\\Omega t/\\pi^2]$。",
+      "pitfalls": [
+        "脉冲峰值是 $\tau$，不是1。",
+        "红字取等号是附加临界情形，不能当成一般参数已知。"
+      ],
+      "sourcePages": [
+        3,
+        4
+      ],
+      "figures": [
+        "2021-q7-spectrum.svg"
+      ]
+    },
+    {
+      "ref": "九",
+      "title": "只接收一次回波的有限延迟系统",
+      "statement": "原文明确“只接收一个回波”，图示 $h(t)=\\alpha\\delta(t-T)+\\alpha^3\\delta(t-3T)$，$0<\\alpha<1$。求 $H(s)$、零极点与收敛域、幅频特性。",
+      "firstStep": "直接变换图中的两根冲激。有限个延迟项组成整函数，不应补上无限几何级数。",
+      "solution": "按原文和图形，只有直接到达与一次往返回波两项：\n$$\\boxed{H(s)=\\alpha e^{-sT}+\\alpha^3e^{-3sT}=\\alpha e^{-sT}(1+\\alpha^2e^{-2sT})}.$$\n有限指数项对所有有限复数 $s$ 都收敛，ROC为整个 $s$ 平面；没有有限极点。零点由 $e^{-2sT}=-\\alpha^{-2}$ 得到\n$$\\boxed{s_k=\\frac{\\ln\\alpha}{T}+j\\frac{(2k+1)\\pi}{2T},\\quad k\\in\\mathbb Z}.$$\n由于 $\\ln\\alpha<0$，所有零点位于左半平面的同一竖线上，相邻零点的虚部间距为 $\\pi/T$。\n\n频率响应与幅度为\n$$H(j\\omega)=\\alpha e^{-j\\omega T}(1+\\alpha^2e^{-j2\\omega T}),$$\n$$\\boxed{|H(j\\omega)|=\\alpha\\sqrt{1+\\alpha^4+2\\alpha^2\\cos2\\omega T}}.$$\n曲线为偶函数，周期 $\\pi/T$；最大值 $\\alpha(1+\\alpha^2)$ 出现在 $\\omega=k\\pi/T$，最小值 $\\alpha(1-\\alpha^2)$ 出现在 $\\omega=(k+1/2)\\pi/T$，且最小值大于0。有限冲激权重绝对和为 $\\alpha+\\alpha^3$，系统BIBO稳定。\n\n若另行改成无限次回波，才会得到 $\\alpha e^{-sT}/(1-\\alpha^2e^{-2sT})$ 及一列极点；那是另一模型，不能替代本题的两个冲激。附图选 $\\alpha=0.6$ 展示形状，公式适用于全部题设参数。",
+      "answer": "$H=\\alpha e^{-sT}+\\alpha^3e^{-3sT}$；无有限极点，ROC全平面；零点 $\\Re s=\\ln\\alpha/T$、$\\Im s=(2k+1)\\pi/(2T)$。",
+      "pitfalls": [
+        "原文“一个回波”意味着有限两项，不能误写无限反馈。",
+        "纯延迟的拉普拉斯函数是指数式，不能只用有理式零极点经验。"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "figures": [
+        "2021-q9-response.svg"
+      ]
+    },
+    {
+      "ref": "十",
+      "title": "二阶差分系统：单位圆频响与最少延时",
+      "statement": "$y[n]=y[n-1]-0.5y[n-2]+x[n-1]$。求 $H(z),h[n]$，零极点、幅相曲线及最少延时实现。按零初态因果递推理解。",
+      "firstStep": "先写分母 $1-z^{-1}+0.5z^{-2}$，其共轭根可用半径角度表示。画幅相谱时先把频响分母化为实部加虚部。",
+      "solution": "零状态变换为\n$$H(z)=\\frac{z^{-1}}{1-z^{-1}+\\frac12z^{-2}}=\\frac{z}{z^2-z+1/2}.$$\n零点为0，极点为 $p_{1,2}=\\frac12\\pm\\frac j2=2^{-1/2}e^{\\pm j\\pi/4}$。因果ROC为 $|z|>1/\\sqrt2$，包含单位圆，所以稳定。由共轭极点反变换\n$$\\boxed{h[n]=2\\left(\\frac1{\\sqrt2}\\right)^n\\sin\\frac{n\\pi}{4}\\,u[n]}.$$\n例如 $h[0]=0,h[1]=1,h[2]=1$，与差分递推一致。\n\n在单位圆上，将分子分母同乘 $e^{j\\omega}$，\n$$H(e^{j\\omega})=\\frac1{\\frac32\\cos\\omega-1+j\\frac12\\sin\\omega}.$$\n因此\n$$|H|=\\left[(\\tfrac32\\cos\\omega-1)^2+\\tfrac14\\sin^2\\omega\\right]^{-1/2},$$\n$$\\arg H=-\\operatorname{atan2}(\\tfrac12\\sin\\omega,\\tfrac32\\cos\\omega-1)\\pmod{2\\pi}.$$\n幅频为偶函数、周期 $2\\pi$；$|H(0)|=2,|H(\\pi)|=2/5$；最大值 $2\\sqrt2$ 出现在 $\\cos\\omega=3/4$。相位是奇对称的主值曲线，$\\pi$ 处发生主值折返。\n\n最少延时采用直接Ⅱ型，设\n$$w[n]=x[n]+w[n-1]-\\tfrac12w[n-2],\\qquad y[n]=w[n-1].$$\n两个串联单位延时储存 $w[n-1],w[n-2]$，分别经 $1,-1/2$ 回馈至输入加法器，输出取第一个延时节点。没有零极点抵消，二阶系统需要两个延时单元。",
+      "answer": "$H=z/(z^2-z+1/2)$；$h[n]=2(1/\\sqrt2)^n\\sin(n\\pi/4)u[n]$；两个延时。",
+      "pitfalls": [
+        "输入本身延时一拍，故 $h[0]=0$。",
+        "相位要用 atan2，单用 arctan 会丢失象限。"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "figures": [
+        "2021-q10-response.svg",
+        "2021-q10-block.svg"
+      ]
+    }
+  ]
+}

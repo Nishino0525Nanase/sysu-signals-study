@@ -1,0 +1,8 @@
+.DS_Store
+.sites-local/
+.env*
+android/build/
+android/*.jks
+node_modules/
+*.tar.gz
+
