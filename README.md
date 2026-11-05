@@ -5,7 +5,7 @@
 ## 使用
 
 - 网页：[中大信号研习室](https://nishino0525nanase.github.io/sysu-signals-study/)，由 Pages 工作流发布 `dist/`。
-- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”中的 `sysu-signals-study-v1.2.0.apk`。最低 Android 7.0，可覆盖升级1.0.0/1.0.1/1.1.0并保留本机学习记录。
+- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”中的 `sysu-signals-study-v1.3.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
 - APK内置全部学习内容、公式字体和配图，核心阅读无需联网，不申请网络、定位、摄像头或账号权限。
 - 学习进度、收藏、错题、笔记保存在本机，支持导出和导入JSON备份。
 
@@ -52,5 +52,13 @@ Android使用JDK17、SDK platform35/build-tools35编译：设置`ANDROID_JAR`、
 - 新增24条方法补充，覆盖30道对应题目；38条课程/资料入口包含12个B站、5个慕课、17个MIT课程/讲义及4个GitHub来源。
 - 其他解法按确切题号关联，参考一手课程的思路后独立推导，并写明适用条件和核验方法。外部资料的原文定位和作者信息保存在 `content/resources.json`。
 - 引用课程和仓库均保留原作者链接。数学演算与中文解说由本项目独立整理，不转载课程视频或原仓库的整份教材/答案。
+
+## 1.3.0 直接阅读的中文课程精讲
+
+- 网页标识、浏览器/PWA图标和Android桌面图标统一为中山大学绿色校徽。原矢量来源、版权及尺寸转换说明见 `content/brand/README.md`；项目仍为个人备考整理。
+- “课程精讲”默认展示12篇自成体系的中文整理，覆盖第1至11章及正交投影/匹配滤波。每篇包含结论、第一步的理由、完整例题、条件辨析、易错点、自检答案及可点开的配套题号。
+- 实际读取MIT官方课程文字稿/讲义等正文后重新组织方法；未取得正文的视频保留在独立“资料出处”页，不作为已读课堂内容。24条逐题多解保留。
+- 同一份 `content/study-guides.json` 同时用于网页、APK及38页中文精讲PDF。网页学习页为 `#resources`；可用 `#resources?guide=G07` 等固定链接直接进入章节。
+- 公式与题号/来源映射由 `npm run check` 检查。PDF可运行 `python tools/export-course-digest.py` 生成，需要Pandoc、XeLaTeX、Inkscape及Noto CJK字体。
 
 重绘中文图可分别运行 `tools/localize-early-figures.py`、`tools/localize-middle-figures.py`、`tools/localize-late-figures.py`；需要Matplotlib、NumPy/SciPy及Noto CJK字体。

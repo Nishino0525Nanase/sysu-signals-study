@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "github": "https://github.com/Nishino0525Nanase/sysu-signals-study",
   "training": [
     {
@@ -1669,9 +1669,9 @@
   "files": [
     {
       "kind": "apk",
-      "title": "Android离线版 1.2.0",
-      "description": "中文图解、多种解法与逐题课程入口；核心答案离线可读，外部视频联网打开。Android 7.0及以上，可覆盖升级。",
-      "path": "downloads/sysu-signals-study-v1.2.0.apk"
+      "title": "Android离线版 1.3.0",
+      "description": "中山大学校徽图标，内置12篇中文课程精讲、逐步例题和同章训练；Android 7.0及以上，可覆盖升级。",
+      "path": "downloads/sysu-signals-study-v1.3.0.apk"
     },
     {
       "kind": "xlsx",
@@ -1684,6 +1684,12 @@
       "title": "课后与专项训练逐步答案",
       "description": "40组课后题、32道训练的逐步答案，附中文图解及已核算的其他解法。",
       "path": "downloads/oppenheim-workbook.pdf"
+    },
+    {
+      "kind": "pdf",
+      "title": "中文课程精讲整理",
+      "description": "12篇章节精讲，提炼结论、完整例题、易错点、自检与配套题号。",
+      "path": "downloads/course-digest.pdf"
     }
   ],
   "conventions": "连续傅里叶变换采用 $X(j\\omega)=\\int_{-\\infty}^{\\infty}x(t)e^{-j\\omega t}dt$，逆变换系数为 $1/(2\\pi)$。DTFT采用 $X(e^{j\\omega})=\\sum_nx[n]e^{-j\\omega n}$。离散单位冲激不能使用连续冲激的尺度因子。\n\n资料来自用户提供的2008—2026试题；题面和独立推导分开，原题扫描中的符号疑误、缺失条件、不同解释在题内说明。奥本海姆精选按英文第二版题号和印刷页码定位，不机械对应中文译本页码。\n\n本轮逐题核对订正了旧索引中2012初态、2016“非时变”、2019无储能、2021有限回波等摘要，并相应重算章节频次。",

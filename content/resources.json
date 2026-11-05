@@ -764,7 +764,7 @@
     },
     {
       "id": "OCW-E10",
-      "title": "MIT OCW 第10讲｜离散傅里叶级数：有限个谐波与周期性",
+      "title": "离散时间傅里叶级数（DFS）",
       "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-10-discrete-time-fourier-series/",
       "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/0e0484f952589facbec83d8b55a11fe6_TkMsVwzd1C0.pdf",
       "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/4b4c798a07875b0c999928309825916d_TkMsVwzd1C0.vtt",
@@ -784,7 +784,7 @@
     },
     {
       "id": "OCW-E11",
-      "title": "MIT OCW 第11讲｜离散傅里叶变换：对称性与线性相位",
+      "title": "离散时间傅里叶变换（DTFT）：对称性与线性相位",
       "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-11-discrete-time-fourier-transform/",
       "transcriptUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/25ec2290fd4e7c6c21e5e94ccd6f7a35_HKMY-8BqWWw.pdf",
       "captionUrl": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/45a0f77c687655f19af19b29d46a4f95_HKMY-8BqWWw.vtt",
