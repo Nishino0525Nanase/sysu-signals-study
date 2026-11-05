@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "github": "https://github.com/Nishino0525Nanase/sysu-signals-study",
   "training": [
     {
@@ -1669,9 +1669,9 @@
   "files": [
     {
       "kind": "apk",
-      "title": "Android离线版 1.3.0",
-      "description": "中山大学校徽图标，内置12篇中文课程精讲、逐步例题和同章训练；Android 7.0及以上，可覆盖升级。",
-      "path": "downloads/sysu-signals-study-v1.3.0.apk"
+      "title": "Android离线版 1.4.0",
+      "description": "真题解析内整合推荐路线、多种解法与选法条件，全部核心内容离线可读。Android 7.0及以上，可覆盖升级。",
+      "path": "downloads/sysu-signals-study-v1.4.0.apk"
     },
     {
       "kind": "xlsx",

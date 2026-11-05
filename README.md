@@ -5,7 +5,7 @@
 ## 使用
 
 - 网页：[中大信号研习室](https://nishino0525nanase.github.io/sysu-signals-study/)，由 Pages 工作流发布 `dist/`。
-- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”中的 `sysu-signals-study-v1.3.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
+- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”中的 `sysu-signals-study-v1.4.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
 - APK内置全部学习内容、公式字体和配图，核心阅读无需联网，不申请网络、定位、摄像头或账号权限。
 - 学习进度、收藏、错题、笔记保存在本机，支持导出和导入JSON备份。
 
@@ -62,3 +62,12 @@ Android使用JDK17、SDK platform35/build-tools35编译：设置`ANDROID_JAR`、
 - 公式与题号/来源映射由 `npm run check` 检查。PDF可运行 `python tools/export-course-digest.py` 生成，需要Pandoc、XeLaTeX、Inkscape及Noto CJK字体。
 
 重绘中文图可分别运行 `tools/localize-early-figures.py`、`tools/localize-middle-figures.py`、`tools/localize-late-figures.py`；需要Matplotlib、NumPy/SciPy及Noto CJK字体。
+
+## 1.4.0 真题解析内的方法整合
+
+- 2008–2026的243个可见真题组各有题目专属的推荐路线，直接出现在原题解析的后半部分。关键步骤使用本题参数，保留完整原解供逐行核对。
+- 根据题目可用路径补充另一解法、等价视角或核验法，分别标明类别和具体小问范围；不给简单题强行凑独立解法。每题结尾写明考场怎样选方法、哪些条件不能省略。
+- 既有24条逐题补充在同一解析中展开，课程和原资料放到可选的出处中。侧栏“逐题方法”按年份和章节索引到原题内的方法部分。
+- 内容源为 `content/exam-methods.json`，与原题ID逐一匹配，网页与离线APK共用。原题编号与数据ID区别保留，例如2022年第六题的数据ID为2022-07。
+- 可分享 `#papers?year=2022&question=2022-02&focus=methods` 直接进入某题的方法对照。
+- 本次方法均结合所供题面独立演算；参考课程仅限已读取的讲义/字幕。题面缺失、排印歧义、初态、ROC与复共轭等限制仍明确保留。

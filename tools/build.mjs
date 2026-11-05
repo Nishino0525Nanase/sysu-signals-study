@@ -7,6 +7,7 @@ const read=p=>fs.readFile(path.join(root,p),'utf8').then(JSON.parse);
 const catalog=await read('content/catalog.json'), statistics=await read('content/statistics.json');
 const learning=await read('content/resources.json');
 const guides=await read('content/study-guides.json');
+const examMethods=await read('content/exam-methods.json');
 const topics=new Map(statistics.topics.map(t=>[t.code,t]));
 const exams=[];
 for(let year=2008;year<=2026;year++){
@@ -31,8 +32,10 @@ for(const name of await fs.readdir(path.join(root,'content/assets'))){
  await fs.writeFile(temporary,await fs.readFile(path.join(root,'content/assets',name)));
  await fs.rename(temporary,destination);
 }
-const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams,resources:learning.sources,alternativeMethods:learning.methods,studyGuides:guides.guides};
-await fs.writeFile(path.join(root,'dist/data.js'),'window.SIGNAL_DATA='+JSON.stringify(data)+';\n');
+const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exams,resources:learning.sources,alternativeMethods:learning.methods,studyGuides:guides.guides,examMethods:examMethods.entries};
+const compiled=path.join(root,'dist/data.js');
+await fs.writeFile(compiled+'.tmp','window.SIGNAL_DATA='+JSON.stringify(data)+';\n');
+await fs.rename(compiled+'.tmp',compiled);
 async function walk(dir){let result=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){let p=path.join(dir,e.name);if(e.isDirectory())result.push(...await walk(p));else result.push(p);}return result;}
 const files=await walk(path.join(root,'dist'));
 const assets=files.filter(p=>!p.endsWith('.apk')&&!p.endsWith('/sw.js')).map(p=>path.relative(path.join(root,'dist'),p).split(path.sep).join('/'));
