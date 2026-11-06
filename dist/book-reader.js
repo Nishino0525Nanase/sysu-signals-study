@@ -98,6 +98,7 @@ window.createTextbookReader = function ({ D, escape, heading }) {
   return `<section class="textbook-reader" data-textbook-reader data-current-pdf="${page.pdfPage}">
    <div class="book-backline"><a href="#downloads">← 资料与安装</a><a class="book-download" href="#digest">先读原书精简版 →</a>${downloadLink()}</div>
    ${heading('整本教材 / 原书阅读', escape(book.title || '奥本海姆《信号与系统》第二版'), escape(modeNote))}
+   <p class="book-reading-encouragement">这一页不必一次记住，先弄清一个公式为什么成立。看累了，也可以先休息一会儿。</p>
    <div class="book-page-heading"><div><strong>${escape(pageLabel(page))}</strong><span>${hasPrint(page) ? '按原书印刷页码标注' : '此页未标注正文印刷书页'}</span></div><span class="book-reading-location">${escape(entry?.title || '原书前置页')}${resumed ? '<small>接着上次阅读</small>' : ''}</span></div>
    ${notice ? `<p class="book-route-notice" role="status">${escape(notice)}</p>` : ''}
    <div class="book-read-controls">${paging(page, index)}${jumpForm(page)}<button type="button" class="book-toc-toggle" data-book-action="toggle-toc" aria-expanded="${open}" aria-controls="book-toc-shell">章节目录 ≡</button></div>
