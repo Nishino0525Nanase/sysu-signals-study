@@ -8,4 +8,68 @@ body.dark{color:var(--text);background:var(--bg);--accent:#8ccbb6;--amber:#edbf7
 @media print{.reference-categories,.reference-toolbar,.reference-intro,.reference-notation,.reference-examples button{display:none!important}.reference-detail{border:0}.reference-detail-head,.reference-aid{-webkit-print-color-adjust:exact;print-color-adjust:exact}.reference-reading{padding:0}.reference-aid,.reference-original figure{break-inside:avoid}.reference-original img{max-height:70vh;object-fit:contain}.reference-grid{display:block}.reference-index-card{break-inside:avoid;margin-bottom:20px}}
 
 @media(max-width:600px){#navigation{grid-template-columns:repeat(7,minmax(0,1fr))}#navigation a[data-page=reference]{white-space:nowrap}}
+
+/* Clear tables are the primary reading surface; scans and longer aids open on demand. */
+.reference-toolbar-compact{justify-content:flex-start;gap:9px;margin:10px 0 18px}
+.reference-toolbar-compact>.button,.reference-toolbar-compact>button{font-size:12px;padding:7px 11px}
+.reference-tools{margin:0 0 0 auto;padding:0;border:0;position:relative}
+.reference-tools>summary{font-size:12px;color:var(--accent);padding:8px;cursor:pointer}
+.reference-tools[open]>a{display:block;font-size:12px;padding:8px;border:1px solid var(--line);background:var(--paper)}
+.reference-detail-head{padding:24px 30px}
+.reference-detail-head h1{font-size:27px;margin:12px 0 8px}
+.reference-detail-head p{font-size:13px;line-height:1.8}
+.reference-reading{padding:0 30px 26px}
+.reference-fold{margin:15px 0;padding:0;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+.reference-fold>summary{font-size:13px;color:var(--muted);padding:11px 14px;line-height:1.8}
+.reference-fold-content{padding:0 17px 15px;border-top:1px solid var(--line)}
+.reference-original .reference-gallery{margin-top:12px}
+.reference-original .book-citation{margin:14px 0 8px}
+.reference-extra-aids .reference-aid{margin:14px 0;padding:15px 18px;font-size:15px}
+.reference-extra-examples .reference-examples{padding-top:10px;margin-top:12px;border:0}
+.reference-extra-examples .reference-examples h2{font-size:17px}
+.clear-transform-panel{margin:20px 0 18px;min-width:0}
+.clear-table-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 9px}
+.clear-table-heading h2{font-size:19px;color:var(--ref);margin:0}
+.clear-table-heading>span{font-size:11px;color:var(--muted);white-space:nowrap}
+.clear-table-notation{font-size:14px;line-height:1.9;overflow-wrap:anywhere;margin:0 0 13px}
+.clear-table-notation p{margin:7px 0}.clear-table-notation .katex-display{overflow-x:auto;overflow-y:hidden;max-width:100%}
+.clear-table-scroll{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:8px;scrollbar-gutter:stable}
+.clear-transform-table{width:100%;min-width:650px;font-size:14px;line-height:1.85;table-layout:auto}
+.clear-transform-table th,.clear-transform-table td{white-space:normal;padding:11px 13px;vertical-align:top;border-bottom:1px solid var(--line)}
+.clear-transform-table th{color:var(--ref);background:var(--ref-soft);font-weight:600;font-size:12px}
+.clear-transform-table td:first-child{font-weight:500}
+.clear-transform-table tr[hidden]{display:none!important}
+.clear-transform-table tr:last-child td{border-bottom:0}
+.clear-cell-label{display:none}.clear-cell-label p{margin:0}
+.clear-cell{max-width:100%;overflow-x:auto;overflow-y:hidden;padding-bottom:3px}
+.clear-cell>p{margin:0}.clear-cell .katex{font-size:1.08em}
+.clear-table-toggle{display:block;width:100%;font-size:13px;padding:10px 13px;background:var(--soft);color:var(--accent);margin-top:10px;min-height:43px}
+.clear-table-source{font-size:11px;line-height:1.8;color:var(--muted);margin:10px 1px 0;overflow-wrap:anywhere}
+.clear-table-note{margin:8px 0 0}
+.clear-table-note-toggle{font-size:12px;color:var(--muted);padding:6px 1px;text-align:left}
+.clear-table-note-body{padding:10px 13px;border-left:2px solid var(--line);font-size:13px;line-height:1.9;overflow-wrap:anywhere}
+.clear-table-note-body[hidden]{display:none!important}
+.clear-table-note-body p{margin:0 0 8px}.clear-table-note-body .katex-display{max-width:100%;overflow:auto}
+.large-type .clear-transform-table,.large-type .clear-table-notation{font-size:17px}
+@media(max-width:600px){
+ .reference-detail-head{padding:20px 16px}.reference-detail-head h1{font-size:22px}.reference-reading{padding:0 14px 20px}
+ .reference-detail-head p{font-size:12px}.reference-fold>summary{padding:10px 12px;font-size:12px}.reference-fold-content{padding:0 12px 12px}
+ .clear-table-heading{display:flex;flex-wrap:wrap;gap:4px 12px}.clear-table-heading h2{font-size:18px}.clear-table-heading>span{display:inline;margin:0}
+ .clear-table-notation{font-size:13px}.clear-transform-table{display:block;min-width:0;font-size:15px}
+ .clear-transform-table thead{display:none}.clear-transform-table tbody{display:block}.clear-transform-table tr{display:block;padding:10px 13px;border-bottom:1px solid var(--line)}
+ .clear-transform-table tr:last-child{border-bottom:0}.clear-transform-table td{display:grid;grid-template-columns:72px minmax(0,1fr);align-items:baseline;gap:8px;width:100%;padding:5px 0;border:0}
+ .clear-transform-table .clear-cell-label{display:block;font-size:10px;line-height:1.65;font-weight:500;color:var(--muted);margin:0}
+ .clear-transform-table td:first-child{color:var(--ref)}.clear-cell .katex{font-size:1.05em}
+ .reference-extra-aids .reference-aid{font-size:14px;padding:13px 14px}
+}
+@media print{
+ .reference-original,.reference-extra-aids,.reference-extra-examples,.reference-tools,.clear-table-toggle,.clear-table-note-toggle{display:none!important}
+ .reference-reading,.reference-detail-head{padding:0}.reference-detail-head{background:transparent;margin-bottom:14pt}
+ .clear-table-heading>span{display:none}.clear-table-scroll{overflow:visible;border:0}.clear-transform-table{display:table;min-width:0;width:100%;font-size:10pt}
+ .clear-transform-table thead{display:table-header-group}.clear-transform-table tbody{display:table-row-group}
+ .clear-transform-table tr,.clear-transform-table tr[hidden]{display:table-row!important;break-inside:avoid}
+ .clear-transform-table td,.clear-transform-table th{display:table-cell;width:auto;padding:6pt;border-bottom:1px solid #ccc}
+ .clear-transform-table .clear-cell-label{display:none}.clear-cell{overflow:visible;padding:0}
+ .clear-table-note-body,.clear-table-note-body[hidden]{display:block!important;border:0;padding:10pt 0}
+}
 .integrated-methods .recommended-method{border-left:4px solid #317247}.integrated-methods .method-variant[data-kind="另一解法"]{border-left:4px solid #1f5d9b}.integrated-methods .method-variant[data-kind="另一解法"] .tag{background:#ecf4fc;color:#1f5d9b}.integrated-methods .method-variant[data-kind="等价视角"]{border-left:4px solid #6c41a5}.integrated-methods .method-variant[data-kind="等价视角"] .tag{background:#f4effb;color:#6c41a5}.integrated-methods .method-variant[data-kind="核验法"]{border-left:4px solid #087b7e}.integrated-methods .method-variant[data-kind="核验法"] .tag{background:#e9f7f7;color:#087b7e}.integrated-methods .method-choice{border-left:4px solid #946009}.dark .integrated-methods .method-variant[data-kind="另一解法"] .tag{background:#182b3e;color:#8dbdf0}.dark .integrated-methods .method-variant[data-kind="等价视角"] .tag{background:#2c243e;color:#c3a3f0}.dark .integrated-methods .method-variant[data-kind="核验法"] .tag{background:#183537;color:#83d8d5}

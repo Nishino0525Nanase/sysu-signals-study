@@ -5,7 +5,7 @@
 ## 使用
 
 - 网页：[中大信号研习室](https://nishino0525nanase.github.io/sysu-signals-study/)，由 Pages 工作流发布 `dist/`。
-- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”指向的 `sysu-signals-study-v1.8.1.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
+- Android：下载 [Releases](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/latest) 或网页“资料与安装”指向的 `sysu-signals-study-v1.10.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
 - APK内置全部学习内容、公式字体和配图，核心阅读无需联网，不申请网络、定位、摄像头或账号权限。
 - 学习进度、收藏、错题、笔记保存在本机，支持导出和导入JSON备份。
 
@@ -135,3 +135,12 @@ Android使用JDK17、SDK platform35/build-tools35编译：设置`ANDROID_JAR`、
 - 坐标源为content/exam-original-locations.json，原题清单为content/exam-originals.json；重建运行python tools/build-exam-originals.py。
 - 实看2021年第五题原文后，将旧傅里叶答案纠正为拉普拉斯变换主答案，补齐整个有限s平面ROC和原点可去性；方法对照与第9章考点归类同步更新。
 - 此次为网页版与源码更新，下载页继续准确标注现有Android版本1.8.1。
+
+
+## 1.10.0 清晰变换表与紧凑速查
+
+- 12张原书性质/变换表逐图核对后独立重排，共175行。各表默认9–10行常用项，完整行一键展开；原书扫描图与页码在同卡上方按需对照。
+- 行内保留归一化、支撑、ROC、主值/冲激项及单边初态，注明原表下标与符号的澄清；傅里叶级数积分/累加另列直流常数和收敛条件。
+- 手机将表格按信号、结果和条件纵向排列，公式保持清晰字体。记忆提示、易错点、图形和例题按需展开；方法卡的主要解题步骤继续直接显示。打印当前卡时输出完整清晰表。
+- 内容源仍为content/reference-handbook.json，新增clearTable结构与同源Markdown公式；搜索覆盖所有表行。
+- Android同步包含此前原题优先页面、243组原题摘图、2021年第五题拉氏修订、学习鼓励及本轮清晰表；沿用原签名，支持覆盖升级。

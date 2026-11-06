@@ -34,6 +34,14 @@ const sources=d.resources||[],methods=d.alternativeMethods||[],guides=d.studyGui
 const examMethods=d.examMethods||[];
 const references=d.textbookReferences||{},bookOriginals=references.exercises||[],bookConcepts=references.concepts||[];
 const handbook=d.referenceHandbook?.cards||[];
+const clearTables=handbook.filter(c=>c.clearTable);
+assert.equal(clearTables.length,12,'All 12 textbook tables need a clear counterpart');
+assert.equal(clearTables.reduce((n,c)=>n+c.clearTable.rows.length,0),175,'Keep all source-checked table rows');
+for(const c of clearTables){
+ const t=c.clearTable;assert.equal(c.category,'table');assert.ok(t.notation&&t.sourceNote&&t.columns.length>=2,c.id+' missing table conventions');
+ const core=t.rows.filter(r=>r.core).length;assert.ok(core>0&&core<=10&&core<t.rows.length,c.id+' invalid compact view');
+ for(const row of t.rows){assert.equal(row.cells.length,t.columns.length,c.id+' table cell mismatch');assert.equal(typeof row.core,'boolean');for(const value of row.cells){assert.equal(typeof value,'string');assert.ok(!/[\x00-\x09\x0B-\x1F]/.test(value),c.id+' control character in table');}}
+}
 const textbookReader=d.textbookReader;
 assert.equal(textbookReader?.pages?.length,628,'The complete uploaded book has 628 PDF pages');
 assert.equal(textbookReader.pdfPageCount,628);
@@ -145,7 +153,7 @@ for(const g of guides){
 for(const q of [...drills,...book]){assert.ok(q.solution.length>300,q.id+' needs a worked solution');assert.ok(!/^(最终表达式|各问具体表达式).*(见|推导)/.test(q.answer),q.id+' needs a concrete answer');}
 assert.ok(!(await fs.readFile(path.join(root,'dist/app.js'),'utf8')).includes("replace(/\\$|\\\\[a-zA-Z]+/g"),'Preview must preserve TeX commands');
 let errors=[],mathCount=0,figureCount=0;
-const handbookChecks=handbook.map(c=>({id:c.id,statement:c.formula,firstStep:c.memory,solution:c.explanation+'\n'+(Array.isArray(c.conditions)?c.conditions.join('\n'):c.conditions),answer:Array.isArray(c.pitfalls)?c.pitfalls.join('\n'):c.pitfalls,training:true,figures:(c.diagramPaths||[]).map(path=>({path}))}));
+const handbookChecks=handbook.map(c=>({id:c.id,statement:c.clearTable?[c.clearTable.compactNote||'',c.clearTable.notation,...c.clearTable.columns,...c.clearTable.rows.flatMap(r=>r.cells),c.clearTable.sourceNote].join('\n'):c.formula,firstStep:c.memory,solution:c.explanation+'\n'+(Array.isArray(c.conditions)?c.conditions.join('\n'):c.conditions),answer:Array.isArray(c.pitfalls)?c.pitfalls.join('\n'):c.pitfalls,training:true,figures:(c.diagramPaths||[]).map(path=>({path}))}));
 const condensedChecks=condensed.chapters.map(c=>({id:c.id,statement:c.coreIdea,firstStep:c.firstSteps.map(s=>s.trigger+'\n'+s.action).join('\n'),solution:c.essentials.map(e=>e.title+'\n'+e.explanation+'\n'+e.formula).join('\n'),answer:c.miniExample.title+'\n'+c.miniExample.body+'\n'+c.pitfalls.join('\n')+'\n'+c.selfCheck.question+'\n'+c.selfCheck.answer,training:true}));
 for(const q of [...condensedChecks,...handbookChecks,{id:"handbook-notation",statement:d.referenceHandbook.notation,firstStep:"",solution:"",answer:"",training:true},...qs,...drills,...book,...methods.map(m=>({id:m.id,statement:m.why||'',firstStep:m.whenToUse||'',solution:m.derivation,answer:m.check||'',training:true})),...guides.map(g=>({id:g.id,statement:g.summary,firstStep:g.quickTakeaways.join('\n'),solution:g.body,answer:g.selfCheck.join('\n'),pitfalls:g.pitfalls,training:true})),...examMethods.map(m=>({id:m.targetId+'-methods',statement:m.scope,firstStep:m.recommended.why,solution:m.recommended.steps.join('\n')+'\n'+(m.alternatives||[]).map(a=>a.whenToUse+'\n'+a.steps.join('\n')).join('\n'),answer:m.comparison,training:true})),...bookConcepts.map(c=>({id:c.id,statement:c.summary,firstStep:c.coverageNote||'',solution:'',answer:'',training:true})),...(references.relations||[]).map((r,i)=>({id:'book-relation-'+i,statement:r.scope,firstStep:'',solution:r.explanation,answer:'',training:true}))]){
  for(const field of ['statement','firstStep','solution','answer',...(q.pitfalls||[]).map((_,i)=>'pitfall'+i)]){

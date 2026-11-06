@@ -174,12 +174,12 @@
       "id": "H13-05",
       "category": "table",
       "chapter": "3",
-      "title": "原表3.1：连续时间傅里叶级数性质",
+      "title": "连续时间傅里叶级数性质 · 表3.1",
       "section": "3.5.8（表3.1）",
       "printPages": [
         130
       ],
-      "formula": "约定 $x(t)\\leftrightarrow a_k$、$y(t)\\leftrightarrow b_k$，共同周期T、$\\omega_0=2\\pi/T$。下列为原表的常用行速读，截图保留完整原表。\n\n|时域操作|级数系数|\n|---|---|\n|$Ax+By$|$Aa_k+Bb_k$|\n|$x(t-t_0)$|$a_ke^{-jk\\omega_0t_0}$|\n|$e^{jM\\omega_0t}x(t)$，$M\\in\\mathbb Z$|$a_{k-M}$|\n|$x^*(t)$|$a_{-k}^*$|\n|$x(-t)$|$a_{-k}$|\n|$x(\\alpha t)$，$\\alpha>0$|$a_k$，新周期为 $T/\\alpha$|\n|$\\int_{t_0}^{t_0+T}x(\\tau)y(t-\\tau)d\\tau$|$T a_kb_k$|\n|$x(t)y(t)$|$\\sum_{l=-\\infty}^{\\infty}a_lb_{k-l}$|\n|$x\\prime(t)$|$jk\\omega_0a_k$|\n|实信号|$a_{-k}=a_k^*$|",
+      "formula": "采用 $x(t)=\\sum_{k\\in\\mathbb Z}a_ke^{jk\\omega_0t}$，$a_k=\\frac1T\\int_Tx(t)e^{-jk\\omega_0t}\\,dt$；$y(t)$ 的系数记作 $b_k$，$\\omega_0=2\\pi/T$。$\\int_T$ 指任一完整周期；除尺度变换外，统一用周期 $T$。相位只在系数非零时定义，等式按 $2\\pi$ 同余理解。\n\n|性质|周期信号或条件|傅里叶级数系数|\n|---|---|---|\n|线性|$Ax(t)+By(t)$|$Aa_k+Bb_k$|\n|时移|$x(t-t_0)$|$a_ke^{-jk\\omega_0t_0}=a_ke^{-jk(2\\pi/T)t_0}$|\n|整数谐波频移|$e^{jM\\omega_0t}x(t)$，$M\\in\\mathbb Z$|$a_{k-M}$|\n|共轭|$x^*(t)$|$a_{-k}^*$|\n|时间反转|$x(-t)$|$a_{-k}$|\n|时域尺度变换|$x(\\alpha t)$，$\\alpha>0$；改用周期 $T/\\alpha$、基频 $\\alpha\\omega_0$|仍为 $a_k$；这里没有 $1/\\alpha$ 幅度因子。|\n|周期卷积|$\\int_Tx(\\tau)y(t-\\tau)\\,d\\tau$|$Ta_kb_k$|\n|相乘|$x(t)y(t)$|$\\sum_{\\ell=-\\infty}^{\\infty}a_\\ell b_{k-\\ell}$|\n|微分|$\\frac{dx(t)}{dt}$；若有跳变，广义导数须含跳变冲激。|$jk\\omega_0a_k=jk\\frac{2\\pi}{T}a_k$|\n|积分／周期原函数|原表记 $\\int_{-\\infty}^{t}x(\\tau)\\,d\\tau$；需 $a_0=0$。严格使用时还须保证该无穷积分存在，或明确采用周期原函数。|$c_k=\\frac{a_k}{jk\\omega_0}=\\frac{a_k}{jk(2\\pi/T)}$，$k\\ne0$；$c_0$ 由积分常数确定。零均值保证存在周期原函数，不保证普通下限 $-\\infty$ 的积分收敛。|\n|实信号的共轭对称性|$x(t)$ 为实信号。|$a_k=a_{-k}^*$；$\\operatorname{Re}a_k=\\operatorname{Re}a_{-k}$；$\\operatorname{Im}a_k=-\\operatorname{Im}a_{-k}$；$\\vert a_k\\vert =\\vert a_{-k}\\vert $；$\\arg a_k\\equiv-\\arg a_{-k}\\pmod{2\\pi}$。|\n|实偶信号|$x(t)\\in\\mathbb R$，$x(-t)=x(t)$|$a_k\\in\\mathbb R$ 且 $a_{-k}=a_k$。|\n|实奇信号|$x(t)\\in\\mathbb R$，$x(-t)=-x(t)$|$a_k$ 为纯虚奇序列：$a_{-k}=-a_k$；特别地 $a_0=0$。|\n|实信号的奇偶分解|$x_e(t)=\\frac{x(t)+x(-t)}2$，$x_o(t)=\\frac{x(t)-x(-t)}2$；要求 $x(t)$ 为实信号。|$x_e(t)$ 的系数为 $\\operatorname{Re}a_k$；$x_o(t)$ 的系数为 $j\\operatorname{Im}a_k$。|\n|周期信号的帕斯瓦尔定理|一个周期内平方可积。|$\\frac1T\\int_T\\vert x(t)\\vert ^2\\,dt=\\sum_{k=-\\infty}^{\\infty}\\vert a_k\\vert ^2$|\n\n按中文版印刷第130页（PDF第152页）表3.1完整重排，保留全部15项及共轭对称性的五个关系。积分行补明非零谐波与直流常数的适用条件。",
       "explanation": "这张是教材真实的性质汇总表，不是重新拼成的“原书表”。使用前先统一两个信号的展开周期。时移改变每根谐波相位，调制改变谐波编号；周期卷积只积一个周期，所以带T。相乘的系数要卷积，但已知仅少数非零系数时，直接列可能的索引和最省事。",
       "memory": "延时乘负相位，调制反向移索引；时域相乘，系数卷积；周期卷积别丢T。",
       "conditions": "相关行要求操作有定义；M须为整数才保持所选周期。积分行的非零频率系数可除以jkω0，周期原函数须零均值，直流积分常数另定，不能无条件当作从负无穷的通常反常积分收敛。",
@@ -191,18 +191,150 @@
         "O09"
       ],
       "diagramPaths": [],
-      "preview": "延时乘负相位，调制反向移索引；时域相乘，系数卷积；周期卷积别丢T。"
+      "preview": "清晰对照：常用10行 / 完整15行；原书可展开核对。",
+      "clearTable": {
+        "notation": "采用 $x(t)=\\sum_{k\\in\\mathbb Z}a_ke^{jk\\omega_0t}$，$a_k=\\frac1T\\int_Tx(t)e^{-jk\\omega_0t}\\,dt$；$y(t)$ 的系数记作 $b_k$，$\\omega_0=2\\pi/T$。$\\int_T$ 指任一完整周期；除尺度变换外，统一用周期 $T$。相位只在系数非零时定义，等式按 $2\\pi$ 同余理解。",
+        "columns": [
+          "性质",
+          "周期信号或条件",
+          "傅里叶级数系数"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "线性",
+              "$Ax(t)+By(t)$",
+              "$Aa_k+Bb_k$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时移",
+              "$x(t-t_0)$",
+              "$a_ke^{-jk\\omega_0t_0}=a_ke^{-jk(2\\pi/T)t_0}$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "整数谐波频移",
+              "$e^{jM\\omega_0t}x(t)$，$M\\in\\mathbb Z$",
+              "$a_{k-M}$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "共轭",
+              "$x^*(t)$",
+              "$a_{-k}^*$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "时间反转",
+              "$x(-t)$",
+              "$a_{-k}$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时域尺度变换",
+              "$x(\\alpha t)$，$\\alpha>0$；改用周期 $T/\\alpha$、基频 $\\alpha\\omega_0$",
+              "仍为 $a_k$；这里没有 $1/\\alpha$ 幅度因子。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "周期卷积",
+              "$\\int_Tx(\\tau)y(t-\\tau)\\,d\\tau$",
+              "$Ta_kb_k$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "相乘",
+              "$x(t)y(t)$",
+              "$\\sum_{\\ell=-\\infty}^{\\infty}a_\\ell b_{k-\\ell}$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "微分",
+              "$\\frac{dx(t)}{dt}$；若有跳变，广义导数须含跳变冲激。",
+              "$jk\\omega_0a_k=jk\\frac{2\\pi}{T}a_k$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "积分／周期原函数",
+              "原表记 $\\int_{-\\infty}^{t}x(\\tau)\\,d\\tau$；需 $a_0=0$。严格使用时还须保证该无穷积分存在，或明确采用周期原函数。",
+              "$c_k=\\frac{a_k}{jk\\omega_0}=\\frac{a_k}{jk(2\\pi/T)}$，$k\\ne0$；$c_0$ 由积分常数确定。零均值保证存在周期原函数，不保证普通下限 $-\\infty$ 的积分收敛。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号的共轭对称性",
+              "$x(t)$ 为实信号。",
+              "$a_k=a_{-k}^*$；$\\operatorname{Re}a_k=\\operatorname{Re}a_{-k}$；$\\operatorname{Im}a_k=-\\operatorname{Im}a_{-k}$；$|a_k|=|a_{-k}|$；$\\arg a_k\\equiv-\\arg a_{-k}\\pmod{2\\pi}$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "实偶信号",
+              "$x(t)\\in\\mathbb R$，$x(-t)=x(t)$",
+              "$a_k\\in\\mathbb R$ 且 $a_{-k}=a_k$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "实奇信号",
+              "$x(t)\\in\\mathbb R$，$x(-t)=-x(t)$",
+              "$a_k$ 为纯虚奇序列：$a_{-k}=-a_k$；特别地 $a_0=0$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号的奇偶分解",
+              "$x_e(t)=\\frac{x(t)+x(-t)}2$，$x_o(t)=\\frac{x(t)-x(-t)}2$；要求 $x(t)$ 为实信号。",
+              "$x_e(t)$ 的系数为 $\\operatorname{Re}a_k$；$x_o(t)$ 的系数为 $j\\operatorname{Im}a_k$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "周期信号的帕斯瓦尔定理",
+              "一个周期内平方可积。",
+              "$\\frac1T\\int_T|x(t)|^2\\,dt=\\sum_{k=-\\infty}^{\\infty}|a_k|^2$"
+            ],
+            "core": true
+          }
+        ],
+        "sourceNote": "按中文版印刷第130页（PDF第152页）表3.1完整重排，保留全部15项及共轭对称性的五个关系。积分行补明非零谐波与直流常数的适用条件。",
+        "compactNote": "共同周期$T>0$，$\\omega_0=2\\pi/T$；$x\\leftrightarrow a_k$、$y\\leftrightarrow b_k$。"
+      }
     },
     {
       "id": "H13-06",
       "category": "table",
       "chapter": "3",
-      "title": "原表3.2：离散时间傅里叶级数性质",
+      "title": "离散时间傅里叶级数性质 · 表3.2",
       "section": "3.7（表3.2）",
       "printPages": [
         140
       ],
-      "formula": "约定共同周期N，$x[n]\\leftrightarrow a_k$、$y[n]\\leftrightarrow b_k$；系数下标按模N解释。\n\n|时域操作|DFS系数|\n|---|---|\n|$Ax+By$|$Aa_k+Bb_k$|\n|$x[n-n_0]$|$a_ke^{-j2\\pi kn_0/N}$|\n|$e^{j2\\pi Mn/N}x[n]$|$a_{k-M}$|\n|$x^*[n]$|$a_{-k}^*$|\n|$x[-n]$|$a_{-k}$|\n|$\\sum_{r=0}^{N-1}x[r]y[n-r]$|$N a_kb_k$|\n|$x[n]y[n]$|$\\sum_{l=0}^{N-1}a_lb_{k-l}$|\n|$x[n]-x[n-1]$|$(1-e^{-j2\\pi k/N})a_k$|\n|实序列|$a_{-k}=a_k^*$|\n\n在样本间插入 $m-1$ 个零（$m\\in\\mathbb Z_{>0}$）后，新周期为mN，新系数 $b_k=a_k/m$；右边的旧 $a_k$ 仍按N周期延拓。",
+      "formula": "采用 $x[n]=\\sum_{k=0}^{N-1}a_ke^{jk(2\\pi/N)n}$，$a_k=\\frac1N\\sum_{n=0}^{N-1}x[n]e^{-jk(2\\pi/N)n}$；$x[n],y[n]$ 的系数为 $a_k,b_k$。系数和下标均按 $N$ 周期；$\\sum_{\\langle N\\rangle}$ 指任意连续 $N$ 项。重合的正负谐波须先合并再计功率；自反索引为 $0$，以及偶数 $N$ 时的 $N/2$。相位关系仅在非零系数处按 $2\\pi$ 同余理解。\n\n|性质|周期序列或条件|离散时间傅里叶级数系数|\n|---|---|---|\n|线性|$Ax[n]+By[n]$|$Aa_k+Bb_k$|\n|时移|$x[n-n_0]$，$n_0\\in\\mathbb Z$|$a_ke^{-jk(2\\pi/N)n_0}$|\n|整数谐波频移|$e^{jM(2\\pi/N)n}x[n]$，$M\\in\\mathbb Z$|$a_{k-M}$，下标按 $N$ 同余。|\n|共轭|$x^*[n]$|$a_{-k}^*$|\n|时间反转|$x[-n]$|$a_{-k}$|\n|时域扩展（插零）|$m\\in\\mathbb Z_{>0}$；$x_{(m)}[mr]=x[r]$，其余索引取 $0$；新周期 $mN$、基频 $2\\pi/(mN)$。|$c_k=\\frac1m a_k$，作为 $mN$ 周期系数序列；原 $a_k$ 按 $N$ 重复读取。|\n|周期卷积|$\\sum_{r\\in\\langle N\\rangle}x[r]y[n-r]$|$Na_kb_k$；这不是无系数的 $a_kb_k$。|\n|相乘|$x[n]y[n]$|$\\sum_{\\ell\\in\\langle N\\rangle}a_\\ell b_{k-\\ell}$；只对一个系数周期作循环卷积。|\n|一阶差分|$x[n]-x[n-1]$|$(1-e^{-jk(2\\pi/N)})a_k$|\n|求和／周期累加解|原表记 $\\sum_{r=-\\infty}^{n}x[r]$；需 $a_0=0$。严格使用时还须保证无穷和存在，或明确求解周期关系 $z[n]-z[n-1]=x[n]$。|$c_k=\\frac{a_k}{1-e^{-jk(2\\pi/N)}}$，$k\\not\\equiv0\\pmod N$；$c_0$ 由加法常数确定。零均值保证存在周期累加解，不保证普通无穷下限的和收敛。|\n|实信号的共轭对称性|$x[n]$ 为实序列。|$a_k=a_{-k}^*$；$\\operatorname{Re}a_k=\\operatorname{Re}a_{-k}$；$\\operatorname{Im}a_k=-\\operatorname{Im}a_{-k}$；$\\vert a_k\\vert =\\vert a_{-k}\\vert $；$\\arg a_k\\equiv-\\arg a_{-k}\\pmod{2\\pi}$。自反索引处系数为实数。|\n|实偶信号|$x[n]\\in\\mathbb R$，$x[-n]=x[n]$|$a_k\\in\\mathbb R$ 且 $a_{-k}=a_k$。|\n|实奇信号|$x[n]\\in\\mathbb R$，$x[-n]=-x[n]$|$a_k$ 为纯虚奇序列：$a_{-k}=-a_k$；$a_0=0$，偶数 $N$ 时还有 $a_{N/2}=0$。|\n|实信号的奇偶分解|$x_e[n]=\\frac{x[n]+x[-n]}2$，$x_o[n]=\\frac{x[n]-x[-n]}2$；要求 $x[n]$ 为实序列。|$x_e[n]$ 的系数为 $\\operatorname{Re}a_k$；$x_o[n]$ 的系数为 $j\\operatorname{Im}a_k$。|\n|周期信号的帕斯瓦尔定理|时域、系数域各取连续 $N$ 项。|$\\frac1N\\sum_{n\\in\\langle N\\rangle}\\vert x[n]\\vert ^2=\\sum_{k\\in\\langle N\\rangle}\\vert a_k\\vert ^2$|\n\n按中文版印刷第140页（PDF第162页）表3.2完整重排，共15项。周期累加的直流常数、索引同余及自反频点说明为适用条件补注。",
       "explanation": "原表完整保留了周期卷积、相乘、一次差分、求和及尺度等条目。与CT表最大的实用区别是系数按N周期循环：相乘产生的是系数周期卷积，不能套无限独立谐波的求和。周期矩形可先差分成边缘冲激，再除去差分因子恢复非零频率系数，直流则由一周期平均单独补回。",
       "memory": "DT所有索引转一圈N；周期卷积带N；导数换成差分因子1−e的负相位。",
       "conditions": "n0、M须为整数。使用统一N周期及本书1/N分析规范。若周期求和的差分逆运算有解，需要输入零均值；k≡0(mod N)的常数项另定，不由差分公式唯一决定。",
@@ -213,7 +345,139 @@
         "O08"
       ],
       "diagramPaths": [],
-      "preview": "DT所有索引转一圈N；周期卷积带N；导数换成差分因子1−e的负相位。"
+      "preview": "清晰对照：常用10行 / 完整15行；原书可展开核对。",
+      "clearTable": {
+        "notation": "采用 $x[n]=\\sum_{k=0}^{N-1}a_ke^{jk(2\\pi/N)n}$，$a_k=\\frac1N\\sum_{n=0}^{N-1}x[n]e^{-jk(2\\pi/N)n}$；$x[n],y[n]$ 的系数为 $a_k,b_k$。系数和下标均按 $N$ 周期；$\\sum_{\\langle N\\rangle}$ 指任意连续 $N$ 项。重合的正负谐波须先合并再计功率；自反索引为 $0$，以及偶数 $N$ 时的 $N/2$。相位关系仅在非零系数处按 $2\\pi$ 同余理解。",
+        "columns": [
+          "性质",
+          "周期序列或条件",
+          "离散时间傅里叶级数系数"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "线性",
+              "$Ax[n]+By[n]$",
+              "$Aa_k+Bb_k$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时移",
+              "$x[n-n_0]$，$n_0\\in\\mathbb Z$",
+              "$a_ke^{-jk(2\\pi/N)n_0}$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "整数谐波频移",
+              "$e^{jM(2\\pi/N)n}x[n]$，$M\\in\\mathbb Z$",
+              "$a_{k-M}$，下标按 $N$ 同余。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "共轭",
+              "$x^*[n]$",
+              "$a_{-k}^*$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "时间反转",
+              "$x[-n]$",
+              "$a_{-k}$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时域扩展（插零）",
+              "$m\\in\\mathbb Z_{>0}$；$x_{(m)}[mr]=x[r]$，其余索引取 $0$；新周期 $mN$、基频 $2\\pi/(mN)$。",
+              "$c_k=\\frac1m a_k$，作为 $mN$ 周期系数序列；原 $a_k$ 按 $N$ 重复读取。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "周期卷积",
+              "$\\sum_{r\\in\\langle N\\rangle}x[r]y[n-r]$",
+              "$Na_kb_k$；这不是无系数的 $a_kb_k$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "相乘",
+              "$x[n]y[n]$",
+              "$\\sum_{\\ell\\in\\langle N\\rangle}a_\\ell b_{k-\\ell}$；只对一个系数周期作循环卷积。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "一阶差分",
+              "$x[n]-x[n-1]$",
+              "$(1-e^{-jk(2\\pi/N)})a_k$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "求和／周期累加解",
+              "原表记 $\\sum_{r=-\\infty}^{n}x[r]$；需 $a_0=0$。严格使用时还须保证无穷和存在，或明确求解周期关系 $z[n]-z[n-1]=x[n]$。",
+              "$c_k=\\frac{a_k}{1-e^{-jk(2\\pi/N)}}$，$k\\not\\equiv0\\pmod N$；$c_0$ 由加法常数确定。零均值保证存在周期累加解，不保证普通无穷下限的和收敛。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号的共轭对称性",
+              "$x[n]$ 为实序列。",
+              "$a_k=a_{-k}^*$；$\\operatorname{Re}a_k=\\operatorname{Re}a_{-k}$；$\\operatorname{Im}a_k=-\\operatorname{Im}a_{-k}$；$|a_k|=|a_{-k}|$；$\\arg a_k\\equiv-\\arg a_{-k}\\pmod{2\\pi}$。自反索引处系数为实数。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "实偶信号",
+              "$x[n]\\in\\mathbb R$，$x[-n]=x[n]$",
+              "$a_k\\in\\mathbb R$ 且 $a_{-k}=a_k$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "实奇信号",
+              "$x[n]\\in\\mathbb R$，$x[-n]=-x[n]$",
+              "$a_k$ 为纯虚奇序列：$a_{-k}=-a_k$；$a_0=0$，偶数 $N$ 时还有 $a_{N/2}=0$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号的奇偶分解",
+              "$x_e[n]=\\frac{x[n]+x[-n]}2$，$x_o[n]=\\frac{x[n]-x[-n]}2$；要求 $x[n]$ 为实序列。",
+              "$x_e[n]$ 的系数为 $\\operatorname{Re}a_k$；$x_o[n]$ 的系数为 $j\\operatorname{Im}a_k$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "周期信号的帕斯瓦尔定理",
+              "时域、系数域各取连续 $N$ 项。",
+              "$\\frac1N\\sum_{n\\in\\langle N\\rangle}|x[n]|^2=\\sum_{k\\in\\langle N\\rangle}|a_k|^2$"
+            ],
+            "core": true
+          }
+        ],
+        "sourceNote": "按中文版印刷第140页（PDF第162页）表3.2完整重排，共15项。周期累加的直流常数、索引同余及自反频点说明为适用条件补注。",
+        "compactNote": "共同正整数周期$N$，$x\\leftrightarrow a_k$、$y\\leftrightarrow b_k$；系数按$1/N$分析，下标按模$N$解释。"
+      }
     },
     {
       "id": "H13-07",
@@ -289,12 +553,12 @@
       "id": "HF-02",
       "category": "table",
       "chapter": "4",
-      "title": "原书完整表4.2：常用傅里叶变换对",
+      "title": "傅里叶变换对 · 表4.2",
       "section": "4.6，表4.2",
       "printPages": [
         209
       ],
-      "formula": "常用的三条出发点：\n$$\\delta(t)\\longleftrightarrow1,\\qquad\ne^{-at}u(t)\\longleftrightarrow\\frac1{a+j\\omega}\\quad(\\Re a>0),$$\n$$\\mathbf1_{\\{|t|<T_1\\}}\\longleftrightarrow\\frac{2\\sin(\\omega T_1)}{\\omega},\\qquad\n\\frac{\\sin Wt}{\\pi t}\\longleftrightarrow\\mathbf1_{\\{|\\omega|<W\\}}.$$\n原点按极限补值；矩形边界可按半值理解。",
+      "formula": "采用 $X(j\\omega)=\\int_{-\\infty}^{\\infty}x(t)e^{-j\\omega t}\\,dt$，逆变换系数为 $1/(2\\pi)$；$\\omega$ 为弧度频率。周期项取 $\\omega_0=2\\pi/T>0$。$\\operatorname{sinc}(v)=\\sin(\\pi v)/(\\pi v)$，原点取极限。冲激、阶跃及周期谱按广义函数理解；$\\operatorname{pv}$ 表示柯西主值。“—”表示原表未列级数系数。孤立端点值不影响普通傅里叶积分。\n\n|信号及条件|傅里叶变换|周期信号的级数系数|\n|---|---|---|\n|一般周期信号：$x(t)=\\sum_{k=-\\infty}^{\\infty}a_ke^{jk\\omega_0t}$|$2\\pi\\sum_{k=-\\infty}^{\\infty}a_k\\delta(\\omega-k\\omega_0)$|$a_k$|\n|$e^{jM\\omega_0t}$，$M\\in\\mathbb Z$；用独立的 $M$ 指定谐波。|$2\\pi\\delta(\\omega-M\\omega_0)$|$a_k=\\begin{cases}1,&k=M\\\\0,&k\\ne M\\end{cases}$；$M=1$ 时为 $a_1=1$。|\n|$\\cos\\omega_0t$|$\\pi[\\delta(\\omega-\\omega_0)+\\delta(\\omega+\\omega_0)]$|$a_1=a_{-1}=\\frac12$，其余为 $0$。|\n|$\\sin\\omega_0t$|$\\frac{\\pi}{j}[\\delta(\\omega-\\omega_0)-\\delta(\\omega+\\omega_0)]$|$a_1=-a_{-1}=\\frac1{2j}$，其余为 $0$。|\n|$x(t)=1$|$2\\pi\\delta(\\omega)$|$a_0=1$，$a_k=0\\ (k\\ne0)$；可选任意 $T>0$。|\n|周期矩形：一个周期内，$\\vert t\\vert <T_1$ 时为 $1$，$T_1<\\vert t\\vert \\le T/2$ 时为 $0$，并以 $T$ 重复；$0<T_1<T/2$。|$\\sum_{k=-\\infty}^{\\infty}\\frac{2\\sin(k\\omega_0T_1)}{k}\\delta(\\omega-k\\omega_0)$；$k=0$ 项权重取极限 $2\\omega_0T_1=4\\pi T_1/T$。|$a_k=\\frac{\\omega_0T_1}{\\pi}\\operatorname{sinc}\\!\\left(\\frac{k\\omega_0T_1}{\\pi}\\right)=\\frac{\\sin(k\\omega_0T_1)}{k\\pi}$；$a_0=2T_1/T$。|\n|$\\sum_{n=-\\infty}^{\\infty}\\delta(t-nT)$，$T>0$|$\\frac{2\\pi}{T}\\sum_{k=-\\infty}^{\\infty}\\delta\\!\\left(\\omega-\\frac{2\\pi k}{T}\\right)$|$a_k=1/T$，对所有整数 $k$。|\n|非周期矩形：$x(t)=1$（$\\vert t\\vert <T_1$），$x(t)=0$（$\\vert t\\vert >T_1$）；$T_1>0$。|$\\frac{2\\sin(\\omega T_1)}{\\omega}=2T_1\\operatorname{sinc}\\!\\left(\\frac{\\omega T_1}{\\pi}\\right)$；$\\omega=0$ 时取 $2T_1$。|—|\n|$\\frac{\\sin Wt}{\\pi t}$，$W>0$；$t=0$ 时取 $W/\\pi$。|$X(j\\omega)=\\begin{cases}1,&\\vert \\omega\\vert <W\\\\0,&\\vert \\omega\\vert >W\\end{cases}$|—|\n|$\\delta(t)$|$1$|—|\n|$u(t)$|$\\operatorname{pv}\\frac1{j\\omega}+\\pi\\delta(\\omega)$|—|\n|$\\delta(t-t_0)$|$e^{-j\\omega t_0}$|—|\n|$e^{-at}u(t)$，$\\operatorname{Re}a>0$|$\\frac1{a+j\\omega}$|—|\n|$te^{-at}u(t)$，$\\operatorname{Re}a>0$|$\\frac1{(a+j\\omega)^2}$|—|\n|$\\frac{t^{n-1}}{(n-1)!}e^{-at}u(t)$；$n\\in\\mathbb Z_{>0}$，$\\operatorname{Re}a>0$。|$\\frac1{(a+j\\omega)^n}$|—|\n\n按中文版印刷第209页（PDF第231页）表4.2逐行重排，共15项。原表复指数行混用谐波下标k与a₁，已统一为独立整数M；补明主值、sinc归一化和可去奇点极限。",
       "explanation": "表中每一行都是可直接配对的函数形状。做O14时先找到指数核、矩形与sinc，再根据题目追加调制、微分或相乘；做O15则反过来识别频谱。表末的n阶指数核带(n−1)!，适合把反复出现的高阶分母一次还原。截图完整保留表头、周期级数列和最后一行，没有只截某几条。",
       "memory": "先记冲激、指数、矩形三类；其余常由平移、调制、微分、对偶生成。",
       "conditions": "指数核要求Re a>0；n阶公式中n为正整数。复指数、常数、冲激列、周期信号及阶跃按分布解释；不是普通有限能量频谱。采用本书ω与1/(2π)逆变换约定。",
@@ -309,19 +573,151 @@
         "assets/handbook-ctft-triangle-sinc2.svg",
         "assets/handbook-ctft-exponential-spectrum.svg"
       ],
-      "preview": "先记冲激、指数、矩形三类；其余常由平移、调制、微分、对偶生成。"
+      "preview": "清晰对照：常用9行 / 完整15行；原书可展开核对。",
+      "clearTable": {
+        "notation": "采用 $X(j\\omega)=\\int_{-\\infty}^{\\infty}x(t)e^{-j\\omega t}\\,dt$，逆变换系数为 $1/(2\\pi)$；$\\omega$ 为弧度频率。周期项取 $\\omega_0=2\\pi/T>0$。$\\operatorname{sinc}(v)=\\sin(\\pi v)/(\\pi v)$，原点取极限。冲激、阶跃及周期谱按广义函数理解；$\\operatorname{pv}$ 表示柯西主值。“—”表示原表未列级数系数。孤立端点值不影响普通傅里叶积分。",
+        "columns": [
+          "信号及条件",
+          "傅里叶变换",
+          "周期信号的级数系数"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "一般周期信号：$x(t)=\\sum_{k=-\\infty}^{\\infty}a_ke^{jk\\omega_0t}$",
+              "$2\\pi\\sum_{k=-\\infty}^{\\infty}a_k\\delta(\\omega-k\\omega_0)$",
+              "$a_k$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$e^{jM\\omega_0t}$，$M\\in\\mathbb Z$；用独立的 $M$ 指定谐波。",
+              "$2\\pi\\delta(\\omega-M\\omega_0)$",
+              "$a_k=\\begin{cases}1,&k=M\\\\0,&k\\ne M\\end{cases}$；$M=1$ 时为 $a_1=1$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\cos\\omega_0t$",
+              "$\\pi[\\delta(\\omega-\\omega_0)+\\delta(\\omega+\\omega_0)]$",
+              "$a_1=a_{-1}=\\frac12$，其余为 $0$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\sin\\omega_0t$",
+              "$\\frac{\\pi}{j}[\\delta(\\omega-\\omega_0)-\\delta(\\omega+\\omega_0)]$",
+              "$a_1=-a_{-1}=\\frac1{2j}$，其余为 $0$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "$x(t)=1$",
+              "$2\\pi\\delta(\\omega)$",
+              "$a_0=1$，$a_k=0\\ (k\\ne0)$；可选任意 $T>0$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "周期矩形：一个周期内，$|t|<T_1$ 时为 $1$，$T_1<|t|\\le T/2$ 时为 $0$，并以 $T$ 重复；$0<T_1<T/2$。",
+              "$\\sum_{k=-\\infty}^{\\infty}\\frac{2\\sin(k\\omega_0T_1)}{k}\\delta(\\omega-k\\omega_0)$；$k=0$ 项权重取极限 $2\\omega_0T_1=4\\pi T_1/T$。",
+              "$a_k=\\frac{\\omega_0T_1}{\\pi}\\operatorname{sinc}\\!\\left(\\frac{k\\omega_0T_1}{\\pi}\\right)=\\frac{\\sin(k\\omega_0T_1)}{k\\pi}$；$a_0=2T_1/T$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "$\\sum_{n=-\\infty}^{\\infty}\\delta(t-nT)$，$T>0$",
+              "$\\frac{2\\pi}{T}\\sum_{k=-\\infty}^{\\infty}\\delta\\!\\left(\\omega-\\frac{2\\pi k}{T}\\right)$",
+              "$a_k=1/T$，对所有整数 $k$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "非周期矩形：$x(t)=1$（$|t|<T_1$），$x(t)=0$（$|t|>T_1$）；$T_1>0$。",
+              "$\\frac{2\\sin(\\omega T_1)}{\\omega}=2T_1\\operatorname{sinc}\\!\\left(\\frac{\\omega T_1}{\\pi}\\right)$；$\\omega=0$ 时取 $2T_1$。",
+              "—"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\frac{\\sin Wt}{\\pi t}$，$W>0$；$t=0$ 时取 $W/\\pi$。",
+              "$X(j\\omega)=\\begin{cases}1,&|\\omega|<W\\\\0,&|\\omega|>W\\end{cases}$",
+              "—"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\delta(t)$",
+              "$1$",
+              "—"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$u(t)$",
+              "$\\operatorname{pv}\\frac1{j\\omega}+\\pi\\delta(\\omega)$",
+              "—"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\delta(t-t_0)$",
+              "$e^{-j\\omega t_0}$",
+              "—"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "$e^{-at}u(t)$，$\\operatorname{Re}a>0$",
+              "$\\frac1{a+j\\omega}$",
+              "—"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$te^{-at}u(t)$，$\\operatorname{Re}a>0$",
+              "$\\frac1{(a+j\\omega)^2}$",
+              "—"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "$\\frac{t^{n-1}}{(n-1)!}e^{-at}u(t)$；$n\\in\\mathbb Z_{>0}$，$\\operatorname{Re}a>0$。",
+              "$\\frac1{(a+j\\omega)^n}$",
+              "—"
+            ],
+            "core": false
+          }
+        ],
+        "sourceNote": "按中文版印刷第209页（PDF第231页）表4.2逐行重排，共15项。原表复指数行混用谐波下标k与a₁，已统一为独立整数M；补明主值、sinc归一化和可去奇点极限。",
+        "compactNote": "逆变换带$1/(2\\pi)$。本表$\\operatorname{sinc}(v)=\\sin(\\pi v)/(\\pi v)$，不同于$\\mathrm{Sa}(v)=\\sin v/v$；冲激与阶跃按广义函数理解。"
+      }
     },
     {
       "id": "HF-03",
       "category": "table",
       "chapter": "4",
-      "title": "原书完整表4.1：傅里叶变换性质",
+      "title": "傅里叶变换性质 · 表4.1",
       "section": "4.6，表4.1",
       "printPages": [
         208,
         209
       ],
-      "formula": "运算方向先分清：\n$$x*y\\longleftrightarrow XY,\\qquad\nxy\\longleftrightarrow\\frac1{2\\pi}(X*Y),$$\n$$x^*(t)\\longleftrightarrow X^*(-j\\omega),\\qquad\nx(-t)\\longleftrightarrow X(-j\\omega).$$\n实信号另满足$X(-j\\omega)=X^*(j\\omega)$。",
+      "formula": "记 $x(t)\\longleftrightarrow X(j\\omega)$、$y(t)\\longleftrightarrow Y(j\\omega)$；正变换核为 $e^{-j\\omega t}$，逆变换前有 $1/(2\\pi)$。普通积分、卷积、乘积须存在；冲激等情形按相应广义函数约定理解。相位仅在频谱非零处定义，并按 $2\\pi$ 同余理解。\n\n|性质|时域信号或条件|傅里叶变换|\n|---|---|---|\n|线性|$Ax(t)+By(t)$|$AX(j\\omega)+BY(j\\omega)$|\n|时移|$x(t-t_0)$|$e^{-j\\omega t_0}X(j\\omega)$|\n|频移|$e^{j\\omega_0t}x(t)$|$X\\!\\left(j(\\omega-\\omega_0)\\right)$|\n|共轭|$x^*(t)$|$X^*(-j\\omega)$|\n|时间反转|$x(-t)$|$X(-j\\omega)$|\n|时间与频率尺度变换|$x(at)$，$a\\in\\mathbb R\\setminus\\{0\\}$|$\\frac1{\\vert a\\vert }X\\!\\left(\\frac{j\\omega}{a}\\right)$；负 $a$ 同时反转频率。|\n|卷积|$x(t)*y(t)$|$X(j\\omega)Y(j\\omega)$|\n|相乘|$x(t)y(t)$|$\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}X(j\\theta)Y\\!\\left(j(\\omega-\\theta)\\right)\\,d\\theta$|\n|时域微分|$\\frac{dx(t)}{dt}$；广义导数须计入跳变冲激。|$j\\omega X(j\\omega)$|\n|时域积分|$\\int_{-\\infty}^{t}x(\\tau)\\,d\\tau$；例如要求 $\\int_{-\\infty}^{\\infty}(1+\\vert t\\vert )\\vert x(t)\\vert \\,dt<\\infty$，使 $X$ 在原点为普通可微函数。|$X(j\\omega)\\operatorname{pv}\\frac1{j\\omega}+\\pi X(0)\\delta(\\omega)$；$X(0)=\\int_{-\\infty}^{\\infty}x(t)\\,dt$。不可漏掉原点冲激，也不可对已含冲激的任意 $X$ 直接作主值乘积。|\n|频域微分|$tx(t)$|$j\\frac{dX(j\\omega)}{d\\omega}$|\n|实信号的共轭对称性|$x(t)$ 为实信号。|$X(j\\omega)=X^*(-j\\omega)$；$\\operatorname{Re}X(j\\omega)=\\operatorname{Re}X(-j\\omega)$；$\\operatorname{Im}X(j\\omega)=-\\operatorname{Im}X(-j\\omega)$；$\\vert X(j\\omega)\\vert =\\vert X(-j\\omega)\\vert $；$\\arg X(j\\omega)\\equiv-\\arg X(-j\\omega)\\pmod{2\\pi}$。|\n|实偶信号的对称性|$x(t)\\in\\mathbb R$，$x(-t)=x(t)$|$X(j\\omega)$ 为实偶函数。|\n|实奇信号的对称性|$x(t)\\in\\mathbb R$，$x(-t)=-x(t)$|$X(j\\omega)$ 为纯虚奇函数。|\n|实信号的奇偶分解|$x_e(t)=\\frac{x(t)+x(-t)}2$，$x_o(t)=\\frac{x(t)-x(-t)}2$；要求 $x(t)$ 为实信号。|$x_e(t)\\longleftrightarrow\\operatorname{Re}X(j\\omega)$；$x_o(t)\\longleftrightarrow j\\operatorname{Im}X(j\\omega)$。|\n|非周期信号的帕斯瓦尔定理|$x(t)$ 为有限能量信号（平方可积）。|$\\int_{-\\infty}^{\\infty}\\vert x(t)\\vert ^2\\,dt=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}\\vert X(j\\omega)\\vert ^2\\,d\\omega$|\n\n按中文版印刷第208—209页（PDF第230—231页）表4.1及续表完整重排，共16项。补明积分项的主值定义与适用条件，保留πX(0)δ(ω)；原表无独立对偶行。",
       "explanation": "查表先圈出题目的操作：卷积、相乘、共轭、反转、平移还是微分。若含多层操作，把括号内的最基本信号先命名，再逐层写变换，避免一步猜结果。两页截图组成表4.1全文，包含末尾实信号性质与Parseval；下一张表4.2另列，不把目录当公式依据。",
       "memory": "卷积变乘积；乘积变卷积且多1/(2π)。共轭带反号，单纯反转只换频率符号。",
       "conditions": "表中各运算须在经典积分、L²或分布框架中有定义；尤其不能随意把两个冲激相乘。一般复信号不能套用仅对实信号成立的共轭对称、实偶与虚奇结论。",
@@ -333,7 +729,147 @@
         "O16"
       ],
       "diagramPaths": [],
-      "preview": "卷积变乘积；乘积变卷积且多1/(2π)。共轭带反号，单纯反转只换频率符号。"
+      "preview": "清晰对照：常用10行 / 完整16行；原书可展开核对。",
+      "clearTable": {
+        "notation": "记 $x(t)\\longleftrightarrow X(j\\omega)$、$y(t)\\longleftrightarrow Y(j\\omega)$；正变换核为 $e^{-j\\omega t}$，逆变换前有 $1/(2\\pi)$。普通积分、卷积、乘积须存在；冲激等情形按相应广义函数约定理解。相位仅在频谱非零处定义，并按 $2\\pi$ 同余理解。",
+        "columns": [
+          "性质",
+          "时域信号或条件",
+          "傅里叶变换"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "线性",
+              "$Ax(t)+By(t)$",
+              "$AX(j\\omega)+BY(j\\omega)$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时移",
+              "$x(t-t_0)$",
+              "$e^{-j\\omega t_0}X(j\\omega)$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "频移",
+              "$e^{j\\omega_0t}x(t)$",
+              "$X\\!\\left(j(\\omega-\\omega_0)\\right)$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "共轭",
+              "$x^*(t)$",
+              "$X^*(-j\\omega)$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "时间反转",
+              "$x(-t)$",
+              "$X(-j\\omega)$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "时间与频率尺度变换",
+              "$x(at)$，$a\\in\\mathbb R\\setminus\\{0\\}$",
+              "$\\frac1{|a|}X\\!\\left(\\frac{j\\omega}{a}\\right)$；负 $a$ 同时反转频率。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "卷积",
+              "$x(t)*y(t)$",
+              "$X(j\\omega)Y(j\\omega)$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "相乘",
+              "$x(t)y(t)$",
+              "$\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}X(j\\theta)Y\\!\\left(j(\\omega-\\theta)\\right)\\,d\\theta$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时域微分",
+              "$\\frac{dx(t)}{dt}$；广义导数须计入跳变冲激。",
+              "$j\\omega X(j\\omega)$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时域积分",
+              "$\\int_{-\\infty}^{t}x(\\tau)\\,d\\tau$；例如要求 $\\int_{-\\infty}^{\\infty}(1+|t|)|x(t)|\\,dt<\\infty$，使 $X$ 在原点为普通可微函数。",
+              "$X(j\\omega)\\operatorname{pv}\\frac1{j\\omega}+\\pi X(0)\\delta(\\omega)$；$X(0)=\\int_{-\\infty}^{\\infty}x(t)\\,dt$。不可漏掉原点冲激，也不可对已含冲激的任意 $X$ 直接作主值乘积。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "频域微分",
+              "$tx(t)$",
+              "$j\\frac{dX(j\\omega)}{d\\omega}$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号的共轭对称性",
+              "$x(t)$ 为实信号。",
+              "$X(j\\omega)=X^*(-j\\omega)$；$\\operatorname{Re}X(j\\omega)=\\operatorname{Re}X(-j\\omega)$；$\\operatorname{Im}X(j\\omega)=-\\operatorname{Im}X(-j\\omega)$；$|X(j\\omega)|=|X(-j\\omega)|$；$\\arg X(j\\omega)\\equiv-\\arg X(-j\\omega)\\pmod{2\\pi}$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "实偶信号的对称性",
+              "$x(t)\\in\\mathbb R$，$x(-t)=x(t)$",
+              "$X(j\\omega)$ 为实偶函数。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实奇信号的对称性",
+              "$x(t)\\in\\mathbb R$，$x(-t)=-x(t)$",
+              "$X(j\\omega)$ 为纯虚奇函数。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号的奇偶分解",
+              "$x_e(t)=\\frac{x(t)+x(-t)}2$，$x_o(t)=\\frac{x(t)-x(-t)}2$；要求 $x(t)$ 为实信号。",
+              "$x_e(t)\\longleftrightarrow\\operatorname{Re}X(j\\omega)$；$x_o(t)\\longleftrightarrow j\\operatorname{Im}X(j\\omega)$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "非周期信号的帕斯瓦尔定理",
+              "$x(t)$ 为有限能量信号（平方可积）。",
+              "$\\int_{-\\infty}^{\\infty}|x(t)|^2\\,dt=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}|X(j\\omega)|^2\\,d\\omega$"
+            ],
+            "core": true
+          }
+        ],
+        "sourceNote": "按中文版印刷第208—209页（PDF第230—231页）表4.1及续表完整重排，共16项。补明积分项的主值定义与适用条件，保留πX(0)δ(ω)；原表无独立对偶行。",
+        "compactNote": "$x\\leftrightarrow X(j\\omega)$、$y\\leftrightarrow Y(j\\omega)$；逆变换带$1/(2\\pi)$。相关运算须存在或采用表内广义函数约定。"
+      }
     },
     {
       "id": "HF-04",
@@ -499,13 +1035,13 @@
       "id": "HD-03",
       "category": "table",
       "chapter": "5",
-      "title": "原书表5.2：基本DTFT变换对（两页完整表）",
+      "title": "DTFT变换对 · 表5.2",
       "section": "5.6，表5.2",
       "printPages": [
         249,
         250
       ],
-      "formula": "最常用的四个起点：\n$$\\delta[n-n_0]\\longleftrightarrow e^{-j\\omega n_0},\\qquad a^nu[n]\\longleftrightarrow\\frac1{1-ae^{-j\\omega}},\\quad |a|<1.$$\n$$\\frac{\\sin(Wn)}{\\pi n}\\longleftrightarrow\\begin{cases}1,&|\\omega|<W,\\\\0,&W<|\\omega|<\\pi,\\end{cases}\\quad0<W<\\pi,$$\n其中$n=0$取$W/\\pi$，频谱按$2\\pi$延拓。\n$$x[n]=\\mathbf1_{|n|\\le M}\\longleftrightarrow\\frac{\\sin[(M+1/2)\\omega]}{\\sin(\\omega/2)}.$$",
+      "formula": "$X(e^{j\\omega})=\\sum_{n=-\\infty}^{\\infty}x[n]e^{-j\\omega n}$，频率以$2\\pi$为周期。$u[0]=1$，$\\operatorname{sinc}(v)=\\sin(\\pi v)/(\\pi v)$；$N\\in\\mathbb N_+$，$a_{k+N}=a_k$。记$D_N[k]=1$（$k$为$N$的整数倍），其余为0；用它书写DFS可自动合并重合谱线。周期谱、阶跃谱按广义函数理解，$\\operatorname{PV}$表示周期柯西主值；每条冲激的系数是面积。 其中$N_1\\in\\mathbb Z_{\\ge0}$，即$N_1$为非负整数。\n\n|信号与条件|DTFT $X(e^{j\\omega})$|DFS系数或边界说明|\n|---|---|---|\n|一般$N$周期序列：$x[n]=\\sum_{k=0}^{N-1}a_ke^{j2\\pi kn/N}$|$2\\pi\\sum_{k\\in\\mathbb Z}a_k\\delta(\\omega-2\\pi k/N)$|DFS为$a_k$；$a_k$按$N$周期延拓。|\n|$e^{j\\omega_0n}$|$2\\pi\\sum_{\\ell\\in\\mathbb Z}\\delta(\\omega-\\omega_0-2\\pi\\ell)$|若$\\omega_0=2\\pi m/N$，$a_k=D_N[k-m]$；$\\omega_0/(2\\pi)$无理时非周期。|\n|$\\cos(\\omega_0n)$|$\\pi\\sum_{\\ell\\in\\mathbb Z}[\\delta(\\omega-\\omega_0-2\\pi\\ell)+\\delta(\\omega+\\omega_0-2\\pi\\ell)]$|若$\\omega_0=2\\pi m/N$，$a_k=\\tfrac12(D_N[k-m]+D_N[k+m])$；无理比时非周期，重合时相加。|\n|$\\sin(\\omega_0n)$|$\\dfrac{\\pi}{j}\\sum_{\\ell\\in\\mathbb Z}[\\delta(\\omega-\\omega_0-2\\pi\\ell)-\\delta(\\omega+\\omega_0-2\\pi\\ell)]$|若$\\omega_0=2\\pi m/N$，$a_k=\\tfrac1{2j}(D_N[k-m]-D_N[k+m])$；无理比时非周期，重合时抵消。|\n|$x[n]=1$|$2\\pi\\sum_{\\ell\\in\\mathbb Z}\\delta(\\omega-2\\pi\\ell)$|以任意正整数$N$作为周期，$a_k=D_N[k]$。|\n|周期方波：一周期内$\\vert n\\vert \\le N_1$为1，其余为0；$x[n+N]=x[n]$，$0\\le N_1<N/2$|$2\\pi\\sum_{k\\in\\mathbb Z}a_k\\delta(\\omega-2\\pi k/N)$|$k\\notin N\\mathbb Z$时$a_k=\\dfrac{\\sin[(2\\pi k/N)(N_1+1/2)]}{N\\sin(\\pi k/N)}$；$k\\in N\\mathbb Z$时$a_k=(2N_1+1)/N$。|\n|$\\sum_{m\\in\\mathbb Z}\\delta[n-mN]$|$\\dfrac{2\\pi}{N}\\sum_{k\\in\\mathbb Z}\\delta(\\omega-2\\pi k/N)$|$a_k=1/N$，对所有整数$k$。|\n|$a^nu[n]$，$\\vert a\\vert <1$|$\\dfrac1{1-ae^{-j\\omega}}$|非周期。$a=0$时按$a^0=1$退化为$\\delta[n]$。|\n|有限矩形：$x[n]=1$于$\\vert n\\vert \\le N_1$，其余为0|$\\dfrac{\\sin[(N_1+1/2)\\omega]}{\\sin(\\omega/2)}$|$N_1\\in\\mathbb Z_{\\ge0}$；$\\omega=2\\pi m$处取极限$2N_1+1$。|\n|$\\dfrac{\\sin(Wn)}{\\pi n}=\\dfrac W\\pi\\operatorname{sinc}(Wn/\\pi)$，$0<W<\\pi$|一周期内$X=1$于$\\vert \\omega\\vert <W$、$X=0$于$W<\\vert \\omega\\vert \\le\\pi$，再以$2\\pi$延拓。|$n=0$取$W/\\pi$。原表将频带端点计为1；跳变点单点取值不影响逆变换，按傅里叶级数收敛值可取$1/2$。|\n|$\\delta[n]$|$1$|非周期。|\n|$u[n]$|$\\operatorname{PV}\\!\\dfrac1{1-e^{-j\\omega}}+\\pi\\sum_{k\\in\\mathbb Z}\\delta(\\omega-2\\pi k)$|不能只保留分式；零频冲激列系数是$\\pi$。|\n|$\\delta[n-n_0]$，$n_0\\in\\mathbb Z$|$e^{-j\\omega n_0}$|整数移位，不含连续冲激的尺度因子。|\n|$(n+1)a^nu[n]$，$\\vert a\\vert <1$|$\\dfrac1{(1-ae^{-j\\omega})^2}$|二重指数型变换对。|\n|$\\dfrac{(n+r-1)!}{n!(r-1)!}a^nu[n]$，$\\vert a\\vert <1$，$r\\in\\mathbb N_+$|$\\dfrac1{(1-ae^{-j\\omega})^r}$|阶乘表达式仅用于$n\\ge0$，$n<0$的序列值为0。|\n\n实际目视原书表5.2两页截图HD-03-01/02：PDF271–272，印刷249–250页。15项全保留；DFS改用同余指示函数等价重排，补明谱线重合、阶跃主值和端点约定。",
       "explanation": "两张截图合起来才是原教材完整的基本变换对表，不把若干重写公式当成整张原表。查表先认支撑：$a^nu[n]$是右边指数，而$a^{|n|}$是双边序列，谱不同。周期信号一栏同时给DTFT冲激列和DFS系数，要先认当前所问的对象。表中的单位阶跃与全时间正弦涉及分布；有限矩形与$|a|<1$的右边指数可按普通函数处理。",
       "memory": "冲激→指数；指数→几何分式；有限矩形→正弦比；离散sinc→周期矩形。",
       "conditions": "n0、M为整数且M≥0；右边指数普通DTFT要求|a|<1；sinc带宽在0与π之间。表中阶跃的奇异项按分布/主值解释，不能在ω=0做普通除法。",
@@ -517,19 +1053,151 @@
         "O36"
       ],
       "diagramPaths": [],
-      "preview": "冲激→指数；指数→几何分式；有限矩形→正弦比；离散sinc→周期矩形。"
+      "preview": "清晰对照：常用10行 / 完整15行；原书可展开核对。",
+      "clearTable": {
+        "notation": "$X(e^{j\\omega})=\\sum_{n=-\\infty}^{\\infty}x[n]e^{-j\\omega n}$，频率以$2\\pi$为周期。$u[0]=1$，$\\operatorname{sinc}(v)=\\sin(\\pi v)/(\\pi v)$；$N\\in\\mathbb N_+$，$a_{k+N}=a_k$。记$D_N[k]=1$（$k$为$N$的整数倍），其余为0；用它书写DFS可自动合并重合谱线。周期谱、阶跃谱按广义函数理解，$\\operatorname{PV}$表示周期柯西主值；每条冲激的系数是面积。 其中$N_1\\in\\mathbb Z_{\\ge0}$，即$N_1$为非负整数。",
+        "columns": [
+          "信号与条件",
+          "DTFT $X(e^{j\\omega})$",
+          "DFS系数或边界说明"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "一般$N$周期序列：$x[n]=\\sum_{k=0}^{N-1}a_ke^{j2\\pi kn/N}$",
+              "$2\\pi\\sum_{k\\in\\mathbb Z}a_k\\delta(\\omega-2\\pi k/N)$",
+              "DFS为$a_k$；$a_k$按$N$周期延拓。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "$e^{j\\omega_0n}$",
+              "$2\\pi\\sum_{\\ell\\in\\mathbb Z}\\delta(\\omega-\\omega_0-2\\pi\\ell)$",
+              "若$\\omega_0=2\\pi m/N$，$a_k=D_N[k-m]$；$\\omega_0/(2\\pi)$无理时非周期。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\cos(\\omega_0n)$",
+              "$\\pi\\sum_{\\ell\\in\\mathbb Z}[\\delta(\\omega-\\omega_0-2\\pi\\ell)+\\delta(\\omega+\\omega_0-2\\pi\\ell)]$",
+              "若$\\omega_0=2\\pi m/N$，$a_k=\\tfrac12(D_N[k-m]+D_N[k+m])$；无理比时非周期，重合时相加。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\sin(\\omega_0n)$",
+              "$\\dfrac{\\pi}{j}\\sum_{\\ell\\in\\mathbb Z}[\\delta(\\omega-\\omega_0-2\\pi\\ell)-\\delta(\\omega+\\omega_0-2\\pi\\ell)]$",
+              "若$\\omega_0=2\\pi m/N$，$a_k=\\tfrac1{2j}(D_N[k-m]-D_N[k+m])$；无理比时非周期，重合时抵消。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$x[n]=1$",
+              "$2\\pi\\sum_{\\ell\\in\\mathbb Z}\\delta(\\omega-2\\pi\\ell)$",
+              "以任意正整数$N$作为周期，$a_k=D_N[k]$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "周期方波：一周期内$|n|\\le N_1$为1，其余为0；$x[n+N]=x[n]$，$0\\le N_1<N/2$",
+              "$2\\pi\\sum_{k\\in\\mathbb Z}a_k\\delta(\\omega-2\\pi k/N)$",
+              "$k\\notin N\\mathbb Z$时$a_k=\\dfrac{\\sin[(2\\pi k/N)(N_1+1/2)]}{N\\sin(\\pi k/N)}$；$k\\in N\\mathbb Z$时$a_k=(2N_1+1)/N$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "$\\sum_{m\\in\\mathbb Z}\\delta[n-mN]$",
+              "$\\dfrac{2\\pi}{N}\\sum_{k\\in\\mathbb Z}\\delta(\\omega-2\\pi k/N)$",
+              "$a_k=1/N$，对所有整数$k$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$a^nu[n]$，$|a|<1$",
+              "$\\dfrac1{1-ae^{-j\\omega}}$",
+              "非周期。$a=0$时按$a^0=1$退化为$\\delta[n]$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "有限矩形：$x[n]=1$于$|n|\\le N_1$，其余为0",
+              "$\\dfrac{\\sin[(N_1+1/2)\\omega]}{\\sin(\\omega/2)}$",
+              "$N_1\\in\\mathbb Z_{\\ge0}$；$\\omega=2\\pi m$处取极限$2N_1+1$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\dfrac{\\sin(Wn)}{\\pi n}=\\dfrac W\\pi\\operatorname{sinc}(Wn/\\pi)$，$0<W<\\pi$",
+              "一周期内$X=1$于$|\\omega|<W$、$X=0$于$W<|\\omega|\\le\\pi$，再以$2\\pi$延拓。",
+              "$n=0$取$W/\\pi$。原表将频带端点计为1；跳变点单点取值不影响逆变换，按傅里叶级数收敛值可取$1/2$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\delta[n]$",
+              "$1$",
+              "非周期。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$u[n]$",
+              "$\\operatorname{PV}\\!\\dfrac1{1-e^{-j\\omega}}+\\pi\\sum_{k\\in\\mathbb Z}\\delta(\\omega-2\\pi k)$",
+              "不能只保留分式；零频冲激列系数是$\\pi$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\delta[n-n_0]$，$n_0\\in\\mathbb Z$",
+              "$e^{-j\\omega n_0}$",
+              "整数移位，不含连续冲激的尺度因子。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$(n+1)a^nu[n]$，$|a|<1$",
+              "$\\dfrac1{(1-ae^{-j\\omega})^2}$",
+              "二重指数型变换对。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "$\\dfrac{(n+r-1)!}{n!(r-1)!}a^nu[n]$，$|a|<1$，$r\\in\\mathbb N_+$",
+              "$\\dfrac1{(1-ae^{-j\\omega})^r}$",
+              "阶乘表达式仅用于$n\\ge0$，$n<0$的序列值为0。"
+            ],
+            "core": false
+          }
+        ],
+        "sourceNote": "实际目视原书表5.2两页截图HD-03-01/02：PDF271–272，印刷249–250页。15项全保留；DFS改用同余指示函数等价重排，补明谱线重合、阶跃主值和端点约定。",
+        "compactNote": "DTFT以$2\\pi$为周期，$\\operatorname{sinc}(v)=\\sin(\\pi v)/(\\pi v)$。$D_N[k]$在$N\\mid k$时为1，否则0；$N\\ge1$，$M,N_1$为非负整数。"
+      }
     },
     {
       "id": "HD-04",
       "category": "table",
       "chapter": "5",
-      "title": "原书表5.1：DTFT性质（含完整续表）",
+      "title": "DTFT性质 · 表5.1",
       "section": "5.6，表5.1；5.3–5.5",
       "printPages": [
         248,
         249
       ],
-      "formula": "$$x[n-n_0]\\longleftrightarrow e^{-j\\omega n_0}X(e^{j\\omega}),\\qquad e^{j\\omega_0n}x[n]\\longleftrightarrow X(e^{j(\\omega-\\omega_0)}).$$\n$$x*y\\longleftrightarrow XY,\\qquad x[n]y[n]\\longleftrightarrow\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}X(e^{j\\theta})Y(e^{j(\\omega-\\theta)})d\\theta.$$\n$$nx[n]\\longleftrightarrow j\\frac{dX(e^{j\\omega})}{d\\omega},\\qquad x[n]-x[n-1]\\longleftrightarrow(1-e^{-j\\omega})X(e^{j\\omega}).$$\n实序列满足$X(e^{-j\\omega})=X^*(e^{j\\omega})$。",
+      "formula": "约定$x[n]\\leftrightarrow X(e^{j\\omega})$、$y[n]\\leftrightarrow Y(e^{j\\omega})$；所有频谱以$2\\pi$为周期。积分$\\int_{2\\pi}$指任意长度为$2\\pi$的区间。$L\\in\\mathbb N_+$，$n_0\\in\\mathbb Z$；性质在有关变换存在或所述广义函数意义下使用，累加式的分式按$\\operatorname{PV}$理解。\n\n|性质|时域序列|DTFT结果|条件与提醒|\n|---|---|---|---|\n|线性|$ax[n]+by[n]$|$aX(e^{j\\omega})+bY(e^{j\\omega})$|系数可为复数。|\n|时移|$x[n-n_0]$|$e^{-j\\omega n_0}X(e^{j\\omega})$|只改变相位因子。|\n|频移/调制|$e^{j\\omega_0n}x[n]$|$X(e^{j(\\omega-\\omega_0)})$|$\\omega_0$按$2\\pi$等价。|\n|共轭|$x^*[n]$|$X^*(e^{-j\\omega})$|共轭并反转频率。|\n|时间反转|$x[-n]$|$X(e^{-j\\omega})$|不附尺度系数。|\n|插零扩展|$x_{(L)}[n]=x[n/L]$（$L\\mid n$），其余为0|$X(e^{jL\\omega})$|插入$L-1$个零，不是直接取$x[Ln]$。|\n|卷积|$x[n]*y[n]$|$X(e^{j\\omega})Y(e^{j\\omega})$|线性卷积。|\n|相乘|$x[n]y[n]$|$\\dfrac1{2\\pi}\\int_{2\\pi}X(e^{j\\theta})Y(e^{j(\\omega-\\theta)})\\,d\\theta$|周期频域卷积，保留归一化系数。|\n|一次差分|$x[n]-x[n-1]$|$(1-e^{-j\\omega})X(e^{j\\omega})$|双边DTFT没有单边初态项。|\n|从负无穷累加|$\\sum_{k=-\\infty}^{n}x[k]$|$\\operatorname{PV}\\!\\dfrac{X(e^{j\\omega})}{1-e^{-j\\omega}}+\\pi X(e^{j0})\\sum_{m\\in\\mathbb Z}\\delta(\\omega-2\\pi m)$|如$x$绝对可和则$X(e^{j0})=\\sum_kx[k]$；结果可需广义函数解释。|\n|频域微分|$nx[n]$|$j\\dfrac{dX(e^{j\\omega})}{d\\omega}$|不是除以$j$。|\n|实信号：共轭对称|$x[n]\\in\\mathbb R$|$X(e^{j\\omega})=X^*(e^{-j\\omega})$|以下四行均由此推出。|\n|实信号：实部偶|$x[n]\\in\\mathbb R$|$\\operatorname{Re}X(e^{j\\omega})=\\operatorname{Re}X(e^{-j\\omega})$|实部关于零频偶对称。|\n|实信号：虚部奇|$x[n]\\in\\mathbb R$|$\\operatorname{Im}X(e^{j\\omega})=-\\operatorname{Im}X(e^{-j\\omega})$|虚部关于零频奇对称。|\n|实信号：幅度偶|$x[n]\\in\\mathbb R$|$\\vert X(e^{j\\omega})\\vert =\\vert X(e^{-j\\omega})\\vert $|幅度非负。|\n|实信号：相位奇|$x[n]\\in\\mathbb R$|$\\arg X(e^{j\\omega})\\equiv-\\arg X(e^{-j\\omega})\\pmod{2\\pi}$|仅在频谱非零处；主值相位允许折返。|\n|实偶信号|$x[n]\\in\\mathbb R$，$x[-n]=x[n]$|$X(e^{j\\omega})$为实偶函数|频谱可为负；其相位可为$\\pi$。|\n|实奇信号|$x[n]\\in\\mathbb R$，$x[-n]=-x[n]$|$X(e^{j\\omega})$为纯虚奇函数|纯虚不等于幅度奇对称。|\n|实信号的偶部|$x_e[n]=\\dfrac{x[n]+x[-n]}2$，$x[n]$为实|$\\operatorname{Re}X(e^{j\\omega})$|实信号前提不可丢。|\n|实信号的奇部|$x_o[n]=\\dfrac{x[n]-x[-n]}2$，$x[n]$为实|$j\\operatorname{Im}X(e^{j\\omega})$|必须保留$j$。|\n|Parseval能量等式|$\\sum_{n=-\\infty}^{\\infty}\\vert x[n]\\vert ^2$|$\\dfrac1{2\\pi}\\int_{2\\pi}\\vert X(e^{j\\omega})\\vert ^2\\,d\\omega$|有限能量序列，变换可按平方可积意义理解；周期信号改求功率。|\n\n实际目视表5.1及续表HD-04-01/02：PDF270–271，印刷248–249页。原表9项首表、累加/微分/实信号对称及分解/Parseval全保留；对称复合行拆开为21行，补明主值与相位模2π条件。",
       "explanation": "先把复杂题拆成查表起点，再一层层应用性质，最后检查$2\\pi$周期性与共轭对称。时移$n_0$必须是整数；任意主周期内写出的$e^{-j\\omega/2}$不是半拍冲激，可以先按区间积分反演。表中的“时域扩展”指每两原样点之间插零，而不是连续时间任意$x(at)$；整数抽取$x[kn]$则会产生不同的混叠求和式。相乘对应的是周期频谱卷积，只积一周期，并带$1/(2\\pi)$。",
       "memory": "时移加线性相位；调制搬频谱；卷积变乘积；乘积变一周期卷积。",
       "conditions": "有关和、积分、导数存在，或采用适当分布解释。n0为整数；频移量任意但结果须按2π折回。实序列只推出共轭对称，不能直接推出频谱实值。",
@@ -541,7 +1209,209 @@
         "2018-09"
       ],
       "diagramPaths": [],
-      "preview": "时移加线性相位；调制搬频谱；卷积变乘积；乘积变一周期卷积。"
+      "preview": "清晰对照：常用10行 / 完整21行；原书可展开核对。",
+      "clearTable": {
+        "notation": "约定$x[n]\\leftrightarrow X(e^{j\\omega})$、$y[n]\\leftrightarrow Y(e^{j\\omega})$；所有频谱以$2\\pi$为周期。积分$\\int_{2\\pi}$指任意长度为$2\\pi$的区间。$L\\in\\mathbb N_+$，$n_0\\in\\mathbb Z$；性质在有关变换存在或所述广义函数意义下使用，累加式的分式按$\\operatorname{PV}$理解。",
+        "columns": [
+          "性质",
+          "时域序列",
+          "DTFT结果",
+          "条件与提醒"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "线性",
+              "$ax[n]+by[n]$",
+              "$aX(e^{j\\omega})+bY(e^{j\\omega})$",
+              "系数可为复数。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时移",
+              "$x[n-n_0]$",
+              "$e^{-j\\omega n_0}X(e^{j\\omega})$",
+              "只改变相位因子。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "频移/调制",
+              "$e^{j\\omega_0n}x[n]$",
+              "$X(e^{j(\\omega-\\omega_0)})$",
+              "$\\omega_0$按$2\\pi$等价。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "共轭",
+              "$x^*[n]$",
+              "$X^*(e^{-j\\omega})$",
+              "共轭并反转频率。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "时间反转",
+              "$x[-n]$",
+              "$X(e^{-j\\omega})$",
+              "不附尺度系数。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "插零扩展",
+              "$x_{(L)}[n]=x[n/L]$（$L\\mid n$），其余为0",
+              "$X(e^{jL\\omega})$",
+              "插入$L-1$个零，不是直接取$x[Ln]$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "卷积",
+              "$x[n]*y[n]$",
+              "$X(e^{j\\omega})Y(e^{j\\omega})$",
+              "线性卷积。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "相乘",
+              "$x[n]y[n]$",
+              "$\\dfrac1{2\\pi}\\int_{2\\pi}X(e^{j\\theta})Y(e^{j(\\omega-\\theta)})\\,d\\theta$",
+              "周期频域卷积，保留归一化系数。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "一次差分",
+              "$x[n]-x[n-1]$",
+              "$(1-e^{-j\\omega})X(e^{j\\omega})$",
+              "双边DTFT没有单边初态项。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "从负无穷累加",
+              "$\\sum_{k=-\\infty}^{n}x[k]$",
+              "$\\operatorname{PV}\\!\\dfrac{X(e^{j\\omega})}{1-e^{-j\\omega}}+\\pi X(e^{j0})\\sum_{m\\in\\mathbb Z}\\delta(\\omega-2\\pi m)$",
+              "如$x$绝对可和则$X(e^{j0})=\\sum_kx[k]$；结果可需广义函数解释。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "频域微分",
+              "$nx[n]$",
+              "$j\\dfrac{dX(e^{j\\omega})}{d\\omega}$",
+              "不是除以$j$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号：共轭对称",
+              "$x[n]\\in\\mathbb R$",
+              "$X(e^{j\\omega})=X^*(e^{-j\\omega})$",
+              "以下四行均由此推出。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "实信号：实部偶",
+              "$x[n]\\in\\mathbb R$",
+              "$\\operatorname{Re}X(e^{j\\omega})=\\operatorname{Re}X(e^{-j\\omega})$",
+              "实部关于零频偶对称。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号：虚部奇",
+              "$x[n]\\in\\mathbb R$",
+              "$\\operatorname{Im}X(e^{j\\omega})=-\\operatorname{Im}X(e^{-j\\omega})$",
+              "虚部关于零频奇对称。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号：幅度偶",
+              "$x[n]\\in\\mathbb R$",
+              "$|X(e^{j\\omega})|=|X(e^{-j\\omega})|$",
+              "幅度非负。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号：相位奇",
+              "$x[n]\\in\\mathbb R$",
+              "$\\arg X(e^{j\\omega})\\equiv-\\arg X(e^{-j\\omega})\\pmod{2\\pi}$",
+              "仅在频谱非零处；主值相位允许折返。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实偶信号",
+              "$x[n]\\in\\mathbb R$，$x[-n]=x[n]$",
+              "$X(e^{j\\omega})$为实偶函数",
+              "频谱可为负；其相位可为$\\pi$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实奇信号",
+              "$x[n]\\in\\mathbb R$，$x[-n]=-x[n]$",
+              "$X(e^{j\\omega})$为纯虚奇函数",
+              "纯虚不等于幅度奇对称。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号的偶部",
+              "$x_e[n]=\\dfrac{x[n]+x[-n]}2$，$x[n]$为实",
+              "$\\operatorname{Re}X(e^{j\\omega})$",
+              "实信号前提不可丢。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "实信号的奇部",
+              "$x_o[n]=\\dfrac{x[n]-x[-n]}2$，$x[n]$为实",
+              "$j\\operatorname{Im}X(e^{j\\omega})$",
+              "必须保留$j$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "Parseval能量等式",
+              "$\\sum_{n=-\\infty}^{\\infty}|x[n]|^2$",
+              "$\\dfrac1{2\\pi}\\int_{2\\pi}|X(e^{j\\omega})|^2\\,d\\omega$",
+              "有限能量序列，变换可按平方可积意义理解；周期信号改求功率。"
+            ],
+            "core": true
+          }
+        ],
+        "sourceNote": "实际目视表5.1及续表HD-04-01/02：PDF270–271，印刷248–249页。原表9项首表、累加/微分/实信号对称及分解/Parseval全保留；对称复合行拆开为21行，补明主值与相位模2π条件。",
+        "compactNote": "DTFT以$2\\pi$为周期；$L$为正整数、$n_0$为整数，$\\int_{2\\pi}$取任意一周期。"
+      }
     },
     {
       "id": "HD-05",
@@ -786,12 +1656,12 @@
       "id": "HL-02",
       "category": "table",
       "chapter": "9",
-      "title": "完整表9.2：基本函数的拉普拉斯变换对",
+      "title": "拉普拉斯变换对 · 表9.2",
       "section": "9.6，表9.2",
       "printPages": [
         442
       ],
-      "formula": "设$n=1,2,\\ldots$，下表按常用实数$a$写ROC。\n\n|序号|时域信号|双边拉普拉斯变换|ROC|\n|---|---|---|---|\n|1|$\\delta(t)$|$1$|全s平面|\n|2|$u(t)$|$1/s$|$\\Re s>0$|\n|3|$-u(-t)$|$1/s$|$\\Re s<0$|\n|4|$t^{n-1}u(t)/(n-1)!$|$1/s^n$|$\\Re s>0$|\n|5|$-t^{n-1}u(-t)/(n-1)!$|$1/s^n$|$\\Re s<0$|\n|6|$e^{-at}u(t)$|$1/(s+a)$|$\\Re s>-a$|\n|7|$-e^{-at}u(-t)$|$1/(s+a)$|$\\Re s<-a$|\n|8|$t^{n-1}e^{-at}u(t)/(n-1)!$|$1/(s+a)^n$|$\\Re s>-a$|\n|9|$-t^{n-1}e^{-at}u(-t)/(n-1)!$|$1/(s+a)^n$|$\\Re s<-a$|\n|10|$\\delta(t-T)$|$e^{-sT}$|全s平面|\n|11|$\\cos(\\omega_0t)u(t)$|$s/(s^2+\\omega_0^2)$|$\\Re s>0$|\n|12|$\\sin(\\omega_0t)u(t)$|$\\omega_0/(s^2+\\omega_0^2)$|$\\Re s>0$|\n|13|$e^{-at}\\cos(\\omega_0t)u(t)$|$(s+a)/[(s+a)^2+\\omega_0^2]$|$\\Re s>-a$|\n|14|$e^{-at}\\sin(\\omega_0t)u(t)$|$\\omega_0/[(s+a)^2+\\omega_0^2]$|$\\Re s>-a$|\n|15|$u_n(t)=d^n\\delta(t)/dt^n$|$s^n$|全s平面|\n|16|$u_{-n}(t)=\\underbrace{u*\\cdots*u}_{n\\text{次}}$|$1/s^n$|$\\Re s>0$|\n\n**左右边同式，不能漏ROC：**\n$$\\frac1{s-a}\\leftrightarrow\\begin{cases}e^{at}u(t),&\\Re s>\\Re a,\\\\-e^{at}u(-t),&\\Re s<\\Re a.\\end{cases}$$",
+      "formula": "本表为**双边**拉普拉斯变换：$X(s)=\\int_{-\\infty}^{\\infty}x(t)e^{-st}\\,dt$。严格按原表取 $a\\in\\mathbb R$，$T\\in\\mathbb R$；多项式阶数 $n\\in\\{1,2,\\ldots\\}$，唯第15项允许 $n=0$。三角函数项先取 $\\omega_0\\in\\mathbb R\\setminus\\{0\\}$（通常取正值）。$u(t)$ 为单位阶跃；$\\delta^{(n)}(t)$ 为冲激的第 $n$ 阶广义导数。**相同分式必须连同 ROC 使用，左边信号前的负号不能删。**“全部 $s$”指整个有限复平面。若把 $a$ 推广为复数，第6—9、13—14项 ROC 的 $-a$ 改为 $-\\Re a$；零频退化时余弦项退为对应阶跃/指数项，正弦项为零，零信号的实际 ROC 为全部 $s$。\n\n|原表序号|信号 $x(t)$|双边变换 $X(s)$|ROC 与条件|\n|---|---|---|---|\n|1|$\\delta(t)$|$1$|全部 $s$|\n|2|$u(t)$|$\\dfrac1s$|$\\Re s>0$|\n|3|$-u(-t)$|$\\dfrac1s$|$\\Re s<0$|\n|4|$\\dfrac{t^{n-1}}{(n-1)!}u(t)$|$\\dfrac1{s^n}$|$\\Re s>0$；$n\\ge1$|\n|5|$-\\dfrac{t^{n-1}}{(n-1)!}u(-t)$|$\\dfrac1{s^n}$|$\\Re s<0$；$n\\ge1$|\n|6|$e^{-at}u(t)$|$\\dfrac1{s+a}$|$\\Re s>-a$|\n|7|$-e^{-at}u(-t)$|$\\dfrac1{s+a}$|$\\Re s<-a$|\n|8|$\\dfrac{t^{n-1}}{(n-1)!}e^{-at}u(t)$|$\\dfrac1{(s+a)^n}$|$\\Re s>-a$；$n\\ge1$|\n|9|$-\\dfrac{t^{n-1}}{(n-1)!}e^{-at}u(-t)$|$\\dfrac1{(s+a)^n}$|$\\Re s<-a$；$n\\ge1$|\n|10|$\\delta(t-T)$|$e^{-sT}$|全部 $s$；$T$ 可正、可负、可为零|\n|11|$\\cos(\\omega_0t)u(t)$|$\\dfrac{s}{s^2+\\omega_0^2}$|$\\Re s>0$|\n|12|$\\sin(\\omega_0t)u(t)$|$\\dfrac{\\omega_0}{s^2+\\omega_0^2}$|$\\Re s>0$|\n|13|$e^{-at}\\cos(\\omega_0t)u(t)$|$\\dfrac{s+a}{(s+a)^2+\\omega_0^2}$|$\\Re s>-a$|\n|14|$e^{-at}\\sin(\\omega_0t)u(t)$|$\\dfrac{\\omega_0}{(s+a)^2+\\omega_0^2}$|$\\Re s>-a$|\n|15|$u_n(t)=\\delta^{(n)}(t)=\\dfrac{d^n\\delta(t)}{dt^n}$|$s^n$|全部 $s$；$n\\ge0$，这是原书的广义函数记号|\n|16|$u_{-n}(t)=\\underbrace{u(t)*\\cdots*u(t)}_{n\\text{ 次}}$|$\\dfrac1{s^n}$|$\\Re s>0$；$n\\ge1$，等于第4项的时域信号|\n\n逐项目视原书印刷442页（PDF464）、现有裁图 HL-02-01.webp，保留表9.2全部16项及ROC；额外写明参数范围与零频退化情况。",
       "explanation": "截图保留原书表9.2的全部16项；文字表按同一顺序整理，便于检索。重极点先找阶数n，再补t的幂和阶乘。两条左边指数的负号是变换对本身的部分，不是部分分式留数；留数为负时还要再乘一次。最后两项是原书的广义函数记号，连续冲激导数不能按普通函数的高度处理。",
       "memory": "右边往右收，左边多负号；n重极点配t的n−1次方和(n−1)!。",
       "conditions": "通常取ω₀>0、a为实数；复数a时ROC边界用−Re a。各表项按其双边支撑使用；若把信号截成单边，必须重新检查原积分。",
@@ -803,18 +1673,175 @@
         "2020-10"
       ],
       "diagramPaths": [],
-      "preview": "右边往右收，左边多负号；n重极点配t的n−1次方和(n−1)!。"
+      "preview": "清晰对照：常用10行 / 完整16行；原书可展开核对。",
+      "clearTable": {
+        "notation": "本表为**双边**拉普拉斯变换：$X(s)=\\int_{-\\infty}^{\\infty}x(t)e^{-st}\\,dt$。严格按原表取 $a\\in\\mathbb R$，$T\\in\\mathbb R$；多项式阶数 $n\\in\\{1,2,\\ldots\\}$，唯第15项允许 $n=0$。三角函数项先取 $\\omega_0\\in\\mathbb R\\setminus\\{0\\}$（通常取正值）。$u(t)$ 为单位阶跃；$\\delta^{(n)}(t)$ 为冲激的第 $n$ 阶广义导数。**相同分式必须连同 ROC 使用，左边信号前的负号不能删。**“全部 $s$”指整个有限复平面。若把 $a$ 推广为复数，第6—9、13—14项 ROC 的 $-a$ 改为 $-\\Re a$；零频退化时余弦项退为对应阶跃/指数项，正弦项为零，零信号的实际 ROC 为全部 $s$。",
+        "columns": [
+          "原表序号",
+          "信号 $x(t)$",
+          "双边变换 $X(s)$",
+          "ROC 与条件"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "1",
+              "$\\delta(t)$",
+              "$1$",
+              "全部 $s$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "2",
+              "$u(t)$",
+              "$\\dfrac1s$",
+              "$\\Re s>0$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "3",
+              "$-u(-t)$",
+              "$\\dfrac1s$",
+              "$\\Re s<0$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "4",
+              "$\\dfrac{t^{n-1}}{(n-1)!}u(t)$",
+              "$\\dfrac1{s^n}$",
+              "$\\Re s>0$；$n\\ge1$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "5",
+              "$-\\dfrac{t^{n-1}}{(n-1)!}u(-t)$",
+              "$\\dfrac1{s^n}$",
+              "$\\Re s<0$；$n\\ge1$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "6",
+              "$e^{-at}u(t)$",
+              "$\\dfrac1{s+a}$",
+              "$\\Re s>-a$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "7",
+              "$-e^{-at}u(-t)$",
+              "$\\dfrac1{s+a}$",
+              "$\\Re s<-a$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "8",
+              "$\\dfrac{t^{n-1}}{(n-1)!}e^{-at}u(t)$",
+              "$\\dfrac1{(s+a)^n}$",
+              "$\\Re s>-a$；$n\\ge1$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "9",
+              "$-\\dfrac{t^{n-1}}{(n-1)!}e^{-at}u(-t)$",
+              "$\\dfrac1{(s+a)^n}$",
+              "$\\Re s<-a$；$n\\ge1$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "10",
+              "$\\delta(t-T)$",
+              "$e^{-sT}$",
+              "全部 $s$；$T$ 可正、可负、可为零"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "11",
+              "$\\cos(\\omega_0t)u(t)$",
+              "$\\dfrac{s}{s^2+\\omega_0^2}$",
+              "$\\Re s>0$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "12",
+              "$\\sin(\\omega_0t)u(t)$",
+              "$\\dfrac{\\omega_0}{s^2+\\omega_0^2}$",
+              "$\\Re s>0$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "13",
+              "$e^{-at}\\cos(\\omega_0t)u(t)$",
+              "$\\dfrac{s+a}{(s+a)^2+\\omega_0^2}$",
+              "$\\Re s>-a$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "14",
+              "$e^{-at}\\sin(\\omega_0t)u(t)$",
+              "$\\dfrac{\\omega_0}{(s+a)^2+\\omega_0^2}$",
+              "$\\Re s>-a$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "15",
+              "$u_n(t)=\\delta^{(n)}(t)=\\dfrac{d^n\\delta(t)}{dt^n}$",
+              "$s^n$",
+              "全部 $s$；$n\\ge0$，这是原书的广义函数记号"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "16",
+              "$u_{-n}(t)=\\underbrace{u(t)*\\cdots*u(t)}_{n\\text{ 次}}$",
+              "$\\dfrac1{s^n}$",
+              "$\\Re s>0$；$n\\ge1$，等于第4项的时域信号"
+            ],
+            "core": false
+          }
+        ],
+        "sourceNote": "逐项目视原书印刷442页（PDF464）、现有裁图 HL-02-01.webp，保留表9.2全部16项及ROC；额外写明参数范围与零频退化情况。",
+        "compactNote": "双边变换；$a,T\\in\\mathbb R$，多项式阶数$n\\ge1$（冲激导数允许$n=0$），$\\omega_0\\ne0$。每行必须连同ROC使用。"
+      }
     },
     {
       "id": "HL-03",
       "category": "table",
       "chapter": "9",
-      "title": "完整表9.1：双边性质与连续初终值",
+      "title": "双边拉普拉斯性质 · 表9.1",
       "section": "9.5.11，表9.1；9.5.10",
       "printPages": [
         441
       ],
-      "formula": "设$x\\leftrightarrow X$、$x_i\\leftrightarrow X_i$，以下是**双边**性质。\n\n|时域运算|s域结果|ROC提示|\n|---|---|---|\n|$ax_1+bx_2$|$aX_1+bX_2$|至少含两ROC交集；抵消后可扩大|\n|$x(t-t_0)$|$e^{-st_0}X(s)$|同原ROC|\n|$e^{s_0t}x(t)$|$X(s-s_0)$|原ROC平移$s_0$|\n|$x(at),\\ a\\ne0$|$\\frac1{\\lvert a\\rvert}X(s/a)$|检查$s/a$是否落在原ROC|\n|$x^*(t)$|$X^*(s^*)$|ROC共轭反射|\n|$x_1*x_2$|$X_1X_2$|至少含ROC交集|\n|$x'(t)$|$sX(s)$|按双边导数理解，可能发生抵消|\n|$-tx(t)$|$dX(s)/ds$|原ROC|\n|$\\int_{-\\infty}^{t}x(\\tau)d\\tau$|$X(s)/s$|至少含原ROC与$\\Re s>0$的交集|\n\n**连续初值、终值是另带条件的极限：**\n$$x(0^+)=\\lim_{s\\to\\infty}sX(s),\\qquad x(\\infty)=\\lim_{s\\to0}sX(s).$$\n\n终值核验必须检查$sX(s)$的相关极点均在开左半平面；不能仅计算一个代数极限。",
+      "formula": "本表是**双边性质**。设 $x(t)\\leftrightarrow X(s)$ 的开收敛条带为 $R$，$x_i(t)\\leftrightarrow X_i(s)$ 的开收敛条带为 $R_i$；$\\alpha,\\beta,s_0$ 可为复数，$t_0\\in\\mathbb R$，尺度 $a\\in\\mathbb R\\setminus\\{0\\}$。$*$ 表示时域卷积，上标 $*$ 表示复共轭。“至少含”表示极零抵消后 ROC 可能扩大；共同收敛域应非空，边界点的收敛另查。微分/积分性质按原书的通常分段光滑、指数阶及变换存在条件使用；有跳变时导数按含冲激的广义导数理解。**双边微分无 $0^-$ 初值项。**初值、终值两行是额外带前提的定理，并非任意双边信号均可用。\n\n|性质 / 原书节次|时域项|双边变换 / 公式|ROC 与适用条件|\n|---|---|---|---|\n|线性 · 9.5.1|$\\alpha x_1(t)+\\beta x_2(t)$|$\\alpha X_1(s)+\\beta X_2(s)$|至少含 $R_1\\cap R_2$；抵消可能扩大 ROC|\n|时移 · 9.5.2|$x(t-t_0)$|$e^{-st_0}X(s)$|ROC 为 $R$；正、负实数时移均适用|\n|$s$域平移 · 9.5.3|$e^{s_0t}x(t)$|$X(s-s_0)$|$\\{s:s-s_0\\in R\\}$；实部边界平移 $\\Re s_0$|\n|时域尺度 · 9.5.4|$x(at)$|$\\dfrac1{\\vert a\\vert }X\\!\\left(\\dfrac{s}{a}\\right)$|$\\{s:s/a\\in R\\}=aR$；$a<0$ 时还要反射并交换左右边界|\n|共轭 · 9.5.5|$x^*(t)$|$X^*(s^*)=\\overline{X(\\overline s)}$|ROC 为 $R$；内外两个共轭都要保留|\n|卷积 · 9.5.6|$x_1(t)*x_2(t)$|$X_1(s)X_2(s)$|至少含 $R_1\\cap R_2$；这是双边卷积，不要求两信号因果|\n|时域微分 · 9.5.7|$\\dfrac{dx(t)}{dt}$|$sX(s)$|至少含 $R$；需导数变换存在、分部积分的无穷远边界项消失；跳变冲激一并计入|\n|$s$域微分 · 9.5.8|$-t\\,x(t)$|$\\dfrac{dX(s)}{ds}$|开收敛条带仍为 $R$；等价地 $t x(t)\\leftrightarrow-X^\\prime(s)$|\n|时域积分 · 9.5.9|$\\displaystyle\\int_{-\\infty}^{t}x(\\tau)\\,d\\tau$|$\\dfrac{X(s)}s$|至少含 $R\\cap\\{s:\\Re s>0\\}$；下限为 $-\\infty$，需积分存在，原点极点可被抵消|\n|初值定理 · 9.5.10|$x(0^+)$|$\\displaystyle x(0^+)=\\lim_{s\\to+\\infty}sX(s)$|原表要求 $t<0$ 时 $x(t)=0$ 且原点无冲激或更高奇异项；另需有限右极限与通常拉普拉斯存在条件。沿实轴趋于 $+\\infty$|\n|终值定理 · 9.5.10|$\\displaystyle\\lim_{t\\to\\infty}x(t)$|$\\displaystyle\\lim_{t\\to\\infty}x(t)=\\lim_{s\\to0^+}sX(s)$|保留原表的因果及原点无奇异项前提。补充常用有理式判据：约分后的 $sX(s)$ 全部有限极点须严格在左半平面；等价地 $X(s)$ 除原点至多一阶极点外，其余极点均严格在左半平面。不能对增长或持续振荡盲取极限|\n\n逐项目视印刷441页（PDF463）表9.1全表及9.5.10，裁图 HL-03-01/02.webp。保留九项运算并把初、终值分成两行；尺度ROC按原表同行“s/a在R中”的文字改写为无歧义集合；终值极点判据是补充适用条件，未冒称原表已写全。",
       "explanation": "截图保留表9.1全部性质与ROC栏；旁边的文字表不是将单边初值项删去后的近似式，而是不同积分范围下的双边规则。时域乘t与对t求导是两条相反方向的对应关系。初终值极限可快速核验留数的系数和，但遇到原点冲激、持续振荡或增长模式时，先检查条件再使用。",
       "memory": "时域导数乘s，时域乘−t才对s求导；双边不补0⁻，单边必须补。",
       "conditions": "积分与求导在变换存在的相应区域/广义函数意义下使用。初值定理要求右边普通信号且0处无冲激及其高阶导数。终值需存在并满足衰减极点条件；表中简写不能替代这项检查。",
@@ -825,13 +1852,125 @@
         "2020-10"
       ],
       "diagramPaths": [],
-      "preview": "时域导数乘s，时域乘−t才对s求导；双边不补0⁻，单边必须补。"
+      "preview": "清晰对照：常用10行 / 完整11行；原书可展开核对。",
+      "clearTable": {
+        "notation": "本表是**双边性质**。设 $x(t)\\leftrightarrow X(s)$ 的开收敛条带为 $R$，$x_i(t)\\leftrightarrow X_i(s)$ 的开收敛条带为 $R_i$；$\\alpha,\\beta,s_0$ 可为复数，$t_0\\in\\mathbb R$，尺度 $a\\in\\mathbb R\\setminus\\{0\\}$。$*$ 表示时域卷积，上标 $*$ 表示复共轭。“至少含”表示极零抵消后 ROC 可能扩大；共同收敛域应非空，边界点的收敛另查。微分/积分性质按原书的通常分段光滑、指数阶及变换存在条件使用；有跳变时导数按含冲激的广义导数理解。**双边微分无 $0^-$ 初值项。**初值、终值两行是额外带前提的定理，并非任意双边信号均可用。",
+        "columns": [
+          "性质 / 原书节次",
+          "时域项",
+          "双边变换 / 公式",
+          "ROC 与适用条件"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "线性 · 9.5.1",
+              "$\\alpha x_1(t)+\\beta x_2(t)$",
+              "$\\alpha X_1(s)+\\beta X_2(s)$",
+              "至少含 $R_1\\cap R_2$；抵消可能扩大 ROC"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时移 · 9.5.2",
+              "$x(t-t_0)$",
+              "$e^{-st_0}X(s)$",
+              "ROC 为 $R$；正、负实数时移均适用"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$s$域平移 · 9.5.3",
+              "$e^{s_0t}x(t)$",
+              "$X(s-s_0)$",
+              "$\\{s:s-s_0\\in R\\}$；实部边界平移 $\\Re s_0$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时域尺度 · 9.5.4",
+              "$x(at)$",
+              "$\\dfrac1{|a|}X\\!\\left(\\dfrac{s}{a}\\right)$",
+              "$\\{s:s/a\\in R\\}=aR$；$a<0$ 时还要反射并交换左右边界"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "共轭 · 9.5.5",
+              "$x^*(t)$",
+              "$X^*(s^*)=\\overline{X(\\overline s)}$",
+              "ROC 为 $R$；内外两个共轭都要保留"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "卷积 · 9.5.6",
+              "$x_1(t)*x_2(t)$",
+              "$X_1(s)X_2(s)$",
+              "至少含 $R_1\\cap R_2$；这是双边卷积，不要求两信号因果"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时域微分 · 9.5.7",
+              "$\\dfrac{dx(t)}{dt}$",
+              "$sX(s)$",
+              "至少含 $R$；需导数变换存在、分部积分的无穷远边界项消失；跳变冲激一并计入"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$s$域微分 · 9.5.8",
+              "$-t\\,x(t)$",
+              "$\\dfrac{dX(s)}{ds}$",
+              "开收敛条带仍为 $R$；等价地 $t x(t)\\leftrightarrow-X^\\prime(s)$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时域积分 · 9.5.9",
+              "$\\displaystyle\\int_{-\\infty}^{t}x(\\tau)\\,d\\tau$",
+              "$\\dfrac{X(s)}s$",
+              "至少含 $R\\cap\\{s:\\Re s>0\\}$；下限为 $-\\infty$，需积分存在，原点极点可被抵消"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "初值定理 · 9.5.10",
+              "$x(0^+)$",
+              "$\\displaystyle x(0^+)=\\lim_{s\\to+\\infty}sX(s)$",
+              "原表要求 $t<0$ 时 $x(t)=0$ 且原点无冲激或更高奇异项；另需有限右极限与通常拉普拉斯存在条件。沿实轴趋于 $+\\infty$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "终值定理 · 9.5.10",
+              "$\\displaystyle\\lim_{t\\to\\infty}x(t)$",
+              "$\\displaystyle\\lim_{t\\to\\infty}x(t)=\\lim_{s\\to0^+}sX(s)$",
+              "保留原表的因果及原点无奇异项前提。补充常用有理式判据：约分后的 $sX(s)$ 全部有限极点须严格在左半平面；等价地 $X(s)$ 除原点至多一阶极点外，其余极点均严格在左半平面。不能对增长或持续振荡盲取极限"
+            ],
+            "core": true
+          }
+        ],
+        "sourceNote": "逐项目视印刷441页（PDF463）表9.1全表及9.5.10，裁图 HL-03-01/02.webp。保留九项运算并把初、终值分成两行；尺度ROC按原表同行“s/a在R中”的文字改写为无歧义集合；终值极点判据是补充适用条件，未冒称原表已写全。",
+        "compactNote": "双边性质，$R$为原ROC；$t_0\\in\\mathbb R$、$a\\in\\mathbb R\\setminus\\{0\\}$。初终值须满足表内附加条件。"
+      }
     },
     {
       "id": "HL-04",
       "category": "table",
       "chapter": "9",
-      "title": "单边拉普拉斯：完整表9.3与0⁻初值",
+      "title": "单边拉普拉斯性质 · 表9.3",
       "section": "9.9、9.9.2–9.9.3，表9.3",
       "printPages": [
         456,
@@ -839,7 +1978,7 @@
         459,
         460
       ],
-      "formula": "$$X_+(s)=\\int_{0^-}^{\\infty}x(t)e^{-st}\\,dt.$$\n\n$$\\mathcal L_+\\{x'\\}=sX_+(s)-x(0^-),$$\n$$\\mathcal L_+\\{x''\\}=s^2X_+(s)-sx(0^-)-x'(0^-).$$\n\n|表9.3运算|单边结果|\n|---|---|\n|线性$ax_1+bx_2$|$aX_1+bX_2$|\n|$e^{s_0t}x(t)$|$X_+(s-s_0)$|\n|$x(at),a>0$|$X_+(s/a)/a$|\n|$x^*(t)$|$X_+^*(s^*)$|\n|$x_1*x_2$，两信号在t<0均为0|$X_{1,+}X_{2,+}$|\n|$x'(t)$|$sX_+-x(0^-)$|\n|$-tx(t)$|$dX_+/ds$|\n|$\\int_{0^-}^{t}x(\\tau)d\\tau$|$X_+/s$|\n\n**将完整响应分成来源不同的两项（自主归纳）：**\n$$A(s)Y_+(s)=B(s)X_+(s)+I_0(s),$$\n$$Y_{zs}=\\frac{B}{A}X_+,\\qquad Y_{zi}=\\frac{I_0}{A},\\qquad Y=Y_{zs}+Y_{zi}.$$\n\n例如$y''+4y'+3y=2x'+x$、$x=u$、$y(0^-)=1,y'(0^-)=0$时：\n$$Y=\\frac{s+4}{(s+1)(s+3)}+\\frac{2s+1}{s(s+1)(s+3)}.$$\n$$y(0^+)=1,\\qquad y'(0^+)=2.$$\n\n初态项$I_0$须由实际方程逐项整理，输入自身的0⁻边界项也不能省略。",
+      "formula": "统一记 $X_+(s)=\\mathcal L_+\\{x\\}=\\int_{0^-}^{\\infty}x(t)e^{-st}\\,dt$，以区别双边 $X(s)$；下限 $0^-$ 表示原点的冲激也全部计入。设其开收敛半平面为 $R_+$，各输入对应 $R_{1+},R_{2+}$。单边变换本身只决定零点之后的信号，**不把实际 $t<0$ 的储能或左初值自动置零**；有理单边变换的 ROC 在最右未抵消极点右侧。$\\alpha,\\beta,s_0$ 可复，尺度 $a>0$；共轭用 $\\overline{X_+(\\overline s)}$ 写清。原表未逐行列 ROC，此处补充通常变换存在条件下的开收敛半平面，边界点另查；“至少含”允许抵消后扩大。二阶微分来自紧随表后的式(9.194)，高阶式为该段递推的自主归纳。\n\n|性质 / 来源|时域项|单边变换 / 公式|必要条件与 ROC|\n|---|---|---|---|\n|线性 · 表9.3|$\\alpha x_1(t)+\\beta x_2(t)$|$\\alpha X_{1+}(s)+\\beta X_{2+}(s)$|至少含 $R_{1+}\\cap R_{2+}$，公共半平面应非空|\n|$s$域平移 · 表9.3|$e^{s_0t}x(t)$|$X_+(s-s_0)$|$\\{s:s-s_0\\in R_+\\}$；实部边界平移 $\\Re s_0$|\n|时域尺度 · 表9.3|$x(at)$|$\\dfrac1aX_+\\!\\left(\\dfrac{s}{a}\\right)$|仅 $a>0$；ROC 为 $\\{s:s/a\\in R_+\\}=aR_+$。负尺度会引入过去信号，不能照搬|\n|共轭 · 表9.3|$x^*(t)$|$X_+^*(s^*)=\\overline{X_+(\\overline s)}$|ROC 为 $R_+$；对复变量显式写出自变量的共轭，不能只在原 $s$ 处共轭数值|\n|卷积 · 表9.3|$x_1(t)*x_2(t)$|$X_{1+}(s)X_{2+}(s)$|原表明确要求 $t<0$ 时两信号均为零；至少含 $R_{1+}\\cap R_{2+}$。若使用完整双边卷积而信号有负时刻部分，不能直接相乘|\n|一阶微分 · 表9.3、式(9.193)|$x^\\prime(t)$|$sX_+(s)-x(0^-)$|使用零点左初值；需左极限有限、导数变换存在且无穷远边界项消失。原点跳变产生的冲激计入；ROC 至少含 $R_+$|\n|二阶微分 · 正文式(9.194)|$x^{\\prime\\prime}(t)$|$s^2X_+(s)-s x(0^-)-x^\\prime(0^-)$|需 $x(0^-),x^\\prime(0^-)$ 存在且有限，并满足各阶变换条件；两项都是左初值，ROC 至少含 $R_+$|\n|高阶微分 · 依正文递推归纳|$x^{(n)}(t)$|$\\displaystyle s^nX_+(s)-\\sum_{k=0}^{n-1}s^{n-1-k}x^{(k)}(0^-)$|$n\\ge1$ 为整数；所用左初值有限、相应变换存在。ROC 至少含 $R_+$；本行为正文递推的整理，非原表另列条目|\n|$s$域微分 · 表9.3|$-t\\,x(t)$|$\\dfrac{dX_+(s)}{ds}$|开收敛半平面仍为 $R_+$；等价地 $t x(t)\\leftrightarrow-X_+^\\prime(s)$|\n|时域积分 · 表9.3|$\\displaystyle\\int_{0^-}^{t}x(\\tau)\\,d\\tau$|$\\dfrac{X_+(s)}s$|从 $0^-$ 起积分，积分量在起点的左初值为零、原点冲激计入；至少含 $R_+\\cap\\{s:\\Re s>0\\}$。若另外给积分器非零初值，还要另加初值项|\n|初值定理 · 表9.3|$x(0^+)$|$\\displaystyle x(0^+)=\\lim_{s\\to+\\infty}sX_+(s)$|原点不含冲激或更高奇异项；需有限右极限及通常拉普拉斯存在条件。求得的是右初值，不是微分式中的 $x(0^-)$|\n|终值定理 · 表9.3|$\\displaystyle\\lim_{t\\to\\infty}x(t)$|$\\displaystyle\\lim_{t\\to\\infty}x(t)=\\lim_{s\\to0^+}sX_+(s)$|保留原表的原点无奇异项前提；补充有理式判据：约分后的 $sX_+(s)$ 全部有限极点须严格在左半平面。不是仅见到一个有限代数极限就能套用|\n\n实看印刷456、458—460页（PDF478、480—482），裁图 HL-04-01至04.webp。原表9.3八项性质及初、终值完整保留，并明确区分相邻正文补充的二阶/高阶式。共轭项改用由复变量定义确定的 X₊*(s*)，避免原表 X₊*(s) 简写歧义；终值极点条件为补充。",
       "explanation": "原书表9.3整张保留，二阶公式由同节正文给出；响应分解和数值例子是自主归纳。0⁻初值描述输入作用前的状态，不等于0⁺；输入导数含δ时，右导数可以瞬间改变。非零初态实验要保留I₀，不能直接拿全响应Y/X当H。单边只保留观测段，含负时间信号的双边卷积一般不能由单边乘积替代。",
       "memory": "先写左初值，再看冲激改右初值；初态清零求H，保留初态求全响应。",
       "conditions": "单边时域缩放只列a>0。卷积乘积需两输入的负时间部分均为0；初终值行仍需无原点奇异项和相应极点条件。所有0⁻量按题目给定处理，不自行设0。",
@@ -852,7 +1991,128 @@
         "2020-05"
       ],
       "diagramPaths": [],
-      "preview": "先写左初值，再看冲激改右初值；初态清零求H，保留初态求全响应。"
+      "preview": "清晰对照：常用9行 / 完整12行；原书可展开核对。",
+      "clearTable": {
+        "notation": "统一记 $X_+(s)=\\mathcal L_+\\{x\\}=\\int_{0^-}^{\\infty}x(t)e^{-st}\\,dt$，以区别双边 $X(s)$；下限 $0^-$ 表示原点的冲激也全部计入。设其开收敛半平面为 $R_+$，各输入对应 $R_{1+},R_{2+}$。单边变换本身只决定零点之后的信号，**不把实际 $t<0$ 的储能或左初值自动置零**；有理单边变换的 ROC 在最右未抵消极点右侧。$\\alpha,\\beta,s_0$ 可复，尺度 $a>0$；共轭用 $\\overline{X_+(\\overline s)}$ 写清。原表未逐行列 ROC，此处补充通常变换存在条件下的开收敛半平面，边界点另查；“至少含”允许抵消后扩大。二阶微分来自紧随表后的式(9.194)，高阶式为该段递推的自主归纳。",
+        "columns": [
+          "性质 / 来源",
+          "时域项",
+          "单边变换 / 公式",
+          "必要条件与 ROC"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "线性 · 表9.3",
+              "$\\alpha x_1(t)+\\beta x_2(t)$",
+              "$\\alpha X_{1+}(s)+\\beta X_{2+}(s)$",
+              "至少含 $R_{1+}\\cap R_{2+}$，公共半平面应非空"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$s$域平移 · 表9.3",
+              "$e^{s_0t}x(t)$",
+              "$X_+(s-s_0)$",
+              "$\\{s:s-s_0\\in R_+\\}$；实部边界平移 $\\Re s_0$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时域尺度 · 表9.3",
+              "$x(at)$",
+              "$\\dfrac1aX_+\\!\\left(\\dfrac{s}{a}\\right)$",
+              "仅 $a>0$；ROC 为 $\\{s:s/a\\in R_+\\}=aR_+$。负尺度会引入过去信号，不能照搬"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "共轭 · 表9.3",
+              "$x^*(t)$",
+              "$X_+^*(s^*)=\\overline{X_+(\\overline s)}$",
+              "ROC 为 $R_+$；对复变量显式写出自变量的共轭，不能只在原 $s$ 处共轭数值"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "卷积 · 表9.3",
+              "$x_1(t)*x_2(t)$",
+              "$X_{1+}(s)X_{2+}(s)$",
+              "原表明确要求 $t<0$ 时两信号均为零；至少含 $R_{1+}\\cap R_{2+}$。若使用完整双边卷积而信号有负时刻部分，不能直接相乘"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "一阶微分 · 表9.3、式(9.193)",
+              "$x^\\prime(t)$",
+              "$sX_+(s)-x(0^-)$",
+              "使用零点左初值；需左极限有限、导数变换存在且无穷远边界项消失。原点跳变产生的冲激计入；ROC 至少含 $R_+$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "二阶微分 · 正文式(9.194)",
+              "$x^{\\prime\\prime}(t)$",
+              "$s^2X_+(s)-s x(0^-)-x^\\prime(0^-)$",
+              "需 $x(0^-),x^\\prime(0^-)$ 存在且有限，并满足各阶变换条件；两项都是左初值，ROC 至少含 $R_+$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "高阶微分 · 依正文递推归纳",
+              "$x^{(n)}(t)$",
+              "$\\displaystyle s^nX_+(s)-\\sum_{k=0}^{n-1}s^{n-1-k}x^{(k)}(0^-)$",
+              "$n\\ge1$ 为整数；所用左初值有限、相应变换存在。ROC 至少含 $R_+$；本行为正文递推的整理，非原表另列条目"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "$s$域微分 · 表9.3",
+              "$-t\\,x(t)$",
+              "$\\dfrac{dX_+(s)}{ds}$",
+              "开收敛半平面仍为 $R_+$；等价地 $t x(t)\\leftrightarrow-X_+^\\prime(s)$"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "时域积分 · 表9.3",
+              "$\\displaystyle\\int_{0^-}^{t}x(\\tau)\\,d\\tau$",
+              "$\\dfrac{X_+(s)}s$",
+              "从 $0^-$ 起积分，积分量在起点的左初值为零、原点冲激计入；至少含 $R_+\\cap\\{s:\\Re s>0\\}$。若另外给积分器非零初值，还要另加初值项"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "初值定理 · 表9.3",
+              "$x(0^+)$",
+              "$\\displaystyle x(0^+)=\\lim_{s\\to+\\infty}sX_+(s)$",
+              "原点不含冲激或更高奇异项；需有限右极限及通常拉普拉斯存在条件。求得的是右初值，不是微分式中的 $x(0^-)$"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "终值定理 · 表9.3",
+              "$\\displaystyle\\lim_{t\\to\\infty}x(t)$",
+              "$\\displaystyle\\lim_{t\\to\\infty}x(t)=\\lim_{s\\to0^+}sX_+(s)$",
+              "保留原表的原点无奇异项前提；补充有理式判据：约分后的 $sX_+(s)$ 全部有限极点须严格在左半平面。不是仅见到一个有限代数极限就能套用"
+            ],
+            "core": true
+          }
+        ],
+        "sourceNote": "实看印刷456、458—460页（PDF478、480—482），裁图 HL-04-01至04.webp。原表9.3八项性质及初、终值完整保留，并明确区分相邻正文补充的二阶/高阶式。共轭项改用由复变量定义确定的 X₊*(s*)，避免原表 X₊*(s) 简写歧义；终值极点条件为补充。",
+        "compactNote": "从$0^-$起的单边变换，$a>0$；初态项按给定左初值保留，ROC检查相应右半平面。"
+      }
     },
     {
       "id": "HL-05",
@@ -887,12 +2147,12 @@
       "id": "HL-06",
       "category": "table",
       "chapter": "10",
-      "title": "完整表10.2：常用Z变换对",
+      "title": "Z变换对 · 表10.2",
       "section": "10.6，表10.2",
       "printPages": [
         496
       ],
-      "formula": "设$q=z^{-1}$，表内$r>0$、$a\\ne0$。\n\n|序号|序列|双边Z变换|ROC|\n|---|---|---|---|\n|1|$\\delta[n]$|$1$|全z平面|\n|2|$u[n]$|$1/(1-q)$|$\\lvert z\\rvert>1$|\n|3|$-u[-n-1]$|$1/(1-q)$|$\\lvert z\\rvert<1$|\n|4|$\\delta[n-m]$|$z^{-m}$|m>0排除0；m<0排除无穷远；m=0全平面|\n|5|$a^nu[n]$|$1/(1-aq)$|$\\lvert z\\rvert>\\lvert a\\rvert$|\n|6|$-a^nu[-n-1]$|$1/(1-aq)$|$\\lvert z\\rvert<\\lvert a\\rvert$|\n|7|$na^nu[n]$|$aq/(1-aq)^2$|$\\lvert z\\rvert>\\lvert a\\rvert$|\n|8|$-na^nu[-n-1]$|$aq/(1-aq)^2$|$\\lvert z\\rvert<\\lvert a\\rvert$|\n|9|$\\cos(\\omega_0n)u[n]$|$[1-\\cos(\\omega_0)q]/[1-2\\cos(\\omega_0)q+q^2]$|$\\lvert z\\rvert>1$|\n|10|$\\sin(\\omega_0n)u[n]$|$\\sin(\\omega_0)q/[1-2\\cos(\\omega_0)q+q^2]$|$\\lvert z\\rvert>1$|\n|11|$r^n\\cos(\\omega_0n)u[n]$|$[1-r\\cos(\\omega_0)q]/[1-2r\\cos(\\omega_0)q+r^2q^2]$|$\\lvert z\\rvert>r$|\n|12|$r^n\\sin(\\omega_0n)u[n]$|$r\\sin(\\omega_0)q/[1-2r\\cos(\\omega_0)q+r^2q^2]$|$\\lvert z\\rvert>r$|\n\n**把分子1改成可直接查表的分子z：**\n$$\\frac1{z-a}=z^{-1}\\frac z{z-a}.$$\n$$\\frac1{z-a}\\leftrightarrow\\begin{cases}a^{n-1}u[n-1],&\\lvert z\\rvert>\\lvert a\\rvert,\\\\-a^{n-1}u[-n],&\\lvert z\\rvert<\\lvert a\\rvert.\\end{cases}$$",
+      "formula": "双边$X(z)=\\sum_{n=-\\infty}^{\\infty}x[n]z^{-n}$，$u[0]=1$。指数参数$a\\ne0$；$a=0$须单独退化，不能代入含负次幂的左边序列。$m\\in\\mathbb Z$，$\\omega_0\\in\\mathbb R$，末两行$r>0$。ROC必须和分式一起保存；以下“全部$z$”也包含可延拓的$0$与$\\infty$，书中圆环边界若有抵消应按实际序列复核。\n\n|信号 $x[n]$|双边Z变换 $X(z)$|ROC与端点|\n|---|---|---|\n|$\\delta[n]$|$1$|全部$z$，含$0,\\infty$。|\n|$u[n]$|$\\dfrac1{1-z^{-1}}$|$\\vert z\\vert >1$，含$\\infty$。|\n|$-u[-n-1]$|$\\dfrac1{1-z^{-1}}$|$\\vert z\\vert <1$，含$0$，不含$\\infty$。|\n|$\\delta[n-m]$|$z^{-m}$|$m>0$：除$0$外全部$z$；$m<0$：除$\\infty$外全部$z$；$m=0$：全部$z$。|\n|$a^nu[n]$|$\\dfrac1{1-az^{-1}}$|$\\vert z\\vert >\\vert a\\vert $，含$\\infty$。|\n|$-a^nu[-n-1]$|$\\dfrac1{1-az^{-1}}$|$\\vert z\\vert <\\vert a\\vert $，含$0$。|\n|$na^nu[n]$|$\\dfrac{az^{-1}}{(1-az^{-1})^2}$|$\\vert z\\vert >\\vert a\\vert $，含$\\infty$。|\n|$-na^nu[-n-1]$|$\\dfrac{az^{-1}}{(1-az^{-1})^2}$|$\\vert z\\vert <\\vert a\\vert $，含$0$。|\n|$\\cos(\\omega_0n)u[n]$|$\\dfrac{1-(\\cos\\omega_0)z^{-1}}{1-2(\\cos\\omega_0)z^{-1}+z^{-2}}$|$\\vert z\\vert >1$，含$\\infty$。|\n|$\\sin(\\omega_0n)u[n]$|$\\dfrac{(\\sin\\omega_0)z^{-1}}{1-2(\\cos\\omega_0)z^{-1}+z^{-2}}$|通常$\\vert z\\vert >1$，含$\\infty$；若$\\omega_0\\in\\pi\\mathbb Z$则为零序列，ROC为全部$z$。|\n|$r^n\\cos(\\omega_0n)u[n]$|$\\dfrac{1-r(\\cos\\omega_0)z^{-1}}{1-2r(\\cos\\omega_0)z^{-1}+r^2z^{-2}}$|$\\vert z\\vert >r$，含$\\infty$。|\n|$r^n\\sin(\\omega_0n)u[n]$|$\\dfrac{r(\\sin\\omega_0)z^{-1}}{1-2r(\\cos\\omega_0)z^{-1}+r^2z^{-2}}$|通常$\\vert z\\vert >r$，含$\\infty$；若$\\omega_0\\in\\pi\\mathbb Z$则为零序列，ROC为全部$z$。|\n\n实际目视HL-06-01：PDF518，印刷496页，表10.2原有12项逐项重排。补明a非零、移位冲激的原点/无穷远端点及正弦退化为零时的ROC。",
       "explanation": "截图保留原书表10.2全部12项。文字表用q简化长分式；逆变换时最后仍还原q=z⁻¹。正余弦的二阶分母来自一对共轭极点，r决定衰减半径、ω₀决定旋转角。幂次乘n导致二阶极点。另列分子1的移位版本是自主归纳，用于防止从表中直接抄错起点，尤其双边左边项包含n=0。",
       "memory": "分子z从0起，分子1先延一拍；正幂z表示提前，负幂表示延迟。",
       "conditions": "正余弦表按一般非退化频率使用；若正弦恒为0或因特殊参数发生抵消，实际ROC可能扩大。有限样点序列需单独核对0与无穷远。",
@@ -904,21 +2164,129 @@
         "2021-09"
       ],
       "diagramPaths": [],
-      "preview": "分子z从0起，分子1先延一拍；正幂z表示提前，负幂表示延迟。"
+      "preview": "清晰对照：常用10行 / 完整12行；原书可展开核对。",
+      "clearTable": {
+        "notation": "双边$X(z)=\\sum_{n=-\\infty}^{\\infty}x[n]z^{-n}$，$u[0]=1$。指数参数$a\\ne0$；$a=0$须单独退化，不能代入含负次幂的左边序列。$m\\in\\mathbb Z$，$\\omega_0\\in\\mathbb R$，末两行$r>0$。ROC必须和分式一起保存；以下“全部$z$”也包含可延拓的$0$与$\\infty$，书中圆环边界若有抵消应按实际序列复核。",
+        "columns": [
+          "信号 $x[n]$",
+          "双边Z变换 $X(z)$",
+          "ROC与端点"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "$\\delta[n]$",
+              "$1$",
+              "全部$z$，含$0,\\infty$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$u[n]$",
+              "$\\dfrac1{1-z^{-1}}$",
+              "$|z|>1$，含$\\infty$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$-u[-n-1]$",
+              "$\\dfrac1{1-z^{-1}}$",
+              "$|z|<1$，含$0$，不含$\\infty$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\delta[n-m]$",
+              "$z^{-m}$",
+              "$m>0$：除$0$外全部$z$；$m<0$：除$\\infty$外全部$z$；$m=0$：全部$z$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$a^nu[n]$",
+              "$\\dfrac1{1-az^{-1}}$",
+              "$|z|>|a|$，含$\\infty$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$-a^nu[-n-1]$",
+              "$\\dfrac1{1-az^{-1}}$",
+              "$|z|<|a|$，含$0$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$na^nu[n]$",
+              "$\\dfrac{az^{-1}}{(1-az^{-1})^2}$",
+              "$|z|>|a|$，含$\\infty$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$-na^nu[-n-1]$",
+              "$\\dfrac{az^{-1}}{(1-az^{-1})^2}$",
+              "$|z|<|a|$，含$0$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\cos(\\omega_0n)u[n]$",
+              "$\\dfrac{1-(\\cos\\omega_0)z^{-1}}{1-2(\\cos\\omega_0)z^{-1}+z^{-2}}$",
+              "$|z|>1$，含$\\infty$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$\\sin(\\omega_0n)u[n]$",
+              "$\\dfrac{(\\sin\\omega_0)z^{-1}}{1-2(\\cos\\omega_0)z^{-1}+z^{-2}}$",
+              "通常$|z|>1$，含$\\infty$；若$\\omega_0\\in\\pi\\mathbb Z$则为零序列，ROC为全部$z$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "$r^n\\cos(\\omega_0n)u[n]$",
+              "$\\dfrac{1-r(\\cos\\omega_0)z^{-1}}{1-2r(\\cos\\omega_0)z^{-1}+r^2z^{-2}}$",
+              "$|z|>r$，含$\\infty$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "$r^n\\sin(\\omega_0n)u[n]$",
+              "$\\dfrac{r(\\sin\\omega_0)z^{-1}}{1-2r(\\cos\\omega_0)z^{-1}+r^2z^{-2}}$",
+              "通常$|z|>r$，含$\\infty$；若$\\omega_0\\in\\pi\\mathbb Z$则为零序列，ROC为全部$z$。"
+            ],
+            "core": false
+          }
+        ],
+        "sourceNote": "实际目视HL-06-01：PDF518，印刷496页，表10.2原有12项逐项重排。补明a非零、移位冲激的原点/无穷远端点及正弦退化为零时的ROC。",
+        "compactNote": "双边Z变换；$a\\ne0$、$r>0$、$m\\in\\mathbb Z$。ROC与序列支撑配对，$0$与$\\infty$另查。"
+      }
     },
     {
       "id": "HL-07",
       "category": "table",
       "chapter": "10",
-      "title": "完整表10.1：双边Z性质与初值定理",
+      "title": "双边Z变换性质 · 表10.1",
       "section": "10.5.9–10.5.10，表10.1",
       "printPages": [
         495
       ],
-      "formula": "设$x[n]\\leftrightarrow X(z)$。\n\n|序列运算|双边Z域结果|\n|---|---|\n|$ax_1[n]+bx_2[n]$|$aX_1(z)+bX_2(z)$|\n|$x[n-n_0]$|$z^{-n_0}X(z)$|\n|$e^{j\\omega_0n}x[n]$|$X(e^{-j\\omega_0}z)$|\n|$z_0^nx[n]$|$X(z/z_0)$|\n|$a^nx[n]$|$X(z/a)$|\n|$x[-n]$|$X(z^{-1})$|\n|$x_k[n]=x[m]$于$n=mk$，其余0|$X(z^k)$|\n|$x^*[n]$|$X^*(z^*)$|\n|$x_1*x_2$|$X_1X_2$|\n|$x[n]-x[n-1]$|$(1-z^{-1})X(z)$|\n|$\\sum_{k=-\\infty}^{n}x[k]$|$X(z)/(1-z^{-1})$|\n|$nx[n]$|$-z\\,dX(z)/dz$|\n\n**ROC跟随运算：**移位保留原环带但另查0与无穷远；乘$z_0^n$使环带半径乘$\\lvert z_0\\rvert$；反转把半径区间倒数；线性和卷积至少含原ROC交集。\n\n**原书只列离散初值：**若$n<0$时$x[n]=0$，\n$$x[0]=\\lim_{z\\to\\infty}X(z).$$\n\n**独立补充，非本书表10.1原文：**在终值存在、消去$z=1$后其余相关极点均严格在单位圆内的条件下，\n$$\\lim_{n\\to\\infty}x[n]=\\lim_{z\\to1}(1-z^{-1})X(z).$$",
+      "formula": "双边$x[n]\\leftrightarrow X(z)$，ROC为$R$；$x_i[n]\\leftrightarrow X_i(z)$，ROC为$R_i$。可记$R:r_{\\rm in}<|z|<r_{\\rm out}$，$a,z_0\\ne0$为指数缩放参数，$L\\in\\mathbb N_+$。线性叠加或卷积的实际ROC可能因抵消扩大；表中“至少”指在两ROC有非空交集等收敛前提下成立。$0$、$\\infty$及开圆环的边界需另查，不用代数分式自行指定ROC。\n\n|性质|序列|双边Z变换|ROC / 前提|\n|---|---|---|---|\n|线性|$ax_1[n]+bx_2[n]$|$aX_1(z)+bX_2(z)$|至少含$R_1\\cap R_2$；抵消可扩大。|\n|时移|$x[n-n_0]$，$n_0\\in\\mathbb Z$|$z^{-n_0}X(z)$|同$R$，但$0$或$\\infty$的包含情况可能改变。|\n|单位圆调制|$e^{j\\omega_0n}x[n]$|$X(e^{-j\\omega_0}z)$|同$R$。|\n|复指数缩放|$z_0^nx[n]$|$X(z/z_0)$|$\\vert z_0\\vert r_{\\rm in}<\\vert z\\vert <\\vert z_0\\vert r_{\\rm out}$。|\n|尺度变换的等价写法|$a^nx[n]$|$X(a^{-1}z)$|$\\vert a\\vert R$，即把ROC的半径乘$\\vert a\\vert $。|\n|时间反转|$x[-n]$|$X(z^{-1})$|$1/r_{\\rm out}<\\vert z\\vert <1/r_{\\rm in}$；$0$与$\\infty$互换。|\n|插零扩展|$x_{(L)}[n]=x[n/L]$（$L\\mid n$），其余为0|$X(z^L)$|$r_{\\rm in}^{1/L}<\\vert z\\vert <r_{\\rm out}^{1/L}$，端点另查。|\n|共轭|$x^*[n]$|$[X(z^*)]^*$|同$R$。|\n|卷积|$x_1[n]*x_2[n]$|$X_1(z)X_2(z)$|至少含$R_1\\cap R_2$；抵消可扩大。|\n|一次差分|$x[n]-x[n-1]$|$(1-z^{-1})X(z)$|至少含$R\\cap\\{\\vert z\\vert >0\\}$，再核查抵消。|\n|从负无穷累加|$\\sum_{k=-\\infty}^{n}x[k]$|$\\dfrac{X(z)}{1-z^{-1}}$|至少含$R\\cap\\{\\vert z\\vert >1\\}$；先确认累加和及交集存在。|\n|z域微分|$nx[n]$|$-z\\dfrac{dX(z)}{dz}$|原开圆环$R$；边界收敛须另查。|\n|初值定理|$x[n]=0$于$n<0$|$x[0]=\\lim_{z\\to\\infty}X(z)$|变换存在于某外圆域，$x[0]$有限；仅右边但含负索引的序列不能直接套。|\n\n实际目视HL-07-01/02：PDF517，印刷495页，表10.1与10.5.9正文。13个数学条目全保留。原表一次差分行将频域量印为Y(z)，按该行输入x[n]统一更正为X(z)；本表不添加原书未列的终值定理。",
       "explanation": "截图完整保留原书性质表和初值正文；离散终值另作醒目标注，避免冒称原书表内内容。差分和累加互为方向相反的操作，分别对应乘、除1−z⁻¹。卷积、调制、反转得到新代数式后都要跟踪ROC；若只抄变换表达式，双边逆变换仍可能不唯一。初值式看的是z趋无穷，而非z趋0。",
       "memory": "连续−t配d/ds，离散n配−z d/dz；反转倒z，调制缩放z。",
-      "conditions": "双边累加公式须保证原累加与变换存在，ROC至少含原ROC与|z|>1的交集。初值要求负索引为0；独立补充的终值公式必须先检查衰减条件，不能用于(−1)^n或2^n。",
+      "conditions": "双边累加公式须保证累加与变换存在，ROC至少含原ROC与|z|>1的交集。初值定理要求负索引为0；本原表不列离散终值定理。",
       "pitfalls": "共轭写X*(z*)，不是X*(1/z*)；单位圆上两种表达可能偶然混淆，离开单位圆通常不同。不得把单边移位初态项混入本双边表。",
       "exampleIds": [
         "O36",
@@ -927,13 +2295,143 @@
         "2021-09"
       ],
       "diagramPaths": [],
-      "preview": "连续−t配d/ds，离散n配−z d/dz；反转倒z，调制缩放z。"
+      "preview": "清晰对照：常用10行 / 完整13行；原书可展开核对。",
+      "clearTable": {
+        "notation": "双边$x[n]\\leftrightarrow X(z)$，ROC为$R$；$x_i[n]\\leftrightarrow X_i(z)$，ROC为$R_i$。可记$R:r_{\\rm in}<|z|<r_{\\rm out}$，$a,z_0\\ne0$为指数缩放参数，$L\\in\\mathbb N_+$。线性叠加或卷积的实际ROC可能因抵消扩大；表中“至少”指在两ROC有非空交集等收敛前提下成立。$0$、$\\infty$及开圆环的边界需另查，不用代数分式自行指定ROC。",
+        "columns": [
+          "性质",
+          "序列",
+          "双边Z变换",
+          "ROC / 前提"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "线性",
+              "$ax_1[n]+bx_2[n]$",
+              "$aX_1(z)+bX_2(z)$",
+              "至少含$R_1\\cap R_2$；抵消可扩大。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "时移",
+              "$x[n-n_0]$，$n_0\\in\\mathbb Z$",
+              "$z^{-n_0}X(z)$",
+              "同$R$，但$0$或$\\infty$的包含情况可能改变。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "单位圆调制",
+              "$e^{j\\omega_0n}x[n]$",
+              "$X(e^{-j\\omega_0}z)$",
+              "同$R$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "复指数缩放",
+              "$z_0^nx[n]$",
+              "$X(z/z_0)$",
+              "$|z_0|r_{\\rm in}<|z|<|z_0|r_{\\rm out}$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "尺度变换的等价写法",
+              "$a^nx[n]$",
+              "$X(a^{-1}z)$",
+              "$|a|R$，即把ROC的半径乘$|a|$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "时间反转",
+              "$x[-n]$",
+              "$X(z^{-1})$",
+              "$1/r_{\\rm out}<|z|<1/r_{\\rm in}$；$0$与$\\infty$互换。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "插零扩展",
+              "$x_{(L)}[n]=x[n/L]$（$L\\mid n$），其余为0",
+              "$X(z^L)$",
+              "$r_{\\rm in}^{1/L}<|z|<r_{\\rm out}^{1/L}$，端点另查。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "共轭",
+              "$x^*[n]$",
+              "$[X(z^*)]^*$",
+              "同$R$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "卷积",
+              "$x_1[n]*x_2[n]$",
+              "$X_1(z)X_2(z)$",
+              "至少含$R_1\\cap R_2$；抵消可扩大。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "一次差分",
+              "$x[n]-x[n-1]$",
+              "$(1-z^{-1})X(z)$",
+              "至少含$R\\cap\\{|z|>0\\}$，再核查抵消。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "从负无穷累加",
+              "$\\sum_{k=-\\infty}^{n}x[k]$",
+              "$\\dfrac{X(z)}{1-z^{-1}}$",
+              "至少含$R\\cap\\{|z|>1\\}$；先确认累加和及交集存在。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "z域微分",
+              "$nx[n]$",
+              "$-z\\dfrac{dX(z)}{dz}$",
+              "原开圆环$R$；边界收敛须另查。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "初值定理",
+              "$x[n]=0$于$n<0$",
+              "$x[0]=\\lim_{z\\to\\infty}X(z)$",
+              "变换存在于某外圆域，$x[0]$有限；仅右边但含负索引的序列不能直接套。"
+            ],
+            "core": true
+          }
+        ],
+        "sourceNote": "实际目视HL-07-01/02：PDF517，印刷495页，表10.1与10.5.9正文。13个数学条目全保留。原表一次差分行将频域量印为Y(z)，按该行输入x[n]统一更正为X(z)；本表不添加原书未列的终值定理。",
+        "compactNote": "双边性质，$R$为原ROC；$a,z_0\\ne0$、$L$为正整数。极零抵消后ROC可能扩大。"
+      }
     },
     {
       "id": "HL-08",
       "category": "table",
       "chapter": "10",
-      "title": "单边Z：完整表10.3与负索引初态",
+      "title": "单边Z变换性质 · 表10.3",
       "section": "10.9、10.9.2–10.9.3，表10.3",
       "printPages": [
         506,
@@ -941,7 +2439,7 @@
         509,
         510
       ],
-      "formula": "$$X_+(z)=\\sum_{n=0}^{\\infty}x[n]z^{-n}.$$\n\n|运算|单边结果|\n|---|---|\n|$x[n-1]$|$z^{-1}X_+(z)+x[-1]$|\n|$x[n-2]$|$z^{-2}X_+(z)+x[-1]z^{-1}+x[-2]$|\n|$x[n+1]$|$zX_+(z)-zx[0]$|\n|$x[n]-x[n-1]$|$(1-z^{-1})X_+(z)-x[-1]$|\n|$\\sum_{k=0}^{n}x[k]$|$X_+(z)/(1-z^{-1})$|\n|$nx[n]$|$-z\\,dX_+(z)/dz$|\n\n线性、$e^{j\\omega_0n}$及$z_0^n$调制、时间扩展、共轭的公式与表10.1对应项相同。卷积乘积要求两序列在$n<0$时均为0；不能把双边时间反转公式直接用于单边截取。\n\n**带初态差分方程示例（按原书例10.37自主归纳）：**\n$$y[n]+3y[n-1]=x[n],\\quad y[-1]=\\beta,\\quad x[n]=\\alpha u[n],$$\n$$Y_+(z)=\\underbrace{\\frac{-3\\beta}{1+3z^{-1}}}_{Y_{zi}}+\\underbrace{\\frac{\\alpha}{(1+3z^{-1})(1-z^{-1})}}_{Y_{zs}}.$$\n$$\\alpha=8,\\ \\beta=1\\quad\\Longrightarrow\\quad y[n]=[3(-3)^n+2]u[n].$$",
+      "formula": "单边$X_+(z)=\\sum_{n=0}^{\\infty}x[n]z^{-n}$（原书用$\\mathcal X$）。它仅记录$n\\ge0$，不代表实际负时刻样本为零；延时必须保留$x[-1],x[-2]$。$a,z_0\\ne0$为指数缩放参数，$L\\in\\mathbb N_+$。各式在有关外圆收敛域内使用，有限初态项仍可能改变原点的包含情况；与双边卷积公式合用时须遵守所列零过去条件。\n\n|性质|序列|单边Z变换|条件 / 边界项|\n|---|---|---|---|\n|线性|$ax_1[n]+bx_2[n]$|$aX_{1+}(z)+bX_{2+}(z)$|同一非负下标求和。|\n|延时一拍|$x[n-1]$|$z^{-1}X_+(z)+x[-1]$|负样本$x[-1]$必须保留。|\n|超前一拍|$x[n+1]$|$zX_+(z)-zx[0]$|删去求和中的首样本。|\n|单位圆调制|$e^{j\\omega_0n}x[n]$|$X_+(e^{-j\\omega_0}z)$|只旋转频率。|\n|复指数缩放|$z_0^nx[n]$|$X_+(z/z_0)$|$z_0\\ne0$，ROC半径乘$\\vert z_0\\vert $。|\n|尺度变换的等价写法|$a^nx[n]$|$X_+(a^{-1}z)$|$a\\ne0$。|\n|插零扩展|$x_{(L)}[n]=x[n/L]$（$L\\mid n$），其余为0|$X_+(z^L)$|$L$为正整数。|\n|共轭|$x^*[n]$|$[X_+(z^*)]^*$|求和仍从0开始。|\n|卷积|$x_1[n]*x_2[n]$|$X_{1+}(z)X_{2+}(z)$|仅当两序列在$n<0$都为0，或显式采用零过去的因果卷积。|\n|一次差分|$x[n]-x[n-1]$|$(1-z^{-1})X_+(z)-x[-1]$|与双边公式相比，多出$-x[-1]$。|\n|从0开始累加|$\\sum_{k=0}^{n}x[k]$|$\\dfrac{X_+(z)}{1-z^{-1}}$|下限为0，不能误抄成$-\\infty$。|\n|z域微分|$nx[n]$|$-z\\dfrac{dX_+(z)}{dz}$|单边求和的微分性质。|\n|初值定理|非负时刻首样本$x[0]$|$x[0]=\\lim_{z\\to\\infty}X_+(z)$|假设单边变换存在且$x[0]$有限；不要求实际过去样本为零。|\n|正文补充：延时两拍|$x[n-2]$|$z^{-2}X_+(z)+z^{-1}x[-1]+x[-2]$|印刷510页式(10.148)，两项负样本均保留。|\n\n实际目视HL-08-02（PDF530/印刷508）表10.3全部13项；并读HL-08-01/03/04（PDF528、531、532/印刷506、509、510）定义与时移正文。增加原书式(10.148)作为第14行，明确标为正文补充。",
       "explanation": "截图保留原书表10.3全表，随后正文给出一拍、两拍移位的边界项与非零初态求解。表中累加按其相关负时间/边界前提使用，本卡将求和下限明确写为0，避免遗失负时间累计常数。先把y[−1]等状态代入变换式，再区分初态与输入来源；从−1到0已经递推一次，指数系数通常不等于题给初值。",
       "memory": "单边延时要捎上负索引；一拍加x[−1]，两拍再加x[−2]。",
       "conditions": "表10.3是真实原书单边表，数值分解是依原例自主整理。单边卷积公式需两信号负索引为0；单边并无普遍的x[−n]↔X(z⁻¹)规则。本卡不把离散终值归给原书。",
@@ -952,7 +2450,146 @@
         "2021-09"
       ],
       "diagramPaths": [],
-      "preview": "单边延时要捎上负索引；一拍加x[−1]，两拍再加x[−2]。"
+      "preview": "清晰对照：常用10行 / 完整14行；原书可展开核对。",
+      "clearTable": {
+        "notation": "单边$X_+(z)=\\sum_{n=0}^{\\infty}x[n]z^{-n}$（原书用$\\mathcal X$）。它仅记录$n\\ge0$，不代表实际负时刻样本为零；延时必须保留$x[-1],x[-2]$。$a,z_0\\ne0$为指数缩放参数，$L\\in\\mathbb N_+$。各式在有关外圆收敛域内使用，有限初态项仍可能改变原点的包含情况；与双边卷积公式合用时须遵守所列零过去条件。",
+        "columns": [
+          "性质",
+          "序列",
+          "单边Z变换",
+          "条件 / 边界项"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "线性",
+              "$ax_1[n]+bx_2[n]$",
+              "$aX_{1+}(z)+bX_{2+}(z)$",
+              "同一非负下标求和。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "延时一拍",
+              "$x[n-1]$",
+              "$z^{-1}X_+(z)+x[-1]$",
+              "负样本$x[-1]$必须保留。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "超前一拍",
+              "$x[n+1]$",
+              "$zX_+(z)-zx[0]$",
+              "删去求和中的首样本。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "单位圆调制",
+              "$e^{j\\omega_0n}x[n]$",
+              "$X_+(e^{-j\\omega_0}z)$",
+              "只旋转频率。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "复指数缩放",
+              "$z_0^nx[n]$",
+              "$X_+(z/z_0)$",
+              "$z_0\\ne0$，ROC半径乘$|z_0|$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "尺度变换的等价写法",
+              "$a^nx[n]$",
+              "$X_+(a^{-1}z)$",
+              "$a\\ne0$。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "插零扩展",
+              "$x_{(L)}[n]=x[n/L]$（$L\\mid n$），其余为0",
+              "$X_+(z^L)$",
+              "$L$为正整数。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "共轭",
+              "$x^*[n]$",
+              "$[X_+(z^*)]^*$",
+              "求和仍从0开始。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "卷积",
+              "$x_1[n]*x_2[n]$",
+              "$X_{1+}(z)X_{2+}(z)$",
+              "仅当两序列在$n<0$都为0，或显式采用零过去的因果卷积。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "一次差分",
+              "$x[n]-x[n-1]$",
+              "$(1-z^{-1})X_+(z)-x[-1]$",
+              "与双边公式相比，多出$-x[-1]$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "从0开始累加",
+              "$\\sum_{k=0}^{n}x[k]$",
+              "$\\dfrac{X_+(z)}{1-z^{-1}}$",
+              "下限为0，不能误抄成$-\\infty$。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "z域微分",
+              "$nx[n]$",
+              "$-z\\dfrac{dX_+(z)}{dz}$",
+              "单边求和的微分性质。"
+            ],
+            "core": false
+          },
+          {
+            "cells": [
+              "初值定理",
+              "非负时刻首样本$x[0]$",
+              "$x[0]=\\lim_{z\\to\\infty}X_+(z)$",
+              "假设单边变换存在且$x[0]$有限；不要求实际过去样本为零。"
+            ],
+            "core": true
+          },
+          {
+            "cells": [
+              "正文补充：延时两拍",
+              "$x[n-2]$",
+              "$z^{-2}X_+(z)+z^{-1}x[-1]+x[-2]$",
+              "印刷510页式(10.148)，两项负样本均保留。"
+            ],
+            "core": true
+          }
+        ],
+        "sourceNote": "实际目视HL-08-02（PDF530/印刷508）表10.3全部13项；并读HL-08-01/03/04（PDF528、531、532/印刷506、509、510）定义与时移正文。增加原书式(10.148)作为第14行，明确标为正文补充。",
+        "compactNote": "从$n=0$起算的单边变换，$a,z_0\\ne0$、$L$为正整数；延迟保留$x[-1],x[-2]$等过去样本。"
+      }
     },
     {
       "id": "HB-04",
