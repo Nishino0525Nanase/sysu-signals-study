@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const source=await fs.readFile(path.join(root,'dist/data.js'),'utf8');
@@ -10,6 +11,25 @@ const context={module:{exports:{}},exports:{},console};context.exports=context.m
 vm.runInNewContext(await fs.readFile(path.join(root,'dist/vendor/katex.min.js'),'utf8'),context);
 const katex=context.module.exports;
 const qs=d.exams.flatMap(e=>e.questions),drills=d.training,book=d.oppenheim;
+const examOriginals=d.examOriginals?.questions||[];
+assert.equal(examOriginals.length,qs.length,'Every visible exam group needs its own original question excerpts');
+assert.equal(new Set(examOriginals.map(q=>q.id)).size,qs.length,'Duplicate original question ID');
+const originalById=new Map(examOriginals.map(q=>[q.id,q]));
+const sourcePageByPath=new Map((d.examOriginals.sourcePages||[]).map(p=>[p.path,p]));
+for(const q of qs){
+ const original=originalById.get(q.id);assert.ok(original,q.id+' original missing');
+ assert.equal(original.year,q.year);assert.equal(original.ref,q.ref);assert.ok(original.excerpts.length,q.id+' original empty');
+ for(const e of original.excerpts){
+  const p=sourcePageByPath.get(e.sourcePath);assert.ok(p,q.id+' source provenance missing');
+  const [x0,y0,x1,y1]=e.rect;assert.ok([x0,y0,x1,y1].every(Number.isInteger)&&x0>=0&&y0>=0&&x1>x0&&y1>y0&&x1<=p.width&&y1<=p.height,q.id+' invalid crop');
+  assert.equal(e.width,x1-x0);assert.equal(e.height,y1-y0);
+  const bytes=await fs.readFile(path.join(root,'dist',e.path));assert.equal(bytes.length,e.bytes);assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),e.sha256,q.id+' original bytes changed');
+ }
+}
+for(const p of sourcePageByPath.values())assert.equal(crypto.createHash('sha256').update(await fs.readFile(path.join(root,'dist',p.path))).digest('hex'),p.sha256,'Original source page changed '+p.path);
+assert.deepEqual([...new Set(originalById.get('2026-04').excerpts.map(e=>e.pdfPage))],[1,2],'Keep the final subquestion on the next original page');
+assert.ok(originalById.get('2014-08').excerpts.some(e=>e.pdfPage===1),'Keep the shared spectrum referenced on the previous page');
+assert.ok(qs.find(q=>q.id==='2021-05').statement.includes('拉普拉斯'),'2021 fifth question asks for Laplace, not Fourier');
 const sources=d.resources||[],methods=d.alternativeMethods||[],guides=d.studyGuides||[];
 const examMethods=d.examMethods||[];
 const references=d.textbookReferences||{},bookOriginals=references.exercises||[],bookConcepts=references.concepts||[];
@@ -33,6 +53,7 @@ const serviceWorker=await fs.readFile(path.join(root,'dist/sw.js'),'utf8');
 const precacheMatch=serviceWorker.match(/const ASSETS=(\[[\s\S]*?\]);self/);
 assert.ok(precacheMatch,'Missing offline asset list');
 assert.ok(!JSON.parse(precacheMatch[1]).some(p=>p.startsWith('references/textbook/')),'Do not preload the entire textbook on website install');
+assert.ok(!JSON.parse(precacheMatch[1]).some(p=>p.startsWith('sources/questions/')),'Load original question crops when opening a question');
 assert.equal(qs.length,243);assert.equal(new Set(qs.map(q=>q.id)).size,243);assert.equal(drills.length,32);assert.equal(d.oppenheim.length,40);
 assert.equal(new Set([...qs,...drills,...book].map(q=>q.id)).size,315);
 const questionIds=new Set([...qs,...drills,...book].map(q=>q.id));
