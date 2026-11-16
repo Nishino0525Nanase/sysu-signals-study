@@ -54,6 +54,16 @@ public final class MainActivity extends Activity {
   @JavascriptInterface public void exportProgress(String json){if(json==null||json.length()>5000000)return;pendingExport=json.getBytes(StandardCharsets.UTF_8);runOnUiThread(new Runnable(){@Override public void run(){Intent intent=new Intent(Intent.ACTION_CREATE_DOCUMENT);intent.addCategory(Intent.CATEGORY_OPENABLE);intent.setType("application/json");intent.putExtra(Intent.EXTRA_TITLE,"信号研习室_学习记录.json");try{startActivityForResult(intent,EXPORT);}catch(Exception e){pendingExport=null;Toast.makeText(MainActivity.this,"未找到保存文件的位置",Toast.LENGTH_SHORT).show();}}});}
  }
  @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);if(request==IMPORT&&chooser!=null){chooser.onReceiveValue(WebChromeClient.FileChooserParams.parseResult(result,data));chooser=null;}if(request==EXPORT){if(result==RESULT_OK&&data!=null&&data.getData()!=null&&pendingExport!=null){try(OutputStream out=getContentResolver().openOutputStream(data.getData())){if(out!=null)out.write(pendingExport);Toast.makeText(this,"学习记录已保存",Toast.LENGTH_SHORT).show();}catch(IOException e){Toast.makeText(this,"保存失败，请重试",Toast.LENGTH_SHORT).show();}}pendingExport=null;}}
- @Override public void onBackPressed(){web.evaluateJavascript("(function(){for(var id of ['image-dialog','reader']){var d=document.getElementById(id);if(d&&d.open){d.close();return true;}}return false;})()",new ValueCallback<String>(){@Override public void onReceiveValue(String closed){if(!"true".equals(closed)){if(web.canGoBack())web.goBack();else finish();}}});}
+ @Override public void onBackPressed(){
+  web.evaluateJavascript("(function(){for(var id of ['image-dialog','lecture-reference']){var d=document.getElementById(id);if(d&&d.open){d.close();return 'closed';}}var study=window.signalStudy;var reader=document.getElementById('reader');return (study&&typeof study.isReaderOpen==='function'?study.isReaderOpen():reader&&!reader.hidden)?'reader':'page';})()",new ValueCallback<String>(){
+   @Override public void onReceiveValue(String target){
+    if("\"closed\"".equals(target))return;
+    if(web.canGoBack()){web.goBack();return;}
+    if("\"reader\"".equals(target)){
+     web.evaluateJavascript("(function(){if(window.signalStudy&&typeof window.signalStudy.closeQuestion==='function'){window.signalStudy.closeQuestion();}else{var close=document.getElementById('close-reader');if(close)close.click();}})()",null);
+    }else finish();
+   }
+  });
+ }
  @Override protected void onDestroy(){if(chooser!=null)chooser.onReceiveValue(null);web.removeJavascriptInterface("Android");web.destroy();super.onDestroy();}
 }

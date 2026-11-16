@@ -1,27 +1,26 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#193b38"><meta name="description" content="中山大学信号与系统历年真题详解、公式速查、专项训练与奥本海姆原书高清阅读。"><title>中大信号研习室</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="vendor/katex.min.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="reference.css"><link rel="stylesheet" href="book-reader.css"><link rel="stylesheet" href="textbook-digest.css"><link rel="stylesheet" href="question-reader.css"><link rel="stylesheet" href="focus-layout.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#193b38"><meta name="description" content="中山大学信号与系统历年真题详解、公式速查、专项训练与奥本海姆原书高清阅读。"><title>中大信号研习室</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="vendor/katex.min.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="reference.css"><link rel="stylesheet" href="book-reader.css"><link rel="stylesheet" href="textbook-digest.css"><link rel="stylesheet" href="question-reader.css"><link rel="stylesheet" href="focus-layout.css"><link rel="stylesheet" href="lecture-shell.css"><link rel="stylesheet" href="lecture-reader.css"></head>
 <body>
-<aside class="sidebar">
-  <a class="brand" href="#overview"><img class="brand-crest" src="icon-192.png" alt="中山大学校徽" width="44" height="44"><span>信号研习室<small>SYSU · SIGNALS &amp; SYSTEMS</small></span></a>
-  <p class="nav-label">学习</p>
+<header class="sidebar lecture-masthead">
+  <a class="brand" href="#overview" aria-label="信号研习室首页"><img class="brand-crest" src="icon-192.png" alt="中山大学校徽" width="40" height="40"><span>信号研习室<small>SYSU · SIGNALS &amp; SYSTEMS</small></span></a>
   <nav id="navigation" class="primary-navigation" aria-label="主要学习入口">
-    <a href="#overview" data-page="overview"><span aria-hidden="true">◈</span>首页</a>
-    <a href="#papers" data-page="papers"><span aria-hidden="true">▤</span>真题</a>
-    <a href="#practice" data-page="practice"><span aria-hidden="true">✎</span>专项</a>
-    <a href="#reference" data-page="reference"><span aria-hidden="true">≋</span>速查</a>
-    <a href="#notebook" data-page="notebook"><span aria-hidden="true">☆</span>复盘</a>
+    <a class="home-navigation" href="#overview" data-page="overview">首页</a>
+    <a href="#papers" data-page="papers">真题</a>
+    <a href="#practice" data-page="practice">专项</a>
+    <a href="#reference" data-page="reference">速查</a>
+    <a href="#notebook" data-page="notebook">复盘</a>
   </nav>
-  <details class="nav-more"><summary>更多资料</summary><nav class="secondary-navigation" aria-label="补充学习资料">
-    <a href="#resources" data-page="resources">逐题方法</a><a href="#chapters" data-page="chapters">考点分布</a><a href="#digest" data-page="digest">原书精读</a><a href="#book" data-page="book">高清原书</a><a href="#downloads" data-page="downloads">资料与安装</a>
-  </nav></details>
-  <div class="sidebar-note"><span class="status-dot"></span>学习记录保存在本机<button id="export-progress" class="plain">备份学习记录 ↗</button></div>
-</aside>
-<div class="workspace"><header class="topbar"><img class="mobile-crest" src="icon-192.png" alt="中山大学校徽" width="30" height="30"><span id="breadcrumb">学习总览</span><div class="top-actions">
-  <button id="font-toggle" class="plain" aria-label="切换大字模式">Aa<span class="control-label"> 字号</span></button><button id="theme-toggle" class="plain" aria-label="切换深色模式">◐<span class="control-label"> 外观</span></button>
-  <details class="top-more"><summary aria-label="更多学习资料">更多</summary><nav aria-label="更多学习资料"><a href="#resources" data-page="resources">逐题方法</a><a href="#chapters" data-page="chapters">考点分布</a><a href="#digest" data-page="digest">原书精读</a><a href="#book" data-page="book">高清原书</a><a href="#downloads" data-page="downloads">资料与 APK</a></nav></details>
-</div></header><main id="main" tabindex="-1"></main><footer>中大信号研习室 · 个人备考整理，非官方答案</footer></div>
-<dialog id="reader"><div class="reader-top"><button id="close-reader" class="plain">← 返回</button><span id="reader-position"></span><button id="print-question" class="plain">打印 / PDF</button></div><article id="reader-body"></article><div class="reader-bottom"><button id="prev-question">← 上一题</button><button id="next-question">下一题 →</button></div></dialog>
+  <div class="top-actions">
+    <button id="font-toggle" class="plain" aria-label="切换大字模式">Aa<span class="control-label"> 字号</span></button>
+    <button id="theme-toggle" class="plain" aria-label="切换深色模式">外观</button>
+    <details class="nav-more top-more"><summary aria-label="更多学习资料">更多</summary><nav class="secondary-navigation" aria-label="补充学习资料">
+      <a href="#resources" data-page="resources">逐题方法</a><a href="#chapters" data-page="chapters">考点分布</a><a href="#digest" data-page="digest">原书精读</a><a href="#book" data-page="book">高清原书</a><a href="#downloads" data-page="downloads">资料与 APK</a><button id="export-progress" class="plain">备份学习记录</button>
+    </nav></details>
+  </div>
+</header>
+<div class="workspace"><div class="topbar"><span id="breadcrumb">学习总览</span><span class="shell-local-note">学习记录保存在本机</span></div><main id="main" tabindex="-1"></main><footer>中大信号研习室 · 个人备考整理，非官方答案</footer></div>
+<section id="reader" hidden aria-label="题目阅读"><div class="reader-top"><button id="close-reader" class="plain">← 返回</button><span id="reader-position"></span><button id="print-question" class="plain">打印 / PDF</button></div><article id="reader-body"></article><div class="reader-bottom"><button id="prev-question">← 上一题</button><button id="next-question">下一题 →</button></div></section>
 <dialog id="image-dialog"><div class="image-toolbar"><div class="image-heading"><strong id="image-caption">原题与图解</strong><small id="image-dimensions"></small></div><div class="image-controls"><button id="image-zoom-out" aria-label="缩小原图">−</button><span id="image-zoom-label">100%</span><button id="image-zoom-in" aria-label="放大原图">＋</button><button id="image-fit">适合宽度</button><button id="image-native">原始尺寸</button><button id="close-image">关闭 ×</button></div></div><div id="image-canvas"><img id="expanded-image" alt="放大查看原题或配图"></div></dialog><div id="toast" role="status"></div><input id="import-progress" type="file" accept="application/json" hidden>
-<script src="vendor/marked.min.js"></script><script src="vendor/katex.min.js"></script><script src="vendor/auto-render.min.js"></script><script src="data.js"></script><script src="reference.js"></script><script src="book-reader.js"></script><script src="textbook-digest.js"></script><script src="app.js"></script>
+<script src="vendor/marked.min.js"></script><script src="vendor/katex.min.js"></script><script src="vendor/auto-render.min.js"></script><script src="data.js"></script><script src="reference.js"></script><script src="book-reader.js"></script><script src="textbook-digest.js"></script><script src="lecture-context.js"></script><script src="app.js"></script>
 </body></html>
