@@ -106,3 +106,6 @@ body.question-open{overflow:visible}
 
 .lecture-footer-reference{display:none}#lecture-reference>header>strong{margin-right:auto}
 @media(max-width:600px){#reader .reader-bottom .lecture-footer-reference{display:block;font-size:13px;border-left:1px solid var(--line);border-right:1px solid var(--line);padding:7px 10px}#reader .reader-bottom{gap:7px}#lecture-read-status{max-width:calc(100% - 220px)}}
+@media(min-width:601px) and (max-width:1000px){#reader .reader-bottom .lecture-footer-reference{display:block;font-size:14px;padding:8px 12px;border-left:1px solid var(--line);border-right:1px solid var(--line)}}
+/* Keep the formula column on the page's scroll surface. */
+@media(min-width:1001px){.lecture-context{top:100px;max-height:none;overflow:visible}.lecture-context-note p{line-height:1.8}.lecture-context-links{gap:0;margin-top:16px;padding-top:10px}}
