@@ -13,14 +13,14 @@ window.createLectureContext = function ({D, escape, md}) {
   {
    id: 'ct-modulation', title: '余弦调制', referenceId: 'HF-05', chapters: ['4','8'],
    keywords: ['调制','混频','搬移','频移','载波','乘余弦','调制器'],
-   formula: "$$\\begin{aligned}x(t)\\cos\\omega_ct&\\longleftrightarrow\\\\&\\tfrac12X(j(\\omega-\\omega_c))\\\\&+\\tfrac12X(j(\\omega+\\omega_c)).\\end{aligned}$$",
+   formula: "$$\\begin{gathered}x(t)\\cos\\omega_ct\\longleftrightarrow\\\\\\tfrac12X(j(\\omega-\\omega_c))\\\\+\\tfrac12X(j(\\omega+\\omega_c)).\\end{gathered}$$",
    explanation: '余弦拆成正、负频率的两个复指数，原谱向两侧各搬一次，每份乘 $1/2$。',
    hint: '先标每份谱的中心和边界，再算高度；发生重叠时相加。若乘的是 $2\\cos\\omega_ct$，两份系数各为 $1$。'
   },
   {
    id: 'ct-sampling', title: '冲激抽样', referenceId: 'HS-03', chapters: ['7'],
    keywords: ['抽样','采样','冲激串','周期门','门控','奈奎斯特','慢波','副本'],
-   formula: "$$\\begin{aligned}\\omega_s&=\\frac{2\\pi}{T_s},\\\\X_s(j\\omega)&=\\frac1{T_s}\\sum_k\\\\&\\quad X(j(\\omega-k\\omega_s)).\\end{aligned}$$",
+   formula: "$$\\begin{gathered}\\omega_s=\\frac{2\\pi}{T_s},\\\\X_s(j\\omega)=\\frac1{T_s}\\sum_k\\\\\\quad X(j(\\omega-k\\omega_s)).\\end{gathered}$$",
    explanation: '单位冲激串抽样：原谱每隔 $\\omega_s$ 复制一次，每份高度乘 $1/T_s$。',
    hint: '间隔与高度分开看。周期矩形门控要先求级数系数 $c_k$，复制谱的权重是 $c_k$，不能照搬 $1/T_s$。'
   },
@@ -34,63 +34,63 @@ window.createLectureContext = function ({D, escape, md}) {
   {
    id: 'ctfs', title: '连续傅里叶级数', referenceId: 'H13-03', chapters: ['3'],
    keywords: ['级数','周期门','矩形门','谐波','周期输入','傅里叶系数','周期函数'],
-   formula: "$$\\begin{aligned}a_k&=\\frac1T\\int_{t_0}^{t_0+T}\\\\&\\quad x(t)e^{-jk\\omega_0t}\\,dt,\\\\\\omega_0&=\\frac{2\\pi}{T}.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}a_k=\\frac1T\\int_{t_0}^{t_0+T}\\\\\\quad x(t)e^{-jk\\omega_0t}\\,dt,\\\\\\omega_0=\\frac{2\\pi}{T}.\\end{gathered}$$",
    explanation: '先选一个完整周期，再求系数；$a_0$ 就是一周期的平均值。',
    hint: '分析式有 $1/T$、负指数；综合式是 $\\sum_k a_ke^{jk\\omega_0t}$。脉宽与周期是两回事。'
   },
   {
    id: 'dtfs', title: '离散傅里叶级数', referenceId: 'H13-04', chapters: ['3','5'],
    keywords: ['DFS','离散级数','系数周期','N点','N周期','周期序列'],
-   formula: "$$\\begin{aligned}a_k&=\\frac1N\\sum_{n=0}^{N-1}\\\\&\\quad x[n]e^{-j2\\pi kn/N},\\\\a_{k+N}&=a_k.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}a_k=\\frac1N\\sum_{n=0}^{N-1}\\\\\\quad x[n]e^{-j2\\pi kn/N},\\\\a_{k+N}=a_k.\\end{gathered}$$",
    explanation: '时间与系数都以 $N$ 为周期；每次求和只取连续 $N$ 项。',
    hint: '系数索引先按模 $N$ 折回。这里的级数系数等于未归一化 DFT 的 $1/N$，不能混用幅度。'
   },
   {
    id: 'energy', title: '能量 Parseval', referenceId: 'HF-08', chapters: ['4'],
    keywords: ['Parseval','能量','平方积分','卷积平方','模平方','频谱矩'],
-   formula: "$$\\begin{aligned}&\\int_{-\\infty}^{\\infty}|x(t)|^2dt\\\\&=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}\\\\&\\qquad |X(j\\omega)|^2d\\omega.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}\\int_{-\\infty}^{\\infty}|x(t)|^2dt\\\\=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}\\\\\\qquad |X(j\\omega)|^2d\\omega.\\end{gathered}$$",
    explanation: '在时域、频域中选更容易积分的一侧；频域换回能量时除以 $2\\pi$。',
    hint: '算的是模平方，不是频谱的几何面积。周期信号应改用平均功率的级数 Parseval 公式。'
   },
   {
    id: 'power', title: '周期平均功率', referenceId: 'H13-08', chapters: ['3'],
    keywords: ['平均功率','功率','单边','双边','功率谱'],
-   formula: "$$\\begin{aligned}P&=\\frac1T\\int_{t_0}^{t_0+T}|x(t)|^2dt\\\\&=\\sum_{k=-\\infty}^{\\infty}|a_k|^2.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}P=\\frac1T\\int_{t_0}^{t_0+T}|x(t)|^2dt\\\\=\\sum_{k=-\\infty}^{\\infty}|a_k|^2.\\end{gathered}$$",
    explanation: '各个正交谐波的功率可以直接相加；直流项贡献 $|a_0|^2$。',
    hint: '实信号的正、负频率成对。若改成单边余弦形式，非零谐波幅度是双边系数模的两倍，功率对应 $A_k^2/2$。'
   },
   {
    id: 'ct-convolution', title: '连续卷积', referenceId: 'H13-02', chapters: ['2'],
    keywords: ['卷积','阶跃响应','冲激响应','零状态','支撑','重叠'],
-   formula: "$$\\begin{aligned}y_{zs}(t)&=\\int_{-\\infty}^{\\infty}\\\\&\\quad x(\\tau)h(t-\\tau)d\\tau.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}y_{zs}(t)=\\int_{-\\infty}^{\\infty}\\\\\\quad x(\\tau)h(t-\\tau)d\\tau.\\end{gathered}$$",
    explanation: '先固定输出时刻 $t$，找两个因子同时非零的 $\\tau$ 区间，再积分。',
    hint: '卷积给已知 LTI 系统的零状态响应。若有非零初态，全响应还要加零输入响应。'
   },
   {
    id: 'dt-convolution', title: '离散卷积', referenceId: 'H13-02', chapters: ['2'],
    keywords: ['离散卷积','序列卷积','右边指数','卷积求和','u[n','u[n−','u[n-'],
-   formula: "$$\\begin{aligned}y[n]&=\\sum_{k=-\\infty}^{\\infty}\\\\&\\quad x[k]h[n-k].\\end{aligned}$$",
+   formula: "$$\\begin{gathered}y[n]=\\sum_{k=-\\infty}^{\\infty}\\\\\\quad x[k]h[n-k].\\end{gathered}$$",
    explanation: '先用阶跃条件联立出 $k$ 的上下限，再把指数代入求和。',
    hint: '闭区间 $L\\le k\\le U$ 一共 $U-L+1$ 项。替换 $n-k$ 时，指数与阶跃都要一起替换。'
   },
   {
    id: 'linearity', title: '线性与时不变', referenceId: 'H13-01', chapters: ['1'],
    keywords: ['线性','时不变','时变','性质','二变量核'],
-   formula: "$$\\begin{aligned}T\\{ax_1+bx_2\\}&=\\\\aT\\{x_1\\}&+bT\\{x_2\\}.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}T\\{ax_1+bx_2\\}=\\\\aT\\{x_1\\}+bT\\{x_2\\}.\\end{gathered}$$",
    explanation: '线性比较输入幅值的叠加；时不变则比较“先延迟输入”和“求输出后再延迟”。',
    hint: '证明不成立，一个反例就够；证明成立要覆盖题目允许的全部输入。出现 $t$ 并不能直接否定线性。'
   },
   {
    id: 'causal-kernel', title: '因果：看未来输入', referenceId: 'H13-01', chapters: ['1'],
    keywords: ['因果','冲激响应核','二变量核','未来','h_tau','h_\\tau'],
-   formula: "$$\\begin{aligned}y(t)&=\\int\\\\&\\quad x(\\tau)K(t,\\tau)d\\tau,\\\\\\tau>t&\\Rightarrow K(t,\\tau)=0.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}y(t)=\\int\\\\\\quad x(\\tau)K(t,\\tau)d\\tau,\\\\\\tau>t\\Rightarrow K(t,\\tau)=0.\\end{gathered}$$",
    explanation: '一般线性系统的因果性，要检查未来时刻 $\\tau$ 的输入能否影响当前 $t$ 的输出。',
    hint: '只有已经确定是 LTI 系统时，才能把判据简化为单变量的 $h(t)=0$（$t<0$）。'
   },
   {
    id: 'dtft', title: 'DTFT：频率连续', referenceId: 'HD-01', chapters: ['5'],
    keywords: ['DTFT','幅频图','离散时间傅里叶','零点','频率响应'],
-   formula: "$$\\begin{aligned}X(e^{j\\omega})&=\\sum_{n=-\\infty}^{\\infty}\\\\&\\quad x[n]e^{-j\\omega n},\\\\X(e^{j(\\omega+2\\pi)})&=\\\\X(e^{j\\omega})&.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}X(e^{j\\omega})=\\sum_{n=-\\infty}^{\\infty}\\\\\\quad x[n]e^{-j\\omega n},\\\\X(e^{j(\\omega+2\\pi)})=\\\\X(e^{j\\omega}).\\end{gathered}$$",
    explanation: '时间是离散的，频率变量仍连续；频谱以 $2\\pi$ 为周期。',
    hint: '先核对 $\\omega=0,\\pi$ 与零点，再判断整条幅频曲线。周期序列的 DTFT 是冲激线谱，不能直接当普通函数求和。'
   },
@@ -111,7 +111,7 @@ window.createLectureContext = function ({D, escape, md}) {
   {
    id: 'laplace-roc', title: '拉氏收敛域', referenceId: 'HL-01', chapters: ['9'],
    keywords: ['拉普拉斯','拉氏','s平面','ROC','极点','收敛域'],
-   formula: "$$\\begin{aligned}X(s)&=\\int_{-\\infty}^{\\infty}\\\\&\\quad x(t)e^{-st}dt.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}X(s)=\\int_{-\\infty}^{\\infty}\\\\\\quad x(t)e^{-st}dt.\\end{gathered}$$",
    explanation: '先标实际极点，再用因果或稳定条件选 ROC，最后为各项选左右边信号。',
    hint: '稳定要求 ROC 包含虚轴；有理因果系统的 ROC 在最右实际极点右侧。代数分式相同，ROC 不同，信号也可能不同。'
   },
@@ -132,7 +132,7 @@ window.createLectureContext = function ({D, escape, md}) {
   {
    id: 'orthogonal', title: '正交投影', referenceId: 'HM-09', chapters: ['S'],
    keywords: ['正交','最小误差','匹配滤波','最佳逼近','展开系数'],
-   formula: "$$\\begin{aligned}c_k&=\\frac{\\langle x,g_k\\rangle}{\\|g_k\\|^2},\\\\\\langle x,g\\rangle&=\\int\\\\&\\quad x(t)g^*(t)dt.\\end{aligned}$$",
+   formula: "$$\\begin{gathered}c_k=\\frac{\\langle x,g_k\\rangle}{\\|g_k\\|^2},\\\\\\langle x,g\\rangle=\\int\\\\\\quad x(t)g^*(t)dt.\\end{gathered}$$",
    explanation: '最小误差时，残差与每个已选基函数正交。只有单位范数基才能直接把内积当系数。',
    hint: '正交不等于归一。复内积中的共轭、误差能量中的模平方都要保留。'
   }
