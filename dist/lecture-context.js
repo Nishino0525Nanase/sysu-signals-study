@@ -6,9 +6,9 @@ window.createLectureContext = function ({D, escape, md}) {
   {
    id: 'ct-scale', title: '时间尺度', referenceId: 'HF-05', chapters: ['4'],
    keywords: ['尺度','拓展','扩展','压缩','缩放','时间扩展','频谱变窄','平方sinc'],
-   formula: '$$x(at)\\longleftrightarrow \\frac{1}{|a|}X\\!\\left(j\\frac{\\omega}{a}\\right),\\quad a\\ne0.$$',
-   explanation: '时间与频谱的宽度互逆变化；频谱的高度还要除以 $|a|$。先看横轴，再看纵轴。',
-   hint: '例如 $x(t/4)$ 的谱是 $4X(j4\\omega)$：带宽缩为原来的 $1/4$，高度变为原来的 $4$ 倍。求最高频率时看支撑边界，不把前面的幅度系数算进去。'
+   formula: '$$\\begin{gathered}x(at)\\longleftrightarrow\\\\\\frac{1}{|a|}X\\!\\left(j\\frac{\\omega}{a}\\right)\\end{gathered}$$',
+   explanation: '当 $a\\ne0$，时间与频谱的宽度互逆变化；频谱高度还要除以 $|a|$。',
+   hint: '$x(t/4)\\leftrightarrow4X(j4\\omega)$：带宽缩为 $1/4$，高度变为 $4$ 倍。求最高频率只看支撑边界。'
   },
   {
    id: 'ct-modulation', title: '余弦调制', referenceId: 'HF-05', chapters: ['4','8'],
