@@ -12,12 +12,11 @@
 
 Android同步上述布局与内容，保持原包名及签名。既有243组真题、346张原题裁剪图、32道原创训练、40组课后题、12张175行清晰表及628页原书均保留。
 
-GitHub同步状态：旧凭据认证失败，现有连接缺少此仓库的写入权限，因此v1.11.0尚未写入公开仓库或创建Release；新版先通过当前Site与安装包文件交付。源码改动保存在Site源仓库，恢复GitHub写入授权后可继续同步。
 
 ## 使用
 
 - 网页：[中大信号研习室](https://nishino0525nanase.github.io/sysu-signals-study/)，由 Pages 工作流发布 `dist/`。
-- Android：通过[本次安装包](https://chatgpt.com/library?file_id=libfile_fde3_f-c1941629c1e08191ba763aa13c3eb7e2_898a0db71c888191abe3e1ba24ab23f2&account_id=personal)或新版网页“资料与安装”下载 `sysu-signals-study-v1.11.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
+- Android：从[GitHub Releases v1.11.0](https://github.com/Nishino0525Nanase/sysu-signals-study/releases/tag/v1.11.0)或新版网页“资料与安装”下载 `sysu-signals-study-v1.11.0.apk`。最低 Android 7.0，可覆盖升级旧版并保留本机学习记录。
 - APK内置全部学习内容、公式字体和配图，核心阅读无需联网，不申请网络、定位、摄像头或账号权限。
 - 学习进度、收藏、错题、笔记保存在本机，支持导出和导入JSON备份。
 

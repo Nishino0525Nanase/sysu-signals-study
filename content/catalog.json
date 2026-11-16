@@ -1675,8 +1675,8 @@
     {
       "kind": "apk",
       "title": "Android 离线版 v1.11.0",
-      "description": "打开下载页获取新版安装包。保持原签名，可覆盖升级；内置全部原题、逐步推导、清晰变换表及10条针对性解法。",
-      "path": "https://chatgpt.com/library?file_id=libfile_fde3_f-c1941629c1e08191ba763aa13c3eb7e2_898a0db71c888191abe3e1ba24ab23f2&account_id=personal"
+      "description": "内置真题与逐步详解、10条针对性方法、清晰变换表和高清原书；首页与题目阅读布局重新整理。",
+      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.11.0/sysu-signals-study-v1.11.0.apk"
     },
     {
       "id": "textbook-condensed",
