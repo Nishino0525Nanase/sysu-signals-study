@@ -5,7 +5,7 @@ final result: passed
 ## Visual truth and evidence
 
 - Selected visual: second displayed concept, `/workspace/scratch/13209b04cbad/generated_images/exec-1482f4fb-8b3c-4e60-b957-a7ea7d32e2da.png` (1487 × 1058 pixels; generated design, no CSS viewport metadata).
-- Final browser capture: `/workspace/shared/signals-lecture-final.jpg` (1363 × 936 pixels, CSS viewport 1363 × 936, 1× density).
+- Final browser capture: `docs/lecture-reader-v1.12.jpg` (captured as `/workspace/shared/signals-lecture-final.jpg`) (1363 × 936 pixels, CSS viewport 1363 × 936, 1× density).
 - State: light appearance, normal type, 2026 fourth problem, original scan collapsed, complete derivation visible, time-scaling context selected.
 - The source and final capture were opened together in one comparison input. Responsive desktop composition was compared proportionally; no claim of pixel-identical reconstruction is made across the different viewport widths.
 - Focused checks: actual 17px manuscript paragraphs, 20px large mode, 18px contextual display formulas, original scan availability, triangle support and peak labels, side-column overflow and active-outline placement. These were inspected in the full capture and measured in the rendered DOM; the relevant details were legible without a separate crop.
