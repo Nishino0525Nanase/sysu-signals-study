@@ -103,3 +103,6 @@ body.question-open{overflow:visible}
 @media print{body.question-open .lecture-manuscript .question-pitfalls{display:block!important}.lecture-mobile-reference{display:none!important}}
 
 .lecture-context-note>.lecture-context-source{display:block;margin:0 0 16px;padding:0 0 10px;border-bottom:1px solid var(--line);font-size:12px;width:100%}
+
+.lecture-footer-reference{display:none}#lecture-reference>header>strong{margin-right:auto}
+@media(max-width:600px){#reader .reader-bottom .lecture-footer-reference{display:block;font-size:13px;border-left:1px solid var(--line);border-right:1px solid var(--line);padding:7px 10px}#reader .reader-bottom{gap:7px}#lecture-read-status{max-width:calc(100% - 220px)}}
