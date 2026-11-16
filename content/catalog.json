@@ -1,5 +1,5 @@
 {
-  "version": "1.10.0",
+  "version": "1.11.0",
   "github": "https://github.com/Nishino0525Nanase/sysu-signals-study",
   "training": [
     {
@@ -1674,9 +1674,9 @@
   "files": [
     {
       "kind": "apk",
-      "title": "Android离线版 1.10.0",
-      "description": "离线内置原题、详细解析、清晰变换表及完整原书，可覆盖升级保留本机学习记录。",
-      "path": "https://github.com/Nishino0525Nanase/sysu-signals-study/releases/download/v1.10.0/sysu-signals-study-v1.10.0.apk"
+      "title": "Android 离线版 v1.11.0",
+      "description": "打开下载页获取新版安装包。保持原签名，可覆盖升级；内置全部原题、逐步推导、清晰变换表及10条针对性解法。",
+      "path": "https://chatgpt.com/library?file_id=libfile_fde3_f-c1941629c1e08191ba763aa13c3eb7e2_898a0db71c888191abe3e1ba24ab23f2&account_id=personal"
     },
     {
       "id": "textbook-condensed",
