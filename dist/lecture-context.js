@@ -164,7 +164,7 @@ window.createLectureContext = function ({D, escape, md}) {
  function body(card) {
   if (!card) return '<p>把已知条件与适用范围写在一起，再选用公式。</p>';
   const source = handbook.get(card.referenceId);
-  return `<section class="lecture-context-note" data-context-note="${escape(card.id)}"><h3>${escape(card.title)}</h3><div class="lecture-context-formula">${md(card.formula)}</div><h4>怎么理解</h4><div class="lecture-context-explanation">${md(card.explanation)}</div><h4>记忆与检查</h4><div class="lecture-context-hint">${md(card.hint)}</div>${source ? `<button class="plain lecture-context-source" data-action="lecture-reference" data-card="${escape(card.referenceId)}">查看完整公式与原书对照</button>` : ''}</section>`;
+  return `<section class="lecture-context-note" data-context-note="${escape(card.id)}">${source ? `<button class="plain lecture-context-source" data-action="lecture-reference" data-card="${escape(card.referenceId)}">查看完整公式与原书对照</button>` : ''}<h3>${escape(card.title)}</h3><div class="lecture-context-formula">${md(card.formula)}</div><h4>怎么理解</h4><div class="lecture-context-explanation">${md(card.explanation)}</div><h4>记忆与检查</h4><div class="lecture-context-hint">${md(card.hint)}</div></section>`;
  }
  function renderCard(q, id) {
   return body(cardsFor(q).find(card => card.id === id) || byId.get(id) || select(q));

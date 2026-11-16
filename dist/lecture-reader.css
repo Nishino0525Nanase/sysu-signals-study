@@ -101,3 +101,5 @@ body.question-open{overflow:visible}
 .lecture-context-formula p{font-size:18px;line-height:1.7}.lecture-context-formula .katex{font-size:1em}.lecture-outline nav button{font-size:15px}.lecture-mobile-reference{display:none}
 @media(max-width:600px){.lecture-title-row .lecture-source-toggle,.lecture-title-row .lecture-mobile-reference{display:inline-block;margin-right:10px}.lecture-mobile-reference{font-size:13px;color:var(--accent);min-height:38px;border:1px solid var(--line)!important;padding:6px 10px!important}.lecture-outline{position:sticky;top:58px;background:var(--paper);z-index:24;padding:0}.lecture-outline nav button{font-size:13px}}
 @media print{body.question-open .lecture-manuscript .question-pitfalls{display:block!important}.lecture-mobile-reference{display:none!important}}
+
+.lecture-context-note>.lecture-context-source{display:block;margin:0 0 16px;padding:0 0 10px;border-bottom:1px solid var(--line);font-size:12px;width:100%}

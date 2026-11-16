@@ -56,6 +56,15 @@ const data={...catalog,chapters:statistics.chapters,topics:statistics.topics,exa
 const compiled=path.join(root,'dist/data.js');
 await fs.writeFile(compiled+'.tmp','window.SIGNAL_DATA='+JSON.stringify(data)+';\n');
 await fs.rename(compiled+'.tmp',compiled);
+// A saved tab must load one consistent UI version after a release, even while
+// GitHub Pages still gives the previous CSS/JS a fresh HTTP cache lifetime.
+const indexPath=path.join(root,'dist/index.html');
+let index=await fs.readFile(indexPath,'utf8');
+for(const match of [...index.matchAll(/(?:href|src)="([^"?]+\.(?:css|js))(?:\?[^\"]*)?"/g)]){
+ const asset=match[1],fingerprint=crypto.createHash('sha256').update(await fs.readFile(path.join(root,'dist',asset))).digest('hex').slice(0,10);
+ index=index.replace(match[0],match[0].split('=')[0]+'="'+asset+'?v='+fingerprint+'"');
+}
+await fs.writeFile(indexPath,index);
 async function walk(dir){let result=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){let p=path.join(dir,e.name);if(e.isDirectory())result.push(...await walk(p));else result.push(p);}return result;}
 const files=await walk(path.join(root,'dist'));
 const assets=files.filter(p=>!p.endsWith('.apk')&&!p.endsWith('.apk.sha256')&&!p.endsWith('/sw.js')&&!p.includes('/references/textbook/')&&!p.includes('/sources/questions/')&&!/\.tmp(?:\.|$)|\.cn-tmp$/.test(p)).map(p=>path.relative(path.join(root,'dist'),p).split(path.sep).join('/'));
@@ -64,5 +73,5 @@ for(const asset of [...assets].sort()){
  digest.update(asset).update(await fs.readFile(path.join(root,'dist',asset)));
 }
 const hash=digest.digest('hex').slice(0,12);
-await fs.writeFile(path.join(root,'dist/sw.js'),`const CACHE='signal-atlas-${hash}',BOOK_CACHE='signal-textbook-${textbookCacheVersion}';const ASSETS=${JSON.stringify(['./',...assets])};self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>(k.startsWith('signal-atlas-')&&k!==CACHE)||(k.startsWith('signal-textbook-')&&k!==BOOK_CACHE)).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>{const url=new URL(e.request.url);if(e.request.method!=='GET'||url.origin!==location.origin||url.pathname.endsWith('.apk'))return;if(url.pathname.includes('/references/textbook/')){e.respondWith((async()=>{let c;try{c=await caches.open(BOOK_CACHE);const hit=await c.match(e.request);if(hit)return hit;}catch{}const r=await fetch(e.request);if(r.ok&&c){try{await c.put(e.request,r.clone());}catch{}}return r;})());return;}e.respondWith(fetch(e.request).then(r=>{if(r.ok){let copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));}return r;}).catch(()=>caches.match(e.request)));});`);
+await fs.writeFile(path.join(root,'dist/sw.js'),`const CACHE='signal-atlas-${hash}',BOOK_CACHE='signal-textbook-${textbookCacheVersion}';const ASSETS=${JSON.stringify(['./',...assets])};self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>(k.startsWith('signal-atlas-')&&k!==CACHE)||(k.startsWith('signal-textbook-')&&k!==BOOK_CACHE)).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>{const url=new URL(e.request.url);if(e.request.method!=='GET'||url.origin!==location.origin||url.pathname.endsWith('.apk'))return;if(url.pathname.includes('/references/textbook/')){e.respondWith((async()=>{let c;try{c=await caches.open(BOOK_CACHE);const hit=await c.match(e.request);if(hit)return hit;}catch{}const r=await fetch(e.request);if(r.ok&&c){try{await c.put(e.request,r.clone());}catch{}}return r;})());return;}e.respondWith(fetch(e.request).then(r=>{if(r.ok){let copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));}return r;}).catch(()=>caches.match(e.request,{ignoreSearch:true})));});`);
 console.log(JSON.stringify({years:exams.length,questions:exams.flatMap(e=>e.questions).length,training:data.training.length,assets:assets.length,textbookPages:textbookReader.pages.length,originalQuestionCrops:examOriginals.questions.reduce((n,q)=>n+q.excerpts.length,0)}));
